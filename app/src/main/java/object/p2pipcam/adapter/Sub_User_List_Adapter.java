@@ -82,19 +82,19 @@ public class Sub_User_List_Adapter extends BaseAdapter implements ServerConnectL
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return sub_UserDBList.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		 
 		return sub_UserDBList.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		 
 		return position;
 	}
 
@@ -301,7 +301,7 @@ public class Sub_User_List_Adapter extends BaseAdapter implements ServerConnectL
 
 	@Override
 	public void onFailure(ServerResponse response) {
-		// TODO Auto-generated method stub
+		 
 		try
 		{
 		WaitingStaticProgress.hideProgressDialog();

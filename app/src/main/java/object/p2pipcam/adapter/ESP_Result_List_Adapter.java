@@ -97,19 +97,19 @@ public class ESP_Result_List_Adapter extends BaseAdapter
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return espList.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		 
 		return espList.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		 
 		return position;
 	}
 

@@ -184,7 +184,7 @@ public class GetSwitchTime {
 	        
 	        @Override
 	        protected void onPreExecute() {
-	        // TODO Auto-generated method stub
+	         
 	        super.onPreExecute();
 	        
 	        

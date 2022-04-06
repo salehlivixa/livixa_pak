@@ -88,14 +88,14 @@ public class AddCameraActivity extends BaseActivity implements OnClickListener,
 	}
 
 	private void hideSof(EditText edit) {
-		// TODO Auto-generated method stub
+		 
 		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
+		 
 		/*if (progressdlg != null && progressdlg.isShowing()) {
 			progressdlg.cancel();
 		}*/

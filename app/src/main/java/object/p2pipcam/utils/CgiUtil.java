@@ -83,7 +83,7 @@ public class CgiUtil implements HttpUtil.HttpResult{
 	private class CmdThread implements Runnable{
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
+			 
 			while(bCmdThreadRuning){
 				try{
 					Map<String,Object> map = getCMD();					
@@ -107,7 +107,7 @@ public class CgiUtil implements HttpUtil.HttpResult{
 
 	@Override
 	public void httpResult(String strResult, int operation) {
-		// TODO Auto-generated method stub
+		 
 		Log.d(STR_LOG, "strResult: " + strResult) ;
 		switch(operation){
 		case GET_CAMERA_PARAMS:
@@ -117,7 +117,7 @@ public class CgiUtil implements HttpUtil.HttpResult{
 	}
 
 	private void getCameraParams(String strResult) {
-		// TODO Auto-generated method stub
+		 
 		if(cgiResult == null)
 			return;		
 		

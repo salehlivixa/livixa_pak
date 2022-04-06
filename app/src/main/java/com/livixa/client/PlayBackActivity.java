@@ -166,7 +166,7 @@ public class PlayBackActivity extends BaseActivity implements
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
+		 
 		StartAudio();
 		super.onResume();
 	}
@@ -448,7 +448,7 @@ public class PlayBackActivity extends BaseActivity implements
 	@Override
 	public void callBackDatetimeParams(String did, int now, int tz,
 			int ntp_enable, String ntp_svr, int xialingshi) {
-		// TODO Auto-generated method stub
+		 
 		setTimeZone(tz);
 		Log.d("tag", "timestr:" + tzStr + "  tz:" + tz);
 	}
@@ -456,13 +456,13 @@ public class PlayBackActivity extends BaseActivity implements
 	@Override
 	public void callBackSetSystemParamsResult(String did, int paramType,
 			int result) {
-		// TODO Auto-generated method stub
+		 
 
 	}
 
 	@Override
 	public void callBackPlaybackAudioData(byte[] pcm, int len) {
-		// TODO Auto-generated method stub
+		 
 		if (!audioPlayer.isAudioPlaying()) {
 			return;
 		}

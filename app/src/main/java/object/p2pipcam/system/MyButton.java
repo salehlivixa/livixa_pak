@@ -25,7 +25,7 @@ public class MyButton extends Button {
 
 	@Override
 	public boolean isFocused() {
-		// TODO Auto-generated method stub
+		 
 		return true;
 	}
 }

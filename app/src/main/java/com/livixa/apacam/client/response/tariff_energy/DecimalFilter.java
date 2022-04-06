@@ -57,11 +57,11 @@ public class DecimalFilter implements TextWatcher {
 		}
 		
 		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-		// TODO Auto-generated method stub
+		 
 		}
 		
 		public void onTextChanged(CharSequence s, int start, int before, int count) {
-		// TODO Auto-generated method stub
+		 
 		}
 
 }

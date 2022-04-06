@@ -247,7 +247,7 @@ public class PlayBackTFActivity extends BaseActivity implements
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		finish();
@@ -405,7 +405,7 @@ public class PlayBackTFActivity extends BaseActivity implements
 
 						@Override
 						public void run() {
-							// TODO Auto-generated method stub
+							 
 							for (int i = 0; i < nPageCount - 1; i++) {
 								NativeCaller.PPPPGetSDCardRecordFileList(
 										strDID, i + 1, 128);

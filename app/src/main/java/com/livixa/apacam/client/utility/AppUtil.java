@@ -2350,7 +2350,7 @@ public class AppUtil {
 	}
 
 	public static String getValueAppendByComma(long value) {
-		// TODO Auto-generated method stub
+		 
 		int count = 0;
 		String number = "" + value;
 		StringBuilder numberFormat = new StringBuilder();
@@ -2368,7 +2368,7 @@ public class AppUtil {
 	}
 
 	public static String getValueAppendByComma(double value) {
-		// TODO Auto-generated method stub
+		 
 		int count = 0;
 		String number = "" + (long) value;
 		StringBuilder numberFormat = new StringBuilder();

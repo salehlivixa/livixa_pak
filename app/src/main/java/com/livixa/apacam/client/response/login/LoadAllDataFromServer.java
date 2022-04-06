@@ -184,7 +184,7 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
 	
 	@Override
 	protected void onPreExecute() {
-		// TODO Auto-generated method stub
+		 
 		super.onPreExecute();
 		
 		showProgressDialog(cntxt.getString(R.string.Pleasewaitwhileyourdata), 100);

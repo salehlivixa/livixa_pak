@@ -152,7 +152,7 @@ public class SettingSDCardActivity extends BaseActivity implements
 	}
 
 	private void listAdd() {
-		// TODO Auto-generated method stub
+		 
 		list.add("00:00");
 		list.add("01:00");
 		list.add("02:00");
@@ -290,13 +290,13 @@ public class SettingSDCardActivity extends BaseActivity implements
 					@Override
 					public void onItemSelected(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						// TODO Auto-generated method stub
+						 
 						m_start_time = arg2;
 					}
 
 					@Override
 					public void onNothingSelected(AdapterView<?> arg0) {
-						// TODO Auto-generated method stub
+						 
 
 					}
 				});
@@ -306,13 +306,13 @@ public class SettingSDCardActivity extends BaseActivity implements
 					@Override
 					public void onItemSelected(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						// TODO Auto-generated method stub
+						 
 						m_end_time = arg2 + 1;
 					}
 
 					@Override
 					public void onNothingSelected(AdapterView<?> arg0) {
-						// TODO Auto-generated method stub
+						 
 
 					}
 				});

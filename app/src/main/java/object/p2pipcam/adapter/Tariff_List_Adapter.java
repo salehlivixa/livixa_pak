@@ -168,7 +168,7 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 
 	@Override
 	public void onFailure(ServerResponse response) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 	

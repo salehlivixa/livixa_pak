@@ -75,7 +75,7 @@ public class AlarmLogActivity extends BaseActivity implements OnClickListener {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
+				 
 				initData();
 			}
 		});
@@ -178,7 +178,7 @@ public class AlarmLogActivity extends BaseActivity implements OnClickListener {
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		finish();

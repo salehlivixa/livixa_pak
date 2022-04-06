@@ -128,7 +128,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 	private LinearLayout linearsetting;
 
 	private void findviewSelf() {
-		// TODO Auto-generated method stub
+		 
 		userOk = (Button) findViewById(R.id.ok);
 		userCancel = (Button) findViewById(R.id.back);
 		userOk.setOnClickListener(this);
@@ -449,7 +449,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 
 					@Override
 					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						// TODO Auto-generated method stub
+						 
 						if (checkedId == rb1_select.getId()) {
 							linearsetting.setVisibility(View.GONE);
 							userTimeBean.setUser_schedule_enable(0);
@@ -464,7 +464,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				// TODO Auto-generated method stub
+				 
 				if (checkedId == rb1.getId()) {
 					relative_one.setVisibility(View.VISIBLE);
 					relative_two.setVisibility(View.GONE);
@@ -489,7 +489,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 	}
 
 	private void listAdd() {
-		// TODO Auto-generated method stub
+		 
 		list.add(getResources().getString(R.string.set_user_time_1));
 		list.add(getResources().getString(R.string.set_user_time_2));
 		list.add(getResources().getString(R.string.set_user_time_3));
@@ -517,7 +517,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 			int user_schedule_mode, int user_schedule_startday,
 			int user_schedule_endday, int user_schedule_starttime_min,
 			int user_schedule_endtime_min) {
-		// TODO Auto-generated method stub
+		 
 		userTimeBean.setUser_schedule_enable(user_schedule_enable);
 		userTimeBean.setUser_schedule_endday(user_schedule_endday);
 		userTimeBean.setUser_schedule_endtime_min(user_schedule_endtime_min);
@@ -530,7 +530,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 
 	@Override
 	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
+		 
 		switch (arg0.getId()) {
 		case R.id.ok:
 			if (retrunStringToInt(editText_hour_1.getText().toString()) > 23
@@ -627,7 +627,7 @@ public class SettingUserTimeActivity extends BaseActivity implements
 	}
 
 	private int retrunStringToInt(String time) {
-		// TODO Auto-generated method stub
+		 
 		if (time==null||time.length()<1) {
 			time = "0";
 		}

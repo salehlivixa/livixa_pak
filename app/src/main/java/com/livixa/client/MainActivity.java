@@ -177,7 +177,7 @@ public class MainActivity extends ActivityGroup implements OnTouchListener,
 		//
 		// @Override
 		// public void run() {
-		// // TODO Auto-generated method stub
+		//  
 		// popupWindow_bit.showAtLocation(img, Gravity.CENTER, 0, 0);
 		// }
 		// }, 1000);
@@ -364,7 +364,7 @@ public class MainActivity extends ActivityGroup implements OnTouchListener,
 
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		
 		//super.onBackPressed();
 		

@@ -97,7 +97,7 @@ public class AudioPlayer {
 	class AudioPlayThread implements Runnable {
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
+			 
 			if (!initAudioDev()) {
 				Log.d("tag", "��ʼ��audioTrackʧ��");
 				return;

@@ -93,19 +93,19 @@ public class RoomAssignedtoUsers_List_Adapter extends BaseAdapter
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return roomUserRelations.roomsList.size() + 1;
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		 
 		return roomUserRelations.roomsList.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		 
 		return position;
 	}
 

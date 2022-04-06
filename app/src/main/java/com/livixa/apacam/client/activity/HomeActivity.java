@@ -125,7 +125,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 	
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
+		 
 		super.onDestroy();
 		
 		try
@@ -180,7 +180,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.rl_camera:
@@ -477,13 +477,13 @@ public class HomeActivity extends Activity implements OnClickListener {
 						
 						@Override
 						public void onLoadingStarted(String arg0, View arg1) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 						
 						@Override
 						public void onLoadingFailed(String arg0, View arg1, FailReason arg2) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 						
@@ -508,7 +508,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 						
 						@Override
 						public void onLoadingCancelled(String arg0, View arg1) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 					});

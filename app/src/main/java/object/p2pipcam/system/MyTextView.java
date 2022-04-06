@@ -25,7 +25,7 @@ public class MyTextView extends AppCompatTextView {
 
 	@Override
 	public boolean isFocused() {
-		// TODO Auto-generated method stub
+		 
 		return true;
 	}
 }

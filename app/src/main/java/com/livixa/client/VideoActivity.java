@@ -326,7 +326,7 @@ public class VideoActivity extends BaseActivity implements OnClickListener,
 
 			@Override
 			public boolean accept(File file) {
-				// TODO Auto-generated method stub
+				 
 				String name = file.getName();
 				int i = name.lastIndexOf(".");
 				if (i != -1) {

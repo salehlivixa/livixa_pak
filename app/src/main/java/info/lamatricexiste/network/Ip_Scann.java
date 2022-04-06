@@ -93,7 +93,7 @@ public class Ip_Scann extends AsyncTask<Void, Void, ArrayList<LocalDeviceInfo>>{
 	 
 	 @Override
 	protected void onPreExecute() {
-		// TODO Auto-generated method stub
+		 
 		super.onPreExecute();
 		
 		StaticProgress.showProgressDialog("Please wait while scanning. This may take few minutes ",_context);

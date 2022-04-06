@@ -326,20 +326,20 @@ public class SettingWifiActivity extends BaseActivity implements
 		// @Override
 		// public void onTextChanged(CharSequence s, int start, int before,
 		// int count) {
-		// // TODO Auto-generated method stub
+		//  
 		//
 		// }
 		//
 		// @Override
 		// public void beforeTextChanged(CharSequence s, int start, int count,
 		// int after) {
-		// // TODO Auto-generated method stub
+		//  
 		//
 		// }
 		//
 		// @Override
 		// public void afterTextChanged(Editable s) {
-		// // TODO Auto-generated method stub
+		//  
 		// changeWifiFlag = true;
 		// }
 		// });
@@ -406,7 +406,7 @@ public class SettingWifiActivity extends BaseActivity implements
 
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				// TODO Auto-generated method stub
+				 
 				if (checkedId == rb1.getId()) {
 					wifiBean.setEncryp(0);// 0
 					Log.d("tag", "wifiBean.setEncryp(0)");
@@ -420,7 +420,7 @@ public class SettingWifiActivity extends BaseActivity implements
 
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				// TODO Auto-generated method stub
+				 
 				if (checkedId == rb3.getId()) {
 					wifiBean.setKeyformat(1);// 0
 					Log.d("tag", "wifiBean.setKeyformat(1)");
@@ -499,7 +499,7 @@ public class SettingWifiActivity extends BaseActivity implements
 
 	@Override
 	protected void onStop() {
-		// TODO Auto-generated method stub
+		 
 		/*if (scanDialog != null && scanDialog.isShowing()) {
 			scanDialog.cancel();
 		}*/
@@ -732,7 +732,7 @@ public class SettingWifiActivity extends BaseActivity implements
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		

@@ -85,19 +85,19 @@ public class Moods_Detail_List_Adapter extends BaseAdapter
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return mood_Model_List.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		 
 		return mood_Model_List.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		 
 		return position;
 	}
 

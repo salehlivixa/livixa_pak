@@ -510,7 +510,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 							
 							@Override
 							public void onAnimationRepeat(Animation animation) {
-								// TODO Auto-generated method stub
+								 
 								
 							}
 							
@@ -3336,7 +3336,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 			
 			@Override
 			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
+				 
 				
 			}
 			

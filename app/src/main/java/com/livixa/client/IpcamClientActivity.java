@@ -371,7 +371,7 @@ public class IpcamClientActivity extends BaseActivity implements
 
 						@Override
 						public void run() {
-							// TODO Auto-generated method stub
+							 
 							cameraListView.setVisibility(View.VISIBLE);
 						}
 					});
@@ -380,7 +380,7 @@ public class IpcamClientActivity extends BaseActivity implements
 
 						@Override
 						public void run() {
-							// TODO Auto-generated method stub
+							 
 							cameraListView.setVisibility(View.GONE);
 						}
 					});
@@ -584,7 +584,7 @@ public class IpcamClientActivity extends BaseActivity implements
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				 
 				new GetDataTask().execute();
 			}
 		});
@@ -592,7 +592,7 @@ public class IpcamClientActivity extends BaseActivity implements
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				 
 				Log.d("tag", "screen_width:" + screen_width
 						+ "  screen_height:" + screen_height);
 				if (screen_width > 480 && screen_height > 800) {

@@ -10,7 +10,7 @@ import com.livixa.client.BaseActivity;
 public class OtherMoreFunctionActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		 
 		super.onCreate(savedInstanceState);
 	}
 }

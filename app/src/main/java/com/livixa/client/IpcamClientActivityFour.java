@@ -170,7 +170,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							// pppp_status_disconnect
 							imageView1.setImageBitmap(bitmap_defult);
@@ -204,7 +204,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView2.setImageBitmap(bitmap_defult);
 							showToast(name2
@@ -237,7 +237,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView3.setImageBitmap(bitmap_defult);
 							showToast(name3
@@ -269,7 +269,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView4.setImageBitmap(bitmap_defult);
 							showToast(name4
@@ -487,7 +487,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView1.setImageBitmap(bitmap_defult);
 						}
@@ -519,7 +519,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView2.setImageBitmap(bitmap_defult);
 						}
@@ -550,7 +550,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView3.setImageBitmap(bitmap_defult);
 						}
@@ -581,7 +581,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							super.onPostExecute(result);
 							imageView4.setImageBitmap(bitmap_defult);
 						}
@@ -600,7 +600,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_about.dismiss();
 					}
 				});
@@ -1645,14 +1645,14 @@ public class IpcamClientActivityFour extends BaseActivity implements
 	@Override
 	public void callBackCameraParamNotify(String did, int resolution,
 			int brightness, int contrast, int hue, int saturation, int flip) {
-		// TODO Auto-generated method stub
+		 
 
 	}
 
 	@Override
 	public void callBaceVideoData(String did, byte[] videobuf, int h264Data,
 			int len, int width, int height) {
-		// TODO Auto-generated method stub
+		 
 		// Log.d("tagg", "did==" + did + "Call VideoData...h264Data: " +
 		// h264Data
 		// + " len: " + len + " videobuf len: " + videobuf.length
@@ -1691,7 +1691,7 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 	@Override
 	public void callBackMessageNotify(String did, int msgType, int param) {
-		// TODO Auto-generated method stub
+		 
 		Log.d("test_four", "MessageNotify did: " + did + " msgType: " + msgType
 				+ " param: " + param);
 		if (msgType == 0 && param != 2) {
@@ -1706,19 +1706,19 @@ public class IpcamClientActivityFour extends BaseActivity implements
 
 	@Override
 	public void callBackAudioData(byte[] pcm, int len) {
-		// TODO Auto-generated method stub
+		 
 
 	}
 
 	@Override
 	public void callBackH264Data(byte[] h264, int type, int size) {
-		// TODO Auto-generated method stub
+		 
 
 	}
 
 	@Override
 	public boolean onLongClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		switch (v.getId()) {
 		case R.id.imageView1:
 			// Date date = new Date();

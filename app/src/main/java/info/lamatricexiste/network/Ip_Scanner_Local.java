@@ -390,7 +390,7 @@ public class Ip_Scanner_Local  extends AsyncTask<Void, Void, Boolean>{
 	 
 	 @Override
 	protected void onPostExecute(Boolean result) {
-		// TODO Auto-generated method stub
+		 
 		super.onPostExecute(result);
 		
 		if(scanResult!=null)

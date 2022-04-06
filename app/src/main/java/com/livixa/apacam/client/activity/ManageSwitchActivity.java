@@ -1532,7 +1532,7 @@ public class ManageSwitchActivity extends Activity implements MessageHandlerList
 
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 
 		
@@ -2839,7 +2839,7 @@ runOnUiThread(new Runnable() {
 
 @Override
 public void onsocketConnection(String message) {
-	// TODO Auto-generated method stub
+	 
 	
 }
 
@@ -2913,7 +2913,7 @@ public void onFourTriesFailer(String message) {
 
 @Override
 public void writeMessageReponse(String message) {
-	// TODO Auto-generated method stub
+	 
 	
 }
 

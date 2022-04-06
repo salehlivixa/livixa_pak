@@ -420,7 +420,7 @@ public class SettingMailActivity extends BaseActivity implements
 
 			@Override
 			public void onDismiss() {
-				// TODO Auto-generated method stub
+				 
 				sslPopWindow.dismiss();
 			}
 		});
@@ -474,7 +474,7 @@ public class SettingMailActivity extends BaseActivity implements
 
 			@Override
 			public void onDismiss() {
-				// TODO Auto-generated method stub
+				 
 				smtpPopWindow.dismiss();
 			}
 		});

@@ -94,7 +94,7 @@ public class AllVideoCheckActivity extends BaseActivity {
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		AllVideoCheckActivity.this.finish();

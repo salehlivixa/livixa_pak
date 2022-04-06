@@ -25,7 +25,7 @@ public class HttpImageAsyncUtil extends AsyncTask<String, String, Drawable>{
 
 	@Override
 	protected Drawable doInBackground(String... params) {
-		// TODO Auto-generated method stub
+		 
 		URL url;
 		HttpURLConnection urlConn = null;
 		InputStream is = null;
@@ -49,7 +49,7 @@ public class HttpImageAsyncUtil extends AsyncTask<String, String, Drawable>{
 
 	@Override
 	protected void onPostExecute(Drawable result) {
-		// TODO Auto-generated method stub
+		 
 		super.onPostExecute(result);
 		if(asyncResult != null && result != null){
 			asyncResult.ImageResult(strIpAddr, nPort, result);
@@ -58,13 +58,13 @@ public class HttpImageAsyncUtil extends AsyncTask<String, String, Drawable>{
 
 	@Override
 	protected void onPreExecute() {
-		// TODO Auto-generated method stub
+		 
 		super.onPreExecute();
 	}
 
 	@Override
 	protected void onProgressUpdate(String... values) {
-		// TODO Auto-generated method stub
+		 
 		super.onProgressUpdate(values);
 	}
 	

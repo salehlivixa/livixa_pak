@@ -138,7 +138,7 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		

@@ -156,7 +156,7 @@ public class SwitchConfigurationActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		
 		
 		if(stopFromBackMove)

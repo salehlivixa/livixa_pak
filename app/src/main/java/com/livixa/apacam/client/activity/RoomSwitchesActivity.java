@@ -237,19 +237,19 @@ public class RoomSwitchesActivity extends Activity {
 
 	    @Override
 	    public int getCount() {
-	        // TODO Auto-generated method stub
+	         
 	        return mSwitchModelList.size();
 	    }
 
 	    @Override
 	    public Object getItem(int position) {
-	        // TODO Auto-generated method stub
+	         
 	        return mSwitchModelList.get(position);
 	    }
 	    
 	    
 	    public void addItem(Switch_Model swModel) {
-	        // TODO Auto-generated method stub
+	         
 	    	
 	    	if(mSwitchModelList==null)
 	    	{
@@ -261,7 +261,7 @@ public class RoomSwitchesActivity extends Activity {
 
 	    @Override
 	    public long getItemId(int position) {
-	        // TODO Auto-generated method stub
+	         
 	        return position;
 	    }
 
@@ -344,7 +344,7 @@ public class RoomSwitchesActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		

@@ -205,7 +205,7 @@ public class AllocationWifiActivity extends BaseActivity implements
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
-				// TODO Auto-generated method stub
+				 
 				if (isChecked) {
 					// 如果选中，显示密�?
 					wifiPwd.setTransformationMethod(HideReturnsTransformationMethod

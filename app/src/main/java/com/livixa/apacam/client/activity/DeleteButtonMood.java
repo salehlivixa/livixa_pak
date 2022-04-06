@@ -171,7 +171,7 @@ public class DeleteButtonMood {
 	        
 	        @Override
 	        protected void onPreExecute() {
-	        // TODO Auto-generated method stub
+	         
 	        super.onPreExecute();
 	        
 	        

@@ -70,13 +70,13 @@ public class StartActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
+		 
 		super.onResume();
 		handler.postDelayed(new Runnable() {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
+				 
 				popupWindow_bit.showAtLocation(img, Gravity.CENTER, 0, 0);
 			}
 		}, 2000);
@@ -116,7 +116,7 @@ public class StartActivity extends Activity implements OnClickListener {
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_bit.dismiss();
 					}
 				});
@@ -141,7 +141,7 @@ public class StartActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		switch (v.getId()) {
 		case R.id.button_start_1:
 			SystemValue.SystemSerVer = "EBGAEOBOKHJMHMJMENGKFIEEHBMDHNNEGNEBBCCCBIIHLHLOCIACCJOFHHLLJEKHBFMPLMCHPHMHAGDHJNNHIFBAMC";

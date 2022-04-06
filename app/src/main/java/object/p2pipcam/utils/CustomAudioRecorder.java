@@ -68,7 +68,7 @@ public class CustomAudioRecorder {
 
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
+			 
 			// if (!initRecorder()) {
 			// return;
 			// }
@@ -93,7 +93,7 @@ public class CustomAudioRecorder {
 	}
 
 	public boolean initRecorder() {
-		// TODO Auto-generated method stub
+		 
 		if (mode==2) {
 			m_in_buf_size = AudioRecord.getMinBufferSize(16000,
 					AudioFormat.CHANNEL_CONFIGURATION_MONO,

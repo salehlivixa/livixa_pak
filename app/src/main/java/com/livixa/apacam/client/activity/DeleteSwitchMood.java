@@ -203,7 +203,7 @@ public class DeleteSwitchMood {
 	        
 	        @Override
 	        protected void onPreExecute() {
-	        // TODO Auto-generated method stub
+	         
 	        super.onPreExecute();
 	        
 	        

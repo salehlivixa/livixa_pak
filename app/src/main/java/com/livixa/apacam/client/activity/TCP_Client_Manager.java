@@ -75,25 +75,25 @@ public class TCP_Client_Manager {
 
 						@Override
 						public void onsocketConnectionClosed(String message) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 
 						@Override
 						public void onsocketConnectionFailer(String message) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 
 						@Override
 						public void onSocketConnection(String message) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 
 						@Override
 						public void onSocketSelfClose(String message) {
-							// TODO Auto-generated method stub
+							 
 							
 						}
 		            });

@@ -577,7 +577,7 @@ public class LoginActivity extends Activity implements OnClickListener,
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.btn_login:

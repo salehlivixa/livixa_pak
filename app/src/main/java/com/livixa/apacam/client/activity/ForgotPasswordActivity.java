@@ -147,7 +147,7 @@ public class ForgotPasswordActivity extends Activity implements
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.btn_send_email:
@@ -161,7 +161,7 @@ public class ForgotPasswordActivity extends Activity implements
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		finish();

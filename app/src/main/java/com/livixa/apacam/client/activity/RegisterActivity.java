@@ -664,7 +664,7 @@ public class RegisterActivity extends FragmentActivity implements
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		switch (v.getId()) {
 		case R.id.btn_register:
 			verifyData();
@@ -686,7 +686,7 @@ public class RegisterActivity extends FragmentActivity implements
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		finish();
@@ -1099,7 +1099,7 @@ public class RegisterActivity extends FragmentActivity implements
 	   
 	    @Override
 	    protected void onPostExecute(ArrayList<String> result) {
-	    	// TODO Auto-generated method stub
+	    	 
 	    	super.onPostExecute(result);
 	    	
 	    	WaitingStaticProgress.hideProgressDialog();
@@ -1384,25 +1384,25 @@ public class RegisterActivity extends FragmentActivity implements
 
 	@Override
 	public void onLocationChanged(Location location) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 
 	@Override
 	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 
 	@Override
 	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 
 	@Override
 	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
+		 
 		
 	}
 	
@@ -1537,7 +1537,7 @@ public class RegisterActivity extends FragmentActivity implements
 		
 		@Override
 		protected void onPostExecute(List<Address> addresses) {
-			// TODO Auto-generated method stub
+			 
 			super.onPostExecute(addresses);
 			
 			try

@@ -810,7 +810,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_about.dismiss();
 					}
 				});
@@ -862,7 +862,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_playMore.dismiss();
 					}
 				});
@@ -904,7 +904,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_alerm.dismiss();
 					}
 				});
@@ -948,7 +948,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_frame.dismiss();
 					}
 				});
@@ -986,7 +986,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_re.dismiss();
 					}
 				});
@@ -1022,7 +1022,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_in.dismiss();
 					}
 				});
@@ -1062,7 +1062,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_bit.dismiss();
 					}
 				});
@@ -1274,7 +1274,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
+					 
 					isPictSave = false;
 					showToast(R.string.play_take_pic_show);
 				}
@@ -1599,7 +1599,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
+		 
 		super.onStart();
 	}
 
@@ -1642,7 +1642,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					StartTalk();
 					StopAudio();
@@ -1659,7 +1659,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							try {
 								Thread.sleep(2000);
 							} catch (InterruptedException e) {
@@ -1691,7 +1691,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1110);
 					Log.d("test", "zhaogenghuai ptz up start");
@@ -1706,7 +1706,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1112);
 					Log.d("test", "zhaogenghuai ptz down start");
@@ -1721,7 +1721,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1114);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -1734,7 +1734,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1116);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -1747,7 +1747,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1110);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -1760,7 +1760,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1112);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -1773,7 +1773,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1114);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -1786,7 +1786,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
+				 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
 					NativeCaller.PPPPPTZControl(strDID, 1116);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -2072,7 +2072,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
+		 
 		Log.d("test", "zhaogenghuai onstop");
 		bManualExit = true;
 		if (!bProgress) {
@@ -2144,7 +2144,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 					@Override
 					public void onDismiss() {
-						// TODO Auto-generated method stub
+						 
 						popupWindow_show_you.dismiss();
 					}
 				});
@@ -2208,7 +2208,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							NativeCaller.PPPPPTZControl(strDID,
 									ContentCommon.CMD_PTZ_RIGHT);
 							try {
@@ -2248,7 +2248,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							NativeCaller.PPPPPTZControl(strDID,
 									ContentCommon.CMD_PTZ_LEFT);
 							try {
@@ -2292,7 +2292,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							NativeCaller.PPPPPTZControl(strDID,
 									ContentCommon.CMD_PTZ_DOWN);
 							try {
@@ -2333,7 +2333,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							NativeCaller.PPPPPTZControl(strDID,
 									ContentCommon.CMD_PTZ_UP);
 							try {
@@ -2641,14 +2641,14 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 					new AsyncTask<Void, Void, Void>() {
 						@Override
 						protected void onPreExecute() {
-							// TODO Auto-generated method stub
+							 
 							takeVideoThread.stopThread();
 							super.onPreExecute();
 						}
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 
 							try {
 								Thread.sleep(3000);
@@ -2661,7 +2661,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							ptzTakeVideo
 									.setImageResource(R.drawable.ptz_takevideo);
 							layout_videoing.setVisibility(View.GONE);
@@ -2691,7 +2691,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected void onPreExecute() {
-							// TODO Auto-generated method stub
+							 
 							takeVideoThread = new TakeVideoThread(isH264Data,
 									strDID, frame, nVideoWidth, nVideoHeight);
 							takeVideoThread.start();
@@ -2700,7 +2700,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected Void doInBackground(Void... params) {
-							// TODO Auto-generated method stub
+							 
 							try {
 								Thread.sleep(6000);
 							} catch (InterruptedException e) {
@@ -2712,7 +2712,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 						@Override
 						protected void onPostExecute(Void result) {
-							// TODO Auto-generated method stub
+							 
 							ptz_takevideo_progress.setVisibility(View.GONE);
 							ptzTakeVideo.setVisibility(View.VISIBLE);
 							ptzTakeVideo
@@ -3229,7 +3229,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
+				 
 				ptz_frame.setText(frame + "FPS");
 				// ptzResolutoin.sett
 				if (ircut1 == 0) {
@@ -3278,7 +3278,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
+					 
 					ptzVertMirror2.setImageResource(R.drawable.ptz_vert_mirror);
 					ptzHoriMirror2.setImageResource(R.drawable.ptz_hori_mirror);
 				}
@@ -3292,7 +3292,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
+					 
 					ptzHoriMirror2.setImageResource(R.drawable.ptz_hori_mirror);
 					ptzVertMirror2
 							.setImageResource(R.drawable.ptz_vert_mirror_press);
@@ -3306,7 +3306,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
+					 
 					ptzHoriMirror2
 							.setImageResource(R.drawable.ptz_hori_mirror_press);
 					ptzVertMirror2.setImageResource(R.drawable.ptz_vert_mirror);
@@ -3320,7 +3320,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
+					 
 					ptzVertMirror2
 							.setImageResource(R.drawable.ptz_vert_mirror_press);
 					ptzHoriMirror2
@@ -3478,7 +3478,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 	@Override
 	public void callBackDatetimeParams(String did, int now, int tz,
 			int ntp_enable, String ntp_svr, int xialingshi) {
-		// TODO Auto-generated method stub
+		 
 		setTimeZone(tz);
 		Log.d("tag", "timestr:" + tzStr + "  tz:" + tz);
 	}
@@ -3486,7 +3486,7 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 	@Override
 	public void callBackSetSystemParamsResult(String did, int paramType,
 			int result) {
-		// TODO Auto-generated method stub
+		 
 
 	}
 

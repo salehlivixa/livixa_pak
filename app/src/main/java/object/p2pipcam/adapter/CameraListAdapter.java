@@ -133,7 +133,7 @@ public class CameraListAdapter extends BaseAdapter {
 				public void onClick(View v) {
 					
 					
-					// TODO Auto-generated method stub
+					 
 					if (ipcamClientActivity != null) {
 						ipcamClientActivity.showSetting(position);
 					}	

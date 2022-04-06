@@ -39,25 +39,25 @@ public class SearchListAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return listItems.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		 
 		return null;
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		 
 		return 0;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
+		 
 		
 		SearchListItem  searchListItem = null; 		
 		if(convertView == null){
@@ -112,7 +112,7 @@ public class SearchListAdapter extends BaseAdapter {
 	 * @return
 	 */
 	private boolean CheckCameraInfo(String mac) {
-		// TODO Auto-generated method stub
+		 
 		//�����б?����Ƿ�����ͬmac��ַ�������
 		int size = listItems.size();
 		int i;
@@ -126,7 +126,7 @@ public class SearchListAdapter extends BaseAdapter {
 	}
 
 	public Map<String, Object> getItemContent(int pos) {
-		// TODO Auto-generated method stub
+		 
 		if(pos > listItems.size()){
 			return null;
 		}

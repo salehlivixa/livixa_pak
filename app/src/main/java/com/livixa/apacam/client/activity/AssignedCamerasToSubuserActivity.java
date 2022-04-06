@@ -109,7 +109,7 @@ public class AssignedCamerasToSubuserActivity extends Activity  {
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		 finish();
 		 Intent intent = new Intent(this, Add_OR_Edit_UserActivity.class);
@@ -140,7 +140,7 @@ public class AssignedCamerasToSubuserActivity extends Activity  {
 	
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
+		 
 		super.onDestroy();
 		
 		

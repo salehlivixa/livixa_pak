@@ -117,7 +117,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	
 	@Override
 	protected void onPostResume() {
-		// TODO Auto-generated method stub
+		 
 		super.onPostResume();
 		
 		
@@ -341,7 +341,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		 
 		switch (v.getId()) {
 		case R.id.btn_register:
 			verifyData();
@@ -384,7 +384,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
+		 
 		super.onBackPressed();
 		
 		finish();
@@ -586,7 +586,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	   
 	    @Override
 	    protected void onPostExecute(ArrayList<String> result) {
-	    	// TODO Auto-generated method stub
+	    	 
 	    	super.onPostExecute(result);
 	    	
 	    	WaitingStaticProgress.hideProgressDialog();
@@ -770,7 +770,7 @@ ArrayList<String>  citesArray=new ArrayList<>();
 		
 		@Override
 		protected void onPostExecute(List<Address> addresses) {
-			// TODO Auto-generated method stub
+			 
 			super.onPostExecute(addresses);
 			
 			try

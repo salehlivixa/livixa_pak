@@ -36,7 +36,7 @@ public class SettingListAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+		 
 		return listItems.size();
 	}
 

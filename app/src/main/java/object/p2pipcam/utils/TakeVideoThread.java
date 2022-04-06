@@ -108,7 +108,7 @@ public class TakeVideoThread extends Thread {
 	}
 
 	public void stopThread() {
-		// TODO Auto-generated method stub
+		 
 		isStart = false;
 		video_i = 0;
 		NativeCaller.CloseAvi(szDid);
@@ -116,7 +116,7 @@ public class TakeVideoThread extends Thread {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		 
 		while (isStart) {
 			Log.e("test", "video start:" + isStart);
 			video_i++;
