@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:background="#F2F2F2">
+<RelativeLayout
+    
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+   
+    >    
+    
+    <LinearLayout  android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center_horizontal"
+                   android:id="@+id/startLy"
+                   android:layout_width="80dp"
+        >
+        
+        
+        <LinearLayout 
+            android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="20dp"
+                   android:gravity="center"
+                    android:layout_width="wrap_content">
+                    
+            <ImageView android:layout_height="45dp"
+           
+            android:src="@drawable/sub_user_contact_icon"
+                    android:layout_width="45dp"/>
+        <TextView 
+        android:id="@+id/tv_subUserName"
+        android:layout_width="wrap_content"
+        android:textColor="#686871"
+        android:textSize="11dp"
+        android:singleLine="false"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:gravity="center"
+        android:text="abcddddddddhhhh"
+        
+        android:rotationY="180"
+       
+        android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+    <LinearLayout android:layout_height="match_parent"
+        android:background="#F15A24"
+                   android:layout_marginTop="12dp"
+                   android:layout_marginRight="4dp"
+                   android:orientation="vertical"
+                   android:layout_marginBottom="12dp"
+                   android:layout_toRightOf="@id/startLy"
+                   android:layout_width="match_parent">
+        
+         <object.p2pipcam.system.MyTextView
+            android:id="@+id/camName"
+            android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+            android:background="#221236"
+            android:gravity="center_vertical|right"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/Username"
+            android:rotationY="180"
+            android:textColor="@color/white" />
+         <object.p2pipcam.system.MyTextView
+            android:id="@+id/camID"
+             android:rotationY="180"
+            android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+            android:background="#3EA9FB"
+            android:gravity="center_vertical|right"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/Email"
+            android:textColor="@color/white" />
+         <object.p2pipcam.system.MyTextView
+            android:id="@+id/camSettingStatus"
+            android:paddingLeft="10dp"
+            android:rotationY="180"
+            android:paddingRight="10dp"
+            android:background="#F4BA28"
+            android:gravity="center_vertical|right"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/RoomTitle"
+            android:textColor="@color/white" />
+       
+    </LinearLayout>
+    
+</RelativeLayout>
+</LinearLayout>

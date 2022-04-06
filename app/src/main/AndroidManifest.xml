@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.livixa.client">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_SURFACE_FLINGER"
+        tools:ignore="ProtectedPermissions"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.livixa.apacam.client.base.KisafaApplication"
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_new"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KisafaSmartHome"
+        tools:ignore="HardcodedDebugMode">
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="mytest.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.livixa.apacam.dbmodel.Camera_Model,com.livixa.apacam.client.response.login.SUB_USER_DB,com.livixa.apacam.dbmodel.User_Camera_Model,com.livixa.apacam.dbmodel.Switch_Model,com.livixa.apacam.dbmodel.Room_Model" />
+        <activity
+            android:name="com.espressif.iot.esptouch.demo_activity.EsptouchDemoActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.SplashActivity"
+            android:label="@string/app_name_new"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.AssignedCamerasToSubuserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.UpdateProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.RegisterActivityForSubUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateUnspecified|stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Camera Activities -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustUnspecified"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IpcamClientActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustUnspecified"></activity>
+        <activity
+            android:name=".AllocationWifiActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="allocationwifi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".AddCameraActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Add Camera"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".PlayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="play"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name=".PlayActivitySport"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="play"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="about"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="setting"
+
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".ShowLocalVideoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="localvideopicture"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".LocalPictureListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="LocalPicture"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".ShowLocalPictureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="ShowLocPicture"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingWifiActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="WifiSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingUserActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="UserSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingFtpActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="FtpSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingAlarmActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingMailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingDNSActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingNetworkActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingDateActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".SettingUserTimeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".AlarmLogActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".PlayBackTFActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".PlayBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".ShowLocalPicGridActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".AlarmActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".PictureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".VideoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name="object.p2pipcam.zxingtwodimensioncode.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".SettingSDCardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity
+            android:name=".StartActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <service
+            android:name=".BridgeService"
+            android:stopWithTask="true"></service>
+
+        <activity
+            android:name="com.livixa.apacam.client.other.AllPicterCheckActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.other.AllVideoCheckActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".IpcamClientActivityFourTest"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustUnspecified"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.Add_OR_Edit_UserActivity"
+            android:label="@string/title_activity_add__or__edit__user"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.CameraAssignedToSubusersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.RoomAssignedToSubusersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+
+        <service android:name="com.livixa.apacam.services.Sync_Service"></service>
+
+        <activity
+            android:name="com.livixa.apacam.client.activity.Add_Edit_RoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="com.livixa.apacam.client.activity.Energy_RoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="com.livixa.apacam.client.activity.View_RoomsActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.Moods_View_RoomsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.AssignedRoomtoSubuserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.Add_Edit_SwitchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.RoomActivity"
+            android:label="@string/title_activity_room"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.RoomSwitchesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.MoodsRoomWithSwitchesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.RoomAndSwitchesTCPActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.Moods_RoomAndSwitchesTCPActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.SwitchConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.ESP_REsult_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="com.livixa.apacam.client.activity.SwitchScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name="info.lamatricexiste.network.ActivityMain"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity
+            android:name="info.lamatricexiste.network.ActivityDiscovery"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ActivityPortscan"
+            android:configChanges="keyboard|keyboardHidden"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".SCAN_HOST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                  Extras:
+                    HostBean.EXTRA_HOST         Host to scan: i.e. scanme.nmap.org or an IP
+                    HostBean.EXTRA_POSITION     Integer that will be put to the result intent
+                    HostBean.EXTRA_TIMEOUT      Maximum time a port can be reached, AKA scan rate
+                    HostBean.EXTRA_PORTSO       Integer array of already know open ports for this host
+                    HostBean.EXTRA_PORTSC       Integer array of already know closed ports for this host
+
+
+                -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Utils.Prefs"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Utils.Help"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.ManageSwitchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <service android:name="com.livixa.apacam.services.TCP_Client_Service"></service>
+
+        <activity
+            android:name="com.livixa.apacam.client.activity.DateAndTimePickerForMoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.DateAndTimePickerForAwayMoodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.Moods_Display_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDatePickerTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.livixa.apacam.client.activity.TariffMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="com.livixa.apacam.client.activity.EnergyRoomAndSwitchesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <receiver android:name="info.lamatricexiste.network.Utils.SystemDialogReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

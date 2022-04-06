@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+    
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+       android:scrollbarThumbVertical="@drawable/tt_bg"
+        android:layout_height="match_parent">
+
+        
+        <RelativeLayout
+   
+    		android:layout_width="match_parent"
+   			 android:layout_height="match_parent"
+    >
+        
+    
+        <RelativeLayout
+            android:id="@+id/loginSc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_max_x_large7more"
+                android:src="@drawable/logo" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/logo"
+                android:layout_marginLeft="@dimen/margin_max_x_large4"
+                android:layout_marginTop="@dimen/margin_max_x_large8more" >
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/padding_normal"
+                    android:paddingTop="@dimen/padding_normal"
+                    android:text="@string/Sign_In"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_extra_large"
+                    app:CustomFontFamily="MYR_PRO" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large_extra_half"
+                    android:layout_toRightOf="@id/tv_sign_in"
+                    android:text=">"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_extra_large" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large_extra_half"
+                    android:layout_toRightOf="@id/iv_arrow"
+                    android:paddingBottom="@dimen/padding_normal"
+                    android:paddingTop="@dimen/padding_normal"
+                    android:text="@string/Sign_Up"
+                    android:textColor="@color/white_opc_50"
+                    android:textSize="@dimen/font_large_extra"
+                    app:CustomFontFamily="MYR_PRO" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_sign"
+                android:layout_marginLeft="@dimen/margin_max_x_large4"
+                android:layout_marginRight="@dimen/margin_max_x_large4"
+                android:layout_marginTop="@dimen/margin_max_x_large4"
+                android:background="@drawable/bg_txt_field"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/iv_grp_view"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:src="@drawable/icon_person" />
+
+                <View
+                    android:layout_width="@dimen/margin_basic"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:background="@color/color_white" />
+
+                <com.livixa.apacam.client.widget.CustomEditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@null"
+                    android:hint="@string/UserNameHint"
+                    android:inputType="text"
+                    android:paddingRight="@dimen/padding_large"
+                    android:paddingBottom="@dimen/padding_normal"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_normal"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:textSize="@dimen/font_large"
+                    app:CustomFontFamily="Light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_user_name"
+                android:layout_marginLeft="@dimen/margin_max_x_large4"
+                android:layout_marginRight="@dimen/margin_max_x_large4"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/bg_txt_field"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/iv_grp_view"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:src="@drawable/icon_key" />
+
+                <View
+                    android:layout_width="@dimen/margin_basic"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:background="@color/color_white" />
+
+                <com.livixa.apacam.client.widget.CustomEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@null"
+                    android:hint="@string/UserPassHint"
+                    android:inputType="textPassword"
+                    android:paddingBottom="@dimen/padding_normal"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_normal"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:textSize="@dimen/font_large"
+                    app:CustomFontFamily="Light" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/ll_password"
+                android:layout_marginLeft="@dimen/margin_max_x_large4"
+                android:layout_marginRight="@dimen/margin_max_x_large4"
+                android:layout_marginTop="@dimen/margin_extra_large" >
+
+                <com.livixa.apacam.client.widget.CustomButton
+                    android:id="@+id/btn_login"
+                    style="@style/ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_rect_sky_blue"
+                    android:text="@string/Login"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_large"
+                    app:CustomFontFamily="Regular" />
+
+                <View
+                    android:id="@+id/v_view"
+                    android:layout_width="@dimen/margin_basic"
+                    android:layout_height="@dimen/margin_max_x_large2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_extra_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_toRightOf="@id/btn_login"
+                    android:background="@color/color_white" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_toRightOf="@id/v_view"
+                    android:paddingBottom="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_large"
+                    android:text="@string/ForgotPassword"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_normal"
+                    app:CustomFontFamily="Light" />
+            </RelativeLayout>
+        </RelativeLayout>
+   
+   <LinearLayout android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:gravity="center"
+                 android:id="@+id/tv_message_lyout"
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:orientation="vertical">   
+        
+   <com.livixa.apacam.client.widget.CustomTextView
+       
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="Please wait while your data is \n  being downloaded!"
+                    android:textColor="@color/color_white"
+                    android:textSize="18dp"
+                    app:CustomFontFamily="Bold" />
+   <View android:layout_height="100dp"
+         android:layout_width="match_parent"/>
+   
+   </LinearLayout> 
+   </RelativeLayout> 
+   
+   </ScrollView>
+
+</RelativeLayout>

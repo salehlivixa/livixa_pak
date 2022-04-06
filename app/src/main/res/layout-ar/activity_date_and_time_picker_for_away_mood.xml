@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:onClick="onbackClick"
+                    android:clickable="true"
+                    android:rotation="180"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_title"
+                   android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/Away"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_large_extra"
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    
+                    android:clickable="true"
+                    android:onClick="onhomeButttonClick"
+                    android:layout_marginBottom="-10dp"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/home" />
+            </RelativeLayout>
+            
+            
+            
+            
+            
+            <LinearLayout 
+                     android:gravity="center"
+                    android:layout_width="match_parent"
+                   
+                    
+                    android:orientation="vertical"
+                    android:layout_height="235dp"
+                    >
+                
+                <LinearLayout android:layout_height="51dp"
+                              android:orientation="horizontal"
+                              android:layout_width="300dp">
+
+                    <LinearLayout
+                        android:id="@+id/timeTab"
+                        android:layout_width="147dp"
+                        android:layout_height="51dp"
+                        
+                        android:background="@drawable/calender_tab_left"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="onEndTimeTabClick"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/endTimeTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center"
+                                android:text="End Time: 13:58"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/endTimeSelected"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:background="#61ABE8"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                   
+                    <LinearLayout android:layout_height="match_parent" 
+                                   android:background="@drawable/calender_tab_right"
+                                   android:orientation="vertical"
+                                   android:id="@+id/dateTab"
+                                   android:clickable="true"
+                                   android:layout_marginLeft="6dp"
+                                   android:onClick="onStartTimeTabClick"
+                                  android:layout_width="147dp">
+                         <LinearLayout android:layout_height="45dp" 
+                                   
+                                  android:layout_width="match_parent">
+                                  
+                         <TextView android:layout_height="wrap_content"
+                                   android:text="Start Time: 13:55"
+                                   android:id="@+id/startTimeTV"
+                                   android:layout_gravity="center"
+                                   android:gravity="center"
+                                   android:layout_marginLeft="8dp"
+                                   android:textColor="@color/black"
+                                   android:layout_width="match_parent"/>
+                         
+                         
+                        
+                         
+                        </LinearLayout>
+                        
+                         <View android:layout_height="6dp"
+                                android:id="@+id/startTimeSelected"
+                                android:background="#61ABE8"
+                                android:layout_width="match_parent">
+                             
+                         </View>
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                    android:id="@+id/dateContainer"
+                    android:layout_width="300dp"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="1dp"
+			        android:orientation="vertical"
+			        android:layout_height="150dp" >
+                    
+                </LinearLayout> -->
+               <TimePicker
+			        android:id="@+id/tp1"
+			        android:layout_width="300dp"
+			        android:paddingTop="5dp"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="1dp"
+			        android:layout_height="150dp"
+			       android:timePickerMode="spinner"
+			        android:visibility="visible"
+			         android:descendantFocusability="blocksDescendants"
+			        style="@style/CustomDatePickerTheme"
+			        android:background="#E0E0E0"
+			        android:calendarViewShown="false"
+			        />
+               <TimePicker
+			        android:id="@+id/tp2"
+			        android:layout_width="300dp"
+			        android:paddingTop="5dp"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="1dp"
+			        android:layout_height="150dp"
+			        android:timePickerMode="spinner"
+			        android:visibility="gone"
+			         android:descendantFocusability="blocksDescendants"
+			        style="@style/CustomDatePickerTheme"
+			        android:background="#E0E0E0"
+			        android:calendarViewShown="false"
+			        />
+               
+               
+                
+               
+                    
+                </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <LinearLayout 
+                     android:gravity="center"
+                    android:layout_width="match_parent"
+                   
+                    
+                    android:orientation="vertical"
+                    android:layout_height="270dp"
+                    >
+                
+                <LinearLayout android:layout_height="51dp"
+                              android:orientation="horizontal"
+                              android:layout_width="300dp">
+
+                    <LinearLayout
+                        android:id="@+id/timeTab"
+                        android:layout_width="147dp"
+                        android:layout_height="51dp"
+                        
+                        android:background="@drawable/calender_tab_left"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="onSetEndDurationTabClick"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/offDurationTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center"
+                                android:text="Off Duration: 1 Mins"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/endDurationSelected"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:background="#61ABE8"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                   
+                    <LinearLayout android:layout_height="match_parent" 
+                                   android:background="@drawable/calender_tab_right"
+                                   android:orientation="vertical"
+                                   android:id="@+id/dateTab"
+                                   android:clickable="true"
+                                   android:layout_marginLeft="6dp"
+                                   android:onClick="onSetStartDurationTabClick"
+                                  android:layout_width="147dp">
+                         <LinearLayout android:layout_height="45dp" 
+                                   
+                                  android:layout_width="match_parent">
+                                  
+                         <TextView android:layout_height="wrap_content"
+                                   android:text="On Duration: 1 Mins"
+                                   android:id="@+id/onDurationTV"
+                                   android:layout_gravity="center"
+                                   android:layout_marginLeft="8dp"
+                                   android:textSize="12dp"
+                                    android:gravity="center"
+                                   android:textColor="@color/black"
+                                   android:layout_width="match_parent"/>
+                         
+                         
+                        
+                         
+                        </LinearLayout>
+                        
+                         <View android:layout_height="6dp"
+                                android:id="@+id/startDurationSelected"
+                                android:background="#61ABE8"
+                                android:layout_width="match_parent">
+                             
+                         </View>
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateContainer"
+                    android:layout_width="300dp"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="1dp"
+			        android:orientation="horizontal"
+			        android:background="#E0E0E0"
+			        android:gravity="center"
+			        android:layout_height="150dp" >
+                    
+                    
+                    
+                    <NumberPicker
+			        android:id="@+id/numberPicker1"
+			        android:layout_width="wrap_content"
+			        
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="1dp"
+			        android:layout_height="145dp"
+			       
+			        android:datePickerMode="spinner"
+			        android:visibility="visible"
+			        android:descendantFocusability="blocksDescendants"
+			        style="@style/CustomDatePickerTheme"
+			        android:background="#E0E0E0"
+			        android:calendarViewShown="false"
+			        /> 
+               
+	              <NumberPicker
+				        android:id="@+id/numberPicker2"
+				        android:layout_width="wrap_content"
+				         android:descendantFocusability="blocksDescendants"
+				        android:layout_marginTop="5dp"
+				        android:layout_marginBottom="1dp"
+				        android:layout_height="145dp"
+				       
+				        android:visibility="gone"
+				        
+				        style="@style/CustomDatePickerTheme"
+				        android:background="#E0E0E0"
+				        android:calendarViewShown="false"
+				        /> 
+               
+                    
+                    
+                    
+                </LinearLayout> 
+               
+                <LinearLayout android:layout_height="45dp"
+                             android:background="@drawable/calender_bottom_bg"
+                              android:gravity="center"
+                              android:orientation="horizontal"
+                              android:layout_width="300dp">
+                    
+                   
+                    
+                    <TextView android:layout_height="30dp"
+                              android:text="@string/OK"
+                              android:textColor="@color/black"
+                              android:textSize="18dp"
+                              android:clickable="true"
+                              android:gravity="center"
+                              android:onClick="onOkClick"
+                              android:layout_width="40dp"/>
+                    
+                    <LinearLayout android:layout_height="match_parent"
+                                  android:gravity="center"
+                                  android:layout_width="170dp">
+                        
+                        <CheckBox android:layout_height="40dp"
+                            android:id="@+id/reapeatCB"
+                                  android:checked="true"
+                                  android:clickable="false"
+                                  android:focusableInTouchMode="false"
+                                  android:focusable="false"
+                                  android:layout_width="wrap_content"/>
+                        
+                        <TextView android:layout_height="wrap_content"
+                              android:text="@string/Repeat"
+                              android:textColor="@color/black"
+                              android:textSize="18dp"
+                              
+                              android:layout_width="wrap_content"/>
+                        
+                    </LinearLayout>
+                    
+                     <TextView android:layout_height="wrap_content"
+                              android:text="@string/Cancel"
+                              android:textColor="@color/black"
+                              android:clickable="true"
+                              android:onClick="onCancelClick"
+                              android:textSize="18dp"
+                              android:layout_width="wrap_content"/>
+                    
+                </LinearLayout>
+               
+                    
+                </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             </LinearLayout>
+   
+</RelativeLayout>

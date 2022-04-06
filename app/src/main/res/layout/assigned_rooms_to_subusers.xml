@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:onClick="onbackButttonClick"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_title"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/Rooms"
+                    android:layout_marginBottom="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                   
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                     android:clickable="true"
+                    android:onClick="onhomeButttonClick"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-10dp"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/home" />
+            </RelativeLayout>
+            
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="0dp"
+                         
+                          android:weightSum="5"
+                          android:orientation="vertical"
+                          android:layout_weight="2"
+                >
+                
+                <LinearLayout 
+                     android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    >
+                    
+                     <ImageView
+                android:id="@+id/logo"
+                android:layout_width="130dp"
+                
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/margin_max_x_large2"
+                android:src="@drawable/logo" />
+                    
+                </LinearLayout>
+
+           
+            
+            </LinearLayout>
+            
+           <!--  // -->
+           
+           
+           
+           
+           
+           <RelativeLayout android:layout_width="match_parent"
+                android:layout_weight="8"
+                            android:layout_height="0dp">
+                
+           
+            
+            <GridView 
+                android:id="@+id/roomsGridView"
+                android:visibility="visible"
+                android:numColumns="2"
+                android:listSelector="@android:color/transparent"
+                android:stretchMode="spacingWidthUniform"
+                android:gravity="center"
+                android:columnWidth="130dp"
+                android:verticalSpacing="10dp"
+                android:layout_width="300dp"
+                android:scrollbars="none"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent">
+            
+            
+       
+            </GridView>
+            <RelativeLayout 
+                android:id="@+id/roomsEmptylayout"
+                android:layout_weight="8"
+                android:visibility="gone"
+               
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+               <ImageView android:layout_height="150dp"
+                          android:alpha="0.08"
+                          android:layout_centerInParent="true"
+                        android:src="@drawable/exclamation_mark"
+                          android:layout_width="150dp"/>
+                <com.livixa.apacam.client.widget.CustomTextView
+                  
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/Noroomsaddedyet"
+                    
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+               
+           </RelativeLayout>
+           
+            
+            
+            
+             </RelativeLayout>
+          
+            
+            
+             </LinearLayout>
+   
+</RelativeLayout>

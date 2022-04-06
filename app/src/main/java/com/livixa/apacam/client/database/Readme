@@ -1,0 +1,15 @@
+DaoMaster:
+Add dao in createAllTables function.
+Add dao in dropAllTables function.
+Register dao class in DaoMaster constructor.
+
+DaoSession:
+Define new dao class config and object in constructor.
+Define a getter for new class dao.
+
+DaoSessionMaster:
+nothing to do in case of new class
+
+
+Note:
+create a new table class with all attributes of the table

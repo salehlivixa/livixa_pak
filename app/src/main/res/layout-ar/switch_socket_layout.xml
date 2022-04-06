@@ -1,0 +1,90 @@
+
+<RelativeLayout 
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/switch_socket_layoutt"
+    android:layout_width="match_parent">
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+                
+                android:orientation="vertical"
+                 android:gravity="center"
+                android:layout_height="match_parent">
+                
+           
+            <ImageView android:layout_height="90dp"
+                        
+                         android:id="@+id/switchIcon"
+                        android:src="@drawable/socket_button_switch"
+                        android:layout_width="90dp"/>
+            <TextView android:layout_height="wrap_content"
+                         android:id="@+id/switchTitle"
+                        android:textColor="#FFFFFF"
+                        android:text="switch"
+                        android:layout_marginTop="3dp"
+                        android:textSize="20dp"
+                       android:layout_width="wrap_content"/>
+            
+            <RelativeLayout android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:layout_width="match_parent">
+                     
+                <LinearLayout android:layout_height="wrap_content"
+                    			android:orientation="vertical"
+                    			android:gravity="center"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="wrap_content">
+                     
+                <TextView android:layout_height="wrap_content"
+                          android:textColor="#ffffff"
+                         
+                          android:id="@+id/onTV"
+                          android:text="ON"
+                          android:layout_marginBottom="10dp"
+                          android:layout_width="wrap_content"/>
+                
+                <ImageView android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                       
+                        android:src="@drawable/rotating_image_off"
+                        android:id="@+id/acFrame"
+                        android:layout_width="200dp"/>
+                
+                <TextView android:layout_height="wrap_content"
+                          android:textColor="#ffffff"
+                          android:layout_marginTop="10dp"
+                          android:text="OFF"
+                          android:id="@+id/offTV"
+                          android:layout_centerInParent="true"
+                          android:layout_width="wrap_content"/>
+                
+                </LinearLayout>
+                
+                
+                
+                 <ImageView android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                       
+                        android:src="@drawable/icon_socket"
+                        android:id="@+id/acIcon"
+                        android:layout_width="35dp"/>
+                
+                <ImageView android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                       
+                        android:src="@drawable/icon_ac_socket_on"
+                        android:id="@+id/onStatusbar"
+                        android:layout_width="200dp"/>
+                
+                
+            </RelativeLayout>
+              
+            
+            
+            
+             </LinearLayout>
+             </RelativeLayout>
+          
+            

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="@dimen/margin_large"
+    android:layout_marginRight="@dimen/margin_large"
+    android:background="@drawable/bg_add_camera"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="@dimen/padding_normal" >
+
+    <LinearLayout
+        android:id="@+id/linear_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgBtnPPPPSetting"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:focusable="false"
+            android:scaleType="center"
+            android:src="@drawable/setting_btn_no" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/linear_for" >
+
+        
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+          android:layout_toLeftOf="@id/imgSnapshot"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="3dip"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip" >
+
+            <TextView
+                android:id="@+id/cameraDevName"
+                
+                android:layout_width="fill_parent"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/font_large" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView
+                     
+                    android:id="@+id/textPPPPStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3px"
+                    android:text="initialing"
+                    android:textColor="@color/color_blue"
+                    android:textSize="12sp" />
+                <TextView
+                     
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/device_status_name"
+                    android:textColor="@color/color_black"
+                    android:textSize="12sp" />
+
+                
+            </LinearLayout>
+
+            <TextView
+                 
+                android:id="@+id/cameraDevID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:gravity="right"
+                android:layout_marginLeft="3px"
+                android:textColor="@color/color_less_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/imgSnapshot"
+             android:background="@drawable/button_selector_common"
+            android:layout_width="@dimen/msg_img"
+            android:layout_height="@dimen/msg_img"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:padding="@dimen/margin_normal" />
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>

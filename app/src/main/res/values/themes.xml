@@ -1,0 +1,116 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KisafaSmartHome" parent="@android:style/Theme.NoTitleBar">
+        <!-- Primary brand color. -->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MD_Light" parent="Theme_Light_Dialog">
+        <item name="md_divider">@color/md_divider_black</item>
+        <item name="md_selector">@drawable/md_selector</item>
+        <item name="md_btn_selector">@drawable/md_btn_selector</item>
+
+    </style>
+
+    <style name="MD_Dark" parent="android:Theme.Dialog">
+        <item name="md_divider">@color/md_divider_white</item>
+        <item name="md_selector">@drawable/md_selector_dark</item>
+        <item name="md_btn_selector">@drawable/md_btn_selector_dark</item>
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MD_ActionButtonStacked" parent="@style/MD_ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+
+        <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internalexternal</item>
+        <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internalexternal
+        </item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+    <style name="MD_ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@android:string/ok</item>
+        <item name="android:textSize">@dimen/md_button_textsize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+
+        <item name="android:layout_height">@dimen/md_button_height</item>
+        <item name="android:minWidth">@dimen/md_button_min_width</item>
+
+    </style>
+
+    <!-- Light dialog theme for devices prior Honeycomb -->
+    <style name="Theme_Light_Dialog" parent="android:Theme.Light">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="SnackBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- <item name="android:layout_gravity">bottom</item> -->
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/sb__snack_bkgnd</item>
+        <item name="android:clickable">true</item>
+        <!-- <item name="android:layout_alignParentBottom">true</item> -->
+    </style>
+
+
+    <style name="SnackBar.Container">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="SnackBar.Message">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/vertical_margin_top</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin_bottom</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="SnackBar.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/vertical_margin_top</item>
+        <item name="android:paddingBottom">@dimen/vertical_margin_bottom</item>
+        <item name="android:textColor">@color/sb__default_button_text_color</item>
+        <item name="android:editable">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="CustomDialogSnack" parent="android:Theme.Dialog">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

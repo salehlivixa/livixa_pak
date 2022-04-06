@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_bg_style"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/wifi_cancel"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxWidth="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="150dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text="@string/setting_wifi"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/wifi_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:maxWidth="100dp"
+            android:minWidth="55dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                   
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp" >
+
+                        <TextView
+                            android:id="@+id/ssid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="SSID:"
+                            
+                            android:textColor="@color/color_black"
+                            android:visibility="visible" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/wifi_tv_name"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_alignTop="@+id/ssid"
+                            android:layout_marginLeft="5dp"
+                            
+                            android:layout_toRightOf="@+id/ssid"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="130dp"
+                            android:minWidth="50dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/color_black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/wifi_img_drop"
+                          
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/abs__spinner_ab_default_holo_light"
+                            android:visibility="gone" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/wifi_tv_prompt"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="130dp"
+                            android:minWidth="50dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/color_black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@color/color_grey" />
+
+                    <LinearLayout
+                        android:id="@+id/wifi_sigalview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/wi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifi_signal_strong"
+                            android:textColor="@color/color_black" />
+
+                        <TextView
+                            android:id="@+id/wifi_tv_sigal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/connecting"
+                            android:textColor="@color/color_black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wifi_safe_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <object.p2pipcam.system.MyTextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/wifi_safe"
+                        android:textColor="@color/color_black" />
+
+                    <TextView
+                        android:id="@+id/wifi_tv_safe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/color_black" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/wifi_btn_manger"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/newbuttonall"
+                    android:text="@string/wifi_manager" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wifi_pwd_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_white_corner"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/password"
+                        android:textColor="@color/color_black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/wifi_edit_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_bg"
+                        android:inputType="textPassword"
+                        android:maxLength="128"
+                        android:singleLine="true"
+                        android:textColor="@color/color_black" >
+                    </EditText>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@color/color_grey"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp" >
+                    
+               
+                <CheckBox
+                    android:id="@+id/wifi_cbox_show_pwd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    
+                    android:background="@drawable/check_box_selector"
+                    android:button="@null"
+                    />
+                
+                <TextView android:layout_height="wrap_content"
+                           android:text="@string/showpwd"
+                           android:layout_gravity="bottom"
+                           android:layout_marginLeft="3dp"
+                           android:textColor="@color/color_black" 
+                          android:layout_width="wrap_content"/>
+                
+                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wep_show1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:checkedButton="@+id/rad1"
+                        android:text="@string/wifi_setting_safe"
+                        android:textColor="@color/color_black"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/group1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/wifi_setting_safe_open"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rb2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifi_setting_safe_all"
+                            android:textColor="#000000" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wep_show2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/wifi_setting_pass_format"
+                        android:textColor="@color/color_black"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/group2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/rad4"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifi_setting_pass_format_as"
+                            android:textColor="#000000" />
+
+                        <RadioButton
+                            android:id="@+id/rb4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/wifi_setting_pass_format_16"
+                            android:textColor="#000000" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/wifi_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_white_corner"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/color_divider"
+                android:dividerHeight="1dp"
+                android:footerDividersEnabled="false"
+                android:listSelector="#00000000"
+                android:visibility="gone" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

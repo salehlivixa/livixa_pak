@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="#00ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        
+    <LinearLayout android:layout_height="200dp"
+                   android:orientation="vertical"
+                   android:gravity="center"
+                   android:background="@color/progress_bg"
+                   android:layout_width="250dp">
+
+        <com.livixa.apacam.customprogressbar.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            app:indicatorName="BallPulseIndicator"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            style="@style/AVLoadingIndicatorView.Large"
+            />
+        
+        <TextView 
+                  android:id="@+id/progressTV"
+                  android:layout_height="wrap_content"
+                  android:textSize="18dp"
+                  android:layout_marginTop="20dp"
+                  android:gravity="center"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:textColor="#FFFFFF"
+                  android:layout_width="wrap_content"
+                  android:text="Abc test jjsnxkljch sdkjf. s,dkv.l hhhhh jjjjkjk"
+                  android:layout_gravity="center"/>
+
+        
+        </LinearLayout>
+
+    </LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/screen_faded"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+
+        
+
+   
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_margin="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_border_light_gray"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                
+                 android:layout_marginRight="10dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    
+                    android:gravity="bottom|fill_horizontal"
+                    android:orientation="horizontal"
+                   
+                    android:layout_height="90dp"
+                     >
+
+                    
+                    <EditText android:layout_height="30dp"
+                               android:id="@+id/switchNameET"
+                               android:text=""
+                               android:hint="@string/Nameswitch"
+                               
+                               android:gravity="center"
+                               android:focusable="true"
+                               android:focusableInTouchMode="true"
+                               android:inputType="text"
+                               android:layout_marginBottom="10dp"
+                               android:maxLength="20"
+                               android:background="@drawable/corner_border_gray"
+                               android:textColor="#939395"
+                               android:textSize="18dp"
+                              android:layout_width="match_parent"/>
+                    
+                    
+                   
+                    
+                   
+                    
+                </LinearLayout>
+                
+               
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                   android:gravity="center"
+                     >
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_Done"
+                        android:background="@drawable/popup_button_selector_white"
+                        
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Donee"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+
+                    
+                </LinearLayout>
+                
+                
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                     android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                   android:gravity="center"
+                     >
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                       
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_Cancel"
+                         android:background="@drawable/popup_button_selector_white"
+                       
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Cancel"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+
+                    
+                </LinearLayout>
+
+                
+ </LinearLayout>
+ 
+            
+                
+        </LinearLayout>
+   
+
+</RelativeLayout>

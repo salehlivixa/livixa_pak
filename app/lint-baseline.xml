@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.1.1" type="baseline" client="gradle" dependencies="false" name="AGP (7.1.1)" variant="fatal" version="7.1.1">
+
+    <issue
+        id="ResAuto"
+        message="In Gradle projects, always use `http://schemas.android.com/apk/res-auto` for custom attributes"
+        errorLine1="    xmlns:app1=&quot;http://schemas.android.com/apk/res/com.livixa.client&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/action_bar_default.xml"
+            line="3"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ResAuto"
+        message="In Gradle projects, always use `http://schemas.android.com/apk/res-auto` for custom attributes"
+        errorLine1="    xmlns:umadsdk=&quot;http://schemas.android.com/apk/res/com.LoveBus&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/ip_video_activity.xml"
+            line="3"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/timeTab`, already defined earlier in this layout"
+        errorLine1="                        android:id=&quot;@+id/timeTab&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_date_and_time_picker_for_away_mood.xml"
+            line="232"
+            column="25"/>
+        <location
+            file="src/main/res/layout-ar/activity_date_and_time_picker_for_away_mood.xml"
+            line="79"
+            column="25"
+            message="Duplicate id `@+id/timeTab` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/dateTab`, already defined earlier in this layout"
+        errorLine1="                                   android:id=&quot;@+id/dateTab&quot;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_date_and_time_picker_for_away_mood.xml"
+            line="235"
+            column="36"/>
+        <location
+            file="src/main/res/layout/activity_date_and_time_picker_for_away_mood.xml"
+            line="80"
+            column="36"
+            message="Duplicate id `@+id/dateTab` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/dateTab`, already defined earlier in this layout"
+        errorLine1="                                   android:id=&quot;@+id/dateTab&quot;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_date_and_time_picker_for_away_mood.xml"
+            line="271"
+            column="36"/>
+        <location
+            file="src/main/res/layout-ar/activity_date_and_time_picker_for_away_mood.xml"
+            line="117"
+            column="36"
+            message="Duplicate id `@+id/dateTab` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/timeTab`, already defined earlier in this layout"
+        errorLine1="                                     android:id=&quot;@+id/timeTab&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_date_and_time_picker_for_away_mood.xml"
+            line="273"
+            column="38"/>
+        <location
+            file="src/main/res/layout/activity_date_and_time_picker_for_away_mood.xml"
+            line="117"
+            column="38"
+            message="Duplicate id `@+id/timeTab` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/rl_bar`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/rl_bar&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="208"
+            column="17"/>
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="18"
+            column="17"
+            message="Duplicate id `@+id/rl_bar` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_back`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_back&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="214"
+            column="21"/>
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="24"
+            column="21"
+            message="Duplicate id `@+id/iv_back` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_home`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_home&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="245"
+            column="21"/>
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="50"
+            column="21"
+            message="Duplicate id `@+id/iv_home` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/logo`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/logo&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="289"
+            column="17"/>
+        <location
+            file="src/main/res/layout/activity_renergy_oom_and_switches.xml"
+            line="78"
+            column="17"
+            message="Duplicate id `@+id/logo` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/rl_bar`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/rl_bar&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="212"
+            column="17"/>
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="18"
+            column="17"
+            message="Duplicate id `@+id/rl_bar` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/rl_bar`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/rl_bar&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="212"
+            column="17"/>
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="18"
+            column="17"
+            message="Duplicate id `@+id/rl_bar` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_back`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_back&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="218"
+            column="21"/>
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="24"
+            column="21"
+            message="Duplicate id `@+id/iv_back` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_back`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_back&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="218"
+            column="21"/>
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="24"
+            column="21"
+            message="Duplicate id `@+id/iv_back` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_home`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_home&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="252"
+            column="21"/>
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="52"
+            column="21"
+            message="Duplicate id `@+id/iv_home` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/iv_home`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/iv_home&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="252"
+            column="21"/>
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="52"
+            column="21"
+            message="Duplicate id `@+id/iv_home` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/logo`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/logo&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="285"
+            column="17"/>
+        <location
+            file="src/main/res/layout-ar/activity_room_and_switches_tcp.xml"
+            line="81"
+            column="17"
+            message="Duplicate id `@+id/logo` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/logo`, already defined earlier in this layout"
+        errorLine1="                android:id=&quot;@+id/logo&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="285"
+            column="17"/>
+        <location
+            file="src/main/res/layout/activity_room_and_switches_tcp.xml"
+            line="81"
+            column="17"
+            message="Duplicate id `@+id/logo` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/linearLayout3`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/linearLayout3&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/button_on_off_popup.xml"
+            line="90"
+            column="21"/>
+        <location
+            file="src/main/res/layout/button_on_off_popup.xml"
+            line="15"
+            column="13"
+            message="Duplicate id `@+id/linearLayout3` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/linearLayout1`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/linearLayout1&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/tariff_setting_popup.xml"
+            line="135"
+            column="21"/>
+        <location
+            file="src/main/res/layout/tariff_setting_popup.xml"
+            line="45"
+            column="21"
+            message="Duplicate id `@+id/linearLayout1` originally defined here"/>
+    </issue>
+
+    <issue
+        id="DuplicateIds"
+        message="Duplicate id `@+id/linearLayout1`, already defined earlier in this layout"
+        errorLine1="                    android:id=&quot;@+id/linearLayout1&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/tariff_setting_popup.xml"
+            line="141"
+            column="21"/>
+        <location
+            file="src/main/res/layout-ar/tariff_setting_popup.xml"
+            line="45"
+            column="21"
+            message="Duplicate id `@+id/linearLayout1` originally defined here"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@id/backArrow` is not a sibling in the same `RelativeLayout`"
+        errorLine1="                    android:layout_toRightOf=&quot;@id/backArrow&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/activity_home.xml"
+            line="46"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@id/startLy` is not a sibling in the same `RelativeLayout`"
+        errorLine1="                   android:layout_toRightOf=&quot;@id/startLy&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-ar/esp_result_list_item.xml"
+            line="25"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@+id/bottom_layout` is not a sibling in the same `RelativeLayout`"
+        errorLine1="        android:layout_above=&quot;@+id/bottom_layout&quot; >"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/ipcamclientftest.xml"
+            line="13"
+            column="9"/>
+    </issue>
+
+</issues>

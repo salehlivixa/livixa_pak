@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="#DE3A41"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+   <TextView
+        android:id="@+id/snackMessage"
+        android:layout_height="62dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+         android:text="Sample message"/>
+    
+
+</LinearLayout>

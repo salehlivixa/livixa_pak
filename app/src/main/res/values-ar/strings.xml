@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    
+     <string name="Sign_In">تسجيل دخول</string>
+    
+     <string name="Sign_Up">إنشاء حساب</string>
+    
+     <string name="Login">إتسجيل دخول</string>
+      
+      <string name="ForgotPassword">هل نسيت كلمة المرو؟</string>
+<!--	  <string name="ForgotPassword">نسيت كلمة المرور</string>-->
+      <string name="UserNameHint">اسم المستخدم</string>
+      
+      <string name="UserPassHint">كلمة المرور</string>
+      
+      <string name="Error_MSG_UserName">مطلوب اسم المستخدم!</string>
+       
+      <string name="Error_MSG_UserPass">مطلوب كلمة المرور!</string>
+      
+       
+		
+		<string name="YES">موافق</string>
+		
+		<string name="NO">غير موافق</string>
+		
+		<string name="LoginError">خطأ في تسجيل الدخول!</string>
+		
+		
+		<string name="AlreadyLoginMessage">تم تسجيل الدخول من جهاز آخر. هل تريد تسجيل خروج من الجهاز الآخر لتستطيع تسجيل الدخول؟</string>
+
+      
+		
+		
+		<string name="Register" >تسجيل"</string>
+		<string name="EnableLocation" >تحتاج السماح لإعدادات تحديد الموقع في التطبيق لملئ معلومات البلد بشكل تلقائي</string>
+		<string name="Emailaddress" >عنوان البريد الإلكتروني</string>
+		<string name="Fullname" >الاسم الكامل</string>
+		<string name="Cellnumber" >رقم الجوال</string>
+		<string name="Country" >البلد</string>
+		<string name="City" >المدينة</string>
+		<string name="Emailisrequired" >مطلوب البريد الإلكتروني!</string>
+		<string name="Emailisnotvalid" >البريد الإلكتروني غير صالح!</string>
+		<string name="Fullnameisrequired" >مطلوب الاسم الكامل!</string>
+		<string name="Cellisrequired" >مطلوب رقم الجوال!</string>
+		<string name="Countryisrequired" >مطلوب البلد!</string>
+		<string name="Cityisrequired" >مطلوب المدينة!</string>
+		<string name="Camera" >الكاميرا</string>
+		<string name="Photos" >الصور</string>
+		<string name="Select" >تحديد</string>
+		<!-- <string name="Thisdevicedoesnotsupportcamera" >هذا الجهاز لايدعم الكاميرا!</string> -->
+		<string name="Countries" >البلدان</string>
+		<string name="Cities" >المدن</string>
+		<string name="Pleaseselectcountryfirst" >يرجى اختيار الدولة أولا!</string>
+    
+		<string name="Thankyouregisteringwithus" >شكرا</string>
+		
+		
+		
+		
+
+
+		<string name="SendEmail">ارسل البريد الإلكتروتي</string>
+		<string name="EmailSend">تم إرسال البريد الإلكتروني</string>
+		<string name="Please_check_your_email_msg">!يرجى التحقق من بريدك الالكتروني لإتباع تعليمات فقدان كلمةالسر</string>
+
+		
+		<string name="Welcome" >مرحباً</string>
+		<string name="YourdatasyncedMSG" >تحتاج بياناتك ليتم مزامنتها مع الخادم، انقر للتحديث… </string>
+		<string name="Rooms" >غرف</string>
+
+		<string name="IR" >المسح الضوئي بالأشعة</string>
+		<string name="Moods" >الأوضاع</string>
+		<string name="EnergyUsage" >استهلاك الطاقة</string>
+		<string name="Settings" >الإعدادات</string>
+	
+		<!-- // HomeHeaderView -->
+	
+		<string name="Youaresignedinas" >قمت بتسجيل الدخول بأسم</string>
+
+	
+	
+	
+		<string name="ON">تشغيل</string>
+		<string name="OFF">إطفاء</string>
+		
+		
+		<string name="LED" >LED</string>
+		<string name="Dimmer1" >مفتاح 1</string>
+		<string name="Dimmer2" >مفتاح 2</string>
+		<string name="Dimmer3" >مفتاح 3</string>
+		
+
+
+		<string name="Donee">تم</string>
+
+
+		
+		
+		<!-- // SettingsViewController -->
+
+		<string name="AddEditRooms">إضافة/تعديل غرف</string>
+		<string name="AddEditSwitches">إضافة/ تعديل مفتاح</string>
+		<string name="Controlinsidehome">التحكم من داخل الغرفة</string>
+		<string name="ControlRemotly">التحكم عن بعد </string>
+		<string name="ConfigureSwitches">تهيئة المفاتيح</string>
+		<string name="EditUsers">تعديل المستخدمين</string>
+		<string name="ElectricityTariff">تعرفة الكهرباء</string>
+		<string name="Profile">الملف الشخصي</string>
+		<string name="KAbout">معلومات عن المستخدم</string>
+		<string name="ChangePassword">تغير كلمة السر</string>
+		<string name="Logout">تسجيل خروج</string>
+		<string name="Language_Currency">اللغة والعلمة النقدية </string>
+		<string name="SystemReset">إعادة ضبط النظام</string>
+		<string name="AddEditMoods">إضافة/تعديل الأوضاع</string>
+		<string name="ScanSwitches">مسح ضوئي للمفاتيح</string>
+		<string name="Areyousuretologout">هل أنت متأكد من تسجيل الخروج؟</string>
+		<string name="Yourdataneedstobesyncedwithserverlogout">الاحتياجات من البيانات ليتم مزامنتها مع خادم !. هل تريد الخروج بدون المزامنة؟</string>
+		
+		
+		<string name="Language">اللغة</string>
+		<string name="Currency">العلمة النقدية</string>
+		<string name="USD">دولار أمريكي</string>
+		<string name="SAR">الريال السعودي</string>
+		<string name="ENGLISH">اللغة الانجليزية</string>
+	
+		<string name="ARABIC">اللغة العربية</string>
+		<string name="ChangeCurrency">تغيير العملة</string>
+		<string name="Currencyupdatedsuccessfully">العملة تجديد بنجاح!</string>
+		<string name="isalreadyappscurrentlanguage">هو بالفعل لغة التطبيق الحالية!</string>
+		<string name="Areyousuretochangeyourlanguageto">هل أنت متأكد من تغيير لغتك ل</string>
+		<string name="ChangeLanguage">غير اللغة</string>
+		
+		
+		<!-- // AddEditRoomsViewController -->
+
+		<string name="Noroomsaddedyet">لم يتم أضافة غرف!</string>
+		<string name="AddRooms">أضف غرف</string>
+		<string name="Areyousuretodeletethisroom">هل أنت متأكد من حذف الغرفة</string>
+		<string name="Editing">تعديل</string>
+		<string name="EditRoom">تعديل الغرفة</string>
+		<string name="DeleteRoom">حذف الغرفة</string>
+		<string name="RoomName">أسم الغرفة</string>
+		<string name="Selecticon">آختر رمز</string>
+		<string name="Roomnameisrequired">مطلوب أسم الغرفة!</string>
+		<string name="Roomnamealreadyexist">أسم الغرفة مستخدم!</string>
+		<string name="Roomiconisrequired">مطلوب رمز الغرفة!</string>
+		
+		
+		<string name="AddManually">يدوياً</string>
+		<string name="SwitchScan">مسح ضوئي للمفتاح</string>
+		<string name="Barcodeisrequired">مطلوب الباركود!</string>
+		<string name="Barcodeisnotvalid">الباركود غير صحيح!</string>
+		<string name="DoyouwanttodeleteswitchwithMAC">هل تريد حذف المفتاح من MAC</string>
+		<string name="Switchwiththismacalreadyadded">المفتاح تم إضافتة من قبل</string>
+		<string name="UnabletoreadBarcode">غير قادر على قرأت الباركود!</string>
+
+		<string name="Noswitchesaddedyet">لم يتم إضافة اي مفتاح!</string>
+		<string name="AddSwitch">إضافة مفتاح</string>
+		<string name="Assignedto">مخصص : </string>
+		
+	
+		
+		<string name="Switch1">مفتاح 1</string>
+		<string name="Switch2">مفتاح 2</string>
+		<string name="Switch3">مفتاح 3</string>
+		<string name="Socket">فيش</string>
+		<string name="AC">مكيف</string>
+		
+		
+		<string name="Travel">سفر</string>
+		<string name="Sleep">نوم</string>
+		<string name="Wakeup">استيقاظ</string>
+		<string name="Guest">ضيوف</string>
+		<string name="Living">غرفة المعيشة</string>
+		<string name="Safety">آمن</string>
+		<string name="Away">بعيد</string>
+		
+		
+		
+		
+		
+	<!-- 	// Language Currency View Controller -->
+
+		<!-- <string name="Language">اللغة</string>
+		<string name="Currency">العلمة النقدية</string>
+		<string name="USD"     >دولار أمريكي</string>
+		<string name="SAR"     >الريال السعودي</string>
+		<string name="ENGLISH" >اللغة الانجليزية</string>
+		<string name="ARABIC"  >اللغة العربية</string>
+		<string name="ChangeCurrency">تغيير العملة</string>
+		<string name="Currencyupdatedsuccessfully">العملة تجديد بنجاح!</string>
+		<string name="isalreadyappcurrentlanguage">هو بالفعل لغة التطبيق الحالية!</string>
+		<string name="Areyousuretochangelanguage">هل أنت متأكد من تغيير لغتك ل</string>
+		<string name="ChangeLanguage">غير اللغة</string> -->
+		 
+		
+		
+		
+		<!-- 	// ScanSwitchesViewController -->
+		
+		
+		
+		<string name="Scan">مسح</string>
+		<string name="IPnotavailable">IP لم يتم العثور</string>
+		<string name="Scanningoptions">خيارات المسح الضوئي</string>
+		<string name="Scanall">مسح كامل</string>
+		<string name="Start">بدأ</string>
+		<string name="Noswitchesfoundyet">لم يتم العثور على اي مفتاح</string>
+		<string name="Pleasewaitwhilescanning">الرجاء الانتظار أثناء المسح الضوئي. قد يستغرق بضع دقائق</string>
+		
+		<!-- // AddEditRoomSwitchesViewController -->
+		<string name="RoomSwitches">مفاتيح الغرفة</string>
+		<string name="removeswitchname">هل أنت متأكد من حذف المفتاح مع الأسم</string>
+		<string name="fromroom">من الغرفة؟</string>
+		<string name="Nameswitch">أسم المفتاح</string>
+		<string name="SwitchNameisrequired">Sمطلوب أسم المفتاح!</string>
+		<string name="Switchnamesshouldunique">يجب أن تكون أسماء المفاتيح في الغرفة مميزة</string>
+		
+		<!-- // ESPViewController -->
+
+		<string name="isconnectedtothewifi">متصل بالشبكة</string>
+		<string name="EspTouchDelegateImpl">EspTouchDelegateImpl onEsptouchResultAddedWithResult bssid:</string>
+		<string name="Configuration">تهيئة</string>
+		<string name="Confirm">تأكيد</string>
+
+		<string name="Iknow">أعرف</string>
+		<string name="ExecuteResult">تنفيذ النتائج</string>
+		<string name="Password_Configuration">كلمة المرور:</string>
+		<string name="Numberofdevicestoconfigure">عدد الأجهزة للتهيئة:</string>
+		<string name="PleasewaitwhileConfiguration">لرجاء الانتظار أثناء تكوين الضوئي. قد يستغرق بضع دقائق</string>
+		<string name="SuccessYes" >تم بنجاح: نعم</string>
+		<string name="SuccessNo" >تم بنجاح: لا</string>
+		<string name="IpAddress" >: IP عنوان</string>
+		 <string name="Pleasewaitwhileyourdata">يرجى الانتظار بينما يتم تحميل البيانات الخاصة بك!</string>
+		 
+	
+	
+				<!-- // AddEditSubUsersViewController -->
+		<string name="User">مستخدم:</string>	
+		<string name="AddUser">إضافة مستخدم</string>
+		<string name="Nosubusersaddedyet">لم يتم إضافة مستخدمين إضافيين!</string>
+		<string name="AddEditSubusers">إضافة/ تعديل مستخدمين إضافيين</string>
+		<string name="deleteuser">هل تريد حذف المستخدم الإضافي مع الاسم؟</string>
+		<string name="Assign">تعين</string>
+			 
+		<!-- // RegisterSubuserViewController -->
+
+		<string name="RegisterSubuser">تسجيل مستخدم إضافي</string>
+		<string name="SubuserNamealreadyexists">اسم المستخدم الإضافي متشابة مع أسم المستخدم الموجود! </string>
+		<string name="Subuseremailalreadyexists">البريد الإلكتروني للمستخدم الإضافي متشابة مع البريد الموجود!</string>
+		<string name="Anonymous">مجهول الإسم</string>
+		
+		
+		
+		
+
+	<!-- // SubuserRoomDetailTableViewCell -->
+		<string name="RoomUsers">مستخدمين الغرفة</string>
+		<string name="Username">أسم المستخدم: </string>
+		<string name="Email">البريد الإلكتروني: </string>
+		<string name="RoomTitle">عنوان الغرفة: </string>
+		
+		
+		<!-- // SubCamerasViewController -->
+	
+		<string name="Nocamerasadded">لم يتم إضافة كاميرا!</string> 
+		<string name="Cameras">كاميرات</string>
+
+		<string name="SettingsYES">إعدادات: نعم</string> 
+		<string name="SettingsNO">إعدادات: لا</string> 
+		<string name="CameraOptions">خيارات الكاميرا</string> 
+		<string name="CameraSubusers">المستخدمين الإضافيين</string> 
+		<string name="CameraSettings">خيارات الكاميرا</string>
+		
+		<!-- // UsersTableViewCell -->
+			 <string name="CameraUsers">مستخدمين الكاميرا</string>
+			<string name="SettingsAllowed">السماح للإعدادات</string>
+			<string name="SettingsNotAllowed">عدم السماح للإعدادات</string> 
+		<!-- // ThankyouViewController -->
+
+		
+			
+		
+			<!-- // TariffViewController -->
+
+			<string name="Slabin">بين</string>
+			<string name="ResidentialTariffin">التعرفة السكنية في</string>
+			<string name="notyetaddedupperlimit">لم تقم بإضافة بعد التعريفة مع الحد الأعلى لانهائي!، هل تريد إضافة الحد الأعلى لانهائي؟</string>
+			<string name="Options">خيارات</string>
+			<string name="Addnewtariff">أضف تعريفة جديدة</string>
+			<string name="alreadyaddedtariff">لقد سبق وأن أضفت التعريفة مع الحد الأعلى لانهائي!</string>
+			<string name="Deletealltariffs">حذف جميع التعريفات</string>
+			<string name="TARIFF">التعريفة</string>
+			<string name="deletetariffs">هل تريد حذف كل التعريفات؟?</string>
+			<string name="deletetariff">هل تريد حذف هذة التعريفة؟</string>
+		    <string name="Notariffaddedyet">لاتوجد تعرفة مضافة</string>
+			<!-- // TariffTableViewCell -->
+		
+			<string name="INFINITE">غير محدود</string>
+		
+			<!-- // AddEditTariffViewController -->
+		
+			<string name="LowerLimit">الحد الأدني</string>
+			<string name="UpperLimit">الحد الأعلى</string>
+			<string name="Infinite">غير محدود</string>
+			<string name="Price">القيمة</string>
+			<string name="UpperlimitRQ">مطلوب الحد الأعلى!</string>
+			<string name="Upperlimitshouldbehigher">الحد الأعلى يجب أن يكون أعلى من الحد الأدني!</string>
+			<string name="Priceisrequired">مطلوب القيمة!</string>
+			
+			<string name="Update">اتحديث</string>
+			
+			<!-- // ChangePasswordViewController -->
+
+			<string name="OldPassword">كلمة المرور القديمة</string>
+			<string name="NewPassword">كلمة المرور الجديدة</string>
+			<string name="ConfirmNewPassword">تأكيد كلمة المرور</string>
+			<string name="Oldpasswordrequired">مطلوب كلمة المرور القديمة!</string>
+			<string name="Newpasswordrequired">مطلوب كلمة المرور الجديدة!</string>
+			<string name="ConfirmNewpasswordrequired">مطلوب تأكيد كلمة المرور الجديدة!</string>
+			<string name="Newpasswordandconfirmnewpasswordshouldbesame">يجب أن تتطابق كلمة المرور الجديدة مع تأكيد كلمة المرور الجديدة </string>
+			<string name="Passwordupdatedsuccessfully">تم تحديث كلمة المرور بنجاح!</string>
+			
+
+			
+			<!-- // EnergyViewController -->
+		
+			<string name="TotalUsage">الإستهلاك الكلي:</string>
+			<string name="TotalCost">التكلفة الإجمالية:</string>
+			<string name="Nodataavailable">لاتتوف>انات!</string>
+			
+		<!-- 	// ButtonMoodBaseViewController -->
+
+			<string name="AddMood">إضافة وضع</string>
+			<string name="morethan14moods">لا تستطيع إنشاء أكثر من 14 وضع</string>
+			<string name="buttonNotAssociatedtoAnyModd">لا يرتبط هذا الزر مع أي وضع!</string>
+			<string name="deleteMoodOption">هل أنت متأكد من حذف الوضع مع اسم</string>
+			<string name="TimeisNotSet">لم يتم تحديد الوقت!</string>
+			<string name="PleaseselectButtonstateformood">الرجاء تحديد حالة الزر من أجل الوضع</string>
+			<string name="CANCEL">إالغاء</string>
+			<string name="Optionsfor">الخيارات المتعلقة</string>
+			<string name="EditTitleORPicture">تعديل العنوان أو الصورة</string>
+			<string name="UpdateTimeSettings">تحديث إعدادات الوقت</string>
+			<string name="DeleteMood">حذف الوضع</string>
+		
+			<string name="RepeatON">تكرار نعم</string>
+			
+			
+			<!-- // ButtonMoodDetailTableViewCell -->
+
+			<string name="Date">التاريخ</string>
+			<string name="Repeat">تكرار</string>
+			<string name="Time">الوقت</string>
+			<string name="ButtonState">وضع الزر</string>
+			<string name="OK">حسناً</string>
+			
+			
+			<!-- // EditRandomMoodViewController -->
+
+			<string name="OnDuration">في المدة</string>
+			
+			<string name="Mins">دقائق</string> 
+			<string name="OffDuration">خارج المدة الزمنية</string>
+			<string name="StartTime">وقت البدء</string>
+			<string name="EndTime">وقت النهاية</string>
+			<string name="Durationnotvalid">غير صالح في المدة الزمنية أو خارج المدة الزمنيح!</string>
+			<string name="startendtimenovalid">يجب أن يكون وقت البء قبل وقت النهاية!</string>
+			
+			
+			
+	
+	
+			<!-- // additions to camera app -->
+		
+			<string name="CCamName">: أسم الكاميرا</string>
+			<string name="CCamID"  >: الكاميرا ID</string>
+			<string name="CUsername">: أسم المستخدم</string>
+			<string name="CPassword">: كلمة المرور</string>
+			<string name="CVideo"    >فيديو</string>
+			<string name="CPhoto"    >صور</string>
+			<string name="CEvent"    >حدث</string>
+			<string name="CCamera"   >كاميرا</string>
+			
+			
+			
+			<!-- //camera fitrst activity -->
+			
+			<string name="IPCamera">كاميرا</string>
+			<string name="TableCamera">كاميرا</string>
+			<string name="fourviews">عرض ٤ شاشات</string>
+			<string name="main_tap_here_add_vidicon">إضافه كاميرا جديدة</string>
+			<string name="cameraNumOut">عدد الكاميرات الخاصة بك تجاوزة الحد الأعلى</string>
+			<string name="device_status_name">الكاميرا في حالة التهيئة</string>
+				
+				
+			<string name="pppp_status_unknown">غير معروف</string>
+			<string name="pppp_status_connecting">متصل</string>
+			<string name="pppp_status_initialing">تهيئة</string>
+			<string name="pppp_status_online">متصل</string>
+			<string name="camera_not_online">غير متصل</string>
+			<string name="PPPPStatusInvalidUserPwd">كلمة المرور أو المستخدم غير صالح</string>
+			<string name="pppp_status_connect_failed">خطأ في الإتصال</string>
+			<string name="pppp_status_disconnect">أنقطع الإتصال</string>
+			<string name="pppp_status_invalid_id">غير صالحة id</string>
+			<string name="pppp_status_connect_timeout">نفذ وقت الإتصال</string>
+			<string name="noadmin">المستخدم ليس لديه صلاحية أو شبكة ضعيفة</string>
+			<string name="PPPPStatusNotWatchTime">الرؤية متاحة فقط وقت الزيارة</string>
+				
+				
+			<string name="versionInfo">معلومات الإصدار</string>
+
+			<string name="versionIgnore">تجاهل الإصدار</string>
+			<string name="versionUpdate">تحديث الأن</string>
+			<string name="versionlaterUpdate">تحديث لاحقاً</string>
+				
+			<string name="ddnscameraisofflineornolan">فشل طلب أو الهاتف المحمول والكاميرا مرتبطة بشبكة مختلفة</string>
+			
+			
+			
+			<string name="Edit">تعديل</string>
+			<string name="Delete">حذف</string>
+			<string name="Back">رجوع</string>
+			<string name="Cancel">إلغاء</string>
+			<string name="main_select_all">تحديد الكل</string>
+			<string name="main_select_reverse">إعادة تحيد</string>
+			
+			
+			
+			<!-- new -->
+			
+			<string name = "AddCamera">إضافة كاميرا</string>
+			<string name = "EditCamera">تعديل</string>
+			<string name = "CameraName">أسم</string>
+			<string name = "CameraID">كاميرا ID</string>
+			<string name = "InputCameraName">إدخل اسم الكاميرا</string>
+			<string name = "InputCameraID">إدخل ID الكاميرا</string>
+			<string name = "InputUserName">ادخل اسم المستخدم</string>
+			<string name = "InputPassword">ارخل كلمة المرور</string>
+			<string name = "CameraInfo">معلومات الكاميرا</string>
+			<string name = "inputCameraIp">ادخل the IP او domain name</string>
+			<string name = "inputCameraPort">ادخل المنفذ</string>
+			<string name = "camera_addr">IP او Domain</string>
+			<string name = "camera_port">منفذ</string>
+			<string name = "input_camera_addr">الرجاء ادخل  Camera Ip او domain</string>
+			<string name = "input_camera_port">الرجاء ادخل منفذ الكاميرا</string>
+			<string name = "input_camera_name">الرجاء ادخل اسم الكاميرا</string>
+			<string name = "input_camera_id">الرجاء ادخل  id الكاميرا</string>
+			<string name = "input_camera_user">الرجاء ادخل اسم المستخدم</string>
+			<string name = "ScanQRCode">مسح ضوئي او الشيفرا</string>
+			<string name = "LANSearch">بحث</string>
+			
+			<string name = "addcamera_idnotchinese">لايمكن ان يحتوي ID على اللغة الصينية</string>
+			<string name = "addcamera_prompt">هذة الكاميرا موجودة</string>
+			<string name = "nouserorloginuser">اسم المستخدم لايمكن ان يكون المستخدم او اسم تسجيل الدخول</string>
+			<string name = "nopwd">Password can not ben pwd</string>
+			
+			<string name = "search_camera">بحث كاميرا</string>
+			
+			<string name = "DefaultVideoParams">معلومات الفيديو الإفتراضي</string>
+			<string name= "play_stop_record_p">فضلاً قف تسجيل الفيديو اولاً</string>
+			<string name= "preset_call">Callاتصال</string>
+			<string name= "preset_set">ثبت</string>
+			<string name= "preset">اعد التثبيت</string>
+			<string name= "play_mode">طريقة</string>
+			<string name= "play_goodvalue">Full HD</string>
+			<string name= "play_fastspeed">الدقة</string>
+			<string name= "play_goodfast">السرعة</string>
+			<string name= "play_recording">تسجيل…</string>
+			<string name= "TakePictureSuccess">تم اخذ الصورة بنجاح</string>
+			<string name= "play_alarmopen">فتح المنبة</string>
+			<string name= "play_alarmclose">اغلاق المنبه</string>
+			<string name= "play_ledopen">فتح ضوء LED</string>
+			<string name= "play_ledclose">اغلاق ضوء LED</string>
+			<string name= "play_ledauto">تلقائي</string>
+			<string name= "play_gpioopen">فتح GPIO منبة</string>
+			<string name= "play_gpioclose">إغلاق GPIO منبة</string>
+			
+				
+			<string name= "alarmview_title">حدث</string>
+			
+				
+			<string name= "alerm_push_log">معلومات المنبة</string>
+			<string name= "alerm_motion_alarm">معلومات الحركة</string>
+			<string name= "alerm_gpio_alarm">GPIO منبة</string>
+			<string name= "alarm_audio_alarm">صوت المنبة</string>
+			
+				
+			<string name= "LocalPic">صورة</string>
+				
+			<string name= "initPicPrompt">تحميل الصورة…</string>
+			<string name= "piclisteditprompt">تحميل الصورة,انقر زر التحديل بعد دقائق </string>
+				
+			<string name= "picshow_delete">هل تريد حذف الصورة؟</string>
+			<string name= "picshow_share">هل تريد مشاركة الصورة؟</string>
+			<string name= "picshow_album">هل تريد حفظ الصورة في الأالبوم</string>
+			<string name= "SavePictureSuccess">تم حفظ الصورة في الأالبوم بنجاح</string>
+			
+			
+			
+				
+			<string name= "Record">فيديو</string>
+			<string name= "Local">محلي</string>
+			<string name= "Remote">تحكم</string>
+				
+			<string name= "About">حول عن</string>
+			<string name= "about_softname">اسم البرنامج</string>
+			<string name= "about_version">رمز النسخة</string>
+			<string name= "about_internalversion">نسخة داخلية</string>
+			<string name= "about_receiverpush">استلام انذار</string>
+				
+			<string name= "settingtitle">IP اعدادات الكاميرا</string>
+			<string name= "setttingsrestart">اعادة تشغيل</string>
+			<string name= "restartdeciveprompt">تحذير</string>
+			<string name= "restartdecivemessage">الجهاز لن تعمل أثناء تشغيل الجهاز</string>
+			<string name= "devicerestarting">الكاميرا لن تعمل اثناء اعادة التشغيل…</string>
+			<string name= "nothavepermission">المستخدم لايملك الصلاحيات</string>
+			<string name= "strSetting">اعدادات</string>
+			
+				
+			<string name= "ClockSetting">الوقت</string>
+			<string name= "datetimeDeviceTime">وقت الجهاز</string>
+			<string name= "datetimeDeviceTiming">استخدم NTP القيم المقدمة</string>
+			<string name= "datetimeDeviceTimingServer">NTP الخادم</string>
+			<string name= "datetimeDeviceTimezone">المنطقة الزمنية</string>
+			<string name= "datetimeDeviceTimeLocal">استخدام ساعة الجهاز لمعايرة الوقت الهاتف</string>
+			<string name= "datetime_jan">يناير</string>
+			<string name= "datetime_Feb">فبراير</string>
+			<string name= "datetime_Mar">مارس</string>
+			<string name= "datetime_Apr">ابريل</string>
+			<string name= "datetime_May">مايو</string>
+			<string name= "datetime_Jun">يونيو</string>
+			<string name= "datetime_Jul">يوليو</string>
+			<string name= "datetime_Aug">أغسطس</string>
+			<string name= "datetime_Sept">سبتمبر</string>
+			<string name= "datetime_Oct">أكتوبر</string>
+			<string name= "datetime_Nov">نوفمبر</string>
+			<string name= "datetime_Dec">ديسمبر</string>
+			
+			<string name= "datetime_Sun">الأحد</string>
+			<string name= "datetime_Mon">الإثنين</string>
+			<string name= "datetime_Tue">الثلاثاء</string>
+			<string name= "datetime_Wed">الأربعاء</string>
+			<string name= "datetime_Thu">الخميس</string>
+			<string name= "datetime_Fri">الجمعة</string>
+			<string name= "datetime_Sat">السبت</string>
+			
+			<string name= "datetimeZone0">(GMT -11:00) Midway Islands, Samoa Islands</string>
+			<string name= "datetimeZone1">(GMT -10:00) Hawaii</string>
+			<string name= "datetimeZone2">(GMT -09:00) Alaska Standard</string>
+			<string name= "datetimeZone3">(GMT -08:00) Pacific Standard(USA and Canada)</string>
+			<string name= "datetimeZone4">(GMT -07:00) Mountain Standard(USA and Canada)</string>
+			<string name= "datetimeZone5">(GMT -06:00) Central Standard(USA and Canada), Mexico City</string>
+			<string name= "datetimeZone6">(GMT -05:00) Eastern Standard(USA and Canada), Lima, Bogota</string>
+			<string name= "datetimeZone7">(GMT -04:00) Atlantic Standard (Canada), Santiago, La Paz</string>
+			<string name= "datetimeZone8">(GMT -03:30) Newfoundland</string>
+			<string name= "datetimeZone9">(GMT -03:00) Brasilia, Buenos Aires, Georgetown</string>
+			<string name= "datetimeZone10">(GMT -02:00) South Geogia I.</string>
+			<string name= "datetimeZone11">(GMT -01:00) Reykjavik</string>
+			<string name= "datetimeZone12">(GMT) Greenwich mean time; London, Lisbon, Casablanca</string>
+			<string name= "datetimeZone13">(GMT +01:00) Brussels, Paris, Berlin, Rome, Madrid, Stockholm, Beograd, Praha</string>
+			<string name= "datetimeZone14">(GMT +02:00) Athens, Jerusalem, Cairo, Helsinki</string>
+			<string name= "datetimeZone15">(GMT +03:00) Nairobi, Riyadh, Moscow</string>
+			<string name= "datetimeZone16">(GMT +03:30) Tehran</string>
+			<string name= "datetimeZone17">(GMT +04:00) Baku, Tbilisi, Abu Dhabi, Muscat</string>
+			<string name= "datetimeZone18">(GMT +04:30) Kabul</string>
+			<string name= "datetimeZone19">(GMT +05:00) Islamabad, Karachi, Tashkent</string>
+			<string name= "datetimeZone20">(GMT +05:30) Bombay, Calcutta, Madras, New Delhi</string>
+			<string name= "datetimeZone21">(GMT +06:00) Astana, Almaty, Dhaka, Colombo</string>
+			<string name= "datetimeZone22">(GMT +07:00) Astana, Almaty, Dhaka, Colombo</string>
+			<string name= "datetimeZone23">(GMT +08:00) Beijing, Singapore, Taipei</string>
+			<string name= "datetimeZone24">(GMT +09:00) Seoul, Yakutsk, Tokyo</string>
+			<string name= "datetimeZone25">(GMT +09:30) Darwin</string>
+			<string name= "datetimeZone26">(GMT +10:00) Guam, Melbourne, Sydney, Port Moresby, Vladivostok</string>
+			<string name= "datetimeZone27">(GMT +11:00) Magadan, Solomon Islands, New Calenonia</string>
+			<string name= "datetimeZone28">(GMT +12:00) Auckland, Wellington, Fiji Islands</string>
+			
+			<string name= "datetime_xia_ling_shi">DST</string>
+			
+				
+			<string name= "setuser_nomatch">اسم المستخدم او كلمة المرور يجب ان تكون ارقام او احرف فقط</string>
+			<string name= "UserSetting">مستخدم</string>
+			<string name= "useradmin">الإداري</string>
+			<string name= "userOperator">   المشغل</string>
+			<string name= "uservisitor">   زائر</string>
+			<string name= "user_user">مستخدم</string>
+			
+			
+			
+				
+			<string name= "MailSetting">ايميل</string>
+			<string name= "MailSender">المرسل</string>
+			<string name= "MailSmtpSvr">SMTP مخدم</string>
+			<string name= "MailSmtpPort">SMTP منفذ</string>
+			<string name= "MailAuth">تأكيد</string>
+			<string name= "MailUser">ايميل</string>
+			<string name= "MailPwd">كلمةالسر</string>
+			<string name= "MailRecv1">استقبال عنوان البريد الإلكتروني 1</string>
+			<string name= "MailRecv2">استقبال عنوان البريد الإلكتروني 2</string>
+			<string name= "MailRecv3">استقبال عنوان البريد الإلكتروني 3</string>
+			<string name= "MailRecv4">استقبال عنوان البريد الإلكتروني 4</string>
+			<string name= "InputMailSender">ادخل ايميل المرسل</string>
+			<string name= "InputMailServer">ادخل ايميل المخدم</string>
+			<string name= "InputMailRecv">ادخل ايميل المستقبل</string>
+			<string name= "MailNone">لا شيء</string>
+			<string name= "MailSSL">SSL</string>
+			<string name= "MailTLS">TLS</string>
+			
+			
+			<string name= "AlarmSetting">منبة</string>
+			<string name= "alarmMotionEnable">مبنة كشف الحركة</string>
+			<string name= "alarmMotionLevel">كشف الحرك بحساسية</string>
+			<string name= "alarmExtern">Alarm input armed</string>
+			<string name= "alarmExternLevel">Trigger level</string>
+			<string name= "alarmMotionPreset">Alarm preset linkage</string>
+			<string name= "alarmMotionIO">IO linkage on alarm</string>
+			<string name= "alarmMotionIOLevel">Output Level</string>
+			<string name= "alarmMail">Armed mail notification</string>
+			<string name= "alarmPicEnable">FTP Upload</string>
+			<string name= "alarmPicTimer">FTP Upload Interval</string>
+			<string name= "alarm_text_a1">High</string>
+			<string name= "alarm_text_a2">Low</string>
+			<string name= "alarmRecord">Alarmed record</string>
+			<string name= "isEnableAlarmAudio">Enable the alarm sound</string>
+			<string name= "alarm_presetno">No</string>
+				
+			<string name= "ftp_uploadtime_prompt">Upload Interval Range 0～3600</string>
+			<string name= "nochinese">cannot contains chinese</string>
+			<string name= "FTPServer">FTP server</string>
+			<string name= "FTPSetting">FTP</string>
+			<string name= "InputFtpServer">Input Ftp Server</string>
+			<string name= "FTPUploadInterval">Upload interval(Seconds)</string>
+			<string name= "ftpport">FTP port</string>
+			<string name= "ftpuser">FTP user</string>
+			<string name= "ftppwd">FTP pwd</string>
+			
+			
+				
+			<string name= "SdcardSetting">تسجيل</string>
+			<string name= "sdcard_total">اجمالي مساحة الذاكرة</string>
+			<string name= "sdcard_remain">المساحة المتبقية</string>
+			<string name= "sdcard_input">تم ادخال الذاكرة</string>
+			<string name= "sdcard_output">لم يتم ادخال الذاكرة</string>
+			<string name= "sdcard_status">حالة الذاكرة</string>
+			<string name= "sdcard_recordtime">مدة التسجيل بالدقيقة</string>
+			<string name= "sdcard_fixedtime_record">المؤقت</string>
+			<string name= "sdcard_cover_record">اعدة التسجيل مع حذف الموجود</string>
+			<string name= "sdcard_range">نطاق</string>
+			<string name= "sdcard_record_starttime">بدء التسجيل</string>
+			<string name= "sdcard_record_endtime">نهاية التسجيل</string>
+			<string name= "sdcard_startendtime_prompt">وقت البدا يجب ان يكون اقل من وقت النهائي</string>
+			<string name= "sdcard_format">اعادة تهيئة</string>
+			<string name= "sd_record_audio">صوت مسجل</string>
+			
+				
+			<string name= "WifiSetting">WIFI</string>
+			<string name= "Loading">تحميل…</string>
+			<string name= "WifiList">اختيار WIFI</string>
+			<string name= "EnterPwd">ادخل كلمة السر</string>
+			<string name= "WillSet">سيتم الاعداد</string>
+			<string name= "NotSetting">لم يتم الاعداد</string>
+			<string name= "wifi_connected">متصل</string>
+			<string name= "wifi_connectedfail">خطأ في الاتصال</string>
+			<string name= "wifi_ssid">SSID</string>
+			<string name= "wifijoin">ربط</string>
+			<string name= "wifisetsucc">إعدادات واي فاي ناجحة، سيتم تهيئة الكاميرا</string>
+			<string name= "wifisetfail">WiFi خطأ في اعدادات</string>
+			<string name= "wifipwdcheck">وضع الامان</string>
+			<string name= "wifipwdopen">فتح</string>
+			<string name= "wifipwdshare">مشاركة</string>
+			<string name= "wifipwdkekformat">Key Format</string>
+			<string name= "kekformatAscci">ASCII</string>
+			<string name= "kekformat16">Hex</string>
+			
+				
+			<string name= "MotionLevelHigh">عالي</string>
+			<string name= "MotionLevelMiddle">عادي</string>
+			<string name= "MotionLevelLow">منخفض</string>
+			<string name= "DropListMotionLevel">مستوى الحركة</string>
+			<string name= "DropListTriggerLevel">مستوى التشغيل</string>
+			<string name= "DropListPreset">مسبقا</string>
+			<string name= "DropListOutputLevel">مستوى الانتاج</string>
+			<string name= "DropListUploadInterval">تحميل الفاصل</string>
+			<string name= "DropListTimeZone">وقت المنطقة</string>
+			<string name= "DropListNtpServer">NTP مخدم</string>
+				
+			<string name= "moreviewall">تم اضافة الشاشات الاربع</string>
+			<string name= "moreviewadded">تم اضافة الكاميرا</string>
+			
+			<string name= "sdformat_prompt">اعادة تهيئة، الرجاء الانتظار</string>
+			
+			<string name= "lookvideo_time">اعدادات وقت مشاهدة المستخدم</string>
+			<string name= "lookvideo_Durationferiod">المدة الزمنية</string>
+			<string name= "lookvideo_timeondays">الوقت خلال اليون</string>
+			<string name= "lookvideo_fromtime">من (الوقت)</string>
+			<string name= "lookvideo_totime">الي(الوقت):</string>
+			<string name= "lookvideo_fromdate">من(التاريخ)</string>
+			<string name= "lookvideo_todate">الى(التاريخ:</string>
+			<string name= "lookvideo_sunday">الأحد</string>
+			<string name= "lookvideo_monday">الإثنين</string>
+			<string name= "lookvideo_Tuesday">الثلاثاء</string>
+			<string name= "lookvideo_Wednesday">الاربعاء</string>
+			<string name= "lookvideo_Thursday">الخميس</string>
+			<string name= "lookvideo_Friday">الجمعة</string>
+			<string name= "lookvideo_Saturday">السبت</string>
+			<string name= "lookvideo_timehour_place">0–23</string>
+			<string name= "lookvideo_timemin_place">0–59</string>
+			<string name= "lookvideo_time_enable">فتح المشاهدة:</string>
+			<string name= "Off">ايقاف</string>
+			<string name= "On">تشغيل</string>
+			
+			<string name= "user_anonymous">السماح لاى شخص بالوصول</string>
+
+			<string name= "setsuccess">تم الضبط بنجاح</string>
+			<string name= "setfailed">فشل في الضبط</string>
+			
+			<string name= "SearchResults">نتائج البحث</string>
+			 <string name="refresh">تحديث</string>
+			 <string name="sum_pic">مجموع</string>
+			 
+			 
+			 
+			  <!-- // AddEditMoodInputViewController -->
+
+			<string name= "Selectphoto">آختر صورة</string>
+			<string name= "MoodName">أسم الوضع</string>
+			<string name= "Moodnamerequired">مطلوب أسم الوضع</string>
+			<string name= "Moodnamenotavailable">أسم الوضع غير متوفر</string>
+			<string name= "Moodphotorequired">مطلوب صورة الوضع!</string>
+			
+					
+			<!-- // ButtonMoodsDetailViewController -->
+		
+			
+			<string name= "ButtonMoods">وضع الأزرار</string>
+			<string name= "removeMoodbuttonfrom">هل أنت متأكد من مسح الزر </string>
+			<string name= "Mood">الوضع</string>
+			 
+			
+			
+			<!-- // EditMoodBaseViewController -->
+
+			<string name="IPnotfound">IP لم يتم العثور</string>
+			<string name="getIP">الرجاء استخدام خيار المسح الضوئي الموجود في اعداداتIP!</string>
+			<string name="Remotemode">التطبيق في حالة التحكم عن بعد حاليا</string>
+			<string name="Errorinconnection">خطأ في الإتصال!</string>
+			<string name="CommunicationErrorPleaseTryAgain">خطأ في الإتصال الرجاء المحاولة مرة أخرى</string>
+			<string name="Error">خطأ</string>
+			<string name="UnknownError">خطأ غير معروف</string>
+			
+			
+			<!-- added later -->
+			
+			
+			 <string name="main_setting_prompt">لايمكن. برمجة الكاميرا  في حالة انعدام الشبكة</string>
+			 <string name="wifi_safe">حماية الواي فاي</string>
+			 <string name="wifi_manager">نقطة اتصال لاسلكي</string>
+			 <string name="wifi_signal_strong">تردد الواي فاي</string> 
+			 <string name="wifi_channel">قناة:</string> 
+			 <string name="showpwd">أظهر الرقم السري</string>
+			 <string name="date_phone_time_auto_check">تزامن مع وقت الموبايل</string>
+			 <string name="exit_play_show">هل أنت متأكد من الخروج من  التشغيل؟</string>
+			 <string name="no_video">لايوجد فيديوهات</string>
+			 <string name="localpic_no">لاتوجد صور</string>
+			 <string name="alerm_no_log">لايوجد تنبيهات</string>
+			 <string name="aler_cancel">تجاهل</string>
+    		 <string name="aler_ok">فحص</string>
+    		 <string name="clean">تنظيف</string>
+    		 <string name="input_camera_all_include">قد تم الخروج من نظام الكاميرا</string>
+    		<!--  <string name= "MotionLevelMiddle">normal</string> -->
+	    	
+	    	 <string name="delete_camera_msg">هل تريد حذف هذة الكاميرا؟</string> 
+	    	
+    		  <string name="updatedsuccessfully">تم تحديث  بنجاح</string>
+    		  <string name="requestingTime">طلب وقت..</string> 
+    		  
+    		  
+    		  
+    		  <string name="MAC">: MAC</string> 
+             <string name="IP">: IP</string> 
+             
+             <string name="ID">: ID</string> 
+             <string name="wifi_scanning">البحث عن الواي فاي</string>
+             <string name="date_setting_success">تمت تهيئة الوقت في الجهاز بنجاح</string>
+             <string name="setting_aler_sucess">تمت تهيئة التنبيه بنجاح</string>
+             <string name="sdcard_set_success">تمت تهيئة الفيديوا بنجاح</string>
+             <string name="sdcard_set_failed">فشل في تهيئة الفيديو</string>
+             <string name="wifi_setting_no_change">لم يتم تغيير إعدادات الواي فاي</string>
+   			 <string name="video_file_name">اسم ملف الفيديو：</string>
+             <string name="video_file_create_time">وقت اسم الملف  المنشأ：</string>
+             
+              <string name="video_file_size">حجم ملف الفيديوا：</string>
+              <string name="remote_video_offline">الكاميرا في وضع خارج الشبكة لاتستطيع إعادة التسجيل للفيديوا المسجل عن بعد</string>
+              <string name="video_play">إذا أحضرت جهاز لتشغيل الملف لاتستطيع ، الرجاء تثبيت برامج تشغيلالتسجيل مثل:إلخ</string>
+    			<string name="exit_show">عاجل:</string>
+    		 <string name="exit_qu">احذف هذا الملف</string>
+    		 <string name="exit_qu_all">احذف جميع الملفات</string>
+    		 <string name="delect_sucss">تم الحذف بنجاح</string>
+               <string name="more_presets">الضبط مقدماً</string>
+              
+</resources>

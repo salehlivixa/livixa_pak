@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        style="@style/top_bg_style"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_gravity="center"
+        android:rotationY="180"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_phonepic"
+            android:rotationY="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+           
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="@string/CPhoto"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:rotationY="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_phone"
+            android:visibility="invisible" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/picture_phone"
+            android:layout_width="70dp"
+            android:rotationY="180"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_bg_rect_local"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/main_phone"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_large" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/picture_remote"
+            android:rotationY="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_2dp"
+            android:background="@drawable/camera_bg_rect_remote"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/main_remote"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_large" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:rotationY="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_phone"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/piclistview"
+        android:rotationY="180"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/color_divider"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:padding="1dp" />
+
+</LinearLayout>

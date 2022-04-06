@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/alarm_log_cam_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:text="ipcam"
+        android:textColor="@color/color_white" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/alarm_log_cam_name"
+        android:layout_toRightOf="@+id/alarm_log_cam_name"
+        android:background="@drawable/alarm_log_bg"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/alarm_log_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:text="@string/time"
+            android:textColor="@color/color_black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/alarm_log_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/alarm_log_left"
+            android:layout_toRightOf="@+id/alarm_log_left"
+            android:maxWidth="200dp"
+            android:text="TextView"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/alarm_log_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/alarm_log_left"
+            android:layout_below="@+id/alarm_log_time"
+            android:text="TextView"
+            android:textColor="@color/color_black" />
+    </RelativeLayout>
+
+</RelativeLayout>

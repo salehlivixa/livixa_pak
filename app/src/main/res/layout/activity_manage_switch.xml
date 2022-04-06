@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    
+     <com.livixa.apacam.client.activity.ShSwitchView
+					        xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+					        android:id="@+id/sSIDHidden"
+					        android:layout_width="65dip"
+					        android:layout_centerInParent="true"
+					        android:layout_height="35dip"
+					        android:layout_marginLeft="10dp"
+					        shSwitch:tintColor="#00097BFF"
+					        shSwitch:shadowSpace="0dip"/>
+     
+     
+   <com.livixa.apacam.client.sliderview.CircularSliderRange
+        xmlns:range="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circular"
+        android:layout_below="@id/sSIDHidden"
+        android:layout_width="120dp"
+        android:layout_centerInParent="true"
+        android:layout_height="120dp"
+        android:padding="15dp"
+        android:background="@drawable/button_dimmer_border"
+        range:arc_color="#B6B6B6"
+        android:visibility="gone"
+        range:arc_dash_size="5dp"
+        range:border_color="#FDB71B"
+        range:border_thickness="5dp"
+        range:end_angle="-90"
+        range:end_thumb_image="@drawable/connect"
+        range:start_angle="-89"
+        range:start_thumb_color="#FFFFFF"
+        range:start_thumb_size="20dp"
+        range:thumb_size="20dp" />
+   
+   <com.livixa.apacam.client.sliderview.HoloCircleSeekBar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/picker"
+        android:layout_width="285dp"
+        android:layout_height="290dp"
+        android:layout_centerInParent="true"
+        app:max="100"
+        app:pointer_color="#ffffff"
+        app:pointer_halo_color="#cc0000"
+        app:pointer_size="20dp"
+        app:text_color="#654321"
+        app:text_size="65sp"
+        app:wheel_active_color="#00A7E4"
+        app:wheel_unactive_color="#E1E6F6" />
+
+</RelativeLayout>

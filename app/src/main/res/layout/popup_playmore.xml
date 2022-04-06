@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_bg"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+		<!-- 
+        <ImageButton
+            android:id="@+id/ptz_hori_mirror"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/play_button_selector"
+            android:src="@drawable/ptz_hori_mirror" />
+ -->
+
+                <Button
+                    android:id="@+id/quality"
+                    android:layout_width="47dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:text="@string/more_mode"
+                    android:textColor="#ffffff"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+                 
+        <ImageButton
+            android:id="@+id/ptz_brightness"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/ptz_brightness" />
+
+                         <Button
+                             android:id="@+id/preset"
+                             android:layout_width="47dp"
+                             android:layout_height="35dp"
+                             android:layout_marginTop="10dp"
+                             android:background="#00000000"
+                             android:text="@string/more_presets"
+                             android:textColor="#ffffff"
+                             android:textSize="12dp"
+                             android:textStyle="bold" />
+
+<!-- 
+        <ImageButton
+            android:id="@+id/led_open"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/led_open" />
+        
+        <ImageButton
+            android:id="@+id/frequence"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/waves" />      
+            -->  
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+<!-- 
+        <ImageButton
+            android:id="@+id/ptz_vert_mirror"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/play_button_selector"
+            android:src="@drawable/ptz_vert_mirror" />
+ -->
+
+        <ImageButton
+            android:id="@+id/ptz_contrast"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/ptz_contrast" />
+          
+                <ImageButton
+                    android:id="@+id/ptz_default_set"
+                    android:layout_width="47dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                	android:background="#00000000"
+                    android:src="@drawable/ptz_default_set" />
+                
+                             
+        <ImageButton
+            android:id="@+id/ptz_io_open"
+            android:layout_width="47dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/gpio_open" />            
+                 
+  
+
+             
+    </LinearLayout>
+
+</LinearLayout>

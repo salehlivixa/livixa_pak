@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    
+    android:background="@drawable/button_selector_white"
+   
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+          android:layout_centerVertical="true"
+        
+        android:layout_height="70dp"
+         >
+
+        <RelativeLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            
+            android:layout_centerVertical="true"
+             >
+
+            <ImageView
+                android:id="@+id/pic"
+                
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:rotationY="180"
+                android:src="@drawable/icon_user" />
+
+            <ImageView
+                android:id="@+id/video_flag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_large"
+                android:scaleType="center"
+                 android:rotationY="180"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/frame"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                 android:rotationY="180"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/text_reg"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                 android:rotationY="180"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:text="TextView"
+                android:textColor="@color/color_blue"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name" >
+
+                <TextView
+                    android:id="@+id/tv_did"
+                     android:rotationY="180"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/text_reg"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_pic_num"
+                     android:rotationY="180"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:text="TextView"
+                    android:textColor="@color/color_black"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_large"
+            android:src="@drawable/camera_icon_arrow_nav_forward" />
+    </RelativeLayout>
+
+</RelativeLayout>

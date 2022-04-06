@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    
+    android:gravity="center"
+    
+    android:layout_height="100dp"
+    >
+<LinearLayout
+  
+    android:layout_width="110dp"
+    android:orientation="vertical"
+    
+    android:gravity="center"
+  
+    android:layout_height="100dp"
+    >
+ 
+    
+    <ImageView android:layout_height="60dp"
+	        		android:id="@+id/img_icon_switch"
+	       			
+	        		android:layout_centerVertical="true"
+	              	android:src="@drawable/one_button_switch"
+	               	android:layout_width="60dp"/>
+    
+    
+     <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="70dp"
+                        
+                        android:layout_height="20dp"
+                        
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="switch1"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:id="@+id/switchName"
+                        />
+     
+      <com.livixa.apacam.client.widget.CustomTextView
+                        android:background="@drawable/corner_border_white_less_less_corner"
+                        android:layout_width="70dp"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        android:paddingLeft="5dp"
+                        android:layout_centerHorizontal="true"
+                        
+                        android:text="ID: AAAAAA03"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:id="@+id/switchId"
+                        />
+    
+
+</LinearLayout>
+
+
+</RelativeLayout>
+

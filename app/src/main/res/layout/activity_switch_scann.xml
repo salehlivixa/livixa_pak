@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:onClick="onbackButttonClick"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_title"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/ScanSwitches"
+                    android:layout_marginBottom="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                   
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+                
+                
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/startScan"
+                    
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="onStartScann"
+                    android:text="@string/Start"
+                    android:gravity="center"
+                    
+                     android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+
+               
+            </RelativeLayout>
+            
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="60dp"
+                          android:gravity="center"
+                          android:orientation="vertical"
+                         
+                >
+                
+               
+                     <ImageView
+                android:id="@+id/logo"
+                android:layout_width="130dp"
+                
+                android:layout_height="70dp"
+               
+                android:src="@drawable/logo" />
+                    
+                
+            </LinearLayout>
+            
+           <!--  // -->
+           
+           
+           <ListView android:id="@+id/switchListView"
+               android:cacheColorHint="#00000000"
+               android:scrollbars="none"
+               android:clickable="false"
+               
+               
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+               
+           </ListView>
+           
+           <RelativeLayout 
+			     
+			     android:id="@+id/switchEmptylayout"
+			     
+			     android:layout_width="match_parent"
+			      android:layout_height="match_parent"
+			     android:visibility="gone"
+			     android:gravity="center"
+			     android:orientation="vertical" >
+                
+               <ImageView android:layout_height="150dp"
+                          android:alpha="0.08"
+                          android:layout_centerInParent="true"
+                          android:src="@drawable/exclamation_mark"
+                          android:layout_width="150dp"/>
+               
+                <com.livixa.apacam.client.widget.CustomTextView
+                  
+                    android:id="@+id/messageTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="No switches added yet!"
+                    
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+               
+           </RelativeLayout>
+           
+           
+           
+          
+            
+             </LinearLayout>
+             
+        
+        <LinearLayout
+                    android:id="@+id/cancelButtonLyout"
+                     android:layout_marginTop="10dp"
+                    android:layout_width="250dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="#99000000"
+                   android:gravity="center"
+                     >
+           
+            
+                      <LinearLayout android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_height="100dp">
+                
+                          
+                         <com.livixa.apacam.customprogressbar.AVLoadingIndicatorView
+				            android:id="@+id/avi"
+				            app:indicatorName="BallPulseIndicator"
+				            android:layout_width="60dp"
+				            android:layout_height="60dp"
+				            style="@style/AVLoadingIndicatorView.Large"
+            				/>
+                          
+                          <TextView android:layout_height="wrap_content"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16dp"
+                                    android:gravity="center"
+                                    android:text="@string/Pleasewaitwhilescanning"
+                                    android:layout_width="match_parent"/>
+                          
+                          
+                      </LinearLayout>
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_Cancel"
+                         android:background="@drawable/popup_button_selector_white"
+                        android:alpha="0.5"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Cancel"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+
+                    
+                </LinearLayout>
+   
+</RelativeLayout>

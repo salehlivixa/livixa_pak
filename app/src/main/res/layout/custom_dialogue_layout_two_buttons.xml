@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="#00ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        
+    <LinearLayout android:layout_height="240dp"
+                   android:orientation="vertical"
+                   android:gravity="center"
+                   android:background="#99000000"
+                   android:layout_width="250dp">
+
+        
+        
+        <TextView 
+                  android:id="@+id/progressTV"
+                  android:layout_height="120dp"
+                  android:textSize="20dp"
+                  android:layout_marginBottom="10dp"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:layout_width="wrap_content"
+                  android:text="You are currently logged in from another device. Do you want to logout from other device to login? "
+                  />
+        
+        
+        <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        
+                        android:ellipsize="marquee"
+                        
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_OK"
+                        android:background="@drawable/popup_button_selector_white"
+                        android:singleLine="true"
+                        android:text="@string/YES"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+        
+        <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="marquee"
+                        
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_NO"
+                        android:background="@drawable/popup_button_selector_white"
+                        android:singleLine="true"
+                        android:text="@string/NO"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+
+        
+        </LinearLayout>
+
+    </LinearLayout>

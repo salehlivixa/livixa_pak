@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_gravity="center"
+        style="@style/top_bg_style"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip" >
+
+        <Button
+            android:id="@+id/check_alarm_event"
+            android:gravity="center"
+            android:background="@drawable/checktopleft_pressed"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_alarm_event" />
+        <Button
+            android:id="@+id/check_pic"
+            android:gravity="center"
+            android:background="@drawable/checkmiddle_normal"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_pic" />
+        <Button
+            android:id="@+id/check_vid"
+            android:gravity="center"
+            android:background="@drawable/checkright_normal"
+            android:textColor="@color/color_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_vid" />
+        
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/checklistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="#00000000"
+        android:cacheColorHint="#00000000"
+       	android:divider="@color/color_divider"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="@drawable/listitem_pressed_selector" 
+        >
+    </ListView>
+
+</LinearLayout>

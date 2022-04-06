@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        style="@style/top_bg_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_selector_common"
+            android:maxWidth="100dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+           
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="150dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            
+            android:singleLine="true"
+            android:text="@string/alerm_push_log"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:padding="10dp"
+            android:scrollbars="none" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/no_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/alerm_no_log"
+            android:textColor="@color/color_white"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/alarm_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/aler_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector_common"
+                android:text="@string/aler_cancel"
+                android:textColor="@color/color_white" >
+            </Button>
+        	<Button
+            	android:id="@+id/clean"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector_common"
+            	android:text="@string/clean"
+            	android:textColor="@color/color_white">        
+            </Button>
+            <Button
+                android:id="@+id/aler_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector_common"
+                android:text="@string/aler_ok"
+                android:textColor="@color/color_white" >
+            </Button>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

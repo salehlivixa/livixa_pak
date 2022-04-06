@@ -1,0 +1,80 @@
+
+<RelativeLayout 
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ac_switch_layoutt"
+    android:layout_width="match_parent">
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+                
+                android:orientation="vertical"
+                 android:gravity="center_horizontal"
+                 
+                android:layout_height="match_parent">
+                
+           
+            <ImageView android:layout_height="75dp"
+                        android:id="@+id/switchIcon"
+                       
+                        android:src="@drawable/ac_button_switch"
+                        android:layout_width="75dp"/>
+            <TextView android:layout_height="wrap_content"
+                         android:id="@+id/switchTitle"
+                        android:textColor="#FFFFFF"
+                        android:text="switch"
+                        android:layout_marginTop="3dp"
+                        android:textSize="17dp"
+                       android:layout_width="wrap_content"/>
+            
+            <RelativeLayout android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="match_parent">
+                            
+                
+                 <RelativeLayout android:layout_height="wrap_content"
+                           
+                            android:layout_width="match_parent">
+                     
+                <LinearLayout android:layout_height="wrap_content"
+                    			android:orientation="vertical"
+                    			android:gravity="center"
+                    			
+                    		  android:layout_centerHorizontal="true"
+                              android:layout_width="wrap_content">
+                     
+                
+                
+                <ImageView android:layout_height="170dp"
+                        android:layout_centerInParent="true"
+                       
+                        android:src="@drawable/rotating_image_off"
+                        android:id="@+id/acFrame"
+                        android:layout_width="170dp"/>
+                
+                
+                
+                </LinearLayout>
+                
+                
+                
+                 <ImageView android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                       
+                        android:src="@drawable/icon_ac"
+                        android:id="@+id/acIcon"
+                        android:layout_width="45dp"/>
+                
+                
+                
+                
+            </RelativeLayout>
+              
+            
+            </RelativeLayout>
+            
+             </LinearLayout>
+             </RelativeLayout>
+          
+            

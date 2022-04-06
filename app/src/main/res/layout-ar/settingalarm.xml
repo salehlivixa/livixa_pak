@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_bg_style"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/alerm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxWidth="100dp"
+            android:minWidth="55dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="300dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text="@string/AlarmSetting"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/alerm_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_selector_common"
+            android:maxWidth="100dp"
+            android:minWidth="55dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout_otherall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/list_bg"
+                    android:orientation="vertical"
+                    android:rotationY="180"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/textView1" >
+
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:rotationY="180"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmMotionEnable"
+                            android:textColor="@color/color_black" />
+
+                       
+                        
+                        <CheckBox
+		                    android:id="@+id/alerm_cbx_move_layout"
+		                    android:layout_width="30dp"
+		                    android:rotationY="180"
+		                    android:layout_height="30dp"
+		                    android:layout_alignParentRight="true"
+		                    android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+		                    android:background="@drawable/check_box_selector"
+		                    android:button="@null"
+		                    />
+
+                        <ImageView
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" 
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/alerm_moveview"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:gravity="center_vertical"
+						>
+
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/tv1"
+                            android:rotationY="180"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmMotionLevel"
+                            android:textColor="@color/color_black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/alerm_tv_sensitivity"
+                                android:rotationY="180"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/alarm_high"
+                                android:textColor="@color/color_black" />
+
+                            <ImageView
+                                android:id="@+id/alerm_img_sensitive_drop"
+                               
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rightdown_selector" />
+
+                            <!-- <TextView -->
+                            <!-- android:id="@+id/tv3" -->
+                            <!-- android:layout_width="wrap_content" -->
+                            <!-- android:layout_height="wrap_content" -->
+                            <!-- android:text="@string/alerm_sensitivity_desc" -->
+                            <!-- android:textColor="@color/color_black" /> -->
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/list_bg"
+                    android:orientation="vertical"
+                    android:rotationY="180"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/textView1" >
+
+                        <object.p2pipcam.system.MyTextView
+                            android:rotationY="180"
+                            android:id="@+id/alerm_i0_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmExtern"
+                            android:textColor="@color/color_black" />
+
+                       
+                        <CheckBox
+		                    android:id="@+id/alerm_cbx_i0_layout"
+		                    android:layout_width="30dp"
+		                    android:rotationY="180"
+		                    android:layout_height="30dp"
+		                    android:layout_alignParentRight="true"
+		                     android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+		                    android:background="@drawable/check_box_selector"
+		                    android:button="@null"
+		                    />
+
+                        <ImageView
+                            android:id="@+id/line3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" 
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/alerm_ioview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+						android:visibility="gone">
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alerm_trigger_level"
+                            android:textColor="@color/color_black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical" >
+
+                            <object.p2pipcam.system.MyTextView
+                                android:id="@+id/alerm_tv_triggerlevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:ellipsize="marquee"
+                                android:focusableInTouchMode="true"
+                                android:gravity="left|center_vertical"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxWidth="300dp"
+                                android:minWidth="60dp"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/color_black" />
+
+                            <ImageView
+                                android:id="@+id/alerm_img_leveldrop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rightdown_selector" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/alerm_eventview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:rotationY="180"
+                    android:background="@drawable/list_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <object.p2pipcam.system.MyTextView
+                        android:rotationY="180"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="300dp"
+                        android:minWidth="60dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/alarmExternLevel"
+                        android:textColor="@color/color_black" />
+
+                    <ImageView
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/color_grey" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/line6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:rotationY="180"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmMotionPreset"
+                            android:textColor="@color/color_black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical" >
+
+                            <object.p2pipcam.system.MyTextView
+                                android:rotationY="180"
+                                android:id="@+id/alerm_tv_preset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:focusableInTouchMode="true"
+                                android:gravity="left|center_vertical"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxWidth="300dp"
+                                android:minWidth="60dp"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/color_black" />
+
+                            <ImageView
+                                android:id="@+id/alerm_img_preset_drop"
+                                android:layout_width="wrap_content"
+                               
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rightdown_selector" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/line7"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:src="@color/color_grey" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:rotationY="180"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmMotionIO"
+                            android:textColor="@color/color_black" />
+
+                        
+                        <CheckBox
+		                    android:id="@+id/alerm_cbx_io_move"
+		                    android:layout_width="30dp"
+		                    android:rotationY="180"
+		                    android:layout_height="30dp"
+		                    android:layout_alignParentRight="true"
+		                    android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+		                    android:background="@drawable/check_box_selector"
+		                    android:button="@null"
+		                    />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/alerm_io_move_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" 
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/line8"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:src="@color/color_grey"/>
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alerm_ioout_level"
+                            android:textColor="@color/color_black" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical" >
+
+                            <object.p2pipcam.system.MyTextView
+                                android:id="@+id/alerm_tv_ioout_level_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:focusableInTouchMode="true"
+                                android:gravity="left|center_vertical"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxWidth="300dp"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/color_black" />
+
+                            <ImageView
+                                android:id="@+id/alerm_img_ioout_level_drop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rightdown_selector" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" 
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/line9"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alerm_mail_inform"
+                            android:textColor="@color/color_black" />
+
+                        <CheckBox
+                            android:id="@+id/alerm_cbx_mail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ss"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/line10"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:rotationY="180"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alarmRecord"
+                            android:textColor="@color/color_black" />
+
+                        
+                         <CheckBox
+		                    android:id="@+id/alerm_cbx_isrecord"
+		                    android:layout_width="30dp"
+		                    android:layout_height="30dp"
+		                    android:rotationY="180"
+		                    android:layout_alignParentRight="true"
+		                      android:layout_centerVertical="true"
+                            android:layout_gravity="right"
+		                    android:background="@drawable/check_box_selector"
+		                    android:button="@null"
+		                    />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" />
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:rotationY="180"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/isEnableAlarmAudio"
+                            android:textColor="@color/color_black" />
+
+                       
+                         <CheckBox
+		                    android:id="@+id/alerm_cbx_void"
+		                    android:layout_width="30dp"
+		                    android:rotationY="180"
+		                    android:layout_height="30dp"
+		                    android:layout_alignParentRight="true"
+		                    android:layout_centerVertical="true"  
+                            android:layout_gravity="right"
+		                    android:background="@drawable/check_box_selector"
+		                    android:button="@null"
+		                    />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" 
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/line11"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@color/color_grey" 
+                            android:contentDescription="@null"/>
+
+                        <object.p2pipcam.system.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:rotationY="180"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/alerm_upload_picture"
+                            android:textColor="@color/color_black" />
+
+                        <CheckBox
+                            android:id="@+id/alerm_cbx_upload_picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rotationY="180"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/alerm_uploadpicture_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+						android:visibility="gone">
+
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/uploadpic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:rotationY="180"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxWidth="300dp"
+                            android:minWidth="60dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/FTPUploadInterval"
+                            android:textColor="@color/color_black" />
+
+                        <EditText
+                            android:id="@+id/alerm_edit_picture_interval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_below="@+id/uploadpic"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/uploadpic"
+                            android:background="@drawable/edit_bg"
+                            android:gravity="center_vertical"
+                            android:hint="1-30"
+                            android:rotationY="180"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true" >
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

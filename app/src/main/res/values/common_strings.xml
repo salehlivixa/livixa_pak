@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- Dialog Titles -->
+    <string name="dlg_title_purchase_audio">Purchase Audio</string>
+    <string name="dlg_title_transaction_detail">Transaction Details</string>
+    <string name="dlg_title_no_playlist_found">No playlist found</string>
+    <string name="dlg_title_audio_playlists">Audio Playlists</string>
+    <string name="dlg_title_error">Error</string>
+    <string name="dlg_title_sorry">Sorry</string>
+    <string name="dlg_title_queue_limitation">Queue Limitation</string>
+    <string name="dlg_title_queue_paralel_max_limit">Set Parallel downloading limits</string>
+    <string name="dlg_title_queue_max_limit">Set max queue size</string>
+    <string name="dlg_title_queue_limitation_msg">Downloading limit is full. Please wait for any download to complete or delete one item from download queue.</string>
+    <string name="dlg_title_are_you_sure_to_delete">Are you sure to delete?</string>
+    <string name="dlg_title_duplicate_playlist_name">Duplicate playlist Name</string>
+    <string name="dlg_title_done">Done</string>
+    <string name="dlg_title_no_option_selected">No option selected</string>
+    <string name="dlg_title_delete_incomplete_downloads">Delete Incomplete Downloads</string>
+    <string name="dlg_title_network_weak">Network Problem</string>
+    <string name="dlg_title_insufficient_space">Insufficient space</string>
+    <!-- Text View -->
+    <string name="at_msg_retrieving_from_secure_vault">Processing file …</string>
+    <string name="lab_authenticating">Authenticating …</string>
+    <string name="tv_title_downloading_queue">Downloading Queue</string>
+    <string name="msg_please_try_again_later">Please try again later.</string>
+    <string name="msg_please_enter_some_text_in">Please enter </string>
+    <string name="msg_please_enter_some_text">Please enter some text.</string>
+    <string name="error_msg_must_contains_characters">Sorry, There must be some letters (a&#8211;z), numbers (0&#8211;9).</string>
+    <!--<string name="error_msg_must_contains_characters_in">Sorry, There must be some letters (a&#8211;z), numbers (0&#8211;9) in </string>-->
+    <!-- Notifications Message -->
+    <string name="lab_pause_notification">Your system is paused.\nPress resume to continue monitoring</string>
+    <string name="tv_temp_value">Temp Value</string>
+    <string name="tv_whats_new">What\'s New</string>
+    <string name="tv_size_of_download"> Size of Download</string>
+    <string name="tv_available_space"> Available space</string>
+    <string name="tv_required_space"> Additional required space</string>
+    <string name="tv_equal_sign">=</string>
+    <string name="lab_add_user">Add User</string>
+    <string name="lab_save">Save</string>
+    <string name="lab_cancel">Cancel</string>
+    <string name="lab_delete">Delete</string>
+    <string name="lab_invite">Invite</string>
+    <string name="textOn">ON</string>
+    <string name="textOff">OFF</string>
+    <string name="lab_field_required">This field is required</string>
+    <string name="lab_filed_short_start">This </string>
+    <string name="lab_filed_short_end">is too short</string>
+    <string name="lab_field_invalid">Invalid input for this field</string>
+    <string name="lab_edit">Edit</string>
+    <string name="lab_gallery">Gallery</string>
+    <string name="lab_message">Messaing</string>
+    <string name="lab_facebook">Facebook</string>
+    <string name="lab_video_quality_low">Low</string>
+    <string name="lab_video_quality_medium">Medium</string>
+    <string name="lab_video_quality_high">High</string>
+    <string name="lab_empty">Empty</string>
+    <string name="lab_guest">Guest</string>
+    <string name="lab_activity">Activity</string>
+    <string name="lab_group_name">Group Name</string>
+<!--    <string name="lab_emailadd">Email Address</string>-->
+    <string name="btn_resume_later">Resume Later</string>
+    <string name="btn_resume">Resume</string>
+    <string name="btn_downloading">Downloading&#8230;</string>
+    <string name="btn_restart">Restart</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="btn_cancel">Cancel</string>
+    <!--<string name="btn_delete">Delete</string>-->
+    <string name="btn_download">Download</string>
+    <string name="btn_re_download">Re-download</string>
+    <string name="btn_purchase">Purchase</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_watch_now">Watch Now</string>
+    <string name="btn_listen_now">Listen Now</string>
+    <string name="btn_try_again">Try again</string>
+    <string name="btn_nevermind">Nevermind</string>
+    <string name="btn_create">Create</string>
+    <string name="btn_credit">Credit</string>
+    <string name="btn_save">save</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_new">New</string>
+    <string name="btn_buy">Buy</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_add_to_playlist">Add to Playlist</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_dissmiss">Dissmiss</string>
+    <string name="btn_rotate">Rotate</string>
+    <string name="btn_crop">Crop</string>
+    <!-- Error Messages -->
+    <string name="genric_error">The current request has caused an unknown error</string>
+    <string name="error_msg_no_internet">No internet connection available. Please check your connection and try again later</string>
+    <string name="error_msg_no_response">No response from server. Please check your connection and try again later.</string>
+    <string name="error_msg_invalid_response">Invalid response from server. Please restart application or report us if continue.</string>
+    <string name="error_msg_no_db">Database not found. Please restart application or report us if continue.</string>
+    <!--<string name="error_msg_no_data_found">No data found. Please restart application or report us if continue.</string>-->
+    <string name="error_msg_invalid_index">Application is trying to get Unavailable Data. Please restart application or report us if continue.</string>
+    <string name="error_msg_null_pointer">Application is trying to get Unavailable Data. Please restart application or report us if continue.</string>
+    <string name="error_msg_empty_string">Data is empty. Please restart application or report us if continue.</string>
+    <string name="error_msg_file_not_found">The file you are trying to access is Unavailable.</string>
+    <string name="error_msg_invalid_data">Invalid data found. Please restart application or report us if continue.</string>
+
+    <!-- Error Messages -->
+    <!--<string name="error_msg_failed_to_delete_download_request">Failed to delete download request. Please try again later.</string>-->
+    <!--<string name="error_msg_encountered_an_error">Encountered an error.</string>-->
+    <!--<string name="error_msg_unable_to_perform_streaming_network_not_available">Network not reachable, player can\'t perform streaming</string>-->
+    <!--<string name="error_msg_ltd_player_encountered_error">Media Player encountered an error. Please try again.</string>-->
+    <!--<string name="error_msg_no_item_found">There are no items to be shown.</string>-->
+    <!--<string name="error_msg_transaction_failed">Sorry! Error processing your request. The transaction cannot be completed.</string>-->
+    <!--<string name="error_msg_no_data_available">No data is available at the moment.</string>-->
+    <!--<string name="error_msg_external_storage_not_available">External Storage is not available</string>-->
+    <!--<string name="error_msg_external_storage_write_protected">External Storage is write protected</string>-->
+    <!--<string name="error_msg_external_storage_insufficient_space">Sorry, there is not enough space available. Please delete some files to download.</string>-->
+    <!--<string name="error_msg_external_storage_insufficient_space_vault">Sorry, there is not enough space available to retrieve data from secure vault.</string>-->
+    <!--<string name="error_msg_pdf_reader_not_found">PDF reader is not found.</string>-->
+    <!--<string name="error_msg_file_not_found_on_external_storage">Sorry, we are unable to locate the file.</string>-->
+    <!--<string name="error_msg_unable_to_download">Unable to download media.</string>-->
+    <!--<string name="error_msg_could_not_login">Could not login. Please try again later.</string>-->
+    <!--<string name="error_msg_invalid_server_response">Invalid server response. Please try again later.</string>-->
+    <!--<string name="error_msg_session_expired">Unable to connect with server. Session expired. Please logout and login again.</string>-->
+    <!--<string name="error_msg_video_not_accessible">Sorry, you do not have access to videos.</string>-->
+    <!--<string name="error_msg_network_not_reachable">Signal strength low or no connectivity. Please try again when network coverage is better.</string>-->
+    <!--<string name="error_msg_decryption_failed">Media is incompatible with our new Secure Vault. Please re-download.</string>-->
+    <!--<string name="error_msg_no_response_from_server">No response from server.</string>-->
+    <!--<string name="error_msg_invalid_response_from_server">Invalid response from server. Please try again later.</string>-->
+    <!--<string name="error_msg_database_not_found">Database not found. Please restart application.</string>-->
+    <string name="fixedAspectRatio">fixedAspectRatio =</string>
+    <string name="aspectRatioX">\u002010</string>
+    <string name="aspectRatioXHeader">aspectRatioX =</string>
+    <string name="aspectRatioY">\u002010</string>
+    <string name="aspectRatioYHeader">aspectRatioY =</string>
+    <string name="showGuidelines">showGuidelines = </string>
+    <string name="crop">Crop</string>
+    <string name="rotate">Rotate</string>
+    <string name="croppedImageDesc">The cropped image.</string>
+
+    <string-array name="showGuidelinesArray">
+        <item>Off</item>
+        <item>On Touch</item>
+        <item>On</item>
+    </string-array>
+
+</resources>

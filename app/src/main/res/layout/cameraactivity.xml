@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ <LinearLayout
+        android:id="@+id/top"
+        android:layout_gravity="center"
+        style="@style/top_bg_style"
+        android:gravity="center"
+        
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip" >
+        <TextView 
+            android:id="@+id/tv_phonepic"
+            android:textSize="18.0sp" 
+            android:textStyle="bold" 
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_white" 
+            android:layout_gravity="center_vertical" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="10.0dip" 
+            android:shadowColor="@color/color_shadow" 
+            android:text="@string/local_picture"
+            android:visibility="gone"
+            android:shadowDx="1.0" 
+            android:shadowDy="1.0" 
+            android:shadowRadius="1.0" />
+        <Button 
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_phone"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/picture_phone"
+            android:gravity="center"
+            android:background="@drawable/camera_bg_rect_local"
+            android:textColor="@color/color_white"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/main_phone"/>
+        <Button
+            android:id="@+id/picture_remote"
+            android:gravity="center"
+            android:background="@drawable/camera_bg_rect_remote"
+            android:textColor="@color/color_white"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/main_remote"  />
+        <Button 
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_phone"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+     <ListView
+                android:id="@+id/listviewCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/color_divider"
+                android:dividerHeight="1dp"
+                android:focusable="false"
+                android:fadeScrollbars="true"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:listSelector="@drawable/listitem_pressed_selector" />
+            
+       
+
+</LinearLayout>

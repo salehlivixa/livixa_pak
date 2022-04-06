@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- error permissions -->
+    <string name="error_per_location">Permission denied for Loaction</string>
+    <string name="error_per_camera">Permission denied for Camera</string>
+    <string name="error_per_storage">Permission denied for Storage</string>
+
+    <!-- error login screen -->
+    <string name="error_no_internet_connection">Signal strength low or no connectivity. Please try again when network coverage is better.</string>
+    <string name="error_email_address">Enter email address</string>
+    <string name="error_valid_email_address">Enter valid email address</string>
+    <string name="error_password">Enter password</string>
+    <string name="error_old_password">Enter old password</string>
+    <string name="error_new_password">Enter new password</string>
+    <string name="error_confirm_password">Enter confirm password</string>
+    <string name="error_password_did_not_match">Entered passwords did not match</string>
+    <string name="error_phone_number">Enter phone number</string>
+    <string name="error_mobile_number">Enter mobile number</string>
+    <string name="error_fax_number">Enter fax number</string>
+    <string name="error_heading">Enter heading</string>
+    <string name="error_minimum_length">Password should be between (6) and (12) characters. A combination of characters and digits. A-Z, a-z, 0-9 and special characters are allowed. Spaces are not allowed.</string>
+    <string name="error_enter_your_comments">Enter your comments</string>
+    <string name="error_enter_your_query">Enter your query</string>
+
+    <!-- Error Messages -->
+    <string name="error_msg_failed_to_share">Failed to share</string>
+    <string name="error_msg_failed_to_save">Failed to save</string>
+    <string name="confirm_msg_save">Your information has been updated</string>
+    <string name="error_msg_failed_to_unshare">Failed to unshare</string>
+    <string name="error_msg_must_contains_characters_in">Sorry, There must be some letters (a&#8211;z), numbers (0&#8211;9) in </string>
+    <string name="error_msg_no_item_found">There are no items to be shown.</string>
+    <string name="error_msg_no_data_found">There is no data to be shown.</string>
+    <string name="error_msg_no_data_available">No data is available at the moment.</string>
+    <string name="error_msg_external_storage_not_available">External Storage is not available</string>
+    <!-- <string name="error_msg_external_storage_write_protected">External Storage is write protected</string> -->
+    <string name="error_msg_external_storage_insufficient_space">Sorry, there is not enough space available. Please delete some files to download.</string>
+    <string name="error_msg_external_storage_insufficient_space_vault">Sorry, there is not enough space available to retrieve data from secure vault.</string>
+    <!-- <string name="error_msg_file_not_found_on_external_storage">Sorry, we are unable to locate the file.</string> -->
+    <string name="error_msg_unable_to_download">Unable to download media.</string>
+    <string name="error_msg_invalid_server_response">Invalid server response. Please try again later.</string>
+    <string name="error_msg_invalid_ltdid_pass">Invalid email or password. Please check and retry.</string>
+    <string name="lab_error">Error</string>
+    <string name="error_msg_session_expired">Unable to connect with server. Session expired. Please logout and login again.</string>
+    <string name="error_msg_smugmug_session_expired">Smugmug session expired. Please try again later.</string>
+    <string name="error_profile_pic">Profile picture missing</string>
+    <string name="error_display_name_first">First name missing</string>
+    <string name="error_display_name_last">Last name missing</string>
+    <string name="error_username_missing">Username missing</string>
+    <string name="error_msg_network_not_reachable">Signal strength low or no connectivity. Please try again when network coverage is better.</string>
+    <string name="error_msg_decryption_failed">Media is incompatible with our new Secure Vault. Please re-download.</string>
+    <string name="error_msg_unable_to_store_data">Error loading Data. Please \'Refresh\' from physical menu button of your handset. \n\nDo you want to Refresh Now?</string>
+    <string name="error_msg_no_response_from_server">No response from server.</string>
+    <string name="error_msg_invalid_response_from_server">Invalid response from server. Please try again later.</string>
+    <string name="error_msg_email_exist">Email already exists.</string>
+    <string name="error_msg_username_exist">Username already exists.</string>
+    <string name="error_msg_invalid_email">Invalid email.</string>
+    <string name="error_fb_login">Cannot log in using this Facebook account.</string>
+    <!-- <string name="error_msg_database_not_found">Database not found. Please restart application.</string> -->
+    <string name="error_loading_data">No result found. Please try again.</string>
+    <string name="error_cant_send_msg">You can only send message to your friends and subscribers</string>
+    <string name="error_failed_feedback">Failed to send the feedback. Please try again later</string>
+    <string name="error_no_front_camera">Your device is not having two cameras. You cannot use this app..</string>
+    <string name="error_no_subject">Missing subject. Please enter your subject.</string>
+    <string name="error_no_feedback">Missing feedback. Please enter your feedback.</string>
+    <string name="error_network_unavailable">Signal strength low or NO connectivity. Please try again when network coverage is better.</string>
+    <!-- <string name="genric_error">The current request has caused an unknown error</string> -->
+    <string name="error_connection_timeout">Connection timeout.</string>
+    <string name="error_msg_could_not_login">Could not login. Please try again later.</string>
+    <!-- <string name="error_msg_session_expired">Unable to connect with server. Session expired. Please logout and login again.</string> -->
+    <string name="error_msg_title">Error</string>
+    <string name="error_invalid_file">Selected file seems either corrupt, or missing from device storage.</string>
+    <string name="failed_to_login">Failed to login</string>
+    <string name="you_must_enter_phone_number_">You must enter phone number.</string>
+    <string name="invalid_number_please_enter_a_valid_phone_number">Invalid number. Please enter a valid phone number.</string>
+    <string name="label_error">Error</string>
+    <string name="fb_account_error_info">\n\nYou must have Facebook Platform Applications turned on in order to use this application - change this within your Facebook account settings</string>
+    <string name="failed_to_report">Failed to report this video. Please try again later</string>
+    <string name="please_enter_four_digit_verification_device_countrycode">Please enter 4 digit verification device CountryCode.</string>
+    <string name="verification_devicecountrycode_must_be_four_digit">Verification deviceCountryCode must be 4 digit.</string>
+    <string name="invalid_confirmation_code">Invalid confirmation code. Please check confirmation code again or try to resend.</string>
+    <string name="invalid_empty">Invalid </string>
+    <string name="failed_to_save_information">Failed to update your infomation. Please try again later.</string>
+    <string name="error_no_acess_type">Please choose the access type of the post.</string>
+    <string name="error_msg_sending_failed">Message sending failed.</string>
+    <string name="server_social_error">Unable to save facebook connection on server.</string>
+    <string name="server_twitter_error">Unable to save twitter connection on server.</string>
+
+</resources>

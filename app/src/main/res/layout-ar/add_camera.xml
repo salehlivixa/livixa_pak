@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="#bbFFFFFF" >
+    
+    
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_weight=".8"
+        android:orientation="horizontal"
+       
+        android:layout_height="0dp">
+        
+        
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/back"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_large_extra_half"
+            android:background="@drawable/camera_bg_rect_remote"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:src="@drawable/ic_back"
+            android:text="@string/Back"
+            android:textColor="@color/white" />
+        
+        
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/done"
+           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_large_extra_half"
+            android:background="@drawable/camera_bg_rect_remote"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:singleLine="true"
+            android:text="@string/Donee"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+        
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="9.2"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        
+         <LinearLayout
+        android:layout_width="match_parent"
+       
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        
+        
+        <ImageView 
+            android:layout_width="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="70dp"
+                
+                android:src="@drawable/logo" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="13dp"
+            android:layout_height="wrap_content">
+            
+            <ImageView 
+                android:layout_width="120dp"
+               
+                android:src="@drawable/icon_camera_home"
+                android:layout_height="60dp"/>
+            
+            <object.p2pipcam.system.MyTextView
+            android:id="@+id/textview_add_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginTop="5dp"
+            
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="120dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text="@string/AddCamera"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+            
+        </LinearLayout>
+        
+        
+        <ScrollView 
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            
+            android:scrollbars="none"
+             android:layout_width="match_parent">
+        <LinearLayout android:layout_height="match_parent"
+            android:orientation="vertical"
+             android:layout_width="match_parent">
+            
+       
+        
+       
+        <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_layout"
+                android:orientation="vertical"
+                >
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/imageView1" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="1dp" -->
+                <!-- android:layout_marginLeft="5dp" -->
+                <!-- android:layout_marginRight="5dp" -->
+                <!-- android:src="@color/color_grey" /> -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/addname"
+                        android:visibility="gone" />
+
+                    
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/user_img3"
+                        android:layout_marginLeft="@dimen/margin_large"
+                         >
+
+                        <EditText
+                            android:id="@+id/editDevName"
+                            
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="Camera"
+                            android:gravity="right"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/margin_basic_5"
+                            android:layout_below="@id/editDevName"
+                            android:background="@color/add_camera_bg" />
+                    </RelativeLayout>
+                    
+                    
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="@dimen/user_img2"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:ellipsize="marquee"
+                        android:layout_alignParentRight="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="right|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="250dp"
+                        android:minWidth="60dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/CameraName"
+                        android:textColor="@color/text_add_camera"
+                        android:textSize="@dimen/text_title_size" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/adddevice"
+                        android:visibility="gone" />
+                    
+                    
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_marginRight="@dimen/user_img3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                         >
+
+                        <EditText
+                            android:id="@+id/editDID"
+                            
+                             android:gravity="right"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                            android:maxLength="32"
+                            android:singleLine="true"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/margin_basic_5"
+                            android:layout_below="@id/editDID"
+                            android:background="@color/add_camera_bg" />
+                    </RelativeLayout>
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="@dimen/user_img2"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:ellipsize="marquee"
+                        android:layout_alignParentRight="true"
+                        android:focusableInTouchMode="true"
+                         android:gravity="right|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="250dp"
+                        android:minWidth="60dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/CameraID"
+                        android:textColor="@color/text_add_camera"
+                        android:textSize="@dimen/text_title_size" />
+
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/adduser"
+                        android:visibility="gone" />
+
+                    
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_marginRight="@dimen/user_img3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                         >
+
+                        <EditText
+                            android:id="@+id/editUser"
+                            
+                            android:gravity="right"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="admin"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/margin_basic_5"
+                            android:layout_below="@id/editUser"
+                            android:background="@color/add_camera_bg" />
+                    </RelativeLayout>
+                    
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="@dimen/user_img2"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:ellipsize="marquee"
+                        android:layout_alignParentRight="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="right|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="250dp"
+                        android:minWidth="60dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Username"
+                        android:textColor="@color/text_add_camera"
+                        android:textSize="@dimen/text_title_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/addpassword"
+                        android:visibility="gone" />
+
+                    
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/user_img3"
+                        android:layout_marginLeft="@dimen/margin_large"
+                         >
+
+                        <EditText
+                            android:id="@+id/editPwd"
+                            android:gravity="right"
+                            
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                            android:inputType="textPassword"
+                            android:maxLength="20"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/margin_basic_5"
+                            android:layout_below="@id/editPwd"
+                            android:background="@color/add_camera_bg" />
+                    </RelativeLayout>
+                    
+                    
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="@dimen/user_img2"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="250dp"
+                        android:minWidth="60dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/UserPassHint"
+                        android:textColor="@color/text_add_camera"
+                        android:textSize="@dimen/text_title_size" />
+                    
+                </RelativeLayout>
+
+               
+            </LinearLayout>
+            
+        
+        
+         
+         <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_below="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   
+                    android:orientation="vertical" >
+                
+            
+                    <ListView
+                android:id="@+id/searchcamera_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_white_corner"
+                android:cacheColorHint="#00000000"
+                android:listSelector="#00000000"
+                android:visibility="gone" >
+            </ListView>
+            
+                    
+                    
+                    <RelativeLayout
+                        android:id="@+id/rl_search"
+                        android:rotationY="180"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        
+                        <LinearLayout 
+                             android:layout_width="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="horizontal">
+                        
+                        <object.p2pipcam.system.MyTextView
+                            android:id="@+id/btn_searchCamera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10dp"
+                             android:rotationY="180"
+                            android:text="@string/SearchCamera"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large_extra" />
+                        
+                        
+                        <ImageView
+                            android:layout_toRightOf="@+id/btn_searchCamera"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                             android:layout_marginRight="40dp"
+                            android:layout_centerVertical="true"
+                            android:rotationY="180"
+                            android:src="@drawable/search_icon_country" />
+							</LinearLayout>
+                        
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_scan"
+                         android:visibility="visible" 
+                        android:rotationY="180"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         >
+                        
+                        
+                        <LinearLayout 
+                             android:layout_width="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="horizontal">
+                             
+                            
+                            <object.p2pipcam.system.MyTextView
+                            android:id="@+id/scanID"
+                            android:rotationY="180"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:text="@string/Scan"
+                            android:textColor="@color/text_add_camera"
+                            android:textSize="@dimen/font_large_extra" />
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                              android:layout_marginRight="40dp"
+                            android:layout_centerVertical="true"
+                            android:rotationY="180"
+                            android:src="@drawable/scan_icon" />
+
+                        
+                        
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    
+
+                    <Button
+                        android:id="@+id/main_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/newbuttonall"
+                        android:drawableLeft="@drawable/admin_settin"
+                        android:drawableRight="@drawable/arrow"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="8dp"
+                        android:text="@string/biz_main_wifi"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size"
+                        android:visibility="gone" />
+                </LinearLayout>
+        
+       </LinearLayout>
+       
+        
+         </ScrollView>
+        
+    </LinearLayout>
+    
+         
+    
+     </LinearLayout>
+    
+       
+    
+
+</LinearLayout>
+
+</RelativeLayout>

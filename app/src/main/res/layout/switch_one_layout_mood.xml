@@ -1,0 +1,67 @@
+<RelativeLayout 
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/switch_one_layoutt"
+    android:layout_width="match_parent">
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+                
+                android:orientation="vertical"
+                 android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+                
+           
+            <ImageView android:layout_height="75dp"
+                         android:id="@+id/switchIcon"
+                        android:src="@drawable/one_button_switch"
+                        android:layout_width="75dp"/>
+            <TextView android:layout_height="wrap_content"
+                         android:id="@+id/switchTitle"
+                        android:textColor="#FFFFFF"
+                        android:text="switch"
+                        android:layout_marginTop="3dp"
+                        android:textSize="17dp"
+                       android:layout_width="wrap_content"/>
+            
+            <RelativeLayout android:layout_height="wrap_content"
+                            android:layout_marginTop="45dp"
+                            android:layout_width="match_parent">
+                     
+               
+                <RelativeLayout android:layout_height="105dp"
+                    			android:orientation="vertical"
+                    			android:id="@+id/rLayoutControl0"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="105dp">
+                     
+                
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconButton"
+                        android:layout_width="40dp"/>
+                 
+                 
+
+                
+                </RelativeLayout>
+                
+                
+                
+                
+                
+                
+            </RelativeLayout>
+              
+            
+            
+            
+             </LinearLayout>
+             </RelativeLayout>
+          
+            

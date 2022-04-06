@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="font_default">12sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_normal_less">13sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_large_less">15sp</dimen>
+    <dimen name="font_very_large">18sp</dimen>
+    <dimen name="font_large_extra">20sp</dimen>
+    <dimen name="font_extra_large">22sp</dimen>
+    <dimen name="font_extra_large_less">20sp</dimen>
+    <dimen name="font_very_extra_large">28sp</dimen>
+    <dimen name="font_max_large">32sp</dimen>
+
+</resources>

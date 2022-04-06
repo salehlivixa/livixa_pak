@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+             
+        
+        
+        
+        <!--  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+        
+        
+        
+        <!--  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+        
+        
+         <!--  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+         
+         
+         
+          <!--  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+         
+        
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/switchesMainLayout"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:onClick="onSwitchButttonClick"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/sw_tv_title"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="AC"
+                    android:layout_marginBottom="11dp"
+                    
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                   
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+                
+                
+                
+                <LinearLayout 
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                   
+                    android:gravity="bottom|right"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="5dp"
+                              android:layout_height="match_parent"
+                              android:layout_width="95dp">
+                
+                
+                <ImageView
+                    
+                    android:id="@+id/getTime"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:gravity="bottom"
+                    android:src="@drawable/icon_switch_time"
+                     android:visibility="visible"
+                    />
+                
+                <ImageView
+                    
+                    android:id="@+id/addMood"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:gravity="bottom"
+                    android:src="@drawable/icon_add_mood"
+                    android:visibility="visible"
+                    />
+                
+                </LinearLayout>
+                
+            </RelativeLayout>
+            
+             <ImageView
+                android:id="@+id/logo"
+                android:layout_width="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo" />
+           
+           <!--  // -->
+           
+           
+           
+           
+           
+           <LinearLayout android:layout_width="match_parent"
+                android:layout_weight="8.4"
+                android:orientation="vertical"
+                android:weightSum="5"
+                android:id="@+id/layoutContainer"
+                android:gravity="center"
+                android:layout_height="0dp">
+                
+               <include layout="@layout/switch_two_layout_moods"/>
+           
+            
+             </LinearLayout>
+             
+           
+           
+             </LinearLayout>
+             
+        
+        
+        
+        <LinearLayout android:layout_height="140dp"
+                      android:layout_alignParentBottom="true"
+                     
+                      android:gravity="center"
+                      android:layout_width="match_parent">
+           
+            
+           
+                
+           <android.support.v7.widget.RecyclerView
+		        android:id="@+id/recycler_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="130dp"
+		        
+       		 >
+    		</android.support.v7.widget.RecyclerView>
+            
+            
+            
+        </LinearLayout>
+        
+             
+        
+   
+</RelativeLayout>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:onClick="onbackButttonClick"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_title"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/ButtonMoods"
+                    android:layout_marginBottom="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                   
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+
+            </RelativeLayout>
+            
+            
+            
+          
+           
+           
+           <ListView android:id="@+id/espResultsListView"
+               android:cacheColorHint="#00000000"
+                            android:divider="#BCBFC3"
+                            android:dividerHeight="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+               
+           </ListView>
+           </LinearLayout>
+           
+</RelativeLayout>

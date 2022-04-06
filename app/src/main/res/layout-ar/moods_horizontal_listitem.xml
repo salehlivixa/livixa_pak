@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:rotationY="180"
+    android:gravity="center"
+    
+    android:layout_height="120dp"
+    >
+<LinearLayout
+  
+    android:layout_width="90dp"
+    android:orientation="vertical"
+    
+    android:gravity="center"
+  
+    android:layout_height="128dp"
+    >
+ 
+    
+    <LinearLayout 
+        android:layout_height="77dp"
+        android:background="@drawable/moods_status_bg"
+        android:gravity="center"
+        android:id="@+id/moodItemBGLY"
+        android:orientation="vertical"
+        android:layout_width="75dp">
+			    <ImageView android:layout_height="40dp"
+				        		android:id="@+id/img_icon_mood"
+				       			
+				        		android:layout_centerVertical="true"
+				              	android:src="@drawable/icon_mood_custom_white"
+				              	
+				               	android:layout_width="60dp"/>
+			    
+			     <com.livixa.apacam.client.widget.CustomTextView
+                       
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="16dp"
+                        
+                        android:singleLine="true"
+                        android:layout_marginTop="2dp"
+                        android:text="sleep"
+                        android:textColor="@color/white"
+                        android:textSize="11dp"
+                        android:id="@+id/moodText"
+                        />
+			    
+			    
+    </LinearLayout>
+    
+     <com.livixa.apacam.client.widget.CustomTextView
+                        android:background="@drawable/corner_border_white_less_less_corner"
+                        android:layout_width="80dp"
+                        
+                        android:gravity="center"
+                        android:layout_height="17dp"
+                        android:paddingLeft="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:text="N/A"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:id="@+id/repeatTV"
+                        />
+                        
+     
+      <com.livixa.apacam.client.widget.CustomTextView
+                        android:background="@drawable/corner_border_white_less_less_corner"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="80dp"
+                        android:gravity="center"
+                        
+                        android:layout_height="17dp"
+                        android:paddingLeft="5dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="N/A"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:id="@+id/timeTV"
+                        />
+    
+
+</LinearLayout>
+
+
+</RelativeLayout>
+

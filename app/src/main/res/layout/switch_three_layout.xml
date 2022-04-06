@@ -1,0 +1,330 @@
+<RelativeLayout 
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/switch_three_layoutt"
+    android:layout_width="match_parent">
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+                
+                android:orientation="vertical"
+                 android:gravity="center"
+                android:layout_height="match_parent">
+                
+           
+            <ImageView android:layout_height="90dp"
+                         android:id="@+id/switchIcon"
+                        android:src="@drawable/three_button_switch"
+                        android:layout_width="90dp"/>
+            
+            <TextView android:layout_height="wrap_content"
+                         android:id="@+id/switchTitle"
+                        android:textColor="#FFFFFF"
+                        android:text="switch"
+                        android:layout_marginTop="3dp"
+                        android:textSize="20dp"
+                       android:layout_width="wrap_content"/>
+            
+            <RelativeLayout android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:splitMotionEvents="false"
+                            android:layout_width="match_parent">
+               
+                
+                
+              <LinearLayout android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:gravity="center"
+                                  android:layout_centerInParent="true"
+                                  android:layout_width="match_parent">
+                                  
+                  
+                  
+                  
+                  
+                
+                <LinearLayout android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:gravity="center"
+                                  android:layout_centerInParent="true"
+                                  android:layout_width="match_parent">
+                                  
+                  <RelativeLayout android:layout_height="130dp"
+                    			android:orientation="vertical"
+                    			android:id="@+id/rLayoutControl0"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="130dp">
+                     
+                
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconButton"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/onOffStatus"
+                           android:text="OFF"
+                           android:gravity="center"
+                           
+                           android:layout_marginTop="10dp"
+                           android:layout_below="@id/bulbIconButton"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>                
+                    
+                <RelativeLayout android:layout_height="130dp"
+                    			android:orientation="vertical"
+                    			android:visibility="gone"
+                    			android:id="@+id/rLayoutControl1"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="130dp">
+                              
+                    
+                    
+                     
+                <com.livixa.apacam.client.sliderview.CircularSeekBar
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/seekBarSwitchOne"
+                        app:cs_negative_enabled="false"
+                        app:cs_circle_style="round"
+                         android:layout_centerInParent="true"
+                        android:padding="8dp"
+                        app:cs_circle_stroke_width="5dp"
+                        app:cs_pointer_stroke_width="20dp"
+                        app:cs_pointer_halo_color = "#99000000"
+                        app:cs_pointer_halo_border_width = "1dp"
+                        app:cs_lock_enabled = "true"
+                        app:cs_pointer_halo_width="0dp"
+                        app:cs_move_outside_circle = "true"
+                        app:cs_maintain_equal_circle = "true"
+                        app:cs_circle_fill = "#00000000"
+						app:cs_circle_color = "#B6B6B6"
+						app:cs_circle_progress_color = "#FDB71B"
+						
+						app:cs_pointer_color = "#ffffff"
+						/>
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIcon"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/progressPercentage"
+                            android:text="0%"
+                           android:gravity="center"
+                           android:layout_marginTop="-2dp"
+                           android:layout_below="@id/bulbIcon"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>
+                
+                
+                
+                <RelativeLayout android:layout_height="130dp"
+                                android:layout_marginLeft="30dp"
+                                android:visibility="gone"
+                    			android:orientation="vertical"
+                    			android:id="@+id/rLayoutControl22"
+                    			android:layout_toRightOf="@id/rLayoutControl1"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="130dp">
+                     
+                <com.livixa.apacam.client.sliderview.CircularSeekBar
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/seekBarSwitchTwo"
+                        app:cs_negative_enabled="false"
+                        app:cs_circle_style="round"
+                         android:layout_centerInParent="true"
+                        android:padding="8dp"
+                        app:cs_circle_stroke_width="5dp"
+                        app:cs_pointer_stroke_width="20dp"
+                        app:cs_pointer_halo_color = "#99000000"
+                        app:cs_pointer_halo_border_width = "1dp"
+                        app:cs_lock_enabled = "true"
+                        app:cs_pointer_halo_width="0dp"
+                        app:cs_move_outside_circle = "true"
+                        app:cs_maintain_equal_circle = "true"
+                        app:cs_circle_fill = "#00000000"
+						app:cs_circle_color = "#B6B6B6"
+						app:cs_circle_progress_color = "#FDB71B"
+						
+						app:cs_pointer_color = "#ffffff"
+						/>
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconTwo"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/progressPercentagetwo"
+                           android:text="0%"
+                           android:gravity="center"
+                           android:layout_marginTop="-2dp"
+                           android:layout_below="@id/bulbIconTwo"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>
+                
+                
+                <RelativeLayout android:layout_height="130dp"
+                    			android:orientation="vertical"
+                    			android:layout_marginLeft="30dp"
+                    			android:id="@+id/rLayoutControl21"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="130dp">
+                     
+                
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconButton2"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/onOffStatus2"
+                           android:text="OFF"
+                           android:gravity="center"
+                           
+                           android:layout_marginTop="10dp"
+                           android:layout_below="@id/bulbIconButton2"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>
+                
+                </LinearLayout>
+                
+                
+                
+                
+                <RelativeLayout android:layout_height="130dp"
+                                android:layout_marginTop="15dp"
+                    			android:orientation="vertical"
+                    			android:id="@+id/rLayoutControl33"
+                    			android:visibility="gone"
+                    			android:background="@drawable/button_dimmer_border"
+                    		    android:layout_centerInParent="true"
+                                android:layout_width="130dp">
+                     
+                <com.livixa.apacam.client.sliderview.CircularSeekBar
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/seekBarSwitchThree"
+                        app:cs_negative_enabled="false"
+                        app:cs_circle_style="round"
+                         android:layout_centerInParent="true"
+                        android:padding="8dp"
+                        app:cs_circle_stroke_width="5dp"
+                        app:cs_pointer_stroke_width="20dp"
+                        app:cs_pointer_halo_color = "#99000000"
+                        app:cs_pointer_halo_border_width = "1dp"
+                        app:cs_lock_enabled = "true"
+                        app:cs_pointer_halo_width="0dp"
+                        app:cs_move_outside_circle = "true"
+                        app:cs_maintain_equal_circle = "true"
+                        app:cs_circle_fill = "#00000000"
+						app:cs_circle_color = "#B6B6B6"
+						app:cs_circle_progress_color = "#FDB71B"
+						
+						app:cs_pointer_color = "#ffffff"
+						/>
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconThree"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/progressPercentageThree"
+                           android:text="0%"
+                           android:gravity="center"
+                           android:layout_marginTop="-2dp"
+                           android:layout_below="@id/bulbIconThree"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>
+                
+                <RelativeLayout android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    			android:orientation="vertical"
+                    			android:id="@+id/rLayoutControl32"
+                    			android:background="@drawable/button_dimmer_border"
+                    		  android:layout_centerInParent="true"
+                              android:layout_width="130dp">
+                     
+                
+                
+                 <ImageView android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:src="@drawable/buld_gray"
+                        android:id="@+id/bulbIconButton3"
+                        android:layout_width="40dp"/>
+                 
+                 <TextView android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                           android:id="@+id/onOffStatus3"
+                           android:text="OFF"
+                           android:gravity="center"
+                           
+                           android:layout_marginTop="10dp"
+                           android:layout_below="@id/bulbIconButton3"
+                           android:textColor="#000000"
+                           android:layout_width="wrap_content"/>
+
+                
+                </RelativeLayout>
+                
+                
+                
+                </LinearLayout>
+                
+            </RelativeLayout>
+              
+            
+            
+            
+             </LinearLayout>
+             </RelativeLayout>
+          
+            

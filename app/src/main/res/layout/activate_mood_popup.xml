@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/screen_faded"
+    android:layout_width="match_parent"
+    android:gravity="bottom|center_horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+
+        
+
+   
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                 android:layout_marginRight="10dp"
+                android:background="@drawable/corner_border_gray"
+                android:orientation="vertical"
+                >
+
+                <object.p2pipcam.system.MyTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxWidth="200dp"
+                    android:minWidth="90dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/user_admin"
+                    android:textColor="@color/color_black"
+                    android:textSize="18sp" 
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="55dp"
+                     >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="Options for Guest"
+                        android:id="@+id/moodNameTV"
+                        android:textColor="#97919B"
+                        android:textSize="@dimen/text_title_size" />
+
+                    
+                </LinearLayout>
+                
+                <View android:layout_height="1dp"
+                    android:background="#AD9EBA"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                      android:layout_width="match_parent"/>
+
+                
+                
+                
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                   android:gravity="center"
+                     >
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_updateTimeSettings"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/UpdateTimeSettings"
+                        android:textColor="#2879DD"
+                        android:textSize="19dp" />
+
+                    
+                </LinearLayout>
+
+                
+ </LinearLayout>
+ 
+            
+            <TextView android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/Cancel"
+               
+                android:id="@+id/cancelButton"
+                android:textColor="#176FD7"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/popup_button_selector_white"
+                android:layout_width="match_parent"/>
+
+                
+        </LinearLayout>
+   
+
+</RelativeLayout>

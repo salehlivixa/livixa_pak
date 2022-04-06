@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_bg_style"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxWidth="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="150dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text="@string/set_user_time_title"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:maxWidth="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RadioGroup
+            android:id="@+id/group_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb1_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/set_user_time_close"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rb2_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/set_user_time_open"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearsetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/set_user_time_select_one"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/set_user_time_select_two"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/relative_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/layout_zero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_from_data1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_start"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/newbuttonall"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_zero"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_from_time1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/editText_hour_1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="00-23"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_minu_1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="0-59"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_one"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_to_data1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_end"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/newbuttonall"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_two"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_to_time1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/editText_to_hour_1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="00-23"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_to_minu_1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="0-59"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/layout_one_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_from_time1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/editText_hour_2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="00-23"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_minu_2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="0-59"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_three_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_one_2"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_to_time1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/editText_to_hour_2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="00-23"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editText_to_minu_2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="0-59"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_zero_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_three_2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_from_data1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_start_2"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/newbuttonall"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_two_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_zero_2"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="@string/set_user_time_to_data1"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_end_2"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/newbuttonall"
+                    android:gravity="center" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

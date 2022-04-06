@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/top"
+            style="@style/top_bg_style"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+               android:layout_margin="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_selector_common"
+                android:maxWidth="100dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="@string/back"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_title_size" />
+
+            <object.p2pipcam.system.MyTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10.0dip"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxWidth="150dp"
+                android:scrollHorizontally="true"
+                android:shadowColor="@color/color_shadow"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:singleLine="true"
+                android:text="@string/main_pic"
+                android:textColor="@color/color_white"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/localpic_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_white_corner"
+            android:cacheColorHint="#00000000"
+            android:listSelector="@drawable/listitem_bg_selector"
+            android:padding="10dp" >
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/localpic_tv_nopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:text="@string/localpic_no"
+        android:textColor="@color/color_white"
+        android:textSize="24sp" />
+
+</FrameLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+   
+    android:orientation="horizontal"
+    android:background="#F2F2F2">
+<RelativeLayout
+    
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+   
+    >    
+    
+    
+    
+    <LinearLayout android:layout_height="match_parent"
+        android:background="#F15A24"
+                   android:layout_marginTop="12dp"
+                   android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                   android:orientation="vertical"
+                   android:layout_marginBottom="12dp"
+                   android:layout_toRightOf="@id/startLy"
+                   android:layout_width="match_parent">
+      
+        
+          
+    
+          <RelativeLayout android:layout_height="25dp"
+                     
+                     
+                      android:layout_width="match_parent">
+
+         <object.p2pipcam.system.MyTextView
+             
+              android:id="@+id/camName"
+             android:layout_width="match_parent"
+             android:layout_height="25dp"
+             android:layout_alignParentLeft="true"
+           
+           android:background="#221236"
+             android:gravity="center_vertical"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:text="hello test"
+             android:textColor="@color/white" />
+
+          
+          </RelativeLayout>
+         
+          
+          <RelativeLayout android:layout_height="25dp"
+                     
+                     
+                      android:layout_width="match_parent">
+                      
+            
+            
+         <object.p2pipcam.system.MyTextView
+            android:id="@+id/heading"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#3EA9FB"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            
+            android:text="BSSID:"
+            android:textColor="@color/white" />
+          
+         <object.p2pipcam.system.MyTextView
+            android:id="@+id/camID"
+             android:layout_toRightOf="@id/heading"
+             android:layout_width="match_parent"
+             android:layout_height="25dp"
+              android:background="#3EA9FB"
+             android:gravity="center_vertical"
+            
+             android:paddingRight="10dp"
+             android:text="hello test"
+             android:textColor="@color/white" />
+          
+          </RelativeLayout>
+          
+          
+          
+          <RelativeLayout android:layout_height="25dp"
+                     
+                     
+                      android:layout_width="match_parent">
+
+        
+        
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/heading1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+             android:background="#F4BA28"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            
+            android:text="@string/IpAddress"
+            android:textColor="@color/white" />
+         <object.p2pipcam.system.MyTextView
+             
+              android:id="@+id/camSettingStatus"
+             android:layout_width="match_parent"
+             android:layout_height="25dp"
+             
+             android:layout_toRightOf="@id/heading1"
+              android:background="#F4BA28"
+             android:gravity="center_vertical"
+             
+             android:paddingRight="10dp"
+             android:text="hello test"
+             android:textColor="@color/white" />
+
+          
+          
+          
+          
+          </RelativeLayout>
+        
+       
+    </LinearLayout>
+    
+</RelativeLayout>
+</LinearLayout>

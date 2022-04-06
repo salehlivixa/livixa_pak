@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.livixa.apacam.client.swipelistview.SwipeRevealLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    
+    android:id="@+id/switchesListItemRoot"
+   
+    app:_mode="same_level"
+    app:dragEdge="right"
+    >
+    
+    
+    
+<FrameLayout
+            android:layout_width="wrap_content"
+            android:background="#40ffffff"
+            android:gravity="center" 
+            android:layout_height="50dp">
+            
+        
+          <RelativeLayout android:layout_height="match_parent"
+       			 
+                  android:layout_width="60dp">
+                  
+               <TextView android:layout_height="match_parent"
+               android:background="#FF3B30"
+               android:text="@string/Delete"
+                android:textColor="@color/white"
+               android:gravity="center"
+               android:layout_alignParentRight="true"
+               android:rotationY="180"
+               android:id="@+id/tv_tariffDelete"
+                android:layout_width="80dp"
+                />
+              
+              
+                  </RelativeLayout>
+            
+        
+  </FrameLayout>
+    
+    
+
+       
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="#40ffffff"
+            android:gravity="center" 
+            android:layout_height="50dp">
+            
+            <LinearLayout   android:layout_height="50dp"
+                           android:background="#CECFD1"
+                           android:weightSum="10"
+                           android:orientation="horizontal"
+                           android:layout_width="match_parent">
+                
+             <TextView android:layout_height="match_parent"
+                       android:layout_weight="1.3"
+                       android:id="@+id/serialNo"
+                       android:gravity="center"
+                       android:textColor="@color/black"
+                       android:text="2"
+                       android:rotationY="180"
+                       android:layout_width="0dp"/>
+             
+             
+             <View    android:layout_height="match_parent"
+                      android:background="#BBBCBE"
+                      android:layout_width="1dp"/>
+             
+             
+             <TextView android:layout_height="match_parent"
+                       android:layout_weight="2.5"
+                       android:id="@+id/lowerLimit"
+                       android:gravity="center"
+                       android:textColor="@color/black"
+                       android:text="26"
+                        android:rotationY="180"
+                       android:layout_width="0dp"/>
+             
+             
+             <View    android:layout_height="match_parent"
+                      android:background="#BBBCBE"
+                      android:layout_width="1dp"/>
+             
+             <TextView android:layout_height="match_parent"
+                       android:layout_weight="2.5"
+                        android:id="@+id/upperLimit"
+                       android:gravity="center"
+                       android:textColor="@color/black"
+                       android:text="58.4"
+                        android:rotationY="180"
+                       android:layout_width="0dp"/>
+             
+             
+             <View    android:layout_height="match_parent"
+                      android:background="#BBBCBE"
+                      android:layout_width="1dp"/>
+             
+             <TextView android:layout_height="match_parent"
+                       android:layout_weight="3.7"
+                        android:id="@+id/tariffPrice"
+                       android:gravity="center"
+                       android:textColor="@color/black"
+                       android:text="58.4"
+                        android:rotationY="180"
+                       android:layout_width="0dp"/>
+               
+               
+           </LinearLayout>
+           
+        
+        </FrameLayout>
+
+</com.livixa.apacam.client.swipelistview.SwipeRevealLayout>
+
+
+
+

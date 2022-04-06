@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_bg_style"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/user_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:maxWidth="100dp"
+            android:minWidth="55dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+
+        <object.p2pipcam.system.MyTextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="150dp"
+            android:scrollHorizontally="true"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text="@string/User"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/user_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_selector_common"
+            android:maxWidth="100dp"
+            android:minWidth="55dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <object.p2pipcam.system.MyTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxWidth="200dp"
+                    android:minWidth="90dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/user_admin"
+                    android:textColor="@color/color_black"
+                    android:textSize="18sp" 
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp" >
+
+                    <object.p2pipcam.system.MyTextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/User"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size" />
+
+                    <EditText
+                        android:id="@+id/edit_admin_name"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/bg_txt_field"
+                        android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                        android:maxLength="20"
+                        android:singleLine="true" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp" >
+
+                    <object.p2pipcam.system.MyTextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                       
+                        android:text="@string/UserPassHint"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size" />
+
+                    <EditText
+                        android:id="@+id/edit_admin_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/bg_txt_field"
+                        android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                
+                
+                 <LinearLayout
+                    android:layout_marginLeft="95dp"
+                    android:orientation="horizontal"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp" >
+                    
+               
+                <CheckBox
+                    android:id="@+id/cbox_show_admin_pwd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    
+                    android:background="@drawable/check_box_selector"
+                    android:button="@null"
+                    />
+                
+                <TextView android:layout_height="wrap_content"
+                           android:text="@string/showpwd"
+                           android:layout_gravity="bottom"
+                           android:layout_marginLeft="3dp"
+                           android:textColor="@color/color_black" 
+                          android:layout_width="wrap_content"/>
+                
+                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@color/color_grey" 
+                    android:visibility="gone"/>
+
+                <object.p2pipcam.system.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxWidth="200dp"
+                    android:minWidth="90dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/user_operator"
+                    android:textColor="@color/color_black"
+                    android:textSize="18sp" 
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp" 
+                    android:visibility="gone">
+
+                    <object.p2pipcam.system.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/user_name"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size"
+                         />
+
+                    <EditText
+                        android:id="@+id/edit_operator_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                        android:maxLength="20"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp" 
+                    android:visibility="gone">
+
+                    <object.p2pipcam.system.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/password"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size" 
+                        />
+
+                    <EditText
+                        android:id="@+id/edit_operator_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm-0123456789"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbox_show_operator_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="95dp"
+                    android:text="@string/showpwd"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_title_size" 
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@color/color_grey" 
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/user_visitor"
+                    android:textColor="@color/color_black"
+                    android:textSize="18sp" 
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/user_name"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size" />
+
+                    <EditText
+                        android:id="@+id/edit_visitor_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm-0123456789"
+                        android:maxLength="64"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/password"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_title_size" />
+
+                    <EditText
+                        android:id="@+id/edit_visitor_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_bg"
+                        android:inputType="textPassword"
+                        android:maxLength="64"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbox_show_visitor_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="95dp"
+                    android:text="@string/showpwd"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_title_size"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

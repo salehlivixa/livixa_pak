@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- UI Width Height -->
+    <dimen name="btn_width">272dp</dimen>
+    <dimen name="msg_img">60dp</dimen>
+    <dimen name="usr_img2">50dp</dimen>
+    <dimen name="usr_img">35dp</dimen>
+    <dimen name="iv_grp_view">30dp</dimen>
+    <dimen name="txt_view">20dp</dimen>
+    <dimen name="user_img2">80dp</dimen>
+    <dimen name="user_img3">96dp</dimen>
+    <dimen name="view_width">240dp</dimen>
+    <dimen name="sliding_header">150dp</dimen>
+    <dimen name="progress_bar_width">30dp</dimen>
+    <dimen name="bottom_view_height">200dp</dimen>
+    <dimen name="getting_close_height">80dp</dimen>
+    <dimen name="home_view_height">140dp</dimen>
+    <dimen name="action_bar_size">54dp</dimen>
+
+    <!-- Floating Edit Text -->
+    <dimen name="floating_edit_text_underline_height">0.5dp</dimen>
+    <dimen name="floating_edit_text_underline_highlighted_height">1dp</dimen>
+
+    <item name="ripple_effect_alpha" format="float" type="dimen">0.4</item>
+
+</resources>

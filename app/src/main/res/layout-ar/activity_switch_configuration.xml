@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                android:background="@color/app_header_color" >
+                
+                
+                <LinearLayout android:orientation="horizontal"
+                              android:onClick="OnBackClick"
+                              android:layout_alignParentBottom="true"
+                              android:gravity="bottom"
+                              android:layout_alignParentRight="true"
+                              android:layout_width="40dp"
+                              android:layout_height="wrap_content">
+                
+                 <ImageView
+                    android:id="@+id/iv_back"
+                    android:rotation="180"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/padding_large"
+                    android:src="@drawable/ic_back" />
+                    
+                
+					</LinearLayout>
+					
+                
+                <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/tv_title"
+                  
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Configuration"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="11dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:visibility="visible"
+                    app:CustomFontFamily="Regular" />
+                
+            </RelativeLayout>
+            
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="0dp"
+                         
+                          android:weightSum="5"
+                          android:orientation="vertical"
+                          android:layout_weight="2"
+                >
+                
+                <LinearLayout 
+                     android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    >
+                    
+                     <ImageView
+                android:id="@+id/logo"
+                android:layout_width="130dp"
+                
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/margin_max_x_large2"
+                android:src="@drawable/logo" />
+                    
+                </LinearLayout>
+
+           
+            
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout 
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_weight="8"
+                android:rotationY="180"
+                android:orientation="vertical"
+                android:layout_height="0dp">
+            
+            <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                       android:weightSum="2"
+                        android:orientation="horizontal"
+                        >
+                     
+                
+                        <View  android:layout_height="match_parent"
+                                android:layout_weight=".2"
+                                android:layout_width="0dp"/>
+                
+                        <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="60dp"
+                        android:layout_weight=".8"
+                        android:layout_height="wrap_content"
+                        android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_vertical|right"
+                        android:text=":SSID"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:CustomFontFamily="Medium" />
+                        
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+                        android:id="@+id/sSDID"
+                         android:layout_width="0dp"
+                        android:layout_weight=".9"
+                        android:layout_height="wrap_content"
+                        android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:CustomFontFamily="Medium" />
+                    
+                    
+                    <View  android:layout_height="match_parent"
+                                android:layout_weight=".1"
+                                android:layout_width="0dp"/>
+                        
+                    </LinearLayout>
+                    
+            <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                       android:weightSum="2"
+                        android:orientation="horizontal"
+                        >
+                    
+                
+                 <View  android:layout_height="match_parent"
+                                android:layout_weight=".2"
+                                android:layout_width="0dp"/>
+                     
+                        <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="60dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                         android:gravity="center_vertical|right"
+                        android:text="@string/Password_Configuration"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:CustomFontFamily="Medium" />
+                        
+
+                    <LinearLayout android:layout_width="0dp"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                        android:layout_weight=".9"
+                        android:layout_height="38dp">
+                    <com.livixa.apacam.client.widget.CustomEditText
+                         android:layout_width="120dp"
+                         android:id="@+id/pass"
+                       android:rotationY="180"
+                        android:layout_height="38dp"
+                        
+                        
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:text=""
+                        
+                        android:background="#20FFFFFF"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:CustomFontFamily="Medium" />
+                    
+                    </LinearLayout>
+                    
+                    <View  android:layout_height="match_parent"
+                                android:layout_weight=".1"
+                                android:layout_width="0dp"/>
+                        
+                    </LinearLayout>
+                    
+            
+            
+            <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                       android:weightSum="2"
+                       android:visibility="gone"
+                        android:orientation="horizontal"
+                        >
+                     
+                        <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                       android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="SSID is Hidden:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_normal"
+                        app:CustomFontFamily="Medium" />
+                        
+
+                    <LinearLayout
+                         android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+                        
+                        <com.livixa.apacam.client.activity.ShSwitchView
+					        xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+					        android:id="@+id/sSIDHidden"
+					        android:layout_width="65dip"
+					        android:layout_height="35dip"
+					        android:layout_marginLeft="10dp"
+					        shSwitch:tintColor="#00097BFF"
+					        shSwitch:shadowSpace="0dip"/>
+                    </LinearLayout>
+                       
+                        
+                        
+                  
+       
+            </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+            <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:gravity="center"
+                       
+                        android:orientation="vertical"
+                        >
+                     
+                
+                <LinearLayout android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:weightSum="1"
+                              android:gravity="center_vertical"
+                              android:layout_width="match_parent">
+                        
+                     <View  android:layout_height="match_parent"
+                                android:layout_weight=".1"
+                                android:layout_width="0dp"/>
+                        
+                     <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="60dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                       android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_vertical|right"
+                        
+                        android:text="@string/Numberofdevicestoconfigure"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                      
+                        android:textStyle="bold"
+                        app:CustomFontFamily="Medium" />
+                     
+                        
+                        
+                        
+                        
+                        <LinearLayout android:layout_width="0dp"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                        android:layout_weight=".45"
+                        android:layout_height="38dp">
+                    <com.livixa.apacam.client.widget.CustomEditText
+                         android:layout_width="120dp"
+                        
+                        android:id="@+id/taskCount"
+                        android:layout_height="38dp"
+                        android:rotationY="180"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        
+                        android:text=""
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:background="#675677"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        app:CustomFontFamily="Medium" />
+                    
+                    </LinearLayout>
+                     
+                     <View  android:layout_height="match_parent"
+                                android:layout_weight=".05"
+                                android:layout_width="0dp"/>
+                    
+                </LinearLayout>
+                  
+                       
+                    
+                    
+                    
+                        
+                   
+                    
+                    
+            
+            
+            <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="130dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="35dp"
+                        android:rotationY="180"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:onClick="onCofirmClick"
+                        android:background="@drawable/button_border_common_pressed"
+                        android:text="@string/Confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_normal"
+                        app:CustomFontFamily="Medium" />
+            
+            
+           
+            
+            </LinearLayout>
+             </LinearLayout>
+            
+             </LinearLayout>
+             
+        
+        <LinearLayout
+                    android:id="@+id/cancelButtonLyout"
+                     android:layout_marginTop="10dp"
+                    android:layout_width="250dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="220dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="#99000000"
+                   android:gravity="center"
+                     >
+           
+            
+                      <LinearLayout android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_height="140dp">
+                
+                          
+                          <com.livixa.apacam.customprogressbar.AVLoadingIndicatorView
+					            android:id="@+id/aviConfiguration"
+					            app:indicatorName="BallPulseIndicator"
+					            android:layout_width="60dp"
+					            android:layout_height="60dp"
+					            style="@style/AVLoadingIndicatorView.Large"
+					            />
+                          
+                          <TextView android:layout_height="wrap_content"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16dp"
+                                    android:gravity="center"
+                                    android:text="@string/PleasewaitwhileConfiguration"
+                                    android:layout_width="match_parent"/>
+                          
+                          
+                      </LinearLayout>
+
+                    <object.p2pipcam.system.MyTextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_Cancel"
+                         android:background="@drawable/popup_button_selector_white"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Cancel"
+                        android:textColor="#2072C7"
+                        android:textSize="18dp" />
+
+                    
+                </LinearLayout>
+   
+</RelativeLayout>
