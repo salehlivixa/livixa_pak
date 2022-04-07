@@ -106,9 +106,11 @@ final class FlashlightManager {
     try {
       return Class.forName(name);
     } catch (ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
       // OK
       return null;
     } catch (RuntimeException re) {
+      re.printStackTrace();
       Log.w(TAG, "Unexpected error while finding class " + name, re);
       return null;
     }
@@ -118,9 +120,11 @@ final class FlashlightManager {
     try {
       return clazz.getMethod(name, argClasses);
     } catch (NoSuchMethodException nsme) {
+      nsme.printStackTrace();
       // OK
       return null;
     } catch (RuntimeException re) {
+      re.printStackTrace();
       Log.w(TAG, "Unexpected error while finding method " + name, re);
       return null;
     }
@@ -130,12 +134,15 @@ final class FlashlightManager {
     try {
       return method.invoke(instance, args);
     } catch (IllegalAccessException e) {
+      e.printStackTrace();
       Log.w(TAG, "Unexpected error while invoking " + method, e);
       return null;
     } catch (InvocationTargetException e) {
+      e.printStackTrace();
       Log.w(TAG, "Unexpected error while invoking " + method, e.getCause());
       return null;
     } catch (RuntimeException re) {
+      re.printStackTrace();
       Log.w(TAG, "Unexpected error while invoking " + method, re);
       return null;
     }

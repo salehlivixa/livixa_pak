@@ -224,7 +224,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 			mRoomModel = getRoomFromDb(mRoomId);
 
 		} catch (Exception ex) {
-			ex.toString();
+			ex.printStackTrace();
 		}
 	}
 
@@ -302,7 +302,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		try {
 			roomModel = new Select().from(Room_Model.class).where("Room_Model.room_id = ?", roomId).executeSingle();
 		} catch (Exception ex) {
-			ex.toString();
+			ex.printStackTrace();
 		}
 
 		return roomModel;
@@ -362,7 +362,9 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		singleTcpClient.stopClient();
 		
 		
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 	}
 	
@@ -412,7 +414,9 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		singleTcpClient.stopClient();
 		
 		
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 		
 	}
@@ -458,7 +462,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 						handleCommand(currentCommand);
 						}catch(Exception ex)
 						{
-							ex.toString();
+							ex.printStackTrace();
 							
 						}
 						
@@ -586,7 +590,9 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		
 		singleTcpClient.stopClient();
 		
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 	}
 
 	
@@ -699,7 +705,9 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 						singleTcpClient.run();
 				}
 				
-				}catch(Exception ex){}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}
 	 
 	            return null;
 	        }
@@ -2890,7 +2898,7 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		
 		}catch(Exception ex)
 		{
-			
+			ex.printStackTrace();
 		}
 		
 		

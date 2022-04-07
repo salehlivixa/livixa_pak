@@ -194,7 +194,7 @@ public class SwitchConfigurationActivity extends Activity {
 			switchModelList = new Select().from(Switch_Model.class).where("Switch_Model.model_status != ?", AppKeys.KEY_IS_DELETED).execute();
 		}catch(Exception ex)
 		{
-			ex.toString();
+			ex.printStackTrace();;
 		}
 		return switchModelList;
 	}
@@ -462,7 +462,9 @@ public class SwitchConfigurationActivity extends Activity {
 							try
 							{
 							deviceMac=iEsptouchResult.getBssid().replace(":", "").substring(6, 12).toUpperCase();
-							}catch(Exception e){}
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 							
 							if(deviceMac!=null && deviceMac.trim().length() > 0)
 							{
@@ -472,7 +474,7 @@ public class SwitchConfigurationActivity extends Activity {
 							       switchModel = new Select().from(Switch_Model.class).where("Switch_Model.mac_address LIKE ?","%"+deviceMac+"%").executeSingle();
 								   }catch(Exception ex)
 								   {
-									   ex.toString();
+									   ex.printStackTrace();
 								   }
 								
 								
@@ -514,7 +516,7 @@ public class SwitchConfigurationActivity extends Activity {
 						
 						}catch(Exception ex)
 						{
-							
+							ex.printStackTrace();
 						}
 						
 						

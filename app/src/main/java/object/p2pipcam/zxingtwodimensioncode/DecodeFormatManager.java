@@ -81,6 +81,7 @@ final class DecodeFormatManager {
         }
         return formats;
       } catch (IllegalArgumentException iae) {
+        iae.printStackTrace();
         // ignore it then
       }
     }

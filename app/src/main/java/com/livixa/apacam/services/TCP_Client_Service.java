@@ -205,7 +205,9 @@ public class TCP_Client_Service  extends Service
 						singleTcpClient.run();
 				}
 				
-				}catch(Exception ex){}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}
 	 
 	            return null;
 	        }
@@ -392,7 +394,6 @@ public class TCP_Client_Service  extends Service
 	    	   try {
 				parseThread.join();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    	   

@@ -28,7 +28,6 @@ public class User_Room_Model extends Model
 	public
 	String userId="";
 	
-	
-	
+
 	
 }

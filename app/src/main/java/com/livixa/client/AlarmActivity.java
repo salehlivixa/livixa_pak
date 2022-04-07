@@ -176,7 +176,9 @@ public class AlarmActivity extends BaseActivity implements OnItemClickListener {
 		try
 		{
 		getParent().onBackPressed();
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 	}
 	

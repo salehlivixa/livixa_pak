@@ -169,7 +169,9 @@ public class Moods_RoomandSwitchesTCPGridViewAdapter extends BaseAdapter {
         
         onItemClick(convertView,pos);
         
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 		
 		return convertView;
@@ -208,7 +210,7 @@ public class Moods_RoomandSwitchesTCPGridViewAdapter extends BaseAdapter {
 				}
 					
 				}catch (Exception e) {
-					
+					e.printStackTrace();
 				}
 				
 				

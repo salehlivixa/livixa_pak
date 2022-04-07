@@ -37,7 +37,7 @@ public class KillNotificationsService extends Service {
 			nManager.cancelAll();
 		}catch(Exception ex)
     	{
-			ex.toString();
+            ex.printStackTrace();
     	};
     }
     

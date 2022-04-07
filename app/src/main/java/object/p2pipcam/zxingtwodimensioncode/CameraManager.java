@@ -51,6 +51,7 @@ public final class CameraManager {
 		try {
 			sdkInt = Integer.parseInt(Build.VERSION.SDK);
 		} catch (NumberFormatException nfe) {
+			nfe.printStackTrace();
 			// Just to be safe
 			sdkInt = 10000;
 		}

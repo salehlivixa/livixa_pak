@@ -140,6 +140,7 @@ final class CameraConfigurationManager {
         newX = Integer.parseInt(previewSize.substring(0, dimPosition));
         newY = Integer.parseInt(previewSize.substring(dimPosition + 1));
       } catch (NumberFormatException nfe) {
+        nfe.printStackTrace();
         Log.w(TAG, "Bad preview-size: " + previewSize);
         continue;
       }
@@ -171,6 +172,7 @@ final class CameraConfigurationManager {
       try {
         value = Double.parseDouble(stringValue);
       } catch (NumberFormatException nfe) {
+        nfe.printStackTrace();
         return tenDesiredZoom;
       }
       int tenValue = (int) (10.0 * value);
@@ -213,6 +215,7 @@ final class CameraConfigurationManager {
           tenDesiredZoom = tenMaxZoom;
         }
       } catch (NumberFormatException nfe) {
+        nfe.printStackTrace();
         Log.w(TAG, "Bad max-zoom: " + maxZoomString);
       }
     }
@@ -225,6 +228,7 @@ final class CameraConfigurationManager {
           tenDesiredZoom = tenMaxZoom;
         }
       } catch (NumberFormatException nfe) {
+        nfe.printStackTrace();
         Log.w(TAG, "Bad taking-picture-zoom-max: " + takingPictureZoomMaxString);
       }
     }
@@ -243,6 +247,7 @@ final class CameraConfigurationManager {
           tenDesiredZoom -= tenDesiredZoom % tenZoomStep;
         }
       } catch (NumberFormatException nfe) {
+        nfe.printStackTrace();
         // continue
       }
     }

@@ -80,7 +80,7 @@ public class SUB_USER_DB extends Model
 	   return _sUB_USER_DB = new Select().from(SUB_USER_DB.class).where("sh_user_id = ?",subUserId ).executeSingle();
 	   }catch(Exception ex)
 	   {
-		   
+		   ex.printStackTrace();
 	   }
 	   return _sUB_USER_DB;
    }
@@ -94,7 +94,7 @@ public class SUB_USER_DB extends Model
 	   _sUB_USER_DB = searchSubUserInDb(subUserId);
 	   }catch(Exception ex)
 	   {
-		   
+		   ex.printStackTrace();
 	   }
 	   
 	   if(_sUB_USER_DB!=null)

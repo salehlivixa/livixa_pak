@@ -102,8 +102,10 @@ public class BridgeService extends Service{
 		{
 			NotificationManager nManager = ((NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE));
 			nManager.cancelAll();
-		}catch(Exception ex){};
-		
+		}catch(Exception ex){
+			ex.printStackTrace();
+		};
+
 		mCustomMgr.cancel(R.drawable.app);
 	}
 

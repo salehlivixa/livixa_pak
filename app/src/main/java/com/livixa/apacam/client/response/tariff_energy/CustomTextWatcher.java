@@ -90,6 +90,7 @@ public class CustomTextWatcher implements TextWatcher {
                     }
 
                 } catch (NumberFormatException e) {
+                    e.printStackTrace();
                 }
             }
         } else {
@@ -112,6 +113,7 @@ public class CustomTextWatcher implements TextWatcher {
                 et.setSelection(et.getText().toString().length());
                 // et.setSelection(moveCaretTo); <- almost had it :))
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }

@@ -73,7 +73,7 @@ public class AddDeleteUpdateSwitchWithMoodsToServer implements ServerConnectList
 					map.put("moods[" + i + "][model_status]", mMoods.get(i).modelStatus);
 					map.put("moods[" + i + "][picture_url]", mMoods.get(i).pictureURL);
 				} catch (Exception ex) {
-
+					ex.printStackTrace();
 				}
 			}
 

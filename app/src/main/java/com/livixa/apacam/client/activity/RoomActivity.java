@@ -456,6 +456,7 @@ public class RoomActivity extends Activity implements OnClickListener{
 		}catch(Exception ex)
 		{
 			ex.toString();
+			ex.printStackTrace();
 			return temproomModelStatus;
 		}
 		

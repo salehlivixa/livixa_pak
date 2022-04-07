@@ -288,7 +288,6 @@ public class PlayActivity extends BaseActivity implements OnTouchListener,
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				streamType = 10;
@@ -300,7 +299,6 @@ public class PlayActivity extends BaseActivity implements OnTouchListener,
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				if (i2 == i1) {
@@ -471,7 +469,6 @@ final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoBut
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						return null;

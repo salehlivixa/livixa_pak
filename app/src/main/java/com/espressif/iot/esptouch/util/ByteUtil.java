@@ -276,6 +276,7 @@ public class ByteUtil {
 		try {
 			return string.getBytes(ESPTOUCH_ENCODING_CHARSET);
 		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
 			throw new IllegalArgumentException("the charset is invalid");
 		}
 	}

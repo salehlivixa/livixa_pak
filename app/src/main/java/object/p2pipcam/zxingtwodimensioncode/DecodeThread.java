@@ -69,6 +69,7 @@ final class DecodeThread extends Thread {
     try {
       handlerInitLatch.await();
     } catch (InterruptedException ie) {
+      ie.printStackTrace();
       // continue?
     }
     return handler;

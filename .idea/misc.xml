@@ -9,8 +9,11 @@
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/action_bar_default.xml" value="0.18802083333333333" />
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/activity_register_for_sub_user.xml" value="0.33" />
+        <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/activity_room.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/add_edit_activity_rooms.xml" value="0.36666666666666664" />
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/alarmactivity.xml" value="0.358695652173913" />
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/ipcamclientftest.xml" value="0.18802083333333333" />
+        <entry key="..\:/Projects/Android/Livixa/app/src/main/res/xml/preferences.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>

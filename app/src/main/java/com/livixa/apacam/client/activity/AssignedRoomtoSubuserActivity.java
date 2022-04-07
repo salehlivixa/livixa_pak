@@ -68,7 +68,7 @@ public class AssignedRoomtoSubuserActivity extends Activity {
 		
 		}catch(Exception ex)
 		{
-			
+			ex.printStackTrace();
 		}
 		
 		roomsGridViewAdapter =new AssignedRoomsToSubusersGridAdapter(AssignedRoomtoSubuserActivity.this,mEmptyView,roomsGridView,_sUB_USER_DB);

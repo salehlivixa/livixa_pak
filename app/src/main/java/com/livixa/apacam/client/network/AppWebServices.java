@@ -10,6 +10,7 @@ public interface AppWebServices {
 	
 	
 	public static final String liveURL = "http://www.kisafavps.com/live/smarthome/v2/";
+	public static final String imageUrl = "http://www.kisafavps.com/live/smarthome";
 	//public static final String liveURL = "http://www.kisafavps.com/live/smarthome/";
 
 	public static final String testURL = "http://www.kisafavps.com/dev/smarthome/";

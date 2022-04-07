@@ -371,11 +371,13 @@ final public class ActivityPortscan extends TabActivity {
             try {
                 startActivity(intent);
             } catch (ActivityNotFoundException e) {
+                e.printStackTrace();
                 if (search != null) {
                     makeToast(getString(R.string.package_missing, pk));
                     try {
                         startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(search)));
                     } catch (ActivityNotFoundException e2) {
+                        e2.printStackTrace();
                         Log.e(TAG, "Market not found !");
                     }
                 }
@@ -412,6 +414,7 @@ final public class ActivityPortscan extends TabActivity {
                 port_end = Integer.parseInt(prefs.getString(Prefs.KEY_PORT_END,
                         Prefs.DEFAULT_PORT_END));
             } catch (NumberFormatException e) {
+                e.printStackTrace();
                 port_start = Integer.parseInt(Prefs.DEFAULT_PORT_START);
                 port_end = Integer.parseInt(Prefs.DEFAULT_PORT_END);
             }
@@ -524,12 +527,13 @@ final public class ActivityPortscan extends TabActivity {
                                     break;
                                 }
                             } catch (PatternSyntaxException e) {
-                                // Log.e(TAG, e.getMessage());
+                                e.printStackTrace();
                             }
                         } while (c.moveToNext());
                     }
                     c.close();
                 } catch (SQLiteException e) {
+                    e.printStackTrace();
                     Log.e(TAG, e.getMessage());
                     Editor edit = PreferenceManager.getDefaultSharedPreferences(ctxt).edit();
                     edit.putInt(Prefs.KEY_RESET_SERVICESDB, 1);

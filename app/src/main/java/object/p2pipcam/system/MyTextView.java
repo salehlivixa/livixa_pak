@@ -2,14 +2,14 @@ package object.p2pipcam.system;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
-import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * @author : �Թ���
  * @version ��2012-12-25 ����14:52:21
  */
-public class MyTextView extends AppCompatTextView {
+public class MyTextView extends TextView {
 
 	public MyTextView(Context context) {
 		super(context);

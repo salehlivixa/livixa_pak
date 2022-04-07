@@ -121,7 +121,7 @@ public class EnergyRoomAndSwitchesActivity extends Activity {
 			
 
 		} catch (Exception ex) {
-			ex.toString();
+			ex.printStackTrace();
 		}
 	}
 
@@ -198,7 +198,7 @@ public class EnergyRoomAndSwitchesActivity extends Activity {
 		try {
 			roomModel = new Select().from(Room_Model.class).where("Room_Model.room_id = ?", roomId).executeSingle();
 		} catch (Exception ex) {
-			ex.toString();
+			ex.printStackTrace();
 		}
 
 		return roomModel;

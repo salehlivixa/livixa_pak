@@ -442,6 +442,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 
 					// onFailure(dataSynced_With_Server.getShMeta().getShErrorCode());
 				} catch (Exception ex) {
+					ex.printStackTrace();
 				}
 			}
 
@@ -456,6 +457,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 			DataSynced_With_Server dataSynced_With_Server = (DataSynced_With_Server) response;
 			// onFailure(dataSynced_With_Server.getShMeta().getShMessage());
 		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
 
 	}
@@ -507,7 +509,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 			map = createMap(AppPreference.getValue(Sync_Service.this, AppKeys.KEY_SESSION));
 
 		} catch (Exception ex) {
-			ex.toString();
+			ex.printStackTrace();
 		}
 
 		Call<DataSynced_With_Server> call = service.upload2server(map);
@@ -522,7 +524,9 @@ public class Sync_Service extends Service implements ServerConnectListener {
 		try
 		{
 		map.put(AppKeys.KEY_CURRENT_LANGUAGE, AppPreference.getValue(this, AppKeys.KEY_CURRENT_LANGUAGE));
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		List<Switch_Model> switchList = null;
 		List<Room_Model> roomsList = null;
 		List<Camera_Model> camList = null;
@@ -573,7 +577,6 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("rooms[" + i + "][model_status]", roomsList.get(i).modelStatus);
 
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -589,7 +592,6 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("user_rooms[" + i + "][model_status]", userRoomsList.get(i).modelStatus);
 
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -613,7 +615,6 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("cameras[" + i + "][pppp_status]", camList.get(i).ppppStatus);
 					map.put("cameras[" + i + "][user]", camList.get(i).user);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -629,7 +630,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("user_cameras[" + i + "][user_camera_id]", camUserList.get(i).userCameraId);
 					map.put("user_cameras[" + i + "][user_id]", camUserList.get(i).userId);
 				} catch (Exception ex) {
-
+					ex.printStackTrace();
 				}
 			}
 
@@ -653,7 +654,6 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("switches[" + i + "][model_status]", switchList.get(i).model_status);
 
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -671,7 +671,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("tariffs[" + i + "][user_id]", tariffModelList.get(i).user_id);
 					map.put("tariffs[" + i + "][model_status]", tariffModelList.get(i).model_status);
 				} catch (Exception ex) {
-
+					ex.printStackTrace();
 				}
 			}
 		
@@ -686,7 +686,7 @@ public class Sync_Service extends Service implements ServerConnectListener {
 					map.put("moods[" + i + "][model_status]", moodsList.get(i).modelStatus);
 					map.put("moods[" + i + "][picture_url]", moodsList.get(i).pictureURL);
 				} catch (Exception ex) {
-
+					ex.printStackTrace();
 				}
 			}
 		

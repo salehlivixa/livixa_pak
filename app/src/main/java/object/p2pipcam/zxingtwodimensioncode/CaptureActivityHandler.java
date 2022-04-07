@@ -116,6 +116,7 @@ public final class CaptureActivityHandler extends Handler {
     try {
       decodeThread.join();
     } catch (InterruptedException e) {
+      e.printStackTrace();
       // continue
     }
 

@@ -69,7 +69,9 @@ public class MyProgressDialog  extends AlertDialog {
 		{
 		avi.hide();
 		this.hide();
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 	}
 
 }

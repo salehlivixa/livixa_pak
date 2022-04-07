@@ -121,7 +121,9 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
 				{
 				
 				onFailure(dataSynced_With_Server.getShMeta().getShMessage());
-				}catch(Exception ex){}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}
 				
 				
 				WaitingStaticProgress.hideProgressDialog();
@@ -160,7 +162,9 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
 		{
 		DataSynced_With_Server dataSynced_With_Server = (DataSynced_With_Server) response;
 		onFailure(response.getMessage());
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 		AppPreference.saveData(cntxt, false, AppKeys.KEY_IS_LOGIN);
 	}

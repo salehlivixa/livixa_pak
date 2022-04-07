@@ -35,17 +35,16 @@ public class WaitingStaticProgress
 			{
 				mProgressDialog.dismiss();
 			}
-			}catch(Exception ex){}
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
 		
 		mProgressDialog = new MyProgressDialog(context,text);
 		mProgressDialog.setCancelable(false);
 		mProgressDialog.show();
 		}catch(Exception ex)
-		
 		{
-			
-			
-			
+			ex.printStackTrace();
 		}
 		
 		
@@ -78,7 +77,7 @@ public class WaitingStaticProgress
 		
 		}catch(Exception ex)
 		{
-			
+			ex.printStackTrace();
 		}
 	}
 	
