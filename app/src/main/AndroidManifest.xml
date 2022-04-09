@@ -54,7 +54,7 @@
             android:value="1" />
         <meta-data
             android:name="AA_MODELS"
-            android:value="com.livixa.apacam.dbmodel.Camera_Model,com.livixa.apacam.client.response.login.SUB_USER_DB,com.livixa.apacam.dbmodel.User_Camera_Model,com.livixa.apacam.dbmodel.Switch_Model,com.livixa.apacam.dbmodel.Room_Model,com.livixa.apacam.dbmodel.User_Room_Model" />
+            android:value="com.livixa.apacam.dbmodel.Camera_Model,com.livixa.apacam.client.response.login.SUB_USER_DB,com.livixa.apacam.dbmodel.User_Camera_Model,com.livixa.apacam.dbmodel.Switch_Model,com.livixa.apacam.dbmodel.Room_Model,com.livixa.apacam.dbmodel.User_Room_Model,com.livixa.apacam.dbmodel.Tariff_Model" />
         <provider
             android:name="com.activeandroid.content.ContentProvider"
             android:authorities="${applicationId}"
