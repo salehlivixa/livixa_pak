@@ -188,14 +188,13 @@ public class CaptureActivity extends Activity implements Callback {
 			// The volume on STREAM_SYSTEM is not adjustable, and users found it
 			// too loud,
 			// so we now play on the music stream.
+
 			mediaPlayer = MediaPlayer.create(this, R.raw.beep);
-			try {
-				mediaPlayer.prepare();
-			} catch (IllegalStateException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				mediaPlayer.prepareAsync();
+//			} catch (IllegalStateException e) {
+//				e.printStackTrace();
+//			}
 
 		}
 	}
@@ -204,6 +203,7 @@ public class CaptureActivity extends Activity implements Callback {
 
 	private void playBeepSoundAndVibrate() {
 		if (playBeep && mediaPlayer != null) {
+
 			mediaPlayer.start();
 		}
 		if (vibrate) {

@@ -19,19 +19,19 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.VIBRATE" />
-<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <!--  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
+      <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
 
-    <application xmlns:tools="http://schemas.android.com/tools"
+    <application
         android:name="com.livixa.apacam.client.base.KisafaApplication"
         android:allowBackup="true"
         android:debuggable="false"

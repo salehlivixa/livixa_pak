@@ -56,9 +56,10 @@ import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.oro.orochi.application.Orochi;
 
-public class KisafaApplication extends Application {
-	public static String TAG = "Kisafa Application";
+public class KisafaApplication extends Orochi {
+	public static String TAG = "Livixa Application";
 
 	private static KisafaApplication instance;
 
