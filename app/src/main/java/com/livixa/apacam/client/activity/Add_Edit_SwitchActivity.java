@@ -17,6 +17,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -988,15 +989,15 @@ public class Add_Edit_SwitchActivity extends Activity {
 	
 	public static String getSwitchTitle(String switchId)
 	{
-		
-		
+
+
 		 if(KisafaApplication.currentAppLanguage!=null)
 		 {
 			 if(KisafaApplication.currentAppLanguage.equals(AppKeys.LANGUAGES.ENGLISH))
 				{
-				 if(switchId!=null)
+				 if(switchId!=null && !switchId.equals(""))
 					{
-						String tempSwitchType=switchId.substring(6,8);
+						String tempSwitchType = switchId.substring(6,8);
 						if(tempSwitchType.equals("01"))
 						{
 							return "Switch 1";
@@ -1023,7 +1024,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 				 
 			   {
 			    	
-			    	if(switchId!=null)
+			    	if(switchId!=null && !switchId.equals(""))
 					{
 						String tempSwitchType=switchId.substring(6,8);
 						if(tempSwitchType.equals("01"))

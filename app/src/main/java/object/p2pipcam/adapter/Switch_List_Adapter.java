@@ -117,7 +117,7 @@ public class Switch_List_Adapter extends BaseAdapter implements ServerConnectLis
 		
 		SwitchViewHolder switchViewHolder=null;
 		
-		Switch_Model     switch_Model=mSwitchModelList.get(position);
+		Switch_Model switch_Model=mSwitchModelList.get(position);
 		
 		   
 			

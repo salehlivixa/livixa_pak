@@ -8,7 +8,6 @@ import com.espressif.iot.esptouch.EsptouchTask;
 import com.espressif.iot.esptouch.IEsptouchListener;
 import com.espressif.iot.esptouch.IEsptouchResult;
 import com.espressif.iot.esptouch.IEsptouchTask;
-import com.espressif.iot.esptouch.demo_activity.EspWifiAdminSimple;
 import com.espressif.iot.esptouch.task.__IEsptouchTask;
 
 import android.app.Activity;
@@ -31,6 +30,7 @@ import com.livixa.apacam.client.widget.CustomTextView;
 import com.livixa.apacam.dbmodel.ESP_Result_Model;
 import com.livixa.apacam.dbmodel.Switch_Model;
 import com.livixa.apacam.services.Sync_Service;
+import com.livixa.apacam.util.EspWifiAdminSimple;
 import com.livixa.client.R;
 
 public class SwitchConfigurationActivity extends Activity {
@@ -354,8 +354,10 @@ public class SwitchConfigurationActivity extends Activity {
 					isSsidHidden = true;
 				}
 				taskResultCount = Integer.parseInt(taskResultCountStr);
+
 				mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword,
-						isSsidHidden, SwitchConfigurationActivity.this);
+						 SwitchConfigurationActivity.this);
+
 				mEsptouchTask.setEsptouchListener(myListener);
 			}
 			List<IEsptouchResult> resultList = mEsptouchTask.executeForResults(taskResultCount);
@@ -370,6 +372,7 @@ public class SwitchConfigurationActivity extends Activity {
 					"Confirm");*/
 			IEsptouchResult firstResult = result.get(0);
 			// check whether the task is cancelled and no results received
+			Log.d(TAG,"!firstResult.isCancelled() = " + !firstResult.isCancelled());
 			if (!firstResult.isCancelled()) {
 				int count = 0;
 				// max results to be displayed, if it is more than maxDisplayCount,
@@ -377,6 +380,7 @@ public class SwitchConfigurationActivity extends Activity {
 				final int maxDisplayCount = 5;
 				// the task received some results including cancelled while
 				// executing before receiving enough results
+				Log.d(TAG,"firstResult.isSuc() = " + firstResult.isSuc());
 				if (firstResult.isSuc()) {
 					StringBuilder sb = new StringBuilder();
 					for (IEsptouchResult resultInList : result) {
@@ -394,10 +398,10 @@ public class SwitchConfigurationActivity extends Activity {
 						sb.append("\nthere's " + (result.size() - count)
 								+ " more result(s) without showing\n");
 					}
+
+
 					
-					
-					
-					
+					Log.e("StringBuilder",sb.toString());
 					
 					/*mProgressDialog.setMessage(sb.toString());
 					mProgressDialog.dismiss();*/

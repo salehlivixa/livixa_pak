@@ -82,6 +82,8 @@
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.3.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/esptouch-1.0.0.aar" level="project" />
+    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/esptouch-v2-2.0.0.aar" level="project" />
     <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/Orochi.aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.5.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.1@aar" level="project" />

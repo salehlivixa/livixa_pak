@@ -215,7 +215,7 @@ public class RoomSwitchesActivity extends Activity {
 
 		
 	     LayoutInflater inflater;
-	     Map<String, Integer> mMapSwitchesToResourse = new HashMap<String, Integer>();
+	     Map<String, Integer> mMapSwitchesToResourse = new HashMap<>();
 	     public HAdapter(Context context) {
 	        inflater = LayoutInflater.from(context);
 	        
@@ -284,9 +284,16 @@ public class RoomSwitchesActivity extends Activity {
 	            holder = (HViewHolder) convertView.getTag();
 	        }
 	        
-	        
-	        holder.img.setImageResource(mMapSwitchesToResourse.get(switch_Model.type));
-	        
+
+	        if(!switch_Model.type.equals("")) {
+	        	try {
+					int id = mMapSwitchesToResourse.get(switch_Model.type);
+						holder.img.setImageResource(id);
+
+				}catch (NullPointerException e){
+	        		e.printStackTrace();
+				}
+			}
 	        try
 	        {
 	        holder.switchName.setText(Add_Edit_SwitchActivity.getSwitchTitle(switch_Model.mac_address));
