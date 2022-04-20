@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -159,9 +160,6 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 		try {
 
 			Intent intent = getIntent();
-
-			
-			
 			watageResult= (Sh_Watage_result)intent.getSerializableExtra("energy_result_to_load_again");
 			
 
@@ -192,6 +190,7 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("session", AppPreference.getValue(Energy_RoomsActivity.this, AppKeys.KEY_SESSION));
 		map.put(AppKeys.KEY_CURRENT_LANGUAGE, AppPreference.getValue(Energy_RoomsActivity.this, AppKeys.KEY_CURRENT_LANGUAGE));
+
 		showProgressDialog("", 100);
 		ApiService service = KisafaApplication.getRestClient().getApiService();
 		Call<Watage_Response> call = (Call<Watage_Response>) service.getWatageDetails(map);
@@ -202,9 +201,9 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 
 	@Override
 	public void onSuccess(ServerResponse response) {
-		
-		
-			
+
+
+	//	Log.e("response",response.getMessage());
 		
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.WATAGE_REQUEST_CODE) {
 			
@@ -235,7 +234,6 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 					{
 					
 					 priceUnit= watageResult.getSh_price_unit();
-					
 					String priceValue=watageResult.getSh_total_price();
 					
 					 watageUnit=watageResult.getSh_wattage_unit();
@@ -254,7 +252,7 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 					try
 					{
 						
-						roomsGridViewAdapter =new EnergyRoomsGridViewAdapter(Energy_RoomsActivity.this,mEmptyView,roomsGridView,roomResult,watageUnit,priceUnit,watageResult);
+    					roomsGridViewAdapter =new EnergyRoomsGridViewAdapter(Energy_RoomsActivity.this,mEmptyView,roomsGridView,roomResult,watageUnit,priceUnit,watageResult);
 						roomsGridView.setAdapter(roomsGridViewAdapter);
 						
 					}
@@ -294,6 +292,7 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 
 	@Override
 	public void onFailure(ServerResponse response) {
+		Log.e("Fail",response.getMessage());
 		onFailure(response.getMessage());
 		
 	}

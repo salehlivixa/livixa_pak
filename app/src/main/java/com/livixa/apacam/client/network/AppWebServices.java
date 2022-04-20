@@ -24,7 +24,8 @@ public interface AppWebServices {
 	public static final String API_REGISTER = "register.php";
 	
 	public static final String API_WAITAGE = "wattage.php";
-	
+	public static final String API_WAITAGE2 = "wattage2.php";
+
 	public static final String API_FORGOT = "forgotpassword.php";
 	public static final String API_CHANGE_PASS = "changepassword.php";
 	

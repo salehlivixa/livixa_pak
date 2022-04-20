@@ -60,33 +60,32 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.3.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.4.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/activeandroid-3.1.0-SNAPSHOT.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/android-query-full.0.26.7.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/converter-gson-2.1.0.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/devsmartlib.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/freemarker-2.3.20.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/greendao-1.3.0-beta-1.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/greendao-generator-2.1.0.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/gson-2.7.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/logging-interceptor-3.4.1.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/okhttp-3.4.1.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/okio-1.9.0.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/retrofit-2.1.0.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/slider-1.3.0-sources.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/socket.io-client-0.8.2.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/socketio.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/universal-image-loader-1.9.2.jar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/zxing.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/activeandroid-3.1.0-SNAPSHOT.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/android-query-full.0.26.7.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/converter-gson-2.1.0.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/devsmartlib.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/freemarker-2.3.20.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/greendao-1.3.0-beta-1.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/greendao-generator-2.1.0.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/gson-2.7.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/logging-interceptor-3.4.1.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/okhttp-3.4.1.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/okio-1.9.0.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/retrofit-2.1.0.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/slider-1.3.0-sources.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/socket.io-client-0.8.2.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/socketio.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/universal-image-loader-1.9.2.jar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/zxing.jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.4.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.1" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/esptouch-1.0.0.aar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/esptouch-v2-2.0.0.aar" level="project" />
-    <orderEntry type="library" name="Gradle: C./Projects/Android/Livixa/app/libs/Orochi.aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.4" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/esptouch-1.0.0.aar" level="project" />
+    <orderEntry type="library" name="Gradle: D./projects/Wajid Office/Livixa/app/libs/Orochi.aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.5.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.4.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.3.6@aar" level="project" />

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: D./projects/Wajid Office/Livixa/app/libs/Orochi.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8322590154d5ce3b261a7541854a4036/transformed/jetified-Orochi/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8322590154d5ce3b261a7541854a4036/transformed/jetified-Orochi/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8322590154d5ce3b261a7541854a4036/transformed/jetified-Orochi/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

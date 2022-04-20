@@ -8,7 +8,7 @@
     <string name="spinnerTaskResultCountTitle">Task result count</string>
     <string name="btnConfirmTitle">Confirm</string>
     <!-- 应有程序 -->
-    <string name="app_name" >Livixa</string>
+    <string name="app_name">Livixa</string>
     <string name="version_code">Version code</string>
     <string name="version_code1">Internal version</string>
     <string name="soft_name">Software name</string>
@@ -633,8 +633,8 @@
     <string name="title_activity_date_and_time_picker_for_moods">DateAndTimePickerForMoodsActivity</string>
     <string name="countries">eyJJTSI6IklzbGUgb2YgTWFuIiwiSFIiOiJDcm9hdGlhIiwiR1ciOiJHdWluZWEtQmlzc2F1IiwiSU4iOiJJbmRpYSIsIktFIjoiS2VueWEiLCJMQSI6Ikxhb3MiLCJJTyI6IkJyaXRpc2ggSW5kaWFuIE9jZWFuIFRlcnJpdG9yeSIsIkhUIjoiSGFpdGkiLCJMQiI6IkxlYmFub24iLCJHWSI6Ikd1eWFuYSIsIktHIjoiS3lyZ3l6c3RhbiIsIkhVIjoiSHVuZ2FyeSIsIkxDIjoiU2FpbnQgTHVjaWEiLCJJUSI6IklyYXEiLCJLSCI6IkNhbWJvZGlhIiwiSk0iOiJKYW1haWNhIiwiSVIiOiJJcmFuIiwiS0kiOiJLaXJpYmF0aSIsIklTIjoiSWNlbGFuZCIsIk1BIjoiTW9yb2NjbyIsIkpPIjoiSm9yZGFuIiwiSVQiOiJJdGFseSIsIkpQIjoiSmFwYW4iLCJNQyI6Ik1vbmFjbyIsIktNIjoiQ29tb3JvcyIsIk1EIjoiTW9sZG92YSIsIkxJIjoiTGllY2h0ZW5zdGVpbiIsIktOIjoiU2FpbnQgS2l0dHMgJiBOZXZpcyIsIk1FIjoiTW9udGVuZWdybyIsIk5BIjoiTmFtaWJpYSIsIk1GIjoiU2FpbnQgTWFydGluIChGcmVuY2gpIiwiTEsiOiJTcmkgTGFua2EiLCJLUCI6Ik5vcnRoIEtvcmVhIiwiTUciOiJNYWRhZ2FzY2FyIiwiTkMiOiJOZXcgQ2FsZWRvbmlhIiwiTUgiOiJNYXJzaGFsbCBJc2xhbmRzIiwiS1IiOiJTb3V0aCBLb3JlYSIsIk5FIjoiTmlnZXIiLCJORiI6Ik5vcmZvbGsgSXNsYW5kIiwiTUsiOiJNYWNlZG9uaWEiLCJORyI6Ik5pZ2VyaWEiLCJNTCI6Ik1hbGkiLCJNTSI6Ik15YW5tYXIgKEJ1cm1hKSIsIkxSIjoiTGliZXJpYSIsIk5JIjoiTmljYXJhZ3VhIiwiS1ciOiJLdXdhaXQiLCJNTiI6Ik1vbmdvbGlhIiwiTFMiOiJMZXNvdGhvIiwiUEEiOiJQYW5hbWEiLCJNTyI6Ik1hY2F1IiwiTFQiOiJMaXRodWFuaWEiLCJLWSI6IkNheW1hbiBJc2xhbmRzIiwiTVAiOiJOb3J0aGVybiBNYXJpYW5hIElzbGFuZHMiLCJMVSI6Ikx1eGVtYm91cmciLCJOTCI6Ik5ldGhlcmxhbmRzIiwiS1oiOiJLYXpha2hzdGFuIiwiTVEiOiJNYXJ0aW5pcXVlIiwiTFYiOiJMYXR2aWEiLCJNUiI6Ik1hdXJpdGFuaWEiLCJQRSI6IlBlcnUiLCJNUyI6Ik1vbnRzZXJyYXQiLCJRQSI6IlFhdGFyIiwiTk8iOiJOb3J3YXkiLCJQRiI6IlRhaGl0aSAoRnJlbmNoIFBvbGluZXNpYSkiLCJNVCI6Ik1hbHRhIiwiTFkiOiJMaWJ5YSIsIk5QIjoiTmVwYWwiLCJQRyI6IlBhcHVhIE5ldyBHdWluZWEiLCJNVSI6Ik1hdXJpdGl1cyIsIlBIIjoiUGhpbGlwcGluZXMiLCJNViI6Ik1hbGRpdmVzIiwiT00iOiJPbWFuIiwiTlIiOiJOYXVydSIsIk1XIjoiTWFsYXdpIiwiTVgiOiJNZXhpY28iLCJQSyI6IlBha2lzdGFuIiwiTVkiOiJNYWxheXNpYSIsIk5VIjoiTml1ZSIsIlBMIjoiUG9sYW5kIiwiTVoiOiJNb3phbWJpcXVlIiwiUE0iOiJTYWludCBQaWVycmUgYW5kIE1pcXVlbG9uIiwiUE4iOiJQaXRjYWlybiIsIlJFIjoiUmV1bmlvbiIsIlNBIjoiU2F1ZGkgQXJhYmlhIiwiU0IiOiJTb2xvbW9uIElzbGFuZHMiLCJOWiI6Ik5ldyBaZWFsYW5kIiwiU0MiOiJTZXljaGVsbGVzIiwiU0QiOiJTdWRhbiIsIlBSIjoiUHVlcnRvIFJpY28iLCJTRSI6IlN3ZWRlbiIsIlBTIjoiUGFsZXN0aW5pYW4gVGVycml0b3J5LCBPY2N1cGllZCIsIlBUIjoiUG9ydHVnYWwiLCJTRyI6IlNpbmdhcG9yZSIsIlRDIjoiVHVya3MgYW5kIENhaWNvcyBJc2xhbmRzIiwiU0giOiJTYWludCBIZWxlbmEiLCJURCI6IkNoYWQiLCJTSSI6IlNsb3ZlbmlhIiwiUFciOiJQYWxhdSIsIlNKIjoiU3ZhbGJhcmQgYW5kIEphbiBNYXllbiBJc2xhbmRzIiwiVUEiOiJVa3JhaW5lIiwiUk8iOiJSb21hbmlhIiwiVEYiOiJGcmVuY2ggU291dGhlcm4gVGVycml0b3JpZXMiLCJTSyI6IlNsb3ZhayBSZXB1YmxpYyIsIlBZIjoiUGFyYWd1YXkiLCJURyI6IlRvZ28iLCJTTCI6IlNpZXJyYSBMZW9uZSIsIlRIIjoiVGhhaWxhbmQiLCJTTSI6IlNhbiBNYXJpbm8iLCJTTiI6IlNlbmVnYWwiLCJSUyI6IlNlcmJpYSAoWXVnb3NsYXZpYSkiLCJUSiI6IlRhamlraXN0YW4iLCJWQSI6IlZhdGljYW4gQ2l0eSIsIlNPIjoiU29tYWxpYSIsIlRLIjoiVG9rZWxhdSIsIlVHIjoiVWdhbmRhIiwiUlUiOiJSdXNzaWFuIEZlZGVyYXRpb24iLCJUTCI6IkVhc3QgVGltb3IiLCJWQyI6IlNhaW50IFZpbmNlbnQgJiB0aGUgR3JlbmFkaW5lcyIsIlRNIjoiVHVya21lbmlzdGFuIiwiU1IiOiJTdXJpbmFtZSIsIlJXIjoiUndhbmRhIiwiVE4iOiJUdW5pc2lhIiwiVkUiOiJWZW5lenVlbGEiLCJUTyI6IlRvbmdhIiwiU1QiOiJTYW8gVG9tZSAmIFByaW5jaXBlIiwiVkciOiJCcml0aXNoIFZpcmdpbiBJc2xhbmRzIiwiU1YiOiJFbCBTYWx2YWRvciIsIlVNIjoiVW5pdGVkIFN0YXRlcyBNaW5vciBPdXRseWluZyBJc2xhbmRzIiwiVFIiOiJUdXJrZXkiLCJWSSI6IlZpcmdpbiBJc2xhbmRzIChVUykiLCJXRiI6IldhbGxpcyBhbmQgRnV0dW5hIiwiVFQiOiJUcmluaWRhZCAmIFRvYmFnbyIsIlNZIjoiU3lyaWEiLCJTWiI6IlN3YXppbGFuZCIsIlRWIjoiVHV2YWx1IiwiVFciOiJUYWl3YW4iLCJWTiI6IlZpZXQgTmFtIiwiVVMiOiJVbml0ZWQgU3RhdGVzIChVU0EpIiwiVFoiOiJUYW56YW5pYSIsIllFIjoiWWVtZW4iLCJaQSI6IlNvdXRoIEFmcmljYSIsIlhLIjoiS29zb3ZvIiwiVVkiOiJVcnVndWF5IiwiVlUiOiJWYW51YXR1IiwiVVoiOiJVemJla2lzdGFuIiwiV1MiOiJTYW1vYSIsIlpNIjoiWmFtYmlhIiwiQUMiOiJBc2NlbnNpb24gSXNsYW5kIiwiQUQiOiJBbmRvcnJhIiwiWVQiOiJNYXlvdHRlIiwiQUUiOiJVbml0ZWQgQXJhYiBFbWlyYXRlcyIsIllVIjoiU2VyYmlhIGFuZCBNb250ZW5lZ3JvIiwiQkEiOiJCb3NuaWEgJiBIZXJ6ZWdvdmluYSIsIkFGIjoiQWZnaGFuaXN0YW4iLCJCQiI6IkJhcmJhZG9zIiwiQUciOiJBbnRpZ3VhICYgQmFyYnVkYSIsIkJEIjoiQmFuZ2xhZGVzaCIsIkFJIjoiQW5ndWlsbGEiLCJCRSI6IkJlbGdpdW0iLCJDQSI6IkNhbmFkYSIsIkJGIjoiQnVya2luYSBGYXNvIiwiQkciOiJCdWxnYXJpYSIsIlpXIjoiWmltYmFid2UiLCJBTCI6IkFsYmFuaWEiLCJDQyI6IkNvY29zIChLZWVsaW5nKSBJc2xhbmRzIiwiQkgiOiJCYWhyYWluIiwiQU0iOiJBcm1lbmlhIiwiQ0QiOiJDb25nbywgRGVtb2NyYXRpYyBSZXB1YmxpYyIsIkJJIjoiQnVydW5kaSIsIkFOIjoiTmV0aGVybGFuZHMgQW50aWxsZXMiLCJCSiI6IkJlbmluIiwiQU8iOiJBbmdvbGEiLCJDRiI6IkNlbnRyYWwgQWZyaWNhbiBSZXB1YmxpYyIsIkNHIjoiQ29uZ28iLCJBUSI6IkFudGFyY3RpY2EiLCJDSCI6IlN3aXR6ZXJsYW5kIiwiQk0iOiJCZXJtdWRhIiwiQVIiOiJBcmdlbnRpbmEiLCJDSSI6IkNvdGUgRCdJdm9pcmUgKEl2b3J5IENvYXN0KSIsIkJOIjoiQnJ1bmVpIERhcnVzc2FsYW0iLCJERSI6Ikdlcm1hbnkiLCJBUyI6IkFtZXJpY2FuIFNhbW9hIiwiQk8iOiJCb2xpdmlhIiwiQVQiOiJBdXN0cmlhIiwiQ0siOiJDb29rIElzbGFuZHMiLCJBVSI6IkF1c3RyYWxpYSIsIkNMIjoiQ2hpbGUiLCJFQyI6IkVjdWFkb3IiLCJDTSI6IkNhbWVyb29uIiwiQlIiOiJCcmF6aWwiLCJBVyI6IkFydWJhIiwiQ04iOiJDaGluYSIsIkVFIjoiRXN0b25pYSIsIkJTIjoiQmFoYW1hcyIsIkRKIjoiRGppYm91dGkiLCJBWCI6IkFsYW5kIElzbGFuZHMiLCJDTyI6IkNvbG9tYmlhIiwiQlQiOiJCaHV0YW4iLCJESyI6IkRlbm1hcmsiLCJFRyI6IkVneXB0IiwiQVoiOiJBemVyYmFpamFuIiwiRUgiOiJXZXN0ZXJuIFNhaGFyYSIsIkJWIjoiQm91dmV0IElzbGFuZCIsIkRNIjoiRG9taW5pY2EiLCJDUiI6IkNvc3RhIFJpY2EiLCJCVyI6IkJvdHN3YW5hIiwiR0EiOiJHYWJvbiIsIkRPIjoiRG9taW5pY2FuIFJlcHVibGljIiwiQlkiOiJCZWxhcnVzIiwiR0IiOiJVbml0ZWQgS2luZ2RvbSIsIkNVIjoiQ3ViYSIsIkJaIjoiQmVsaXplIiwiQ1YiOiJDYXBlIFZlcmRlIiwiR0QiOiJHcmVuYWRhIiwiRkkiOiJGaW5sYW5kIiwiR0UiOiJHZW9yZ2lhIiwiRkoiOiJGaWppIiwiQ1giOiJDaHJpc3RtYXMgSXNsYW5kIiwiR0YiOiJGcmVuY2ggR3VpYW5hIiwiRksiOiJGYWxrbGFuZCBJc2xhbmRzIChNYWx2aW5hcykiLCJDWSI6IkN5cHJ1cyIsIkdHIjoiR3Vlcm5zZXkiLCJDWiI6IkN6ZWNoIFJlcHVibGljIiwiR0giOiJHaGFuYSIsIkZNIjoiTWljcm9uZXNpYSIsIkVSIjoiRXJpdHJlYSIsIkdJIjoiR2licmFsdGFyIiwiRVMiOiJTcGFpbiIsIkZPIjoiRmFyb2UgSXNsYW5kcyIsIkVUIjoiRXRoaW9waWEiLCJHTCI6IkdyZWVubGFuZCIsIkRaIjoiQWxnZXJpYSIsIkdNIjoiR2FtYmlhIiwiSUQiOiJJbmRvbmVzaWEiLCJGUiI6IkZyYW5jZSIsIkdOIjoiR3VpbmVhIiwiSUUiOiJJcmVsYW5kIiwiSEsiOiJIb25nIEtvbmciLCJHUCI6Ikd1YWRlbG91cGUiLCJHUSI6IkVxdWF0b3JpYWwgR3VpbmVhIiwiSE0iOiJIZWFyZCBhbmQgTWNEb25hbGQgSXNsYW5kcyIsIkdSIjoiR3JlZWNlIiwiSE4iOiJIb25kdXJhcyIsIkpFIjoiSmVyc2V5IiwiR1MiOiJTb3V0aCBHZW9yZ2lhIGFuZCBTb3V0aCBTYW5kd2ljaCIsIkZYIjoiRnJhbmNlLCBNZXRyb3BvbGl0YW4iLCJHVCI6Ikd1YXRlbWFsYSIsIkdVIjoiR3VhbSIsIklMIjoiSXNyYWVsIn0=</string>
     <string name="title_activity_tariff_main">TariffMainActivity</string>
-    
-    
+
+
     <!-- Login Screen -->
     <string name="app_name_new">Livixa</string>
     <string name="use_email">Or use your email address</string>
@@ -643,7 +643,7 @@
     <string name="hint_password">Password</string>
     <string name="text_fullname">Full name</string>
     <string name="text_register">Register</string>
-   
+
     <string name="text_firstname">First name</string>
     <string name="text_lastname">Last name</string>
     <string name="text_login">Log In</string>
@@ -654,221 +654,212 @@
     <string name="confirm_delete">confirm_delete</string>
     <string name="exit_user">Are you sure you want to exit?</string>
     <string name="text_signin_cell">Cell number</string>
-    
+
     <string name="text_country">Country</string>
     <string name="text_city">City</string>
-    
+
     <string name="text_signin_username">Username</string>
     <string name="text_sign_in">Sign In</string>
     <string name="text_sign_up">Sign Up</string>
-     <string name="text_register_subuser">Register Subuser</string>
+    <string name="text_register_subuser">Register Subuser</string>
     <string name="text_send_email">Send Email</string>
-    
-    
-    
-    
-     <string name="Sign_In">Sign In</string>
-    
-     <string name="Sign_Up">Sign Up</string>
-    
-     <string name="Login">Login</string>
 
-      
-      <string name="UserNameHint">Username</string>
-      
-      <string name="UserPassHint">Password</string>
-      
-      <string name="Error_MSG_UserName">Username is required!</string>
-       
-      <string name="Error_MSG_UserPass">Password is required!</string>
-      
-       
-		<string name="YES">YES</string>
-		
-		<string name="NO">NO</string>
-		
-		<string name="LoginError">Login Error!</string>
-		
-		
-		<string name="AlreadyLoginMessage">You are currently logged in from another device. Do you want to logout from other device to login?
+
+    <string name="Sign_In">Sign In</string>
+
+    <string name="Sign_Up">Sign Up</string>
+
+    <string name="Login">Login</string>
+
+
+    <string name="UserNameHint">Username</string>
+
+    <string name="UserPassHint">Password</string>
+
+    <string name="Error_MSG_UserName">Username is required!</string>
+
+    <string name="Error_MSG_UserPass">Password is required!</string>
+
+
+    <string name="YES">YES</string>
+
+    <string name="NO">NO</string>
+
+    <string name="LoginError">Login Error!</string>
+
+
+    <string name="AlreadyLoginMessage">You are currently logged in from another device. Do you want to logout from other device to login?
 		</string>
-		
-		<string name="Register">Register</string>
-     	<string name="EnableLocation">You need to allow location access in your settings app to auto fill country info!</string>
-        <string name="Emailaddress">Email address</string>
-		<string name="Fullname">Full name</string>
-		<string name="Cellnumber">Cell number</string>
-		<string name="Country">Country</string>
-		<string name="City">City</string>
-		<string name="Emailisrequired">Email is required!</string>
-		<string name="Emailisnotvalid">Email is not valid!</string>
-		<string name="Fullnameisrequired">Full name is required!</string>
-		<string name="Cellisrequired">Cell is required!</string>
-		<string name="Countryisrequired">Country is required!</string>
-		<string name="Cityisrequired">City is required!</string>
-		<string name="Camera">Camera</string>
-		<string name="Photos">Photos</string>
-		<string name="Select">Select</string>
-		
-		<!-- <string name="Thisdevicedoesnotsupportcamera" >This device does\'t support camera!</string> -->
-		<string name="Countries" >Countries</string>
-		<string name="Cities" >Cities</string>
-		<string name="Pleaseselectcountryfirst" >Please select country first!</string>
-		
-		<string name="Thankyouregisteringwithus" >Thank you for registering with us</string>
-	
-		<string name="ForgotPassword">Forgot Password</string>
-		<string name="SendEmail">Send Email</string>
-		<string name="EmailSend">Email Send</string>
-		<string name="Please_check_your_email_msg">Please check your email to follow forget password instructions!</string>
-		
-		<string name="Welcome">Welcome</string>
-		<string name="YourdatasyncedMSG">Your data needs to be synced with server, tap to update…</string>
-		<string name="Rooms">Rooms</string>
-		
-		<string name="IR">IR</string>
-		<string name="Moods">Moods</string>
-		<string name="EnergyUsage">Energy Usage</string>
-		<string name="Settings">Settings</string>
-	
-		<!-- // HomeHeaderView -->
-	
-		<string name="Youaresignedinas">You are signed in as</string>
-		
-		
-		<string name="IPCamera">Camera</string>
-		<string name="TableCamera">Camera</string>
-		<string name="fourviews">Four Views</string>
-		<string name="main_tap_here_add_vidicon">Add new camera</string>
-		<string name="cameraNumOut">Numbers fo your cameras is upper limit</string>
-		<string name="ingInitCamera">Camera is initializing</string>
-	
-	
-		<string name="PPPPStatusUnknown">unknown</string>
-		<string name="PPPPStatusConnecting">connecting</string>
-		<string name="PPPPStatusInitialing">initialing</string>
-		<string name="PPPPStatusOnline">Online</string>
-		<string name="CameraIsNotOnline">Offline</string>
-		<string name="PPPPStatusInvalidUserPwd">Invalid User or Pwd</string>
-		<string name="PPPPStatusConnectFailed">connect failed</string>
-		<string name="PPPPStatusDisconnected">disconnected</string>
-		<string name="PPPPStatusInvalidID">invalid id</string>
-		<string name="PPPPStatusConnectTimeout">connect timeout</string>
-		<string name="noadmin">The user does not have permission or a poor network</string>
-		<string name="PPPPStatusNotWatchTime">Vision granted only during Visit Time</string>
-	
-	
-		<string name="versionInfo">Version information</string>
-		
-		<string name="versionIgnore">Ignore the version</string>
-		<string name="versionUpdate">Update immediately</string>
-		<string name="versionlaterUpdate">Update later</string>
-	
-		<string name="ddnscameraisofflineornolan">Request failed or mobile phone and camera connects difference network</string>
+
+    <string name="Register">Register</string>
+    <string name="EnableLocation">You need to allow location access in your settings app to auto fill country info!</string>
+    <string name="Emailaddress">Email address</string>
+    <string name="Fullname">Full name</string>
+    <string name="Cellnumber">Cell number</string>
+    <string name="Country">Country</string>
+    <string name="City">City</string>
+    <string name="Emailisrequired">Email is required!</string>
+    <string name="Emailisnotvalid">Email is not valid!</string>
+    <string name="Fullnameisrequired">Full name is required!</string>
+    <string name="Cellisrequired">Cell is required!</string>
+    <string name="Countryisrequired">Country is required!</string>
+    <string name="Cityisrequired">City is required!</string>
+    <string name="Camera">Camera</string>
+    <string name="Photos">Photos</string>
+    <string name="Select">Select</string>
+
+    <!-- <string name="Thisdevicedoesnotsupportcamera" >This device does\'t support camera!</string> -->
+    <string name="Countries">Countries</string>
+    <string name="Cities">Cities</string>
+    <string name="Pleaseselectcountryfirst">Please select country first!</string>
+
+    <string name="Thankyouregisteringwithus">Thank you for registering with us</string>
+
+    <string name="ForgotPassword">Forgot Password</string>
+    <string name="SendEmail">Send Email</string>
+    <string name="EmailSend">Email Send</string>
+    <string name="Please_check_your_email_msg">Please check your email to follow forget password instructions!</string>
+
+    <string name="Welcome">Welcome</string>
+    <string name="YourdatasyncedMSG">Your data needs to be synced with server, tap to update…</string>
+    <string name="Rooms">Rooms</string>
+
+    <string name="IR">IR</string>
+    <string name="Moods">Moods</string>
+    <string name="EnergyUsage">Energy Usage</string>
+    <string name="Settings">Settings</string>
+
+    <!-- // HomeHeaderView -->
+
+    <string name="Youaresignedinas">You are signed in as</string>
 
 
-	
-		<string name="ON">ON</string>
-		<string name="OFF">OFF</string>
-		
-		
-		<string name="LED" >LED</string>
-		<string name="Dimmer1">Dimmer 1</string>
-		<string name="Dimmer2" >Dimmer 2</string>
-		<string name="Dimmer3" >Dimmer 3</string>
-		
-		
-		<string name="Edit">Edit</string>
-		<string name="Donee">Done</string>
-		<string name="Delete">Delete</string>
-		<string name="Back">Back</string>
-	
-		
-		<!-- setting controller -->
-		
-		<string name="AddEditRooms">Add/Edit Rooms</string>
-		<string name="AddEditSwitches">Add/Edit Switches</string>
-		<string name="Controlinsidehome">Control inside home</string>
-		<string name="ControlRemotly">Control Remotly</string>
-		<string name="ConfigureSwitches">Configure Switches</string>
-		<string name="EditUsers">Edit Users</string>
-		<string name="ElectricityTariff">Electricity Tariff</string>
-		<string name="Profile">Profile</string>
-		<string name="KAbout">About</string>
-		<string name="ChangePassword">Change Password</string>
-		<string name="Logout">Logout</string>
-		<string name="Language_Currency">Language &amp; Currency</string>
-		<string name="SystemReset">System Reset</string>
-		<string name="AddEditMoods">Add/Edit Moods</string>
-		<string name="ScanSwitches">Scan Switches</string>
-		<string name="Areyousuretologout">Are you sure to logout?</string>
-		<string name="Yourdataneedstobesyncedwithserverlogout">Your data needs to be synced with server!. Do you want to logout without syncing?</string>
-		
-		
-		
-		<string name="Language">Language</string>
-		<string name="Currency">Currency</string>
-		<string name="USD"     >USD</string>
-		<string name="SAR"     >SAR</string>
-		<string name="ENGLISH" >ENGLISH</string>
-		<string name="ARABIC"  >ARABIC</string>
-		<string name="ChangeCurrency">Change Currency</string>
-		<string name="Currencyupdatedsuccessfully">Currency updated successfully!</string>
-		<string name="isalreadyappscurrentlanguage">is already app\'s current language!</string>
-		<string name="Areyousuretochangeyourlanguageto">Are you sure to change your language to</string>
-		<string name="ChangeLanguage">Change Language</string>
-		
-		<!-- // AddEditRoomsViewController -->
+    <string name="IPCamera">Camera</string>
+    <string name="TableCamera">Camera</string>
+    <string name="fourviews">Four Views</string>
+    <string name="main_tap_here_add_vidicon">Add new camera</string>
+    <string name="cameraNumOut">Numbers fo your cameras is upper limit</string>
+    <string name="ingInitCamera">Camera is initializing</string>
 
-		<string name="Noroomsaddedyet">No rooms added yet!</string>
-		<string name="AddRooms">Add Rooms</string>
-		<string name="Areyousuretodeletethisroom">Are you sure to delete this room</string>
-		<string name="Editing">Editing</string>
-		<string name="EditRoom">Edit Room</string>
-		<string name="DeleteRoom">Delete Room</string>
-		<string name="RoomName">Room Name</string>
-		<string name="Selecticon">Select icon</string>
-		<string name="Roomnameisrequired">Room name is required !</string>
-	    <string name="Roomnamealreadyexist">Room name already exist !</string>
-	    <string name="Roomiconisrequired">Room icon is required !</string>
-	    
-	    
-	
-		<string name="AddManually">Add Manually</string>
-		<string name="SwitchScan">Switch Scan</string>
-		<string name="Barcodeisrequired">Barcode is required !</string>
-		<string name="Barcodeisnotvalid">Barcode is not valid !</string>
-		<string name="DoyouwanttodeleteswitchwithMAC">Do you want to delete switch with MAC</string>
-		<string name="Switchwiththismacalreadyadded">Switch with this mac already added!</string>
-		<string name="UnabletoreadBarcode">Unable to read Barcode !</string>
-		<string name="Noswitchesaddedyet">No switches added yet!</string>
-		<string name="AddSwitch">Add Switch</string>
-		<string name="Assignedto">Assigned to : </string>
-		
-		
-		<string name="Switch1">Switch 1</string>
-		<string name="Switch2">Switch 2</string>
-		<string name="Switch3">Switch 3</string>
-		<string name="Socket">Socket</string>
-		<string name="AC">AC</string>
-		
-		
-			
-		<string name="Travel">Travel</string>
-		<string name="Sleep">Sleep</string>
-		<string name="Wakeup">Wake up</string>
-		<string name="Guest">Guest</string>
-		<string name="Living">Living</string>
-		<string name="Safety">Safety</string>
-		<string name="Away">Away</string>
-		
 
-	
-	
+    <string name="PPPPStatusUnknown">unknown</string>
+    <string name="PPPPStatusConnecting">connecting</string>
+    <string name="PPPPStatusInitialing">initialing</string>
+    <string name="PPPPStatusOnline">Online</string>
+    <string name="CameraIsNotOnline">Offline</string>
+    <string name="PPPPStatusInvalidUserPwd">Invalid User or Pwd</string>
+    <string name="PPPPStatusConnectFailed">connect failed</string>
+    <string name="PPPPStatusDisconnected">disconnected</string>
+    <string name="PPPPStatusInvalidID">invalid id</string>
+    <string name="PPPPStatusConnectTimeout">connect timeout</string>
+    <string name="noadmin">The user does not have permission or a poor network</string>
+    <string name="PPPPStatusNotWatchTime">Vision granted only during Visit Time</string>
 
-		<!-- // Language Currency View Controller -->
-	
-		<!-- <string name="Language">Language</string>
+
+    <string name="versionInfo">Version information</string>
+
+    <string name="versionIgnore">Ignore the version</string>
+    <string name="versionUpdate">Update immediately</string>
+    <string name="versionlaterUpdate">Update later</string>
+
+    <string name="ddnscameraisofflineornolan">Request failed or mobile phone and camera connects difference network</string>
+
+
+    <string name="ON">ON</string>
+    <string name="OFF">OFF</string>
+
+
+    <string name="LED">LED</string>
+    <string name="Dimmer1">Dimmer 1</string>
+    <string name="Dimmer2">Dimmer 2</string>
+    <string name="Dimmer3">Dimmer 3</string>
+
+
+    <string name="Edit">Edit</string>
+    <string name="Donee">Done</string>
+    <string name="Delete">Delete</string>
+    <string name="Back">Back</string>
+
+
+    <!-- setting controller -->
+
+    <string name="AddEditRooms">Add/Edit Rooms</string>
+    <string name="AddEditSwitches">Add/Edit Switches</string>
+    <string name="Controlinsidehome">Control inside home</string>
+    <string name="ControlRemotly">Control Remotly</string>
+    <string name="ConfigureSwitches">Configure Switches</string>
+    <string name="EditUsers">Edit Users</string>
+    <string name="ElectricityTariff">Electricity Tariff</string>
+    <string name="Profile">Profile</string>
+    <string name="KAbout">About</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="Logout">Logout</string>
+    <string name="Language_Currency">Language &amp; Currency</string>
+    <string name="SystemReset">System Reset</string>
+    <string name="AddEditMoods">Add/Edit Moods</string>
+    <string name="ScanSwitches">Scan Switches</string>
+    <string name="Areyousuretologout">Are you sure to logout?</string>
+    <string name="Yourdataneedstobesyncedwithserverlogout">Your data needs to be synced with server!. Do you want to logout without syncing?</string>
+
+
+    <string name="Language">Language</string>
+    <string name="Currency">Currency</string>
+    <string name="USD">USD</string>
+    <string name="SAR">SAR</string>
+    <string name="ENGLISH">ENGLISH</string>
+    <string name="ARABIC">ARABIC</string>
+    <string name="ChangeCurrency">Change Currency</string>
+    <string name="Currencyupdatedsuccessfully">Currency updated successfully!</string>
+    <string name="isalreadyappscurrentlanguage">is already app\'s current language!</string>
+    <string name="Areyousuretochangeyourlanguageto">Are you sure to change your language to</string>
+    <string name="ChangeLanguage">Change Language</string>
+
+    <!-- // AddEditRoomsViewController -->
+
+    <string name="Noroomsaddedyet">No rooms added yet!</string>
+    <string name="AddRooms">Add Rooms</string>
+    <string name="Areyousuretodeletethisroom">Are you sure to delete this room</string>
+    <string name="Editing">Editing</string>
+    <string name="EditRoom">Edit Room</string>
+    <string name="DeleteRoom">Delete Room</string>
+    <string name="RoomName">Room Name</string>
+    <string name="Selecticon">Select icon</string>
+    <string name="Roomnameisrequired">Room name is required !</string>
+    <string name="Roomnamealreadyexist">Room name already exist !</string>
+    <string name="Roomiconisrequired">Room icon is required !</string>
+
+
+    <string name="AddManually">Add Manually</string>
+    <string name="SwitchScan">Switch Scan</string>
+    <string name="Barcodeisrequired">Barcode is required !</string>
+    <string name="Barcodeisnotvalid">Barcode is not valid !</string>
+    <string name="DoyouwanttodeleteswitchwithMAC">Do you want to delete switch with MAC</string>
+    <string name="Switchwiththismacalreadyadded">Switch with this mac already added!</string>
+    <string name="UnabletoreadBarcode">Unable to read Barcode !</string>
+    <string name="Noswitchesaddedyet">No switches added yet!</string>
+    <string name="AddSwitch">Add Switch</string>
+    <string name="Assignedto">Assigned to : </string>
+
+
+    <string name="Switch1">Switch 1</string>
+    <string name="Switch2">Switch 2</string>
+    <string name="Switch3">Switch 3</string>
+    <string name="Socket">Socket</string>
+    <string name="AC">AC</string>
+
+
+    <string name="Travel">Travel</string>
+    <string name="Sleep">Sleep</string>
+    <string name="Wakeup">Wake up</string>
+    <string name="Guest">Guest</string>
+    <string name="Living">Living</string>
+    <string name="Safety">Safety</string>
+    <string name="Away">Away</string>
+
+
+    <!-- // Language Currency View Controller -->
+
+    <!-- <string name="Language">Language</string>
 		<string name="Currency">Currency</string>
 		<string name="USD"     >USD</string>
 		<string name="SAR"     >SAR</string>
@@ -879,519 +870,496 @@
 		<string name="isalreadyappcurrentlanguage">is already app\'s current language!</string>
 		<string name="Areyousuretochangelanguage">Are you sure to change your language to</string>
 		<string name="ChangeLanguage">Change Language</string> -->
-		
-	<!-- 	// ScanSwitchesViewController -->
-		
-		<string name="Scan">Scan</string>
-		<string name="IPnotavailable">IP not available</string>
-		<string name="Scanningoptions">Scanning options</string>
-		<string name="Scanall">Scan all</string>
-		<string name="Start">Start</string>
-		<string name="Noswitchesfoundyet">No switches found yet!</string>
-		<string name="Pleasewaitwhilescanning">Please wait while scanning. This may take few minutes!</string>
-		
-	<!-- // AddEditRoomSwitchesViewController -->
-	    <string name="RoomSwitches">Room Switches</string>
-		<string name="removeswitchname">Are you sure to remove switch with name</string>
-		<string name="fromroom">from room?</string>
-		<string name="Nameswitch">Name switch</string>
-		<string name="SwitchNameisrequired">Switch Name is required !</string>
-		<string name="Switchnamesshouldunique">Switch names in a room should be unique !</string>
-		
-		
-		
-	
-	
 
-		<!-- // ESPViewController -->
-	
-		<string name="isconnectedtothewifi">is connected to the wifi</string>
-		<string name="EspTouchDelegateImpl">EspTouchDelegateImpl onEsptouchResultAddedWithResult bssid:</string>
-		<string name="Configuration">Configuration</string>
-		<string name="Confirm">Confirm</string>
-		<string name="Cancel">Cancel</string>
-		<string name="Iknow">I know</string>
-		<string name="ExecuteResult">Execute Result</string>
-		<string name="Password_Configuration">Password:</string>
-		<string name="Numberofdevicestoconfigure">Number of devices to configure:</string>
-		<string name="PleasewaitwhileConfiguration">Please wait while configuring. This may take few minutes!</string>	
-		<string name="SuccessYes" >Success: YES</string>
-		<string name="SuccessNo" >Success: NO</string>
-		<string name="IpAddress" >IP Address:</string>
-		
+    <!-- 	// ScanSwitchesViewController -->
+
+    <string name="Scan">Scan</string>
+    <string name="IPnotavailable">IP not available</string>
+    <string name="Scanningoptions">Scanning options</string>
+    <string name="Scanall">Scan all</string>
+    <string name="Start">Start</string>
+    <string name="Noswitchesfoundyet">No switches found yet!</string>
+    <string name="Pleasewaitwhilescanning">Please wait while scanning. This may take few minutes!</string>
+
+    <!-- // AddEditRoomSwitchesViewController -->
+    <string name="RoomSwitches">Room Switches</string>
+    <string name="removeswitchname">Are you sure to remove switch with name</string>
+    <string name="fromroom">from room?</string>
+    <string name="Nameswitch">Name switch</string>
+    <string name="SwitchNameisrequired">Switch Name is required !</string>
+    <string name="Switchnamesshouldunique">Switch names in a room should be unique !</string>
 
 
-		<!-- // AllRecordsFetcherViewController -->
+    <!-- // ESPViewController -->
 
-        <string name="Pleasewaitwhileyourdata">Please wait while your data is being downloaded!</string>
-		
-		
-					<!-- // AddEditSubUsersViewController -->
-		<string name="User">User:</string>
-		<string name="AddUser">Add User</string>
-		<string name="Nosubusersaddedyet">No subusers added yet!</string>
-		<string name="AddEditSubusers">Add/Edit Subusers</string>
-		<string name="deleteuser">Do you want to delete subuser with username </string>
-		<string name="Assign">Assign</string>
-
-		
-		<!-- // RegisterSubuserViewController -->
-		
-		
-
-		<string name="RegisterSubuser">Register Subuser</string>
-		<string name="SubuserNamealreadyexists">Subuser with similar username already exists!</string>
-		<string name="Subuseremailalreadyexists">Subuser with similar email already exists!</string>
-		<string name="Anonymous">Anonymous</string>
-		
-		
-		
+    <string name="isconnectedtothewifi">is connected to the wifi</string>
+    <string name="EspTouchDelegateImpl">EspTouchDelegateImpl onEsptouchResultAddedWithResult bssid:</string>
+    <string name="Configuration">Configuration</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Iknow">I know</string>
+    <string name="ExecuteResult">Execute Result</string>
+    <string name="Password_Configuration">Password:</string>
+    <string name="Numberofdevicestoconfigure">Number of devices to configure:</string>
+    <string name="PleasewaitwhileConfiguration">Please wait while configuring. This may take few minutes!</string>
+    <string name="SuccessYes">Success: YES</string>
+    <string name="SuccessNo">Success: NO</string>
+    <string name="IpAddress">IP Address:</string>
 
 
+    <!-- // AllRecordsFetcherViewController -->
 
-		<!-- // SubuserRoomDetailTableViewCell -->
-		<string name="RoomUsers">Room Users</string>
-		<string name="Username">Username: </string>
-		<string name="Email">Email: </string>
-		<string name="RoomTitle">Room Title: </string>
-		
-		<!-- // SubCamerasViewController -->
-		
-			<string name="Nocamerasadded">No cameras added yet!</string> 
-			<string name="Cameras">Cameras</string> 
-			<string name="SettingsYES">Settings = YES</string> 
-			<string name="SettingsNO">Settings = NO</string> 
-			<string name="CameraOptions">Camera Options</string> 
-			<string name="CameraSubusers">Camera Subusers</string> 
-			<string name="CameraSettings">Camera Settings</string>
-			
-			
-			
-			<!-- // UsersTableViewCell -->
-			<string name="CameraUsers">Camera Users</string>
-			<string name="SettingsAllowed">Settings Allowed</string>
-			<string name="SettingsNotAllowed">Settings Not Allowed</string>
-		
-		
-			
-			
-			
-			<!-- // TariffViewController -->
+    <string name="Pleasewaitwhileyourdata">Please wait while your data is being downloaded!</string>
 
-			<string name="Slabin">Slab in</string>
-			<string name="ResidentialTariffin">Residential Tariff in</string>
-			<string name="notyetaddedupperlimit">You have not yet added tariff with infinite upper limit!, Do you want to add infinte upper limit?</string>
-			<string name="Options">Options</string>
-			<string name="Addnewtariff">Add new tariff</string>
-			<string name="alreadyaddedtariff">You have already added tariff with infinite upper limit!</string>
-			<string name="Deletealltariffs">Delete all tariffs</string>
-			<string name="TARIFF">TARIFF</string>
-			<string name="deletetariffs">Do you want to delete all the tariffs ?</string>
-			<string name="deletetariff">Do you want to delete this tariff ?</string>
-		    <string name="Notariffaddedyet">No tariff added yet!</string>
-			<!-- // TariffTableViewCell -->
-		
-					<string name="INFINITE">INFINITE</string>
-		
-			<!-- // AddEditTariffViewController -->
-		
-			<string name="LowerLimit">Lower Limit</string>
-			<string name="UpperLimit">Upper Limit</string>
-			<string name="Infinite">Infinite</string>
-			<string name="Price">Price</string>
-			<string name="UpperlimitRQ">Upper limit is required !</string>
-			<string name="Upperlimitshouldbehigher">Upper limit should be higher than lower limit !</string>
-			<string name="Priceisrequired">Price is required !</string>
-			
-			<string name="Update">Update</string>
-			
-			
-			<!-- // ChangePasswordViewController -->
-		
-			<string name="OldPassword">Old Password</string>
-			<string name="NewPassword">New Password</string>
-			<string name="ConfirmNewPassword">Confirm New Password</string>
-			<string name="Oldpasswordrequired">Old password is required!</string>
-			<string name="Newpasswordrequired">New password is required!</string>
-			<string name="ConfirmNewpasswordrequired">Confirm New password is required!</string>
-			<string name="Newpasswordandconfirmnewpasswordshouldbesame">New password and confirm new password should be same!</string>
-			<string name="Passwordupdatedsuccessfully">Password updated successfully!</string>
-			
-			
-			<!-- // EnergyViewController -->
 
-			<string name="TotalUsage">Total Usage:</string>
-			<string name="TotalCost">Total Cost:</string>
-			<string name="Nodataavailable">No data available!</string>
-			
-			
-			
-	
-			<!-- // ButtonMoodBaseViewController -->
-		
-			<string name="AddMood">Add Mood</string>
-			<string name="morethan14moods">You cannot create more than 14 moods!</string>
-			<string name= "buttonNotAssociatedtoAnyModd">This button is not associated with any mood!</string>
-			<string name= "deleteMoodOption">Are you sure to delete Mood with name</string>
-			<string name= "TimeisNotSet">Time is Not Set !</string>
-			<string name="PleaseselectButtonstateformood">Please select Button state for mood</string>
-			<string name= "CANCEL">CANCEL</string>
-			<string name= "Optionsfor">Options for</string>
-			<string name="EditTitleORPicture">Edit Title OR Picture</string>
-			<string name= "UpdateTimeSettings">Update Time Settings</string>
-			<string name= "DeleteMood">Delete Mood</string>
-		    <string name="RepeatON">Repeat ON</string>
-		    
-		   <!--  // ButtonMoodDetailTableViewCell -->
+    <!-- // AddEditSubUsersViewController -->
+    <string name="User">User:</string>
+    <string name="AddUser">Add User</string>
+    <string name="Nosubusersaddedyet">No subusers added yet!</string>
+    <string name="AddEditSubusers">Add/Edit Subusers</string>
+    <string name="deleteuser">Do you want to delete subuser with username </string>
+    <string name="Assign">Assign</string>
 
-			<string name="Date">Date</string>
-			<string name="Repeat">Repeat</string>
-			<string name="Time">Time</string>
-			<string name="ButtonState">Button State</string>
-			
-			<string name="OK">OK</string>
-			
-			
-			
-			<!-- // EditRandomMoodViewController -->
 
-			<string name="OnDuration">On Duration</string>
-			<string name="Mins"> Mins</string> 
-			<string name="OffDuration">Off Duration</string>
-			<string name="StartTime">Start Time</string>
-			<string name="EndTime">End Time</string>
-			<string name="Durationnotvalid">On Duration OR Off Duration is not valid!</string>
-			<string name="startendtimenovalid">Start Time should be earlier than End Time!</string>
-			
-			<!-- // additions to camera app -->
+    <!-- // RegisterSubuserViewController -->
 
-			<string name="CCamName">Cam Name:</string>
-			<string name="CCamID"  >Cam ID:</string>
-			<string name="CUsername">Username:</string>
-			<string name="CPassword">Password:</string>
-			<string name="CVideo"    >Video</string>
-			<string name="CPhoto"    >Photo</string>
-			<string name="CEvent"    >Event</string>
-			<string name="CCamera"   >Camera</string>
-	
-			
-			<string name= "AddCamera">Add Camera</string>
-			<string name= "EditCamera">Edit</string>
-			<string name= "CameraName">Name</string>
-			<string name= "CameraID">Cam ID</string>
-			<string name= "InputCameraName">Input Camera Name</string>
-			<string name= "InputCameraID">Input Camera ID</string>
-			<string name= "InputUserName">Input User Name</string>
-			<string name= "InputPassword">Input Password</string>
-			<string name= "CameraInfo">Camera Information</string>
-			<string name= "inputCameraIp">Input the IP or domain name</string>
-			<string name= "inputCameraPort">Input Port</string>
-			<string name= "cameraIp">IP Or Domain</string>
-			<string name= "cameraPort">Port</string>
-			<string name= "pleaseInputcameraIp">Please input Camera Ip or domain</string>
-			<string name= "pleaseInputcameraPort">Please input Camera Port</string>
-			<string name= "PleaseInputCamreraName">please input camera name</string>
-			<string name= "PleaseInputCameraID">please input camera id</string>
-			<string name= "PleaseInputUserName">please input user name</string>
-			<string name= "ScanQRCode">Scan QR code</string>
-			<string name= "LANSearch">Search</string>
-			
-			<string name= "addcamera_idnotchinese">ID can not contains Chinese</string>
-			<string name= "addcamera_prompt">This camera exists</string>
-			<string name= "nouserorloginuser">Username can not be user or loginuser</string>
-			<string name= "nopwd">Password can not ben pwd</string>
-			
-			<string name= "SearchCamera">@string/search_camera</string>
-			
-			<string name= "DefaultVideoParams">default video param</string>
-			<string name= "play_stop_record_p">Please first stop record video</string>
-			<string name= "preset_call">Call</string>
-			<string name= "preset_set">Set</string>
-			<string name= "preset">Preset</string>
-			<string name= "play_mode">Mode</string>
-			<string name= "play_goodvalue">Full HD</string>
-			<string name= "play_fastspeed">Quality</string>
-			<string name= "play_goodfast">Speed</string>
-			<string name= "TakePictureSuccess">take picture success</string>
-			<string name= "play_alarmopen">Open Alarm</string>
-			<string name= "play_alarmclose">Close Alarm</string>
-			<string name= "play_ledopen">Open Led Light</string>
-			<string name= "play_ledclose">Close Led Light</string>
-			<string name= "play_ledauto">Auto Led Light</string>
-			<string name= "play_gpioopen">Open GPIO Alarm</string>
-			<string name= "play_gpioclose">Close GPIO Alarm</string>
-			
-			
-			<string name= "alarmview_title">Event</string>
-			
-			
-			<string name= "alerm_push_log">Alarm Details</string>
-			<string name= "alerm_motion_alarm">Motion Alarm</string>
-			<string name= "alerm_gpio_alarm">GPIO Alarm</string>
-			<string name= "alarm_audio_alarm">Audio Alarm</string>
-			
-			
-			<string name= "LocalPic">Photo</string>
-			<string name= "initPicPrompt">Picture Loading…</string>
-			<string name= "piclisteditprompt">Pictures Loading,tap edit button in a moment</string>
-			
-			<string name= "picshow_delete">Do you want to delete image?</string>
-			<string name= "picshow_share">Do you want to share image?</string>
-			<string name= "picshow_album">Do you want to save image to album?</string>
-			<string name= "SavePictureSuccess">Save picture to album success</string>
-			
-			
-			
-			
-			<string name= "Record">Video</string>
-			<string name= "Local">Local</string>
-			<string name= "Remote">Remote</string>
-			<string name= "About">About</string>
-			<string name= "about_softname">Software Name</string>
-			<string name= "about_version">Version Code</string>
-			<string name= "about_internalversion">Internal Version</string>
-			<string name= "about_receiverpush">Receive alarm push</string>
-			
-			<string name= "settingtitle">IPCamera Setting</string>
-			<string name= "setttingsrestart">Restart</string>
-			<string name= "restartdeciveprompt">Warning</string>
-			<string name= "restartdecivemessage">Device will not be operational during reboot</string>
-			<string name= "devicerestarting">Camera rebooting…</string>
-			<string name= "nothavepermission">The user does not have permission</string>
-			<string name= "strSetting">setting</string>
-			
-			
-			<string name= "ClockSetting">Time</string>
-			<string name= "datetimeDeviceTime">Device time</string>
-			<string name= "datetimeDeviceTiming">Use NTP provided values</string>
-			<string name= "datetimeDeviceTimingServer">NTP Server</string>
-			<string name= "datetimeDeviceTimezone">Timezone</string>
-			<string name= "datetimeDeviceTimeLocal">User the phone time calibrate device\'s clock</string>
-			<string name= "datetime_jan">Jan</string>
-			<string name= "datetime_Feb">Feb</string>
-			<string name= "datetime_Mar">Mar</string>
-			<string name= "datetime_Apr">Apr</string>
-			<string name= "datetime_May">May</string>
-			<string name= "datetime_Jun">Jun</string>
-			<string name= "datetime_Jul">Jul</string>
-			<string name= "datetime_Aug">Aug</string>
-			<string name= "datetime_Sept">Sept</string>
-			<string name= "datetime_Oct">Oct</string>
-			<string name= "datetime_Nov">Nov</string>
-			<string name= "datetime_Dec">Dec</string>
-			
-			<string name= "datetime_Sun">Sun</string>
-			<string name= "datetime_Mon">Mon</string>
-			<string name= "datetime_Tue">Tue</string>
-			<string name= "datetime_Wed">Wed</string>
-			<string name= "datetime_Thu">Thu</string>
-			<string name= "datetime_Fri">Fri</string>
-			<string name= "datetime_Sat">Sat</string>
-			
-			<string name= "datetimeZone0">(GMT -11:00) Midway Islands, Samoa Islands</string>
-			<string name= "datetimeZone1">(GMT -10:00) Hawaii</string>
-			<string name= "datetimeZone2">(GMT -09:00) Alaska Standard</string>
-			<string name= "datetimeZone3">(GMT -08:00) Pacific Standard(USA and Canada)</string>
-			<string name= "datetimeZone4">(GMT -07:00) Mountain Standard(USA and Canada)</string>
-			<string name= "datetimeZone5">(GMT -06:00) Central Standard(USA and Canada), Mexico City</string>
-			<string name= "datetimeZone6">(GMT -05:00) Eastern Standard(USA and Canada), Lima, Bogota</string>
-			<string name= "datetimeZone7">(GMT -04:00) Atlantic Standard (Canada), Santiago, La Paz</string>
-			<string name= "datetimeZone8">(GMT -03:30) Newfoundland</string>
-			<string name= "datetimeZone9">(GMT -03:00) Brasilia, Buenos Aires, Georgetown</string>
-			<string name= "datetimeZone10">(GMT -02:00) South Geogia I.</string>
-			<string name= "datetimeZone11">(GMT -01:00) Reykjavik</string>
-			<string name= "datetimeZone12">(GMT) Greenwich mean time; London, Lisbon, Casablanca</string>
-			<string name= "datetimeZone13">(GMT +01:00) Brussels, Paris, Berlin, Rome, Madrid, Stockholm, Beograd, Praha</string>
-			<string name= "datetimeZone14">(GMT +02:00) Athens, Jerusalem, Cairo, Helsinki</string>
-			<string name= "datetimeZone15">(GMT +03:00) Nairobi, Riyadh, Moscow</string>
-			<string name= "datetimeZone16">(GMT +03:30) Tehran</string>
-			<string name= "datetimeZone17">(GMT +04:00) Baku, Tbilisi, Abu Dhabi, Muscat</string>
-			<string name= "datetimeZone18">(GMT +04:30) Kabul</string>
-			<string name= "datetimeZone19">(GMT +05:00) Islamabad, Karachi, Tashkent</string>
-			<string name= "datetimeZone20">(GMT +05:30) Bombay, Calcutta, Madras, New Delhi</string>
-			<string name= "datetimeZone21">(GMT +06:00) Astana, Almaty, Dhaka, Colombo</string>
-			<string name= "datetimeZone22">(GMT +07:00) Astana, Almaty, Dhaka, Colombo</string>
-			<string name= "datetimeZone23">(GMT +08:00) Beijing, Singapore, Taipei</string>
-			<string name= "datetimeZone24">(GMT +09:00) Seoul, Yakutsk, Tokyo</string>
-			<string name= "datetimeZone25">(GMT +09:30) Darwin</string>
-			<string name= "datetimeZone26">(GMT +10:00) Guam, Melbourne, Sydney, Port Moresby, Vladivostok</string>
-			<string name= "datetimeZone27">(GMT +11:00) Magadan, Solomon Islands, New Calenonia</string>
-			<string name= "datetimeZone28">(GMT +12:00) Auckland, Wellington, Fiji Islands</string>
-			
-			<string name= "datetime_xia_ling_shi">DST</string>
-			
-			
-			<string name= "setuser_nomatch">User name or pwd only Numbers or letters</string>
-			<string name= "UserSetting">User</string>
-			<string name= "useradmin">   Administrator</string>
-			<string name= "userOperator">   Operator</string>
-			<string name= "uservisitor">   Visitor</string>
-			<string name= "user_user">User</string>
-			
-			
-			
-			
-			<string name= "MailSetting">Email</string>
-			<string name= "MailSender">Sender</string>
-			<string name= "MailSmtpSvr">SMTP Server</string>
-			<string name= "MailSmtpPort">SMTP Port</string>
-			<string name= "MailAuth">Verify</string>
-			<string name= "MailUser">Email</string>
-			<string name= "MailPwd">Passowrd</string>
-			<string name= "MailRecv1">Receiver email address1</string>
-			<string name= "MailRecv2">Receiver email address2</string>
-			<string name= "MailRecv3">Receiver email address3</string>
-			<string name= "MailRecv4">Receiver email address4</string>
-			<string name= "InputMailSender">input mail sender</string>
-			<string name= "InputMailServer">input mail server</string>
-			<string name= "InputMailRecv">input mail receiver</string>
-			<string name= "MailNone">NONE</string>
-			<string name= "MailSSL">SSL</string>
-			<string name= "MailTLS">TLS</string>
-			
-			
-			<string name= "AlarmSetting">Alarm</string>
-			<string name= "alarmMotionEnable">Motion detector armed</string>
-			<string name= "alarmMotionLevel">Motion detect sensibility</string>
-			<string name= "alarmExtern">Alarm input armed</string>
-			<string name= "alarmExternLevel">Trigger level</string>
-			<string name= "alarmMotionPreset">Alarm preset linkage</string>
-			<string name= "alarmMotionIO">IO linkage on alarm</string>
-			<string name= "alarmMotionIOLevel">Output Level</string>
-			<string name= "alarmMail">Armed mail notification</string>
-			<string name= "alarmPicEnable">FTP Upload</string>
-			<string name= "alarmPicTimer">FTP Upload Interval</string>
-			<string name= "alarm_text_a1">High</string>
-			<string name= "alarm_text_a2">Low</string>
-			<string name= "alarmRecord">Alarmed record</string>
-			<string name= "isEnableAlarmAudio">Enable the alarm sound</string>
-			<string name= "alarm_presetno">No</string>
-			
-			<string name= "ftp_uploadtime_prompt">Upload Interval Range 0～3600</string>
-			<string name= "nochinese">cannot contains chinese</string>
-			<string name= "FTPServer">FTP server</string>
-			<string name= "FTPSetting">FTP</string>
-			<string name= "InputFtpServer">Input Ftp Server</string>
-			<string name= "FTPUploadInterval">Upload interval(Seconds)</string>
-			<string name= "ftpport">FTP port</string>
-			<string name= "ftpuser">FTP user</string>
-			<string name= "ftppwd">FTP pwd</string>
-			
-			
-			
-			<string name= "SdcardSetting">Record</string>
-			<string name= "sdcard_total">SD card total capacity(M)</string>
-			<string name= "sdcard_remain">SD card available space(M)</string>
-			<string name= "sdcard_input">SD inserted</string>
-			<string name= "sdcard_output">SD not inserted</string>
-			<string name= "sdcard_status">SD Status</string>
-			<string name= "sdcard_recordtime">Record length(minute)</string>
-			<string name= "sdcard_fixedtime_record">Timer Recording</string>
-			<string name= "sdcard_cover_record">Overwrite record</string>
-			<string name= "sdcard_range">Range</string>
-			<string name= "sdcard_record_starttime">Record start</string>
-			<string name= "sdcard_record_endtime">Record end</string>
-			<string name= "sdcard_startendtime_prompt">Start time must less end time</string>
-			<string name= "sdcard_format">Format SD card</string>
-			<string name= "sd_record_audio">Recorded voice</string>
-			
-			
-			<string name= "WifiSetting">WIFI</string>
-			<string name= "Loading">Loading…</string>
-			<string name= "WifiList">Choose WIFI</string>
-			<string name= "EnterPwd">Enter Password</string>
-			<string name= "WillSet">Will set</string>
-			<string name= "NotSetting">not setting</string>
-			<string name= "wifi_connected">Connected</string>
-			<string name= "wifi_connectedfail">Connect Failed</string>
-			<string name= "wifi_ssid">SSID</string>
-			<string name= "wifijoin">Join</string>
-			<string name= "wifisetsucc">WiFi settings successful, camera will reboot</string>
-			<string name= "wifisetfail">WiFi settings failed</string>
-			<string name= "wifipwdcheck">Safe Mode</string>
-			<string name= "wifipwdopen">Open</string>
-			<string name= "wifipwdshare">Share</string>
-			<string name= "wifipwdkekformat">Key Format</string>
-			<string name= "kekformatAscci">ASCII</string>
-			<string name= "kekformat16">Hex</string>
-			
-			
-			<string name= "MotionLevelHigh">high</string>
-			<string name= "MotionLevelMiddle">normal</string>
-			<string name= "MotionLevelLow">low</string>
-			<string name= "DropListMotionLevel">Motion Level</string>
-			<string name= "DropListTriggerLevel">Trigger Level</string>
-			<string name= "DropListPreset">Preset</string>
-			<string name= "DropListOutputLevel">Output Level</string>
-			<string name= "DropListUploadInterval">Upload Interval</string>
-			<string name= "DropListTimeZone">Time Zone</string>
-			<string name= "DropListNtpServer">NTP Server</string>
-			
-			<string name= "moreviewall">Four View have already added</string>
-			<string name= "moreviewadded">The camera has bean added</string>
-			
-			<string name= "sdformat_prompt">Formatting,please wait</string>
-			
-			
-			<string name= "lookvideo_time">Visitors watch time Settings</string>
-			<string name= "lookvideo_Durationferiod">DURATION PERIOD</string>
-			<string name= "lookvideo_timeondays">TIME ON DAYS</string>
-			<string name= "lookvideo_fromtime">FROM(TIME):</string>
-			<string name= "lookvideo_totime">TO(TIME):</string>
-			<string name= "lookvideo_fromdate">FROM(DATE):</string>
-			<string name= "lookvideo_todate">TO(DATE):</string>
-			<string name= "lookvideo_sunday">Sunday</string>
-			<string name= "lookvideo_monday">Monday</string>
-			<string name= "lookvideo_Tuesday">Tuesday</string>
-			<string name= "lookvideo_Wednesday">Wednesday</string>
-			<string name= "lookvideo_Thursday">Thursday</string>
-			<string name= "lookvideo_Friday">Friday</string>
-			<string name= "lookvideo_Saturday">Saturday</string>
-			<string name= "lookvideo_timehour_place">0–23</string>
-			<string name= "lookvideo_timemin_place">0–59</string>
-			<string name= "lookvideo_time_enable">Watch open:</string>
-			<string name= "Off">Off</string>
-			<string name= "On">On</string>
-			
-			<string name= "user_anonymous">Allow anonymous access</string>
-			
-			<string name= "setsuccess">Set success</string>
-			<string name= "setfailed">Set failed</string>
-		    <string name= "SearchResults">Search Results</string>
-		    
-		    
-		    	<!-- // AddEditMoodInputViewController -->
 
-			<string name= "Selectphoto">Select photo</string>
-			<string name= "MoodName">Mood Name</string>
-			<string name= "Moodnamerequired">Mood name is required !</string>
-			<string name= "Moodnamenotavailable">Mood name is not available !</string>
-			<string name= "Moodphotorequired">Mood photo is required !</string>
-			
-			
-			
-			<!-- // ButtonMoodsDetailViewController -->
-		
-			<string name= "ButtonMoods">Button Moods</string>
-			<string name= "removeMoodbuttonfrom">Are you sure to remove button from</string>
-			<string name= "Mood">Mood</string>
-			
-			
-						<!-- // EditMoodBaseViewController -->
-			
-			<string name="IPnotfound">IP not found!</string>
-			<string name="getIP">please use scan switches option in settings to get IP!</string>
-			<string name="Remotemode">Currently App is in Remote mode!</string>
-			<string name="Errorinconnection">Error in connection!</string>
-			<string name="CommunicationErrorPleaseTryAgain">Communication Error Please Try Again !</string>
-			<string name="Error">Error</string>
-			<string name="UnknownError">Unknown Error!</string>
-            <string name="delete_camera_msg">Do you want to delete this Camera?</string> 
-            <string name="updatedsuccessfully">Updated Successfully</string>
-             <string name="requestingTime">Requesting Time..</string>
-             <string name="MAC">MAC :</string> 
-             <string name="IP">IP :</string> 
-	         <string name="ID">ID :</string> 
-			
-	         
+    <string name="RegisterSubuser">Register Subuser</string>
+    <string name="SubuserNamealreadyexists">Subuser with similar username already exists!</string>
+    <string name="Subuseremailalreadyexists">Subuser with similar email already exists!</string>
+    <string name="Anonymous">Anonymous</string>
+
+
+    <!-- // SubuserRoomDetailTableViewCell -->
+    <string name="RoomUsers">Room Users</string>
+    <string name="Username">Username: </string>
+    <string name="Email">Email: </string>
+    <string name="RoomTitle">Room Title: </string>
+
+    <!-- // SubCamerasViewController -->
+
+    <string name="Nocamerasadded">No cameras added yet!</string>
+    <string name="Cameras">Cameras</string>
+    <string name="SettingsYES">Settings = YES</string>
+    <string name="SettingsNO">Settings = NO</string>
+    <string name="CameraOptions">Camera Options</string>
+    <string name="CameraSubusers">Camera Subusers</string>
+    <string name="CameraSettings">Camera Settings</string>
+
+
+    <!-- // UsersTableViewCell -->
+    <string name="CameraUsers">Camera Users</string>
+    <string name="SettingsAllowed">Settings Allowed</string>
+    <string name="SettingsNotAllowed">Settings Not Allowed</string>
+
+
+    <!-- // TariffViewController -->
+
+    <string name="Slabin">Slab in</string>
+    <string name="ResidentialTariffin">Residential Tariff in</string>
+    <string name="notyetaddedupperlimit">You have not yet added tariff with infinite upper limit!, Do you want to add infinte upper limit?</string>
+    <string name="Options">Options</string>
+    <string name="Addnewtariff">Add new tariff</string>
+    <string name="alreadyaddedtariff">You have already added tariff with infinite upper limit!</string>
+    <string name="Deletealltariffs">Delete all tariffs</string>
+    <string name="TARIFF">TARIFF</string>
+    <string name="deletetariffs">Do you want to delete all the tariffs ?</string>
+    <string name="deletetariff">Do you want to delete this tariff ?</string>
+    <string name="Notariffaddedyet">No tariff added yet!</string>
+    <!-- // TariffTableViewCell -->
+
+    <string name="INFINITE">INFINITE</string>
+
+    <!-- // AddEditTariffViewController -->
+
+    <string name="LowerLimit">Lower Limit</string>
+    <string name="UpperLimit">Upper Limit</string>
+    <string name="Infinite">Infinite</string>
+    <string name="Price">Price</string>
+    <string name="UpperlimitRQ">Upper limit is required !</string>
+    <string name="Upperlimitshouldbehigher">Upper limit should be higher than lower limit !</string>
+    <string name="Priceisrequired">Price is required !</string>
+
+    <string name="Update">Update</string>
+
+
+    <!-- // ChangePasswordViewController -->
+
+    <string name="OldPassword">Old Password</string>
+    <string name="NewPassword">New Password</string>
+    <string name="ConfirmNewPassword">Confirm New Password</string>
+    <string name="Oldpasswordrequired">Old password is required!</string>
+    <string name="Newpasswordrequired">New password is required!</string>
+    <string name="ConfirmNewpasswordrequired">Confirm New password is required!</string>
+    <string name="Newpasswordandconfirmnewpasswordshouldbesame">New password and confirm new password should be same!</string>
+    <string name="Passwordupdatedsuccessfully">Password updated successfully!</string>
+
+
+    <!-- // EnergyViewController -->
+
+    <string name="TotalUsage">Total Usage:</string>
+    <string name="TotalCost">Total Cost:</string>
+    <string name="Nodataavailable">No data available!</string>
+
+
+    <!-- // ButtonMoodBaseViewController -->
+
+    <string name="AddMood">Add Mood</string>
+    <string name="morethan14moods">You cannot create more than 14 moods!</string>
+    <string name="buttonNotAssociatedtoAnyModd">This button is not associated with any mood!</string>
+    <string name="deleteMoodOption">Are you sure to delete Mood with name</string>
+    <string name="TimeisNotSet">Time is Not Set !</string>
+    <string name="PleaseselectButtonstateformood">Please select Button state for mood</string>
+    <string name="CANCEL">CANCEL</string>
+    <string name="Optionsfor">Options for</string>
+    <string name="EditTitleORPicture">Edit Title OR Picture</string>
+    <string name="UpdateTimeSettings">Update Time Settings</string>
+    <string name="DeleteMood">Delete Mood</string>
+    <string name="RepeatON">Repeat ON</string>
+
+    <!--  // ButtonMoodDetailTableViewCell -->
+
+    <string name="Date">Date</string>
+    <string name="Repeat">Repeat</string>
+    <string name="Time">Time</string>
+    <string name="ButtonState">Button State</string>
+
+    <string name="OK">OK</string>
+
+
+    <!-- // EditRandomMoodViewController -->
+
+    <string name="OnDuration">On Duration</string>
+    <string name="Mins"> Mins</string>
+    <string name="OffDuration">Off Duration</string>
+    <string name="StartTime">Start Time</string>
+    <string name="EndTime">End Time</string>
+    <string name="Durationnotvalid">On Duration OR Off Duration is not valid!</string>
+    <string name="startendtimenovalid">Start Time should be earlier than End Time!</string>
+
+    <!-- // additions to camera app -->
+
+    <string name="CCamName">Cam Name:</string>
+    <string name="CCamID">Cam ID:</string>
+    <string name="CUsername">Username:</string>
+    <string name="CPassword">Password:</string>
+    <string name="CVideo">Video</string>
+    <string name="CPhoto">Photo</string>
+    <string name="CEvent">Event</string>
+    <string name="CCamera">Camera</string>
+
+
+    <string name="AddCamera">Add Camera</string>
+    <string name="EditCamera">Edit</string>
+    <string name="CameraName">Name</string>
+    <string name="CameraID">Cam ID</string>
+    <string name="InputCameraName">Input Camera Name</string>
+    <string name="InputCameraID">Input Camera ID</string>
+    <string name="InputUserName">Input User Name</string>
+    <string name="InputPassword">Input Password</string>
+    <string name="CameraInfo">Camera Information</string>
+    <string name="inputCameraIp">Input the IP or domain name</string>
+    <string name="inputCameraPort">Input Port</string>
+    <string name="cameraIp">IP Or Domain</string>
+    <string name="cameraPort">Port</string>
+    <string name="pleaseInputcameraIp">Please input Camera Ip or domain</string>
+    <string name="pleaseInputcameraPort">Please input Camera Port</string>
+    <string name="PleaseInputCamreraName">please input camera name</string>
+    <string name="PleaseInputCameraID">please input camera id</string>
+    <string name="PleaseInputUserName">please input user name</string>
+    <string name="ScanQRCode">Scan QR code</string>
+    <string name="LANSearch">Search</string>
+
+    <string name="addcamera_idnotchinese">ID can not contains Chinese</string>
+    <string name="addcamera_prompt">This camera exists</string>
+    <string name="nouserorloginuser">Username can not be user or loginuser</string>
+    <string name="nopwd">Password can not ben pwd</string>
+
+    <string name="SearchCamera">@string/search_camera</string>
+
+    <string name="DefaultVideoParams">default video param</string>
+    <string name="play_stop_record_p">Please first stop record video</string>
+    <string name="preset_call">Call</string>
+    <string name="preset_set">Set</string>
+    <string name="preset">Preset</string>
+    <string name="play_mode">Mode</string>
+    <string name="play_goodvalue">Full HD</string>
+    <string name="play_fastspeed">Quality</string>
+    <string name="play_goodfast">Speed</string>
+    <string name="TakePictureSuccess">take picture success</string>
+    <string name="play_alarmopen">Open Alarm</string>
+    <string name="play_alarmclose">Close Alarm</string>
+    <string name="play_ledopen">Open Led Light</string>
+    <string name="play_ledclose">Close Led Light</string>
+    <string name="play_ledauto">Auto Led Light</string>
+    <string name="play_gpioopen">Open GPIO Alarm</string>
+    <string name="play_gpioclose">Close GPIO Alarm</string>
+
+
+    <string name="alarmview_title">Event</string>
+
+
+    <string name="alerm_push_log">Alarm Details</string>
+    <string name="alerm_motion_alarm">Motion Alarm</string>
+    <string name="alerm_gpio_alarm">GPIO Alarm</string>
+    <string name="alarm_audio_alarm">Audio Alarm</string>
+
+
+    <string name="LocalPic">Photo</string>
+    <string name="initPicPrompt">Picture Loading…</string>
+    <string name="piclisteditprompt">Pictures Loading,tap edit button in a moment</string>
+
+    <string name="picshow_delete">Do you want to delete image?</string>
+    <string name="picshow_share">Do you want to share image?</string>
+    <string name="picshow_album">Do you want to save image to album?</string>
+    <string name="SavePictureSuccess">Save picture to album success</string>
+
+
+    <string name="Record">Video</string>
+    <string name="Local">Local</string>
+    <string name="Remote">Remote</string>
+    <string name="About">About</string>
+    <string name="about_softname">Software Name</string>
+    <string name="about_version">Version Code</string>
+    <string name="about_internalversion">Internal Version</string>
+    <string name="about_receiverpush">Receive alarm push</string>
+
+    <string name="settingtitle">IPCamera Setting</string>
+    <string name="setttingsrestart">Restart</string>
+    <string name="restartdeciveprompt">Warning</string>
+    <string name="restartdecivemessage">Device will not be operational during reboot</string>
+    <string name="devicerestarting">Camera rebooting…</string>
+    <string name="nothavepermission">The user does not have permission</string>
+    <string name="strSetting">setting</string>
+
+
+    <string name="ClockSetting">Time</string>
+    <string name="datetimeDeviceTime">Device time</string>
+    <string name="datetimeDeviceTiming">Use NTP provided values</string>
+    <string name="datetimeDeviceTimingServer">NTP Server</string>
+    <string name="datetimeDeviceTimezone">Timezone</string>
+    <string name="datetimeDeviceTimeLocal">User the phone time calibrate device\'s clock</string>
+    <string name="datetime_jan">Jan</string>
+    <string name="datetime_Feb">Feb</string>
+    <string name="datetime_Mar">Mar</string>
+    <string name="datetime_Apr">Apr</string>
+    <string name="datetime_May">May</string>
+    <string name="datetime_Jun">Jun</string>
+    <string name="datetime_Jul">Jul</string>
+    <string name="datetime_Aug">Aug</string>
+    <string name="datetime_Sept">Sept</string>
+    <string name="datetime_Oct">Oct</string>
+    <string name="datetime_Nov">Nov</string>
+    <string name="datetime_Dec">Dec</string>
+
+    <string name="datetime_Sun">Sun</string>
+    <string name="datetime_Mon">Mon</string>
+    <string name="datetime_Tue">Tue</string>
+    <string name="datetime_Wed">Wed</string>
+    <string name="datetime_Thu">Thu</string>
+    <string name="datetime_Fri">Fri</string>
+    <string name="datetime_Sat">Sat</string>
+
+    <string name="datetimeZone0">(GMT -11:00) Midway Islands, Samoa Islands</string>
+    <string name="datetimeZone1">(GMT -10:00) Hawaii</string>
+    <string name="datetimeZone2">(GMT -09:00) Alaska Standard</string>
+    <string name="datetimeZone3">(GMT -08:00) Pacific Standard(USA and Canada)</string>
+    <string name="datetimeZone4">(GMT -07:00) Mountain Standard(USA and Canada)</string>
+    <string name="datetimeZone5">(GMT -06:00) Central Standard(USA and Canada), Mexico City</string>
+    <string name="datetimeZone6">(GMT -05:00) Eastern Standard(USA and Canada), Lima, Bogota</string>
+    <string name="datetimeZone7">(GMT -04:00) Atlantic Standard (Canada), Santiago, La Paz</string>
+    <string name="datetimeZone8">(GMT -03:30) Newfoundland</string>
+    <string name="datetimeZone9">(GMT -03:00) Brasilia, Buenos Aires, Georgetown</string>
+    <string name="datetimeZone10">(GMT -02:00) South Geogia I.</string>
+    <string name="datetimeZone11">(GMT -01:00) Reykjavik</string>
+    <string name="datetimeZone12">(GMT) Greenwich mean time; London, Lisbon, Casablanca</string>
+    <string name="datetimeZone13">(GMT +01:00) Brussels, Paris, Berlin, Rome, Madrid, Stockholm, Beograd, Praha</string>
+    <string name="datetimeZone14">(GMT +02:00) Athens, Jerusalem, Cairo, Helsinki</string>
+    <string name="datetimeZone15">(GMT +03:00) Nairobi, Riyadh, Moscow</string>
+    <string name="datetimeZone16">(GMT +03:30) Tehran</string>
+    <string name="datetimeZone17">(GMT +04:00) Baku, Tbilisi, Abu Dhabi, Muscat</string>
+    <string name="datetimeZone18">(GMT +04:30) Kabul</string>
+    <string name="datetimeZone19">(GMT +05:00) Islamabad, Karachi, Tashkent</string>
+    <string name="datetimeZone20">(GMT +05:30) Bombay, Calcutta, Madras, New Delhi</string>
+    <string name="datetimeZone21">(GMT +06:00) Astana, Almaty, Dhaka, Colombo</string>
+    <string name="datetimeZone22">(GMT +07:00) Astana, Almaty, Dhaka, Colombo</string>
+    <string name="datetimeZone23">(GMT +08:00) Beijing, Singapore, Taipei</string>
+    <string name="datetimeZone24">(GMT +09:00) Seoul, Yakutsk, Tokyo</string>
+    <string name="datetimeZone25">(GMT +09:30) Darwin</string>
+    <string name="datetimeZone26">(GMT +10:00) Guam, Melbourne, Sydney, Port Moresby, Vladivostok</string>
+    <string name="datetimeZone27">(GMT +11:00) Magadan, Solomon Islands, New Calenonia</string>
+    <string name="datetimeZone28">(GMT +12:00) Auckland, Wellington, Fiji Islands</string>
+
+    <string name="datetime_xia_ling_shi">DST</string>
+
+
+    <string name="setuser_nomatch">User name or pwd only Numbers or letters</string>
+    <string name="UserSetting">User</string>
+    <string name="useradmin">   Administrator</string>
+    <string name="userOperator">   Operator</string>
+    <string name="uservisitor">   Visitor</string>
+    <string name="user_user">User</string>
+
+
+    <string name="MailSetting">Email</string>
+    <string name="MailSender">Sender</string>
+    <string name="MailSmtpSvr">SMTP Server</string>
+    <string name="MailSmtpPort">SMTP Port</string>
+    <string name="MailAuth">Verify</string>
+    <string name="MailUser">Email</string>
+    <string name="MailPwd">Passowrd</string>
+    <string name="MailRecv1">Receiver email address1</string>
+    <string name="MailRecv2">Receiver email address2</string>
+    <string name="MailRecv3">Receiver email address3</string>
+    <string name="MailRecv4">Receiver email address4</string>
+    <string name="InputMailSender">input mail sender</string>
+    <string name="InputMailServer">input mail server</string>
+    <string name="InputMailRecv">input mail receiver</string>
+    <string name="MailNone">NONE</string>
+    <string name="MailSSL">SSL</string>
+    <string name="MailTLS">TLS</string>
+
+
+    <string name="AlarmSetting">Alarm</string>
+    <string name="alarmMotionEnable">Motion detector armed</string>
+    <string name="alarmMotionLevel">Motion detect sensibility</string>
+    <string name="alarmExtern">Alarm input armed</string>
+    <string name="alarmExternLevel">Trigger level</string>
+    <string name="alarmMotionPreset">Alarm preset linkage</string>
+    <string name="alarmMotionIO">IO linkage on alarm</string>
+    <string name="alarmMotionIOLevel">Output Level</string>
+    <string name="alarmMail">Armed mail notification</string>
+    <string name="alarmPicEnable">FTP Upload</string>
+    <string name="alarmPicTimer">FTP Upload Interval</string>
+    <string name="alarm_text_a1">High</string>
+    <string name="alarm_text_a2">Low</string>
+    <string name="alarmRecord">Alarmed record</string>
+    <string name="isEnableAlarmAudio">Enable the alarm sound</string>
+    <string name="alarm_presetno">No</string>
+
+    <string name="ftp_uploadtime_prompt">Upload Interval Range 0～3600</string>
+    <string name="nochinese">cannot contains chinese</string>
+    <string name="FTPServer">FTP server</string>
+    <string name="FTPSetting">FTP</string>
+    <string name="InputFtpServer">Input Ftp Server</string>
+    <string name="FTPUploadInterval">Upload interval(Seconds)</string>
+    <string name="ftpport">FTP port</string>
+    <string name="ftpuser">FTP user</string>
+    <string name="ftppwd">FTP pwd</string>
+
+
+    <string name="SdcardSetting">Record</string>
+    <string name="sdcard_total">SD card total capacity(M)</string>
+    <string name="sdcard_remain">SD card available space(M)</string>
+    <string name="sdcard_input">SD inserted</string>
+    <string name="sdcard_output">SD not inserted</string>
+    <string name="sdcard_status">SD Status</string>
+    <string name="sdcard_recordtime">Record length(minute)</string>
+    <string name="sdcard_fixedtime_record">Timer Recording</string>
+    <string name="sdcard_cover_record">Overwrite record</string>
+    <string name="sdcard_range">Range</string>
+    <string name="sdcard_record_starttime">Record start</string>
+    <string name="sdcard_record_endtime">Record end</string>
+    <string name="sdcard_startendtime_prompt">Start time must less end time</string>
+    <string name="sdcard_format">Format SD card</string>
+    <string name="sd_record_audio">Recorded voice</string>
+
+
+    <string name="WifiSetting">WIFI</string>
+    <string name="Loading">Loading…</string>
+    <string name="WifiList">Choose WIFI</string>
+    <string name="EnterPwd">Enter Password</string>
+    <string name="WillSet">Will set</string>
+    <string name="NotSetting">not setting</string>
+    <string name="wifi_connected">Connected</string>
+    <string name="wifi_connectedfail">Connect Failed</string>
+    <string name="wifi_ssid">SSID</string>
+    <string name="wifijoin">Join</string>
+    <string name="wifisetsucc">WiFi settings successful, camera will reboot</string>
+    <string name="wifisetfail">WiFi settings failed</string>
+    <string name="wifipwdcheck">Safe Mode</string>
+    <string name="wifipwdopen">Open</string>
+    <string name="wifipwdshare">Share</string>
+    <string name="wifipwdkekformat">Key Format</string>
+    <string name="kekformatAscci">ASCII</string>
+    <string name="kekformat16">Hex</string>
+
+
+    <string name="MotionLevelHigh">high</string>
+    <string name="MotionLevelMiddle">normal</string>
+    <string name="MotionLevelLow">low</string>
+    <string name="DropListMotionLevel">Motion Level</string>
+    <string name="DropListTriggerLevel">Trigger Level</string>
+    <string name="DropListPreset">Preset</string>
+    <string name="DropListOutputLevel">Output Level</string>
+    <string name="DropListUploadInterval">Upload Interval</string>
+    <string name="DropListTimeZone">Time Zone</string>
+    <string name="DropListNtpServer">NTP Server</string>
+
+    <string name="moreviewall">Four View have already added</string>
+    <string name="moreviewadded">The camera has bean added</string>
+
+    <string name="sdformat_prompt">Formatting,please wait</string>
+
+
+    <string name="lookvideo_time">Visitors watch time Settings</string>
+    <string name="lookvideo_Durationferiod">DURATION PERIOD</string>
+    <string name="lookvideo_timeondays">TIME ON DAYS</string>
+    <string name="lookvideo_fromtime">FROM(TIME):</string>
+    <string name="lookvideo_totime">TO(TIME):</string>
+    <string name="lookvideo_fromdate">FROM(DATE):</string>
+    <string name="lookvideo_todate">TO(DATE):</string>
+    <string name="lookvideo_sunday">Sunday</string>
+    <string name="lookvideo_monday">Monday</string>
+    <string name="lookvideo_Tuesday">Tuesday</string>
+    <string name="lookvideo_Wednesday">Wednesday</string>
+    <string name="lookvideo_Thursday">Thursday</string>
+    <string name="lookvideo_Friday">Friday</string>
+    <string name="lookvideo_Saturday">Saturday</string>
+    <string name="lookvideo_timehour_place">0–23</string>
+    <string name="lookvideo_timemin_place">0–59</string>
+    <string name="lookvideo_time_enable">Watch open:</string>
+    <string name="Off">Off</string>
+    <string name="On">On</string>
+
+    <string name="user_anonymous">Allow anonymous access</string>
+
+    <string name="setsuccess">Set success</string>
+    <string name="setfailed">Set failed</string>
+    <string name="SearchResults">Search Results</string>
+
+
+    <!-- // AddEditMoodInputViewController -->
+
+    <string name="Selectphoto">Select photo</string>
+    <string name="MoodName">Mood Name</string>
+    <string name="Moodnamerequired">Mood name is required !</string>
+    <string name="Moodnamenotavailable">Mood name is not available !</string>
+    <string name="Moodphotorequired">Mood photo is required !</string>
+
+
+    <!-- // ButtonMoodsDetailViewController -->
+
+    <string name="ButtonMoods">Button Moods</string>
+    <string name="removeMoodbuttonfrom">Are you sure to remove button from</string>
+    <string name="Mood">Mood</string>
+
+
+    <!-- // EditMoodBaseViewController -->
+
+    <string name="IPnotfound">IP not found!</string>
+    <string name="getIP">please use scan switches option in settings to get IP!</string>
+    <string name="Remotemode">Currently App is in Remote mode!</string>
+    <string name="Errorinconnection">Error in connection!</string>
+    <string name="CommunicationErrorPleaseTryAgain">Communication Error Please Try Again !</string>
+    <string name="Error">Error</string>
+    <string name="UnknownError">Unknown Error!</string>
+    <string name="delete_camera_msg">Do you want to delete this Camera?</string>
+    <string name="updatedsuccessfully">Updated Successfully</string>
+    <string name="requestingTime">Requesting Time..</string>
+    <string name="MAC">MAC :</string>
+    <string name="IP">IP :</string>
+    <string name="ID">ID :</string>
+
+
 </resources>

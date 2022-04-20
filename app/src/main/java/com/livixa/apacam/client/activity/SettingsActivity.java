@@ -630,12 +630,18 @@ public class SettingsActivity extends Activity implements
 				LanguageAndCurrencySettingPopup();
 				
 				break;
-				
-				
-				
-				
-			
-		default:
+
+			case R.id.rl_notification:
+				intent = new Intent(this, FaqActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				break;
+
+
+
+
+			default:
 			break;
 		}
 	}

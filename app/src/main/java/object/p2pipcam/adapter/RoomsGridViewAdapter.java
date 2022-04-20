@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.Layout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -143,10 +144,12 @@ public class RoomsGridViewAdapter extends BaseAdapter {
 		
 	if(roomModel.picture!=null && roomModel.picture.length >0)
 		{
-		 gridViewItemHolder.placeHolder.setImageBitmap(bytesToBitmap(roomModel.picture));
+
+			gridViewItemHolder.placeHolder.setImageBitmap(bytesToBitmap(roomModel.picture));
 		}
      else if(roomModel.pictureURL!=null && roomModel.pictureURL.trim().length() > 0 )
 			{
+
     	        gridViewItemHolder.placeHolder.setImageResource(R.drawable.placeholder);
 				imageLoader.displayImage(AppWebServices.imageUrl.concat(roomModel.pictureURL), gridViewItemHolder.placeHolder,KisafaApplication.getImageDisplayOption());
 			}

@@ -6,191 +6,252 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg" >
 
-   
-        <LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rl_bar"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:weightSum="10"
-            android:layout_height="match_parent" >
+            android:layout_height="@dimen/action_bar_size"
+            android:background="@color/app_header_color" >
 
-            <RelativeLayout
-                android:id="@+id/rl_bar"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/action_bar_size"
-                android:background="@color/app_header_color" >
-                
-                <ImageView
-                    android:id="@+id/iv_back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:clickable="true"
-                    android:onClick="onbackButttonClick"
-                    android:padding="@dimen/padding_large"
-                    android:src="@drawable/ic_back" />
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:onClick="onbackButttonClick"
+                android:padding="@dimen/padding_large"
+                android:src="@drawable/ic_back" />
 
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_title"
-                    
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    
-                    android:text="@string/Rooms"
-                    android:layout_marginBottom="13dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                   
-                    android:visibility="visible"
-                    app:CustomFontFamily="Regular" />
+            <com.livixa.apacam.client.widget.CustomTextView
+                android:id="@+id/tv_title"
 
-                <ImageView
-                    android:id="@+id/iv_home"
-                     android:clickable="true"
-                    android:onClick="onhomeButttonClick"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="-10dp"
-                    android:padding="@dimen/padding_large"
-                    android:src="@drawable/home" />
-            </RelativeLayout>
-            
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="0dp"
-                         
-                          android:weightSum="5"
-                          android:orientation="vertical"
-                          android:layout_weight="2"
-                >
-                
-                <LinearLayout 
-                     android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_weight="4"
-                    android:orientation="vertical"
-                    android:layout_height="0dp"
-                    >
-                    
-                     <ImageView
-                android:id="@+id/logo"
-                android:layout_width="130dp"
-                
-                android:layout_height="70dp"
-                android:layout_marginTop="@dimen/margin_max_x_large2"
-                android:src="@drawable/logo" />
-                    
-                </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-           
-            
-            </LinearLayout>
-            
-           <!--  // -->
-           
-           
-           
-           <LinearLayout android:layout_width="match_parent"
-                         android:layout_height="65dp"
-                        
-                         android:gravity="center"
-                         android:orientation="vertical"
-                         >
-                
-               
-                 <RelativeLayout android:layout_width="match_parent"
-                         android:layout_height="25dp"
-                         android:layout_marginLeft="38dp"
-                         android:layout_marginRight="38dp"
-                         android:background="@drawable/popup_button_selector_white"
-                        
-                        
-                         >
-                     
-                     <TextView  android:layout_height="match_parent"
-                                android:textColor="#2CABE2"
-                                android:text="@string/TotalUsage"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:textSize="18dp"
-                                android:layout_width="120dp"/>
-                     
-                     <TextView  android:layout_height="match_parent"
-                                android:textColor="#FDB71B"
-                                android:text="0 kWh"
-                                android:id="@+id/totalEnergyUsage"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:layout_alignParentRight="true"
-                                android:textSize="18dp"
-                                android:layout_width="120dp"/>
-                     
-                     </RelativeLayout>
-                
-                 <RelativeLayout android:layout_width="match_parent"
-                         android:layout_height="25dp"
-                         android:layout_marginTop="4dp"
-                         android:layout_marginLeft="38dp"
-                         android:layout_marginRight="38dp"
-                         android:background="@drawable/popup_button_selector_white"
-                        
-                        
-                         >
-                     
-                     <TextView  android:layout_height="match_parent"
-                                android:textColor="#2CABE2"
-                                android:text="@string/TotalCost"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:textSize="18dp"
-                                android:layout_width="120dp"/>
-                     
-                     <TextView  android:layout_height="match_parent"
-                                android:textColor="#FDB71B"
-                                android:text="0 $"
-                               
-                                android:id="@+id/totalCostUsage"
-                                android:textStyle="bold"
-                                android:gravity="center"
-                                android:layout_alignParentRight="true"
-                                android:textSize="18dp"
-                                android:layout_width="120dp"/>
-                     
-                     </RelativeLayout>
-               
-               
-           </LinearLayout>
-          
-           
-           
-           <RelativeLayout android:layout_width="match_parent"
-                android:layout_weight="8"
-                            android:layout_height="0dp">
-                
-               
-                
-           
-            
-            <GridView 
-                android:id="@+id/roomsGridView"
-                android:visibility="visible"
-                android:numColumns="2"
-                android:layout_marginTop="15dp"
-                android:listSelector="@android:color/transparent"
-                android:stretchMode="spacingWidthUniform"
-                android:gravity="center"
-                android:columnWidth="130dp"
-                android:verticalSpacing="10dp"
-                android:layout_width="300dp"
-                android:scrollbars="none"
+                android:text="@string/Rooms"
+                android:layout_marginBottom="13dp"
                 android:layout_centerHorizontal="true"
-                android:layout_height="match_parent">
-            
-            
-       
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+
+                android:visibility="visible"
+                app:CustomFontFamily="Regular" />
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:clickable="true"
+                android:onClick="onhomeButttonClick"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-10dp"
+                android:padding="@dimen/padding_large"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:weightSum="5"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            >
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:layout_height="0dp"
+                >
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="130dp"
+
+                    android:layout_height="70dp"
+                    android:layout_marginTop="@dimen/margin_max_x_large2"
+                    android:src="@drawable/logo" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--  // -->
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/popup_button_selector_white"
+
+
+                >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Month"
+                    android:textColor="#2CABE2"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView  android:layout_height="match_parent"
+                    android:textColor="#FDB71B"
+                    android:text="April"
+                    android:id="@+id/Month"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:textSize="18dp"
+                    android:layout_width="120dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/popup_button_selector_white"
+
+
+                >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Year"
+                    android:textColor="#2CABE2"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView  android:layout_height="match_parent"
+                    android:textColor="#FDB71B"
+                    android:text="2022"
+                    android:id="@+id/Year"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:textSize="18dp"
+                    android:layout_width="120dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/popup_button_selector_white"
+
+
+                >
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/TotalUsage"
+                    android:textColor="#2CABE2"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView  android:layout_height="match_parent"
+                    android:textColor="#FDB71B"
+                    android:text="0 kWh"
+                    android:id="@+id/totalEnergyUsage"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:textSize="18dp"
+                    android:layout_width="120dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:background="@drawable/popup_button_selector_white"
+
+
+                >
+
+                <TextView  android:layout_height="match_parent"
+                    android:textColor="#2CABE2"
+                    android:text="@string/TotalCost"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:layout_width="120dp"/>
+
+                <TextView
+                    android:id="@+id/totalCostUsage"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="0 $"
+                    android:textColor="#FDB71B"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_weight="8"
+            android:layout_height="0dp">
+
+
+            <GridView
+                android:id="@+id/roomsGridView"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:columnWidth="130dp"
+                android:gravity="center"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="10dp"
+                android:visibility="visible">
+
+
             </GridView>
-            <RelativeLayout 
+            <RelativeLayout
                 android:id="@+id/roomsEmptylayout"
                 android:layout_weight="8"
                 android:visibility="gone"
@@ -199,36 +260,36 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                
-               <ImageView android:layout_height="150dp"
-                          android:alpha="0.08"
-                          android:layout_centerInParent="true"
-                        android:src="@drawable/exclamation_mark"
-                          android:layout_width="150dp"/>
+
+                <ImageView android:layout_height="150dp"
+                    android:alpha="0.08"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/exclamation_mark"
+                    android:layout_width="150dp"/>
                 <com.livixa.apacam.client.widget.CustomTextView
-                  
-                    
+
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    
+
                     android:text="@string/Nodataavailable"
-                    
+
                     android:layout_centerInParent="true"
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:visibility="visible"
                     app:CustomFontFamily="Regular" />
-               
-           </RelativeLayout>
-           
-            
-            
-            
-             </RelativeLayout>
-          
-            
-            
-             </LinearLayout>
-   
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
 </RelativeLayout>

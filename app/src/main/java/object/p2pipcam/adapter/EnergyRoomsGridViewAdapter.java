@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.activeandroid.query.Select;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.livixa.apacam.client.network.AppWebServices;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -191,7 +192,8 @@ private LayoutInflater inflater;
 			else if(roomModel.pictureURL!=null && roomModel.pictureURL.trim().length() > 0 )
 		{
 			
-			imageLoader.displayImage(roomModel.pictureURL, gridViewItemHolder.placeHolder,KisafaApplication.getImageDisplayOption());
+			imageLoader.displayImage(AppWebServices.imageUrl.concat(roomModel.pictureURL), gridViewItemHolder.placeHolder,KisafaApplication.getImageDisplayOption());
+
 		}
 		
 		else
@@ -214,9 +216,8 @@ private LayoutInflater inflater;
 		
 		public ImageView   placeHolder;
 		
-		public TextView    roomName;
+		public TextView roomName;
 		public TextView roomCostUsage;
-		
 		public TextView roomEnergyUsage;
 		
 		public LinearLayout tileLayout;
