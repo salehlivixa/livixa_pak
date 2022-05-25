@@ -194,10 +194,6 @@ public class RoomAndSwitchesTCPActivity extends Activity implements TCPTask{
 		switchesMainLayout=(RelativeLayout) findViewById(R.id.switchesMainLayout);
 		
 		roomsMainLayout=(LinearLayout) findViewById(R.id.roomsMainLayout);
-		
-		
-		
-		
 
 		mEmptyView = findViewById(R.id.roomSwitchesEmptylayout);
 

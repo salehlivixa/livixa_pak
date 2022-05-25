@@ -54,12 +54,12 @@ public class Moods_View_RoomsActivity extends Activity {
 		roomsGridViewAdapter =new Moods_ViewRoomsGridViewAdapter(Moods_View_RoomsActivity.this,mEmptyView,roomsGridView);
 		roomsGridView.setAdapter(roomsGridViewAdapter);
 	}
-	
-	
-	
-	public void onViewHomebackButttonClick(View view)
+
+
+
+	public void onbackButttonClick(View view)
 	{
-		onhomeButttonClick(null);
+		onBackPressed();
 	}
 	
 	
@@ -83,7 +83,14 @@ public class Moods_View_RoomsActivity extends Activity {
 		 
 		super.onBackPressed();
 		
-		onhomeButttonClick(null);
+		finish();
+
+		Intent intent = new Intent(this, HomeActivity.class);
+
+
+		KisafaApplication.perFormActivityBackTransition(this);
+
+		startActivity(intent);
 		
 		
 	}

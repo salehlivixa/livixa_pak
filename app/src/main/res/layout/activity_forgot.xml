@@ -4,129 +4,138 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
+    android:background="#fff" >
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@drawable/tt_bg"
-         >
+        android:layout_height="300dp"
+        android:background="#8669FC"
+        android:orientation="vertical"
+        >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-            
-            
-            <ImageView android:layout_height="30dp"
-                    
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="10dp"
-                           android:id="@+id/backArrow"
-                           android:clickable="true"
-                           android:onClick="onbackButttonClick"
-                           android:src="@drawable/ic_back"
-                           android:layout_width="wrap_content"/>
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            >
 
             <ImageView
-                android:id="@+id/logo"
+                android:clickable="true"
+                android:onClick="onbackButttonClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_max_x_large7more"
-                android:src="@drawable/logo" />
+                android:src="@drawable/ic_back"
+                android:layout_marginTop="30dp"
+                android:id="@+id/backArrow"
+                />
 
-            <RelativeLayout
-                android:id="@+id/rl_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/logo"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_max_x_large8more" >
 
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_sign_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingTop="@dimen/padding_normal"
-                    android:text="@string/ForgotPassword"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_large_extra"
-                    app:CustomFontFamily="MYR_PRO" />
-            </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_email"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            >
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rl_sign"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_max_x_large4"
-                android:background="@drawable/bg_txt_field"
-                android:orientation="horizontal" >
+                android:text="Reset Password."
+                android:textSize="28dp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:fontFamily="@font/montbold"
+                />
 
-                <ImageView
-                    android:layout_width="@dimen/iv_grp_view"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:src="@drawable/icon_email" />
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Enter the email associated with your account"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:fontFamily="@font/montsemibold"
+                />
 
-                <View
-                    android:layout_width="@dimen/margin_basic"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:background="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="35dp"
+                    android:text="@string/Emailaddress"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montbold"
+                    />
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:background="@null"
-                    android:hint="@string/Emailaddress"
+                    android:layout_width="366dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montregular"
+                    android:background="@drawable/inputrounded"
+                    android:hint="Enter your Email Address"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingLeft="@dimen/padding_large" 
-                    android:paddingRight="@dimen/padding_large"
-                    android:paddingTop="@dimen/padding_normal"
+                    android:paddingLeft="10dp"
                     android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
+                    android:textColor="#6E8498"
+                    android:textColorHint="#6E8498"
                     android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
-            </LinearLayout>
+                    app:CustomFontFamily="Light"
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/ll_email"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_large_extra_half" >
+                    />
+
 
                 <com.livixa.apacam.client.widget.CustomButton
-                    android:id="@+id/btn_send_email"
                     style="@style/ButtonStyle"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="366dp"
+                    android:layout_height="56dp"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/bg_rect_sky_blue"
-                    android:text="@string/SendEmail"
-                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/ic_reset_password_btn"
+                    android:text="Send Email"
+                    android:textColor="@color/color_white"
+                    android:id="@+id/btn_send_email"
                     android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Regular" />
-            </RelativeLayout>
+                    android:fontFamily="@font/montsemibold" />
+
+            </LinearLayout>
+
         </RelativeLayout>
-    </ScrollView>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

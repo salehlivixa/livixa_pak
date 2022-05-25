@@ -57,14 +57,14 @@ public class View_RoomsActivity extends Activity {
 		roomsGridViewAdapter =new ViewRoomsGridViewAdapter(View_RoomsActivity.this,mEmptyView,roomsGridView);
 		roomsGridView.setAdapter(roomsGridViewAdapter);
 		
-		ViewCompat.setLayoutDirection(roomsGridView, ViewCompat.LAYOUT_DIRECTION_LTR);
+//		ViewCompat.setLayoutDirection(roomsGridView, ViewCompat.LAYOUT_DIRECTION_LTR);
 	}
-	
-	
-	
-	public void onViewHomebackButttonClick(View view)
+
+
+
+	public void onbackButttonClick(View view)
 	{
-		onhomeButttonClick(null);
+		onBackPressed();
 	}
 	
 	
@@ -87,8 +87,18 @@ public class View_RoomsActivity extends Activity {
 	public void onBackPressed() {
 		 
 		super.onBackPressed();
-		
-		onhomeButttonClick(null);
+
+
+		finish();
+
+		Intent intent = new Intent(this, HomeActivity.class);
+
+
+		KisafaApplication.perFormActivityBackTransition(this);
+
+		startActivity(intent);
+
+
 		
 		
 	}

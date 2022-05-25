@@ -6,7 +6,7 @@
     
     android:gravity="center"
     
-    android:layout_height="120dp"
+    android:layout_height="180dp"
     >
 <LinearLayout
   
@@ -15,70 +15,83 @@
     
     android:gravity="center"
   
-    android:layout_height="128dp"
+    android:layout_height="198dp"
     >
  
     
     <LinearLayout 
-        android:layout_height="77dp"
-        android:background="@drawable/moods_status_bg"
+        android:layout_height="120dp"
+        android:background="@drawable/corner_border_gray"
         android:gravity="center"
         android:id="@+id/moodItemBGLY"
         android:orientation="vertical"
         android:layout_width="75dp">
 			    <ImageView android:layout_height="40dp"
 				        		android:id="@+id/img_icon_mood"
-				       			
 				        		android:layout_centerVertical="true"
+					android:layout_marginTop="@dimen/margin_10dp"
 				              	android:src="@drawable/icon_mood_custom_white"
 				              	
 				               	android:layout_width="60dp"/>
 			    
-			     <com.livixa.apacam.client.widget.CustomTextView
-                        
-                        android:layout_width="match_parent"
-                        android:gravity="center"
-                        android:layout_height="16dp"
-                        
-                        android:singleLine="true"
-                        android:layout_marginTop="2dp"
-                        android:text="sleep"
-                        android:textColor="@color/white"
-                        android:textSize="11dp"
-                        android:id="@+id/moodText"
-                        />
-			    
+
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:background="@drawable/corner_border_white"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:layout_marginTop="8dp"
+			android:layout_width="75dp">
+
+			<com.livixa.apacam.client.widget.CustomTextView
+
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:layout_height="16dp"
+
+				android:singleLine="true"
+				android:layout_marginTop="2dp"
+				android:text="sleep"
+				android:textColor="@color/grey"
+				android:textSize="11dp"
+				android:id="@+id/moodText"
+				/>
+
+		<com.livixa.apacam.client.widget.CustomTextView
+
+			android:layout_width="80dp"
+			android:gravity="center"
+			android:layout_height="17dp"
+			android:paddingLeft="5dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="3dp"
+			android:text="N/A"
+			android:textColor="@color/black"
+			android:textSize="9dp"
+			android:id="@+id/repeatTV"
+			/>
+
+			<com.livixa.apacam.client.widget.CustomTextView
+				android:id="@+id/timeTV"
+				android:layout_width="80dp"
+				android:layout_height="17dp"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="4dp"
+
+				android:gravity="center"
+				android:paddingLeft="5dp"
+				android:text="N/A"
+				android:textColor="@color/black"
+				android:textSize="9dp" />
+		</LinearLayout>
 			    
     </LinearLayout>
     
-     <com.livixa.apacam.client.widget.CustomTextView
-                        android:background="@drawable/corner_border_white_less_less_corner"
-                        android:layout_width="80dp"
-                        android:gravity="center"
-                        android:layout_height="17dp"
-                        android:paddingLeft="5dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="3dp"
-                        android:text="N/A"
-                        android:textColor="@color/black"
-                        android:textSize="9dp"
-                        android:id="@+id/repeatTV"
-                        />
+
                         
      
-      <com.livixa.apacam.client.widget.CustomTextView
-                        android:background="@drawable/corner_border_white_less_less_corner"
-                        android:layout_marginTop="4dp"
-                        android:layout_width="80dp"
-                        android:gravity="center"
-                        android:layout_height="17dp"
-                        android:paddingLeft="5dp"
-                        android:layout_centerHorizontal="true"
-                        android:text="N/A"
-                        android:textColor="@color/black"
-                        android:textSize="9dp"
-                        android:id="@+id/timeTV"
-                        />
+
     
 
 </LinearLayout>

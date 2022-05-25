@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.activeandroid.query.Select;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.livixa.apacam.client.network.AppWebServices;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -209,7 +210,7 @@ public class AssignedRoomsToSubusersGridAdapter extends BaseAdapter {
 		else if(roomModel.pictureURL!=null && roomModel.pictureURL.trim().length() > 0 )
 		{
 			gridViewItemHolder.placeHolder.setImageResource(R.drawable.placeholder);
-			imageLoader.displayImage(roomModel.pictureURL, gridViewItemHolder.placeHolder,KisafaApplication.getImageDisplayOption());
+			imageLoader.displayImage(AppWebServices.imageUrl.concat(roomModel.pictureURL), gridViewItemHolder.placeHolder,KisafaApplication.getImageDisplayOption());
 		}
 		else
 		{

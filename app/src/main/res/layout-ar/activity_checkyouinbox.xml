@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8669FC"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            >
+
+            <ImageView
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:src="@drawable/ic_back__1_ara"
+                android:layout_marginTop="30dp"
+                android:id="@+id/backArrow"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginTop="100dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/inboxgif"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montbold"
+                android:text="تحقق من بريدك الوارد"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="لقد أرسلنا تعليمات استعادة كلمة المرور إلى بريدك الإلكتروني."
+                android:textAlignment="center"
+                android:fontFamily="@font/montsemibold"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+
+
+
+
+            <com.livixa.apacam.client.widget.CustomButton
+                style="@style/ButtonStyle"
+                android:onClick="createnewpassword"
+                android:layout_width="366dp"
+                android:layout_height="56dp"
+                android:background="@drawable/ic_reset_password_btn"
+                android:text="افتح تطبيق البريد الإلكتروني"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_large"
+               android:fontFamily="@font/montsemibold"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+
+
+            <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="تخطي ، سأؤكد لاحقًا."
+            android:textAlignment="center"
+                android:fontFamily="@font/montsemibold"
+                android:textColor="#002B54"
+                android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="جرب عنوان بريد إلكتروني آخرلم تتلق البريد الإلكتروني؟ جرب عنوان بريد إلكتروني آخر"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/montregular"
+                />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -4,19 +4,24 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.livixa.client.R;
 
 public class MyProgressDialog  extends AlertDialog {
 	
 	
-	private AVLoadingIndicatorView avi;
+	//private AVLoadingIndicatorView avi;
 	
 	private TextView progressTV;
 	
 	Context mContext;
 	
 	String message="";
+
+	private ImageView launchloader;
 
 	private LayoutInflater inflater;
 
@@ -25,24 +30,32 @@ public class MyProgressDialog  extends AlertDialog {
 		
 		this.mContext=context;
         this.message=message;
-		
-		
+
+//		launchloader = (ImageView) findViewById(R.id.launchloader);
+//		Glide.with(context).load(R.drawable.lanuchloaderani).into(launchloader);
+
+
+
+
 	}
-	
-	
-	
+
+
+
 	@Override
     public void show() {
 
      super.show();
-     
+
+
+
      inflater = LayoutInflater.from(mContext);
      
      View convertView = inflater.inflate(R.layout.custom_progress_layout, null);
      
      setContentView(convertView);
      
-     avi= (AVLoadingIndicatorView) convertView.findViewById(R.id.avi);
+     launchloader= (ImageView) convertView.findViewById(R.id.avi);
+		Glide.with(mContext).load(R.drawable.loaderani).into(launchloader);
      
      progressTV=(TextView) convertView.findViewById(R.id.progressTV);
      
@@ -56,9 +69,9 @@ public class MyProgressDialog  extends AlertDialog {
      }
      progressTV.setText(message);
      
-     avi.setIndicator("BallClipRotatePulseIndicator");
-     
-     avi.show();
+//     avi.setIndicator("BallClipRotatePulseIndicator");
+//
+//     avi.show();
      
     }
 	
@@ -67,7 +80,7 @@ public class MyProgressDialog  extends AlertDialog {
 	{
 		try
 		{
-		avi.hide();
+	//	avi.hide();
 		this.hide();
 		}catch(Exception ex){
 			ex.printStackTrace();

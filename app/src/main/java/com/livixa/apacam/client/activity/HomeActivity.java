@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.bumptech.glide.Glide;
 import com.kisafa.user.profile.CircleImageView;
 import com.kisafa.user.profile.USER_Model;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -48,9 +49,10 @@ public class HomeActivity extends Activity implements OnClickListener {
 	// Layout Variables
 	private View view;
 	private RelativeLayout mRlCamera;
-	private RelativeLayout mRlSettings;
-	private RelativeLayout rl_rooms;
-	private RelativeLayout rl_moods;
+	private ImageView mRlSettings;
+	private LinearLayout rl_rooms;
+	private LinearLayout rl_moods;
+	private  ImageView notigif;
 	
 	private RelativeLayout  rl_energy;
 	
@@ -91,17 +93,17 @@ public class HomeActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
-		
-		
+
+
 		try
 		{
 		initComponents();
 		 //getSupportActionBar().hide();
 		 //getActionBar().hide();
-		 
-		
-		
-		
+			((TextView)findViewById(R.id.userName)).setText(AppPreference.getValue(HomeActivity.this, AppKeys.KEY_USER_NAME).toUpperCase());
+
+
+			Glide.with(this).load(R.drawable.notificationsani).into(notigif);
 		
 		setProfileImage(circleImageViewProfileButton);
 		
@@ -151,17 +153,18 @@ public class HomeActivity extends Activity implements OnClickListener {
 		//super.initUIComponents(ACTIVITY_TITLE);
 		HomeActivity mContext = this;
 		view = (View) findViewById(R.id.rl_root);
-		mRlCamera = (RelativeLayout) findViewById(R.id.rl_camera);
-		mRlSettings = (RelativeLayout) findViewById(R.id.rl_settings);
-		rl_rooms = (RelativeLayout) findViewById(R.id.rl_rooms);
+//		mRlCamera = (RelativeLayout) findViewById(R.id.rl_camera);
+		mRlSettings = (ImageView) findViewById(R.id.rl_settings);
+		rl_rooms = (LinearLayout) findViewById(R.id.rl_rooms);
 		rl_energy = (RelativeLayout) findViewById(R.id.rl_energy);
-		
-		
-		circleImageViewProfileButton = (CircleImageView) findViewById(R.id.iv_profile_button);
-		
-		
-		rl_moods = (RelativeLayout) findViewById(R.id.rl_moods);
-		
+		notigif = (ImageView)findViewById(R.id.noti) ;
+//
+//
+//		circleImageViewProfileButton = (CircleImageView) findViewById(R.id.iv_profile_button);
+//
+//
+		rl_moods = (LinearLayout) findViewById(R.id.rl_moods);
+//
 		profileContainer=(LinearLayout)findViewById(R.id.profileContainer);
 		iv_profile=(ImageView) findViewById(R.id.iv_profile);
 		syncDataTV=(TextView) findViewById(R.id.syncDataTV);
@@ -171,7 +174,7 @@ public class HomeActivity extends Activity implements OnClickListener {
 	}
 
 	public void setClickListner(OnClickListener onclick) {
-		mRlCamera.setOnClickListener(onclick);
+//		mRlCamera.setOnClickListener(onclick);
 		mRlSettings.setOnClickListener(onclick);
 		rl_rooms.setOnClickListener(onclick);
 		rl_moods.setOnClickListener(onclick);
@@ -183,46 +186,48 @@ public class HomeActivity extends Activity implements OnClickListener {
 		 
 		Intent intent = null;
 		switch (v.getId()) {
-		case R.id.rl_camera:
-			intent = new Intent(this, MainActivity.class);
-			
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(this);
-			break;
+//		case R.id.rl_camera:
+//			intent = new Intent(this, MainActivity.class);
+//
+//			startActivity(intent);
+//			finish();
+//			KisafaApplication.perFormActivityNextTransition(this);
+//			break;
 		case R.id.rl_settings:
 			intent = new Intent(this, SettingsActivity.class);
-			
+
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
 			break;
+
+
 		case R.id.rl_rooms:
 			intent = new Intent(this, View_RoomsActivity.class);
-			
+
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
 			break;
-			
-			
+
+
 		case R.id.rl_moods:
-			
+
 			intent = new Intent(this, Moods_View_RoomsActivity.class);
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
 			break;
-			
+
 		case R.id.rl_energy:
-			
+
 			intent = new Intent(this, Energy_RoomsActivity.class);
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
 			break;
-			
-			
+
+
 		default:
 			break;
 		}
@@ -378,24 +383,26 @@ public class HomeActivity extends Activity implements OnClickListener {
 	         
 	         public void onViewProfile(View view)
 	         {
+
+	         	Intent  intent = new Intent(this,UpdateProfileActivity.class);
+	         	startActivity(intent);
 	        	 
-	        	 
-	        	 profileContainer.setVisibility(View.VISIBLE);
-	        	 
-	        	 profileContainer.postDelayed(new Runnable() {
-					
-					@Override
-					public void run() {
-						
-						
-						((TextView)findViewById(R.id.userName)).setText(AppPreference.getValue(HomeActivity.this, AppKeys.KEY_USER_NAME).toUpperCase());
-			        	 
-			        	 CircleImageView imge=(CircleImageView) findViewById(R.id.iv_profile);
-			        	 
-			        	 setProfileImage(imge);
-						
-					}
-				}, 100);
+//	        	 profileContainer.setVisibility(View.VISIBLE);
+//
+//	        	 profileContainer.postDelayed(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//
+//
+//						((TextView)findViewById(R.id.userName)).setText(AppPreference.getValue(HomeActivity.this, AppKeys.KEY_USER_NAME).toUpperCase());
+//
+//			        	 CircleImageView imge=(CircleImageView) findViewById(R.id.iv_profile);
+//
+//			        	 setProfileImage(imge);
+//
+//					}
+//				}, 100);
 	        	 
 	        	 
 	        	 
@@ -709,4 +716,10 @@ public class HomeActivity extends Activity implements OnClickListener {
 	    	    }
 	    	    return false;
 	    	}
+
+	public void notification(View view){
+		Intent intent = new Intent();
+		intent = new Intent(this,Notification.class);
+		startActivity(intent);
+	}
 }

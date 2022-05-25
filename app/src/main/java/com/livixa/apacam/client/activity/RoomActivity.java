@@ -42,7 +42,7 @@ import object.p2pipcam.adapter.RoomsGridViewAdapter;
 
 public class RoomActivity extends Activity implements OnClickListener{
 
-	TextView tv_cancel;
+	ImageView tv_cancel;
 	TextView tv_Done;
 	EditText et_roomName;
 	TextView tv_Camera;
@@ -80,7 +80,7 @@ public class RoomActivity extends Activity implements OnClickListener{
 	
 	private void initLayouts()
 	{
-		 tv_cancel=(TextView)findViewById(R.id.tv_Cancel);
+		 tv_cancel=(ImageView)findViewById(R.id.tv_Cancel);
 		 tv_Done=(TextView)findViewById(R.id.tv_Done);
 		 et_roomName=(EditText)findViewById(R.id.roomName);
 		 tv_Camera=(TextView)findViewById(R.id.tv_Camera);

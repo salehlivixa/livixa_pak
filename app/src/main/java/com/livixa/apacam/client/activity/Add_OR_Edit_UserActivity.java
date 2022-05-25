@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -39,9 +41,9 @@ public class Add_OR_Edit_UserActivity extends Activity {
 
 	private Context mContext;
 	
-	private  ListView subUsersListView;
+	private GridView subUsersListView;
 	
-	private RelativeLayout subUsersEmptylayout;
+	private LinearLayout subUsersEmptylayout;
 	
 	 private ListAdapter adapter;
 	
@@ -55,8 +57,8 @@ public class Add_OR_Edit_UserActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add__or__edit__user);
-		subUsersListView=(ListView) findViewById(R.id.subUsersListView);
-		subUsersEmptylayout=(RelativeLayout) findViewById(R.id.subUsersEmptylayout);
+		subUsersListView=(GridView) findViewById(R.id.subUsersListView);
+		subUsersEmptylayout=(LinearLayout) findViewById(R.id.subUsersEmptylayout);
 		
 		this.mContext=this;
 		

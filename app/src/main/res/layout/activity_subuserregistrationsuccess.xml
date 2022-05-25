@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8669FC"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:onClick="onbackButttonClick"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montbold"
+                    android:text="Add/Edit Subusers"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration Completed"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/montbold"
+                />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Congrats, A subuser account has been successfully created."
+                android:textAlignment="center"
+                android:fontFamily="@font/montsemibold"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <com.livixa.apacam.client.widget.CustomButton
+                android:id="@+id/btn_register"
+                style="@style/ButtonStyle"
+                android:onClick="success"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_reset_password_btn"
+                android:text="@string/Login"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_large"
+                android:fontFamily="@font/montsemibold"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

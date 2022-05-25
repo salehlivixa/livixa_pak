@@ -284,6 +284,11 @@
      
     </style>
 
+
+    <style name="CustomCheckbox02" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/ic_baseline_radio_button_unchecked_24</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>
 
 

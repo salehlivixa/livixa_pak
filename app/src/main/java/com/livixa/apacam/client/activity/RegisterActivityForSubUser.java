@@ -13,6 +13,7 @@ import java.util.TimeZone;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.livixa.apacam.client.widget.CustomButton;
 import com.livixa.client.R;
 import com.livixa.apacam.client.activity.RegisterActivity.GetCites;
 import com.livixa.apacam.client.activity.RegisterActivity.SetLocation;
@@ -81,7 +82,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	private TextView mEtCountry;
 	
 	private EditText mEtPassword;
-	private Button mBtnRegister;
+	private CustomButton mBtnRegister;
 	private ProgressDialog mProgressDialog;
 
 	// Local
@@ -112,6 +113,8 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 		
 		
 	}
+
+
 	
 	
 	
@@ -161,7 +164,7 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 		//super.initUIComponents(ACTIVITY_TITLE);
 		mContext = this;
 		view = (View) findViewById(R.id.rl_root);
-		mBtnRegister = (Button) findViewById(R.id.btn_register);
+		mBtnRegister = (CustomButton) findViewById(R.id.btn_register);
 		mEtUsername = (EditText) findViewById(R.id.et_username);
 		mEtPassword = (EditText) findViewById(R.id.et_password);
 		mEtEmail = (EditText) findViewById(R.id.et_email);
@@ -174,7 +177,11 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 	}
 
 	public void setClickListner(OnClickListener onclick) {
-		mBtnRegister.setOnClickListener(onclick);
+	mBtnRegister.setOnClickListener(onclick);
+//		Intent intent = new Intent(this, subuserregistrationsuccess.class);
+//
+//		startActivity(intent);
+
 	}
 
 	public void setOrientation() {

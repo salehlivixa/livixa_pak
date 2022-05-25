@@ -210,13 +210,13 @@ public class RegisterActivity extends FragmentActivity implements
 		mEtFullName = (EditText) findViewById(R.id.et_fullname);
 		mEtPhoneNo = (EditText) findViewById(R.id.et_phone);
 		mEtEmail = (EditText) findViewById(R.id.et_email);
-		
-		
+
+
 		mEtCity=   (EditText) findViewById(R.id.et_city);
 		mEtCountry=   (EditText) findViewById(R.id.et_country);
 		iv_profile=   (CircleImageView) findViewById(R.id.iv_profile);
-		
-		
+
+
 		welComeScreen=(RelativeLayout) findViewById(R.id.welComeScreen);
 		
 		
@@ -237,7 +237,7 @@ public class RegisterActivity extends FragmentActivity implements
 
 	public void callIntentWithFlag() {
 		Intent intent = new Intent();
-		intent = new Intent(mContext, HomeActivity.class);
+		intent = new Intent(mContext, Registrationcomplete.class);
 		
 		startActivity(intent);
 		overridePendingTransition(R.anim.in_from_right,R.anim.out_to_left);

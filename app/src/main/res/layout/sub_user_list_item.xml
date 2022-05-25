@@ -1,96 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.livixa.apacam.client.swipelistview.SwipeRevealLayout
-   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    
+
     android:id="@+id/subUsersListRoot"
-   
+
     app:_mode="same_level"
     app:dragEdge="right"
     >
-    
-    
-    
-<FrameLayout
-            android:layout_width="wrap_content"
-            android:background="#40ffffff"
-            android:layout_height="match_parent">
-            
-        
-          <RelativeLayout android:layout_height="wrap_content"
-       			 
-                  android:layout_width="80dp">
-                  
-               <TextView android:layout_height="50dp"
-               android:background="#FF3B30"
-               android:text="@string/Delete"
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:background="#40ffffff"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout android:layout_height="wrap_content"
+
+            android:layout_width="80dp">
+
+            <TextView android:layout_height="50dp"
+                android:background="#FF3B30"
+                android:text="@string/Delete"
                 android:textColor="@color/white"
-               android:gravity="center"
-               android:layout_alignParentRight="true"
-               
-               android:id="@+id/tv_sub_UserDelete"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+
+                android:id="@+id/tv_sub_UserDelete"
                 android:layout_width="80dp"
                 />
-              
-              
-                  </RelativeLayout>
-            
-        
-  </FrameLayout>
-    
-    
 
-       
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:background="#40ffffff"
-            android:layout_height="match_parent">
-            
-            <LinearLayout android:layout_height="50dp"
-                android:id="@+id/itemContainerLY"
-       			 android:orientation="horizontal"
-       			 android:weightSum="5"
-       			 android:gravity="center_vertical"
-       			  
-                  android:layout_width="match_parent">
-                  
-                
-                
-                <ImageView android:layout_height="40dp"
-        android:id="@+id/img_icon"
-        android:layout_marginLeft="10dp"
-        android:layout_centerVertical="true"
-               android:src="@drawable/sub_user_contact_icon"
-               android:layout_width="40dp"/>
-        
-    
-    <TextView 
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:id="@+id/itemContainerLY"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/corner_border_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="151dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:padding="@dimen/margin_10dp"
+                android:background="@drawable/corner_border_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_img_placeHolder"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_subuser_ic" />
+
+
+            </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_marginTop="@dimen/margin_10dp"
+    >
+    <com.livixa.apacam.client.widget.CustomTextView
         android:id="@+id/tv_subUserName"
-        android:layout_width="0dp"
-        android:layout_weight="3.5"
-        android:text="abc123"
-        android:layout_centerVertical="true"
-        android:gravity="center_vertical"
-        android:textColor="@color/white"
-        
-        android:layout_marginLeft="10dp"
-        android:layout_height="wrap_content"/>
-    
-    
-    </LinearLayout>
-        
-        </FrameLayout>
-    
-    
-   
-    
-    
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/montsemibold"
+        android:textAlignment="center"
+        android:text="Bed"
+        android:textSize="14sp"
+        android:textColor="#002B54" />
 
+</LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout >
 </com.livixa.apacam.client.swipelistview.SwipeRevealLayout>
-
-
-
-

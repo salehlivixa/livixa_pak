@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
+import com.bumptech.glide.Glide;
 import com.espressif.iot.esptouch.EsptouchTask;
 import com.espressif.iot.esptouch.IEsptouchListener;
 import com.espressif.iot.esptouch.IEsptouchResult;
@@ -20,6 +21,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,9 +39,10 @@ public class SwitchConfigurationActivity extends Activity {
 
 	
 	
-	private  CustomTextView  mSSID;
+	private  CustomEditText  mSSID;
 	private  CustomEditText mTaskCound;
 	private  CustomEditText mPassword;
+    ImageView switchloader;
 	
 	private String TAG=SwitchConfigurationActivity.class.getName();
 	
@@ -60,10 +63,11 @@ public class SwitchConfigurationActivity extends Activity {
 		setContentView(R.layout.activity_switch_configuration);
 		
 		
-		mSSID=(CustomTextView) findViewById(R.id.sSDID);
+		mSSID=(CustomEditText) findViewById(R.id.sSDID);
 		mPassword=(CustomEditText) findViewById(R.id.pass);
 		mTaskCound=(CustomEditText) findViewById(R.id.taskCount);
-		
+		switchloader = (ImageView)findViewById(R.id.load);
+		Glide.with(this).load(R.drawable.loaderani).into(switchloader);
 		cancelButtonLyout=(LinearLayout) findViewById(R.id.cancelButtonLyout);
 		
 		//mShSwitchView=(ShSwitchView) findViewById(R.id.sSIDHidden);

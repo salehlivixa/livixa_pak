@@ -61,11 +61,11 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(AppWebServices.API_FORGOT)
 	Call<RequestResponse> forgot(@FieldMap Map<String, String> params);
-	
-	
+
+
 	@FormUrlEncoded
 	@POST(AppWebServices.API_WAITAGE)
-	Call<Watage_Response> getWatageDetails(@FieldMap Map<String, String> params);
+	Call<Watage_Response> getWatageDetails(@FieldMap Map<String, Object> params);
 	
 	@FormUrlEncoded
 	@POST(AppWebServices.API_CHANGE_PASS)

@@ -94,6 +94,7 @@ public class SettingsActivity extends Activity implements
 	private RelativeLayout rl_add_edit_switch;
 	private RelativeLayout rl_configureSwitches;
 	private RelativeLayout rl_inside_home;
+	private RelativeLayout rl_privacy_and_security;
 	
 	private RelativeLayout rl_profile;
 	private RelativeLayout rl_changePass;
@@ -162,13 +163,14 @@ public class SettingsActivity extends Activity implements
 		remotlySwitch=(ShSwitchView) findViewById(R.id.remotlySwitch);
 		rl_profile=(RelativeLayout) findViewById(R.id.rl_profile);
 		rl_about=(RelativeLayout) findViewById(R.id.rl_about);
+		rl_privacy_and_security=(RelativeLayout)findViewById(R.id.rl_privacy_and_security);
 		
 		rl_energy=(RelativeLayout) findViewById(R.id.rl_energy);
 		rl_language=(RelativeLayout) findViewById(R.id.rl_language);
 		mIvBack = (ImageView) findViewById(R.id.iv_back);
 		
 		rl_edit_users=(RelativeLayout) findViewById(R.id.rl_edit_users);
-		rl_changePass=(RelativeLayout) findViewById(R.id.rl_changePass);
+//		rl_changePass=(RelativeLayout) findViewById(R.id.rl_changePass);
 		
 		
 		
@@ -231,9 +233,10 @@ public class SettingsActivity extends Activity implements
 			rl_add_edit_switch.setOnClickListener(onclick);
 			rl_configureSwitches.setOnClickListener(onclick);
 			rl_inside_home.setOnClickListener(onclick);
-			rl_profile.setOnClickListener(onclick);
-			rl_changePass.setOnClickListener(onclick);
-			rl_about.setOnClickListener(onclick);
+			rl_privacy_and_security.setOnClickListener(onclick);
+//			rl_profile.setOnClickListener(onclick);
+//			rl_changePass.setOnClickListener(onclick);
+     		rl_about.setOnClickListener(onclick);
 			rl_energy.setOnClickListener(onclick);
 			rl_language.setOnClickListener(onclick);
 			
@@ -638,6 +641,13 @@ public class SettingsActivity extends Activity implements
 				KisafaApplication.perFormActivityNextTransition(mContext);
 				break;
 
+			case R.id.rl_privacy_and_security:
+				intent = new Intent(this, Privacyandsecurity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				break;
+
 
 
 
@@ -907,6 +917,7 @@ public class SettingsActivity extends Activity implements
 								}catch(Exception ex)
 								{
 									ex.toString();
+									ex.printStackTrace();
 								}
 								
 								AppPreference.saveValue(getApplicationContext(),LANGUAGES.ENGLISH.getValue(), AppKeys.KEY_CURRENT_LANGUAGE);
@@ -999,6 +1010,7 @@ public class SettingsActivity extends Activity implements
 									
 								}catch(Exception ex)
 								{
+								ex.printStackTrace();
 									ex.toString();
 								}
 								

@@ -39,96 +39,130 @@
                 android:paddingRight="10dp"
                 android:orientation="vertical"
                 android:paddingBottom="15dp">
-                
-                
-                 <LinearLayout
-                    android:id="@+id/linearLayout1"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:alpha="0.8"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content"
-                     >
-                
-                
-                <TextView
-                   
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    
-                    
-                    android:paddingLeft="12dp"
-                    android:text="@string/LowerLimit"
-                    android:hint=""
-                    
-                   
-                    android:textColor="#2379D2"
-                    android:textSize="18dp" />
-                
-                
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/lowerLimit"
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="12dp"
-                    android:inputType="number"
-                    android:text=""
-                    android:hint="1"
-                    android:alpha="0.8"
-                    android:imeOptions="actionNext"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                   android:textColor="@color/grgray"
-                    android:textSize="18dp" />
-                
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/action_bar_size"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montbold"
+                            android:text="@string/LowerLimit"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/tv_Cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="@dimen/margin_15dp"
+                            android:clickable="true"
+                            android:src="@drawable/ic_close_ic" />
+
+                    </RelativeLayout>
                 </LinearLayout>
-                
-                 
-                 <LinearLayout
-                   
-                    android:layout_marginTop="12dp"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:alpha="0.8"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content"
-                     >
-                
-                
-                <TextView
-                    
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    
-                    android:paddingLeft="12dp"
-                    android:text="@string/UpperLimit"
-                   
-                    
-                   
-                    android:textColor="#2379D2"
-                    android:textSize="18dp" />
-                
-                
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/upperLimit"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="12dp"
-                    android:text=""
-                    android:inputType="number"
-                    android:hint="@string/UpperLimit"
-                    android:alpha="0.8"
-                    android:imeOptions="actionNext"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                   android:textColor="@color/grgray"
-                    android:textSize="18dp" />
-                
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <com.livixa.apacam.client.widget.CustomEditText
+                            android:id="@+id/lowerLimit"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/add_room_popup_tv_bg"
+                            android:fontFamily="@font/montsemibold"
+                            android:hint="0.00"
+                            android:textColor="@color/grgray"
+                            android:textSize="18sp" />
+
+
+                    </RelativeLayout>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/action_bar_size"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montbold"
+                            android:text="@string/UpperLimit"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <com.livixa.apacam.client.widget.CustomEditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/upperLimit"
+                            android:layout_height="50dp"
+                            android:background="@drawable/add_room_popup_tv_bg"
+                            android:fontFamily="@font/montbold"
+                            android:hint="0.00"
+                            android:textColor="@color/grgray"
+                            android:textSize="18sp" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
 
                 
                 <RelativeLayout
@@ -140,14 +174,7 @@
                     android:layout_height="65dp"
                      >
 
-                    
-                    <TextView android:layout_height="match_parent"
-                               android:text="@string/Infinite"
-                               android:gravity="center"
-                               android:textColor="#2379D2"
-                               android:paddingLeft="12dp"
-                               android:textSize="18dp"
-                              android:layout_width="wrap_content"/>
+
                     
                     
                     <com.livixa.apacam.client.activity.ShSwitchView
@@ -155,61 +182,80 @@
 				        android:id="@+id/infiniteTriffValue"
 				        android:layout_width="75dip"
 				        android:layout_height="50dip"
-				        android:layout_alignParentRight="true"
 				        android:layout_centerVertical="true"
-				        android:layout_marginLeft="10dp"
 				        shSwitch:tintColor="#097BFF"
 				        shSwitch:shadowSpace="7dip"/>
+
+                    <TextView android:layout_height="match_parent"
+                        android:text="@string/Infinite"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:paddingLeft="12dp"
+                        android:fontFamily="@font/montsemibold"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_width="wrap_content"/>
 				                    
                    
                     
                 </RelativeLayout>
-                
-                
-                
+
                 <LinearLayout
-                   
-                   
-                    android:layout_width="match_parent"
-                    android:alpha="0.8"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content"
-                     >
-                
-                
-                <TextView
-                    
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    
-                    android:paddingLeft="12dp"
-                    android:text="@string/Price"
-                   
-                    
-                   
-                    android:textColor="#2379D2"
-                    android:textSize="18dp" />
-                
-                
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/priceTariff"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="12dp"
-                    android:text=""
-                    android:inputType="numberDecimal"
-                    android:hint="@string/Price"
-                    android:alpha="0.8"
-                    android:imeOptions="actionDone"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                   android:textColor="@color/grgray"
-                    android:textSize="18dp" />
-                
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/action_bar_size"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montbold"
+                            android:text="@string/Price"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+
+
+                    </RelativeLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_10dp">
+
+
+                        <com.livixa.apacam.client.widget.CustomEditText
+                            android:id="@+id/priceTariff"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/add_room_popup_tv_bg"
+                            android:fontFamily="@font/montbold"
+                            android:hint="0.00"
+                            android:textColor="@color/grgray"
+                            android:textSize="18sp" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+                
+
                 
                
 
@@ -225,38 +271,21 @@
 
                     <object.p2pipcam.system.MyTextView
                         
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_weight="4.8"
                         android:layout_height="match_parent"
                         android:ellipsize="marquee"
                         android:gravity="center"
                         android:focusableInTouchMode="true"
                         android:id="@+id/tv_Done"
-                        android:background="@drawable/popup_button_selector_white"
+                        android:background="@drawable/ic_reset_password_btn"
                         android:layout_marginRight="10dp"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:text="@string/Donee"
-                        android:textColor="#176FD7"
+                        android:textColor="#fff"
                         android:textSize="22dp" />
-                    
-                    
-                     <object.p2pipcam.system.MyTextView
-                        
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:ellipsize="marquee"
-                        android:gravity="center"
-                       android:layout_weight="4.8"
-                        android:focusableInTouchMode="true"
-                        android:id="@+id/tv_Cancel"
-                         android:background="@drawable/popup_button_selector_white"
-                       
-                        android:scrollHorizontally="true"
-                        android:singleLine="true"
-                        android:text="@string/Cancel"
-                        android:textColor="#176FD7"
-                        android:textSize="22dp" />
+
 
                     
                 </LinearLayout>

@@ -85,6 +85,26 @@ public class RestClient {
 				.client(client).build();
 		apiService = restAdapter.create(ApiService.class);
 	}
+	public RestClient(String BaseUrl) {
+
+		HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+		interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+		// OkHttpClient client = new
+		// OkHttpClient.Builder().addInterceptor(interceptor).build();
+
+		OkHttpClient client = new OkHttpClient.Builder().addInterceptor(
+				new LoggingInterceptor()).build();
+
+		Gson gson = new GsonBuilder().setDateFormat(
+				"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'").create();
+
+
+		Retrofit restAdapter = new Retrofit.Builder()
+				.baseUrl(BaseUrl)
+				.addConverterFactory(GsonConverterFactory.create())
+				.client(client).build();
+		apiService = restAdapter.create(ApiService.class);
+	}
 
 	public RestClient(boolean headers) {
 		HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();

@@ -26,6 +26,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -74,7 +76,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 		    }
 	};
 	
-	private ListView mSwitchListView;
+	private GridView mSwitchListView;
 	
 	
 	
@@ -96,7 +98,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 	}
 
 	private void initUiComponents() {
-		mSwitchListView = (ListView) findViewById(R.id.switchListView);
+		mSwitchListView = (GridView) findViewById(R.id.switchListView);
 		
 		mEmptyView= findViewById(R.id.switchEmptylayout);
 	}
@@ -169,7 +171,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 		LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View popupView = layoutInflater.inflate(R.layout.add_switch_manual_popup, null);
 
-		TextView tv_cancel = (TextView) popupView.findViewById(R.id.tv_Cancel);
+		ImageView tv_cancel = (ImageView) popupView.findViewById(R.id.tv_Cancel);
 		TextView tv_Done = (TextView) popupView.findViewById(R.id.tv_Done);
 		final EditText et_SwitchId = (EditText) popupView.findViewById(R.id.switchidET);
 		final PopupWindow popupWindow = new PopupWindow(popupView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,

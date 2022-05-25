@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-
     <string name="tvApSsidTitle">SSID: </string>
     <string name="tvPasswordTitle">Password: </string>
     <string name="switchIsSsidHiddenTitle">SSID is Hidden</string>
@@ -648,7 +647,7 @@
     <string name="text_lastname">Last name</string>
     <string name="text_login">Log In</string>
     <string name="text_signup"><u>Sign Up</u></string>
-    <string name="text_forgot_password">Forgot Password</string>
+    <string name="text_forgot_password">Forgot Password ?</string>
     <string name="signout_title">Sample</string>
     <string name="logout_message">Are you sure you want to sign out?</string>
     <string name="confirm_delete">confirm_delete</string>
@@ -669,12 +668,12 @@
 
     <string name="Sign_Up">Sign Up</string>
 
-    <string name="Login">Login</string>
+    <string name="Login">Sign In</string>
 
 
-    <string name="UserNameHint">Username</string>
+    <string name="UserNameHint">Enter your Username</string>
 
-    <string name="UserPassHint">Password</string>
+    <string name="UserPassHint">Enter your Password</string>
 
     <string name="Error_MSG_UserName">Username is required!</string>
 
@@ -693,8 +692,8 @@
 
     <string name="Register">Register</string>
     <string name="EnableLocation">You need to allow location access in your settings app to auto fill country info!</string>
-    <string name="Emailaddress">Email address</string>
-    <string name="Fullname">Full name</string>
+    <string name="Emailaddress">Email Address</string>
+    <string name="Fullname">Full Name</string>
     <string name="Cellnumber">Cell number</string>
     <string name="Country">Country</string>
     <string name="City">City</string>
@@ -715,12 +714,16 @@
 
     <string name="Thankyouregisteringwithus">Thank you for registering with us</string>
 
-    <string name="ForgotPassword">Forgot Password</string>
+    <string name="ForgotPassword">Forgot Password ?</string>
     <string name="SendEmail">Send Email</string>
     <string name="EmailSend">Email Send</string>
     <string name="Please_check_your_email_msg">Please check your email to follow forget password instructions!</string>
 
-    <string name="Welcome">Welcome</string>
+    <string name="Welcome">Welcome Back</string>
+    <string name="Welcomelivisa">Welcome to Livixa.</string>
+    <string name="safepass">Save password</string>
+
+    <string name="toaccess">To access your account, please sign in.</string>
     <string name="YourdatasyncedMSG">Your data needs to be synced with server, tap to update…</string>
     <string name="Rooms">Rooms</string>
 
@@ -932,7 +935,7 @@
 
     <!-- // SubuserRoomDetailTableViewCell -->
     <string name="RoomUsers">Room Users</string>
-    <string name="Username">Username: </string>
+    <string name="Username">Username </string>
     <string name="Email">Email: </string>
     <string name="RoomTitle">Room Title: </string>
 

@@ -539,7 +539,7 @@ public class UpdateProfileActivity extends FragmentActivity implements
 		
 		finish();
 		
-		Intent intent = new Intent(this, SettingsActivity.class);
+		Intent intent = new Intent(this, HomeActivity.class);
 		startActivity(intent);
 		KisafaApplication.perFormActivityBackTransition(this);
 	}
@@ -560,7 +560,7 @@ public class UpdateProfileActivity extends FragmentActivity implements
 	{
 		finish();
 		
-		Intent intent = new Intent(this, SettingsActivity.class);
+		Intent intent = new Intent(this, HomeActivity.class);
 		startActivity(intent);
 		KisafaApplication.perFormActivityBackTransition(this);
 	}

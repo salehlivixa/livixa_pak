@@ -7,196 +7,176 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    
 
-         <LinearLayout
-           
-            android:layout_width="match_parent"
-             android:gravity="center"
-             android:weightSum="10"
-             android:orientation="horizontal"
-             android:layout_height="match_parent">
+    <LinearLayout
 
-   
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_weight="8"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/corner_border_light_gray"
+            android:layout_height="358dp"
             android:layout_centerInParent="true"
-            android:orientation="vertical" >
+            android:layout_weight="8"
+            android:background="@drawable/inputrounded"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                
-                 android:layout_marginRight="10dp"
-                android:paddingTop="8dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+
+                android:layout_marginRight="10dp"
                 android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
                 android:paddingBottom="15dp">
-                
-                
-                 <LinearLayout
-                    android:id="@+id/linearLayout1"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:alpha="0.8"
-                    android:visibility="visible"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content"
-                     >
-                
-                
-                <TextView
-                   
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    
-                    
-                    android:paddingLeft="12dp"
-                    android:text="@string/Language"
-                    android:hint=""
-                    
-                   
-                    android:textColor="#2379D2"
-                    android:textSize="18dp" />
-                
-                
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/engTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="12dp"
-                    
-                    android:text=""
-                    android:hint="ENGLISH"
-                    android:alpha="0.8"
-                    
-                    android:background="@drawable/add_room_popup_tv_bg"
-                   android:textColor="@color/grgray"
-                    android:textSize="18dp" />
-                
-                </LinearLayout>
-                
-                 
-                 
-                
-                
+
+
                 <LinearLayout
-                   
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:alpha="0.8"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/montbold"
+                        android:paddingLeft="12dp"
+                        android:text="@string/Language"
+                        android:textColor="#002B54"
+                        android:textSize="18dp" />
+
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+                        android:background="@drawable/add_room_popup_tv_bg"
+                        android:id="@+id/engTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.8"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:hint="ENGLISH"
+                        android:paddingLeft="12dp"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:text=""
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
                     android:id="@+id/currencyLY"
                     android:layout_width="match_parent"
-                    android:alpha="0.8"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/add_room_popup_tv_bg"
-                    android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                     >
-                
-                
-                <TextView
-                    
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    
-                    android:paddingLeft="12dp"
-                    android:text="@string/Currency"
-                   
-                    
-                   
-                    android:textColor="#2379D2"
-                    android:textSize="18dp" />
-                
-                
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/curTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:gravity="center_vertical"
-                    android:layout_centerVertical="true"
-                    android:paddingLeft="12dp"
-                    android:text=""
-                   
-                    android:hint="SAR"
+                    android:layout_marginTop="20dp"
                     android:alpha="0.8"
-                    
-                    android:background="@drawable/add_room_popup_tv_bg"
-                   android:textColor="@color/grgray"
-                    android:textSize="18dp" />
-                
+
+                    android:orientation="vertical">
+
+
+                    <TextView
+
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:text="@string/Currency"
+                        android:textSize="18dp"
+                        android:textColor="#002B54"
+                        android:fontFamily="@font/montbold"
+
+                        />
+
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+                        android:id="@+id/curTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.8"
+                        android:background="@drawable/add_room_popup_tv_bg"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:hint="SAR"
+                        android:paddingLeft="12dp"
+
+                        android:text=""
+                        android:textColor="@color/grgray"
+                        android:textSize="18dp" />
+
                 </LinearLayout>
-                
-               
+
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginTop="15dp"
-                    android:weightSum="10"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                   android:gravity="center"
-                     >
+                    android:weightSum="10">
 
                     <object.p2pipcam.system.MyTextView
-                        
-                        android:layout_width="0dp"
-                        android:layout_weight="4.8"
-                        android:layout_height="45dp"
-                        android:ellipsize="marquee"
-                        android:gravity="center"
-                        android:focusableInTouchMode="true"
+
                         android:id="@+id/tv_Done"
-                        android:visibility="gone"
-                        android:background="@drawable/popup_button_selector_white"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
                         android:layout_marginRight="10dp"
+                        android:layout_weight="4.8"
+                        android:background="@drawable/popup_button_selector_white"
+                        android:ellipsize="marquee"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:text="Done"
                         android:textColor="#2379D2"
-                        android:textSize="22dp" />
-                    
-                    
-                     <object.p2pipcam.system.MyTextView
-                        
+                        android:textSize="22dp"
+                        android:visibility="gone" />
+
+
+                    <object.p2pipcam.system.MyTextView
+
+                        android:id="@+id/tv_Cancel"
                         android:layout_width="0dp"
                         android:layout_height="45dp"
+                        android:layout_weight="9.5"
                         android:ellipsize="marquee"
-                        android:gravity="center"
-                       android:layout_weight="9.5"
                         android:focusableInTouchMode="true"
-                        android:id="@+id/tv_Cancel"
-                         android:background="@drawable/popup_button_selector_white"
-                       
+                        android:gravity="center"
+                        android:background="@drawable/ic_reset_password_btn"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:text="@string/Cancel"
-                        android:textColor="#2379D2"
+                        android:textColor="#fff"
                         android:textSize="22dp" />
 
-                    
-                </LinearLayout>
-                
-                
-                
 
-                
- </LinearLayout>
- 
-            
-                
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
-        
-        </LinearLayout>
+
+    </LinearLayout>
    
 
 </RelativeLayout>

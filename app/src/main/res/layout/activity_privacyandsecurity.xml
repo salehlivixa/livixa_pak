@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#8669FC"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size"
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:onClick="onbackButttonClick"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montbold"
+                    android:text="Privacy and Security"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_edit_rooms"
+                    android:layout_width="350dp"
+                    android:layout_height="30dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:fontFamily="@font/montsemibold"
+                        android:text="App-lock with Touch ID"
+                        android:textSize="16sp" />
+
+                    <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/touchid"
+                        android:layout_width="50dip"
+                        android:layout_height="60dip"
+                        android:layout_alignParentRight="true"
+                        shSwitch:shadowSpace="7dip">
+                    </com.livixa.apacam.client.activity.ShSwitchView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="350dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/margin_10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:fontFamily="@font/montsemibold"
+                        android:text="@string/ChangePassword"
+                        android:clickable="true"
+                        android:onClick="changepassword"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_open_arrow_ic" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

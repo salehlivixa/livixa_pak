@@ -7,225 +7,183 @@
     android:background="@drawable/bg" >
 
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:weightSum="10"
-        android:layout_height="match_parent" >
+        android:layout_height="200dp"
+        android:background="#8669FC"
+        >
 
         <RelativeLayout
             android:id="@+id/rl_bar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/action_bar_size"
-            android:background="@color/app_header_color" >
+            >
+
 
             <ImageView
                 android:id="@+id/iv_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
                 android:clickable="true"
                 android:onClick="onbackButttonClick"
-                android:padding="@dimen/padding_large"
                 android:src="@drawable/ic_back" />
 
-            <com.livixa.apacam.client.widget.CustomTextView
-                android:id="@+id/tv_title"
-
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:text="@string/Rooms"
-                android:layout_marginBottom="13dp"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
-                android:textColor="@color/white"
-                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montbold"
+                android:text="@string/EnergyUsage"
+                android:textColor="#fff"
+                android:textSize="20sp" />
 
-                android:visibility="visible"
-                app:CustomFontFamily="Regular" />
-
-            <ImageView
-                android:id="@+id/iv_home"
-                android:clickable="true"
-                android:onClick="onhomeButttonClick"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="-10dp"
-                android:padding="@dimen/padding_large"
-                android:src="@drawable/home" />
         </RelativeLayout>
 
-        <LinearLayout android:layout_width="match_parent"
-            android:layout_height="0dp"
+    </LinearLayout>
 
-            android:weightSum="5"
-            android:orientation="vertical"
-            android:layout_weight="2"
-            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_sign"
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
 
             <LinearLayout
-                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_weight="4"
-                android:orientation="vertical"
-                android:layout_height="0dp"
-                >
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="130dp"
 
-                    android:layout_height="70dp"
-                    android:layout_marginTop="@dimen/margin_max_x_large2"
-                    android:src="@drawable/logo" />
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/Month"
+                        android:layout_width="171dp"
+                        android:layout_height="48dp"
+                        android:onClick="openmonth"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="Month"
+                        android:paddingTop="@dimen/margin_15dp"
+                        android:textAlignment="center"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:onClick="openmonth"
+                        android:layout_width="171dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="Year"
+                        android:paddingTop="@dimen/padding_15dp"
+                        android:textAlignment="center"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:gravity="center_vertical">
+
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="171dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:fontFamily="@font/montbold"
+                        android:hint="@string/TotalUsage"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textColorHint="#000"
+                        android:textSize="@dimen/font_large" />
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+                        android:layout_width="171dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:fontFamily="@font/montbold"
+                        android:hint="Total Cost"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textColorHint="#000"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="171dp"
+                        android:id="@+id/totalEnergyUsage"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:fontFamily="@font/montbold"
+                        android:hint="0.0KWH"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large" />
+
+                    <TextView
+                        android:id="@+id/totalCostUsage"
+                        android:layout_width="171dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:fontFamily="@font/montbold"
+                        android:hint="SR 0.00"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
+        </RelativeLayout>
 
-
-        </LinearLayout>
 
         <!--  // -->
 
-
-
-        <LinearLayout android:layout_width="match_parent"
-            android:layout_height="150dp"
-
-            android:gravity="center"
-            android:orientation="vertical"
-            >
-
-            <RelativeLayout android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginRight="38dp"
-                android:background="@drawable/popup_button_selector_white"
-
-
-                >
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Month"
-                    android:textColor="#2CABE2"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView  android:layout_height="match_parent"
-                    android:textColor="#FDB71B"
-                    android:text="April"
-                    android:id="@+id/Month"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_alignParentRight="true"
-                    android:textSize="18dp"
-                    android:layout_width="120dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginRight="38dp"
-                android:background="@drawable/popup_button_selector_white"
-
-
-                >
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Year"
-                    android:textColor="#2CABE2"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView  android:layout_height="match_parent"
-                    android:textColor="#FDB71B"
-                    android:text="2022"
-                    android:id="@+id/Year"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_alignParentRight="true"
-                    android:textSize="18dp"
-                    android:layout_width="120dp"/>
-
-            </RelativeLayout>
-
-
-            <RelativeLayout android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginRight="38dp"
-                android:background="@drawable/popup_button_selector_white"
-
-
-                >
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/TotalUsage"
-                    android:textColor="#2CABE2"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView  android:layout_height="match_parent"
-                    android:textColor="#FDB71B"
-                    android:text="0 kWh"
-                    android:id="@+id/totalEnergyUsage"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_alignParentRight="true"
-                    android:textSize="18dp"
-                    android:layout_width="120dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginRight="38dp"
-                android:background="@drawable/popup_button_selector_white"
-
-
-                >
-
-                <TextView  android:layout_height="match_parent"
-                    android:textColor="#2CABE2"
-                    android:text="@string/TotalCost"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="18dp"
-                    android:layout_width="120dp"/>
-
-                <TextView
-                    android:id="@+id/totalCostUsage"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:text="0 $"
-                    android:textColor="#FDB71B"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
 
 
 
@@ -291,5 +249,6 @@
 
 
     </LinearLayout>
+
 
 </RelativeLayout>

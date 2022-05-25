@@ -4,7 +4,7 @@
     
      <string name="Sign_In">تسجيل دخول</string>
     
-     <string name="Sign_Up">إنشاء حساب</string>
+     <string name="Sign_Up">تسجيل حساب جديد</string>
     
      <string name="Login">إتسجيل دخول</string>
       
@@ -65,9 +65,10 @@
 		<string name="Please_check_your_email_msg">!يرجى التحقق من بريدك الالكتروني لإتباع تعليمات فقدان كلمةالسر</string>
 
 		
-		<string name="Welcome" >مرحباً</string>
+		<string name="Welcome" >أهلاً بك</string>
+	    <string name="toaccess">للوصول إلى حسابك ، الرجاء تسجيل الدخول.</string>
 		<string name="YourdatasyncedMSG" >تحتاج بياناتك ليتم مزامنتها مع الخادم، انقر للتحديث… </string>
-		<string name="Rooms" >غرف</string>
+		<string name="Rooms" >الغرف</string>
 
 		<string name="IR" >المسح الضوئي بالأشعة</string>
 		<string name="Moods" >الأوضاع</string>
@@ -99,16 +100,16 @@
 		
 		<!-- // SettingsViewController -->
 
-		<string name="AddEditRooms">إضافة/تعديل غرف</string>
-		<string name="AddEditSwitches">إضافة/ تعديل مفتاح</string>
-		<string name="Controlinsidehome">التحكم من داخل الغرفة</string>
+		<string name="AddEditRooms">إضافة / تعديل الغرف</string>
+		<string name="AddEditSwitches">إضافة / تعديل مفاتيح </string>
+		<string name="Controlinsidehome">التحكم بداخل المنزل</string>
 		<string name="ControlRemotly">التحكم عن بعد </string>
-		<string name="ConfigureSwitches">تهيئة المفاتيح</string>
-		<string name="EditUsers">تعديل المستخدمين</string>
+		<string name="ConfigureSwitches">إعداد المفاتيح</string>
+		<string name="EditUsers">إضافة / تعديل مستخدمين</string>
 		<string name="ElectricityTariff">تعرفة الكهرباء</string>
 		<string name="Profile">الملف الشخصي</string>
 		<string name="KAbout">معلومات عن المستخدم</string>
-		<string name="ChangePassword">تغير كلمة السر</string>
+		<string name="ChangePassword">تغيير كلمة المرور</string>
 		<string name="Logout">تسجيل خروج</string>
 		<string name="Language_Currency">اللغة والعلمة النقدية </string>
 		<string name="SystemReset">إعادة ضبط النظام</string>
@@ -147,8 +148,8 @@
 		<string name="Roomiconisrequired">مطلوب رمز الغرفة!</string>
 		
 		
-		<string name="AddManually">يدوياً</string>
-		<string name="SwitchScan">مسح ضوئي للمفتاح</string>
+		<string name="AddManually">إضافة يدويا</string>
+		<string name="SwitchScan">مسح مفتاح جديد</string>
 		<string name="Barcodeisrequired">مطلوب الباركود!</string>
 		<string name="Barcodeisnotvalid">الباركود غير صحيح!</string>
 		<string name="DoyouwanttodeleteswitchwithMAC">هل تريد حذف المفتاح من MAC</string>
@@ -315,7 +316,7 @@
 
 			<string name="OldPassword">كلمة المرور القديمة</string>
 			<string name="NewPassword">كلمة المرور الجديدة</string>
-			<string name="ConfirmNewPassword">تأكيد كلمة المرور</string>
+			<string name="ConfirmNewPassword">تأكيد كلمة المرور الجديدة</string>
 			<string name="Oldpasswordrequired">مطلوب كلمة المرور القديمة!</string>
 			<string name="Newpasswordrequired">مطلوب كلمة المرور الجديدة!</string>
 			<string name="ConfirmNewpasswordrequired">مطلوب تأكيد كلمة المرور الجديدة!</string>

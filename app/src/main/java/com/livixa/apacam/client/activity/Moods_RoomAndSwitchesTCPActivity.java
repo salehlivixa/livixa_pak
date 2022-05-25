@@ -99,7 +99,7 @@ public class Moods_RoomAndSwitchesTCPActivity extends Activity implements TCPTas
 	
 	
 	
-	
+
 	
 	public enum Moods {
 		TREVAL(1), SLEEP(2), WAKE_UP(3),  GUEST(4), LIVING(5),SAFETY(6) , AWAY(7);
@@ -1117,7 +1117,7 @@ public class Moods_RoomAndSwitchesTCPActivity extends Activity implements TCPTas
 	
 	public void addRequiredLayout()
 	{
-		
+
 		
 		layoutContainer.removeAllViews();
 		
@@ -1844,15 +1844,16 @@ public class Moods_RoomAndSwitchesTCPActivity extends Activity implements TCPTas
 
 			
 			updateMoodsOnSwitchResponse(mMoodsModelList,currentCommand);
+
+
 			
-			
-			mMapNonCoustomMoodsImages.put(1, R.drawable.icon_mood_travel);
-			mMapNonCoustomMoodsImages.put(2, R.drawable.icon_mood_sleep);
-			mMapNonCoustomMoodsImages.put(3, R.drawable.icon_mood_wakeup);
-			mMapNonCoustomMoodsImages.put(4, R.drawable.icon_mood_guest);
-			mMapNonCoustomMoodsImages.put(5, R.drawable.icon_mood_living);
-			mMapNonCoustomMoodsImages.put(6, R.drawable.icon_mood_safety);
-			mMapNonCoustomMoodsImages.put(14, R.drawable.icon_mood_away);
+			mMapNonCoustomMoodsImages.put(1, R.drawable.ic_travel_ic);
+			mMapNonCoustomMoodsImages.put(2, R.drawable.ic_sleep_ic);
+			mMapNonCoustomMoodsImages.put(3, R.drawable.ic_wake_up_ic);
+			mMapNonCoustomMoodsImages.put(4, R.drawable.ic_guest_ic);
+			mMapNonCoustomMoodsImages.put(5, R.drawable.ic_living_ic);
+			mMapNonCoustomMoodsImages.put(6, R.drawable.ic_safety_ic);
+			mMapNonCoustomMoodsImages.put(14, R.drawable.ic_away_ic);
 			
 			
 			 imageLoader =ImageLoader.getInstance();
@@ -1932,7 +1933,10 @@ public class Moods_RoomAndSwitchesTCPActivity extends Activity implements TCPTas
 	       }
 	       else
 	       {
-	    	   holder.icon.setImageResource(mMapNonCoustomMoodsImages.get(mood_Model.moodIdentifer));
+	       	int _v = mood_Model.moodIdentifer;
+	       	int value = mMapNonCoustomMoodsImages.get(_v != 0 ? _v : 1);
+	       	if(value!=0)
+	    	   holder.icon.setImageResource(value);
 	    	   
 	    	   
 	    	   holder.moodNmae.setText(getMoodTitle(mood_Model.moodIdentifer));

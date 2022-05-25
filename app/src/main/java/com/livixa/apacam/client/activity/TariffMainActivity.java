@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -78,16 +79,16 @@ public class TariffMainActivity extends Activity {
 		String tempPrice_UNIT= AppPreference.getValue(mContext, AppKeys.KEY_USER_PRICE_UNIT);
 		
 		
-		TextView watageUnit=(TextView) findViewById(R.id.watageUnit);
-		
-		TextView priceUnit=(TextView) findViewById(R.id.priceUnit);
-		
-		if(tempWATAGE_UNIT!=null)
-		watageUnit.setText(getString(R.string.Slabin)+" " + tempWATAGE_UNIT);
-		
-		
-		if(tempPrice_UNIT!=null)
-		priceUnit.setText(getString(R.string.ResidentialTariffin)+" " + tempPrice_UNIT);
+//		TextView watageUnit=(TextView) findViewById(R.id.watageUnit);
+//
+//		TextView priceUnit=(TextView) findViewById(R.id.priceUnit);
+//
+//		if(tempWATAGE_UNIT!=null)
+//		watageUnit.setText(getString(R.string.Slabin)+" " + tempWATAGE_UNIT);
+//
+//
+//		if(tempPrice_UNIT!=null)
+//		priceUnit.setText(getString(R.string.ResidentialTariffin)+" " + tempPrice_UNIT);
 		
 		
 	}
@@ -229,7 +230,7 @@ private void tariffSettingPopup() {
 
 	 View popupView = layoutInflater.inflate(R.layout.tariff_setting_popup, null);
 	
-	TextView tv_cancel=(TextView) popupView.findViewById(R.id.tv_Cancel);
+	ImageView tv_cancel=(ImageView) popupView.findViewById(R.id.tv_Cancel);
 	TextView tv_Done=(TextView) popupView.findViewById(R.id.tv_Done);
 	
 	final TextView  lowerLimit=(TextView) popupView.findViewById(R.id.lowerLimit);

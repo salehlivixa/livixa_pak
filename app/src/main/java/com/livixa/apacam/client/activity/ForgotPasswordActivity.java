@@ -3,6 +3,7 @@ package com.livixa.apacam.client.activity;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.livixa.apacam.client.network.RestClient;
 import com.livixa.client.R;
 import com.livixa.apacam.client.appconfig.AppKeys;
 import com.livixa.apacam.client.base.KisafaActivity;
@@ -55,6 +56,12 @@ public class ForgotPasswordActivity extends Activity implements
 		setClickListner(this);
 	}
 
+
+//	public void inbox (View view){
+//	   Intent intent = new Intent();
+//	   intent = new Intent(this,Checkyouinbox.class);
+//	   startActivity(intent);
+//	}
 	// Helping Methods
 	public void initComponents() {
 		//super.initUIComponents(ACTIVITY_TITLE);
@@ -108,7 +115,7 @@ public class ForgotPasswordActivity extends Activity implements
 				AppPreference.getValue(this, AppKeys.deviceToken));
 		map.put("device_type", AppPreference.getValue(this, AppKeys.deviceType));
 		showProgressDialog("", 100);
-		ApiService service = KisafaApplication.getRestClient().getApiService();
+		ApiService service = new RestClient("http://158.101.228.216/live/smarthome/v2/").getApiService();
 		Call<RequestResponse> call = service.forgot(map);
 		call.enqueue(new RestCallback<RequestResponse>(this,
 				ServerCodes.ServerRequestCodes.FORGOT_REQUEST_CODE, mContext));
@@ -125,6 +132,13 @@ public class ForgotPasswordActivity extends Activity implements
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.FORGOT_REQUEST_CODE) {
 			RequestResponse requestResponse = (RequestResponse) response;
 			onFailure(getResources().getString(R.string.Please_check_your_email_msg));
+		}
+
+		else {
+			Intent intent = new Intent();
+            intent = new Intent(this,Checkyouinbox.class);
+	       startActivity(intent);
+
 		}
 	}
 

@@ -4,198 +4,165 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
+    android:background="#fff" >
 
-   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8669FC"
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weightSum="10"
-            android:layout_height="match_parent" >
+            android:layout_marginLeft="25dp"
+            >
+
 
             <RelativeLayout
                 android:id="@+id/rl_bar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/action_bar_size"
-                android:background="@color/app_header_color" >
-                
+                >
+
+
                 <ImageView
                     android:id="@+id/iv_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="@dimen/margin_20dp"
                     android:clickable="true"
-                    android:rotation="180"
                     android:layout_alignParentRight="true"
                     android:onClick="onbackButttonClick"
-                    android:padding="@dimen/padding_large"
-                    android:src="@drawable/ic_back" />
+                    android:src="@drawable/ic_back__1_ara" />
 
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_title"
-                    
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    
-                    android:text="@string/AddEditRooms"
-                    android:layout_marginBottom="13dp"
-                    android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                   
-                    android:visibility="visible"
-                    app:CustomFontFamily="Regular" />
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montbold"
+                    android:text="@string/AddEditRooms"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/iv_home"
-                     android:clickable="true"
-                    android:onClick="onhomeButttonClick"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    
-                    android:layout_marginBottom="-10dp"
-                    android:padding="@dimen/padding_large"
-                    android:src="@drawable/home" />
             </RelativeLayout>
-            
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="0dp"
-                         
-                          android:weightSum="5"
-                          android:orientation="vertical"
-                          android:layout_weight="2"
-                >
-                
-                <LinearLayout 
-                     android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_weight="4"
-                    android:orientation="vertical"
-                    android:layout_height="0dp"
-                    >
-                    
-                     <ImageView
-                android:id="@+id/logo"
-                android:layout_width="130dp"
-                
-                android:layout_height="70dp"
-                android:layout_marginTop="@dimen/margin_max_x_large2"
-                android:src="@drawable/logo" />
-                    
-                </LinearLayout>
+        </LinearLayout>
 
-           
-            
-            </LinearLayout>
-            
-           <!--  // -->
-           
-           
-           
-           
-           
-           <RelativeLayout android:layout_width="match_parent"
-                android:layout_weight="6"
-                            android:layout_height="0dp">
-                
-           
-            
-            <GridView 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_weight="6"
+            android:layout_height="0dp">
+            <GridView
                 android:id="@+id/roomsGridView"
                 android:visibility="visible"
                 android:numColumns="2"
-                android:rotationY="180"
                 android:listSelector="@android:color/transparent"
                 android:stretchMode="spacingWidthUniform"
                 android:gravity="center"
-                android:columnWidth="130dp"
+                android:columnWidth="180dp"
                 android:verticalSpacing="10dp"
-                android:layout_width="300dp"
+                android:layout_width="400dp"
                 android:scrollbars="none"
                 android:layout_centerHorizontal="true"
                 android:layout_height="match_parent">
-            
-            
-       
+
+
+
             </GridView>
-            <RelativeLayout 
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="100dp"
                 android:id="@+id/roomsEmptylayout"
                 android:layout_weight="6"
                 android:visibility="gone"
-               
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/norooms"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="لم تتم إضافة غرف بعد!"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montbold"
+                    />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="استخدم الخيار أدناه لإضافة واحدة"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montsemibold"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:weightSum="10"
+            android:layout_height="0dp">
+
+            <LinearLayout android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                
-               <ImageView android:layout_height="150dp"
-                          android:alpha="0.08"
-                          android:layout_centerInParent="true"
-                        android:src="@drawable/exclamation_mark"
-                          android:layout_width="150dp"/>
+                android:clickable="true"
+                android:onClick="onAddRoomClick"
+
+                android:layout_width="wrap_content">
+
                 <com.livixa.apacam.client.widget.CustomTextView
-                  
-                    
+
+                    android:background="@drawable/ic_add_room_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    
-                    android:text="@string/Noroomsaddedyet"
-                    
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:visibility="visible"
-                    app:CustomFontFamily="Regular" />
-               
-           </RelativeLayout>
-           
-            
-            
-            
-             </RelativeLayout>
-          
-            <LinearLayout 
-               android:layout_weight="2"
-              
-               
-               android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:clickable="true"
-               android:gravity="center_horizontal|bottom"
-               android:weightSum="10"
-               android:layout_height="0dp">
-           
-            <LinearLayout android:layout_height="wrap_content"
-                   android:orientation="vertical"
-                   android:gravity="center"
-                   android:clickable="true"
-                   android:onClick="onAddRoomClick"
-                   android:layout_gravity="bottom"
-                   android:layout_width="wrap_content">
-                <ImageView
-               android:layout_width="60dp"
-               android:layout_height="60dp"
-               android:src="@drawable/add_room" />
-                
-                <com.livixa.apacam.client.widget.CustomTextView
-                  
-                   
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                     android:text="@string/AddRooms"
+                    android:text="@string/AddRooms"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
                     android:textColor="@color/white"
+                    android:fontFamily="@font/montsemibold"
                     android:textSize="13dp"
                     android:visibility="visible"
                     app:CustomFontFamily="Regular" />
-                </LinearLayout>
-                
-           </LinearLayout>
-            
-             </LinearLayout>
-   
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
 </RelativeLayout>

@@ -4,258 +4,278 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
-    
-    
-    <ScrollView 
-        android:layout_width="match_parent"
-       android:scrollbarThumbVertical="@drawable/tt_bg"
-        android:layout_height="match_parent">
+    android:background="#fff" >
 
-        
-        <RelativeLayout
-   
-    		android:layout_width="match_parent"
-   			 android:layout_height="match_parent"
-    >
-        
-    
-        <RelativeLayout
-            android:id="@+id/loginSc"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8669FC"
+        >
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="25dp"
+            >
 
             <ImageView
-                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="end"
+                />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_max_x_large7more"
-                android:src="@drawable/logo" />
+                android:layout_height="50dp"
+                android:text="@string/Welcome"
+                android:layout_gravity="end"
+                android:textSize="28dp"
+                android:textColor="#fff"
+                android:fontFamily="@font/montbold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="@string/toaccess"
+                android:textSize="16dp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montsemibold"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_20dp"
+            >
+
 
             <RelativeLayout
-                android:id="@+id/rl_sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/logo"
-                android:rotationY="180"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_max_x_large8more" >
-
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_sign_in"
-                     android:rotationY="180"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingTop="@dimen/padding_normal"
-                    android:text="@string/Sign_In"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/font_extra_large"
-                    app:CustomFontFamily="MYR_PRO" />
-
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/iv_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/margin_large_extra_half"
-                    android:layout_toRightOf="@id/tv_sign_in"
-                    android:text=">"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/font_extra_large" />
-
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_sign_up"
-                     android:rotationY="180"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/margin_large_extra_half"
-                    android:layout_toRightOf="@id/iv_arrow"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingTop="@dimen/padding_normal"
-                    android:text="@string/Sign_Up"
-                    android:textColor="@color/white_opc_50"
-                    android:textSize="@dimen/font_large_extra"
-                    app:CustomFontFamily="MYR_PRO" />
-            </RelativeLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_user_name"
+                android:id="@+id/loginSc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rl_sign"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_max_x_large4"
-                android:background="@drawable/bg_txt_field"
-                 android:rotationY="180"
-                android:orientation="horizontal" >
+                android:layout_height="500dp"
+                >
 
-                <ImageView
-                    android:layout_width="@dimen/iv_grp_view"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:src="@drawable/icon_person" />
 
-                <View
-                    android:layout_width="@dimen/margin_basic"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:background="@color/color_white" />
-
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_username"
-                    android:rotationY="180"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:background="@null"
-                    android:hint="@string/UserNameHint"
-                    android:inputType="text"
-                    android:paddingRight="@dimen/padding_large"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingLeft="@dimen/padding_large"
-                    android:paddingTop="@dimen/padding_normal"
-                    android:singleLine="true"
-                    android:textColor="@color/color_white"
-                    android:textColorHint="@color/color_white"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_password"
-                android:rotationY="180"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ll_user_name"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_normal"
-                android:background="@drawable/bg_txt_field"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:layout_width="@dimen/iv_grp_view"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:src="@drawable/icon_key" />
-
-                <View
-                    android:layout_width="@dimen/margin_basic"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:background="@color/color_white" />
-
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_password"
-                    android:rotationY="180"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:background="@null"
-                    android:hint="@string/UserPassHint"
-                    android:inputType="textPassword"
-                    android:paddingBottom="@dimen/padding_normal"
-                    android:paddingLeft="@dimen/padding_large"
-                    android:paddingRight="@dimen/padding_large"
-                    android:paddingTop="@dimen/padding_normal"
-                    android:singleLine="true"
-                    android:textColor="@color/color_white"
-                    android:textColorHint="@color/color_white"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                 android:rotationY="180"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/ll_password"
-                android:layout_marginLeft="@dimen/margin_max_x_large4"
-                android:layout_marginRight="@dimen/margin_max_x_large4"
-                android:layout_marginTop="@dimen/margin_extra_large" >
-
-                <com.livixa.apacam.client.widget.CustomButton
-                    android:id="@+id/btn_login"
-                    style="@style/ButtonStyle"
-                     android:rotationY="180"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/bg_rect_sky_blue"
-                    android:text="@string/Login"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Regular" />
-
-                <View
-                    android:id="@+id/v_view"
-                    android:layout_width="@dimen/margin_basic"
-                    android:layout_height="@dimen/margin_max_x_large2"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:layout_marginLeft="@dimen/margin_extra_large"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    android:layout_toRightOf="@id/btn_login"
-                    android:background="@color/color_white" />
-
-                <com.livixa.apacam.client.widget.CustomTextView
-                    android:id="@+id/tv_forgot"
-                     android:rotationY="180"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/margin_large"
-                    android:layout_toRightOf="@id/v_view"
-                    android:paddingBottom="@dimen/padding_large"
-                    android:paddingTop="@dimen/padding_large"
-                    android:text="@string/ForgotPassword"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/font_normal"
-                    app:CustomFontFamily="Light" />
-            </RelativeLayout>
-        </RelativeLayout>
-   
-   <LinearLayout android:layout_height="wrap_content"
-                 android:layout_centerVertical="true"
-                 android:gravity="center"
-                 android:id="@+id/tv_message_lyout"
-                 android:visibility="gone"
-                 android:layout_width="match_parent"
-                 android:orientation="vertical">   
-        
-   <com.livixa.apacam.client.widget.CustomTextView
-       
-                    android:id="@+id/tv_message"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:text="Please wait while your data is \n  being downloaded!"
-                    android:textColor="@color/color_white"
-                    android:textSize="18dp"
-                    app:CustomFontFamily="Bold" />
-   <View android:layout_height="100dp"
-         android:layout_width="match_parent"/>
-   
-   </LinearLayout> 
-   </RelativeLayout> 
-   
-   </ScrollView>
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="@dimen/margin_30dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="@string/UserNameHint"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_username"
+                        android:layout_width="366dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="أدخل اسم المستخدم الخاص بك"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light"
+
+                        />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="@dimen/margin_30dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="@string/UserPassHint"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="366dp"
+                        android:layout_height="48dp"
+                        android:inputType="textPassword"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="ادخل كلمة المرور"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+
+
+                    <LinearLayout
+                        android:layout_width="380dp"
+                        android:layout_height="50dp"
+                        android:gravity="center">
+
+
+
+
+
+                        <com.livixa.apacam.client.widget.CustomTextView
+                            android:id="@+id/tv_forgot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="150dp"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="نسيت كلمة المرور؟ "
+                            android:textColor="#002B54"
+
+                            android:textSize="14sp"
+                            app:CustomFontFamily="Light" />
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="حفظ كلمة المرور"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#002B54"
+                            android:textSize="14sp" />
+
+
+
+
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/check_box_selector"
+                            style="@style/CustomCheckbox02"
+                            android:layout_marginLeft="@dimen/margin_10dp"
+                            />
+                    </LinearLayout>
+
+
+                    <com.livixa.apacam.client.widget.CustomButton
+                        android:id="@+id/btn_login"
+                        style="@style/ButtonStyle"
+                        android:layout_width="366dp"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_sign_in_btn_arabic"
+                        android:fontFamily="@font/montsemibold"
+                        android:text="@string/Login"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_large" />
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="قم بتسجيل الدخول باستخدام Touch ID"
+                            android:textAlignment="center" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_touchid_ic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="جديد في Livixa"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/font_normal" />
+
+                        <TextView
+                            android:id="@+id/tv_sign_up"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="؟ سجل حساب الآن"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/font_normal" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:id="@+id/tv_message_lyout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <com.livixa.apacam.client.widget.CustomTextView
+
+                        android:id="@+id/tv_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="Please wait while your data is \n  being downloaded!"
+                        android:textColor="@color/color_white"
+                        android:textSize="18dp"
+                        app:CustomFontFamily="Bold" />
+                    <View android:layout_height="100dp"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>

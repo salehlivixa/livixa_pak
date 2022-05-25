@@ -1,5 +1,8 @@
 package com.livixa.apacam.client.activity;
 
+import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG;
+import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Executor;
 
 import com.activeandroid.query.Delete;
 import com.github.mrengineer13.snackbar.SnackBar;
@@ -26,6 +30,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -37,6 +42,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+
+import androidx.annotation.NonNull;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
+
 import com.livixa.apacam.client.appconfig.AppKeys;
 import com.livixa.apacam.client.appconfig.AppKeys.LANGUAGES;
 import com.livixa.apacam.client.base.KisafaApplication;
@@ -58,6 +71,7 @@ import com.livixa.apacam.client.utility.ServerCodes;
 import com.livixa.apacam.customprogressbar.CustomAlertDialogueTwoButtons;
 import com.livixa.apacam.customprogressbar.CustomAlertDialogueTwoButtons.CustomDialogueTwoButtonsClickListner;
 import com.livixa.apacam.customprogressbar.WaitingStaticProgress;
+import com.livixa.client.MainActivity;
 import com.livixa.client.R;
 import object.p2pipcam.content.ContentCommon;
 import object.p2pipcam.nativecaller.NativeCaller;
@@ -77,6 +91,13 @@ public class LoginActivity extends Activity implements OnClickListener,
 	private TextView mTvSignUp;
 	private ProgressDialog mProgressDialog;
 
+//	boimetric
+	private ImageView Fingerlogin;
+	private static  final int REQUEST_CODE = 101010;
+	private Executor executor;
+	private BiometricPrompt biometricPrompt;
+	private BiometricPrompt.PromptInfo promptInfo;
+
 	// Local
 	private String ACTIVITY_TITLE = "Log In";
 	private Map<String, String> map;
@@ -92,15 +113,85 @@ public class LoginActivity extends Activity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		setOrientation();
 		setContentView(R.layout.activity_login);
+
 		initComponents();
 		//getSupportActionBar().hide();
 		setClickListner(this);
-		
-		
+
+//		biometric work
+
+//		BiometricManager biometricManager = BiometricManager.from(this);
+//		switch (biometricManager.canAuthenticate(BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {
+//			case BiometricManager.BIOMETRIC_SUCCESS:
+//				Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
+//				break;
+//			case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+//				Log.e("MY_APP_TAG", "No biometric features available on this device.");
+//				break;
+//			case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+//				Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
+//				break;
+//			case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+//				// Prompts the user to create credentials that your app accepts.
+//				final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
+//				enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+//						BIOMETRIC_STRONG | DEVICE_CREDENTIAL);
+//				startActivityForResult(enrollIntent, REQUEST_CODE);
+//				break;
+//		}
+//
+//		executor = ContextCompat.getMainExecutor(this);
+//		biometricPrompt = new BiometricPrompt(LoginActivity.this,
+//				executor, new BiometricPrompt.AuthenticationCallback()
+//		{
+//			@Override
+//			public void onAuthenticationError(int errorCode,
+//											  @NonNull CharSequence errString) {
+//				super.onAuthenticationError(errorCode, errString);
+//				Toast.makeText(getApplicationContext(),
+//						"Authentication error: " + errString, Toast.LENGTH_SHORT)
+//						.show();
+//			}
+//
+//			@Override
+//			public void onAuthenticationSucceeded(
+//					@NonNull BiometricPrompt.AuthenticationResult result) {
+//				super.onAuthenticationSucceeded(result);
+//				Toast.makeText(getApplicationContext(),
+//						"Authentication succeeded!", Toast.LENGTH_SHORT).show();
+//			}
+//
+//			@Override
+//			public void onAuthenticationFailed() {
+//				super.onAuthenticationFailed();
+//				Toast.makeText(getApplicationContext(), "Authentication failed",
+//						Toast.LENGTH_SHORT)
+//						.show();
+//			}
+//		});
+
+//		promptInfo = new BiometricPrompt.PromptInfo.Builder()
+//				.setTitle("Biometric login for my app")
+//				.setSubtitle("Log in using your biometric credential")
+//				.setNegativeButtonText("Use account password")
+//				.build();
+//
+//
+//		Fingerlogin  = (ImageView) findViewById(R.id.fingerlogin);
+//		Fingerlogin.setOnClickListener(view -> {
+//			biometricPrompt.authenticate(promptInfo);
+//		});
+
+
+//biometric end
+
+
+
 		//CommingFromLogoutThenFreeResources();
 		
 	}
-	
+
+
 	private void CommingFromLogoutThenFreeResources()
 	{
 		try
@@ -133,7 +224,7 @@ public class LoginActivity extends Activity implements OnClickListener,
 			//System.exit(0);*/
 			Runtime.getRuntime().exit(0);
 			
-			
+
 		}
 		
 		}catch(Exception ex){}
@@ -142,6 +233,8 @@ public class LoginActivity extends Activity implements OnClickListener,
 
 	// Helping Methods
 	public void initComponents() {
+
+
 		//super.initUIComponents(ACTIVITY_TITLE);
 		mContext = this;
 		view = (View) findViewById(R.id.rl_root);
@@ -152,7 +245,8 @@ public class LoginActivity extends Activity implements OnClickListener,
 		mTvSignUp = (TextView) findViewById(R.id.tv_sign_up);
 		loginSc= (RelativeLayout) findViewById(R.id.loginSc);
 		tv_message_lyout= (View) findViewById(R.id.tv_message_lyout);
-		
+		Fingerlogin=(ImageView)findViewById(R.id.fingerlogin);
+
 		String currentLanguage=AppPreference.getValue(getApplicationContext(), AppKeys.KEY_CURRENT_LANGUAGE);
 		 
 		  
@@ -204,9 +298,7 @@ public class LoginActivity extends Activity implements OnClickListener,
 			    	
 			    }
 		 }
-		 
-			
-		
+
 		
 		
 		
@@ -577,7 +669,7 @@ public class LoginActivity extends Activity implements OnClickListener,
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		 
+
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.btn_login:
@@ -588,14 +680,14 @@ public class LoginActivity extends Activity implements OnClickListener,
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
-			
+
 			break;
 		case R.id.tv_forgot:
 			intent = new Intent(this, ForgotPasswordActivity.class);
 			startActivity(intent);
 			finish();
 			KisafaApplication.perFormActivityNextTransition(this);
-			
+
 			break;
 		default:
 			break;
@@ -698,7 +790,7 @@ public class LoginActivity extends Activity implements OnClickListener,
 	        if(bitmap!=null)
 	        {
 	        	ByteArrayOutputStream baos = new ByteArrayOutputStream();  
-	        	bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);   
+//	        	bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
 		        byte[] photo = baos.toByteArray();
 		        
 		        if(user==null)
