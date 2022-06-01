@@ -258,6 +258,27 @@
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout/activity_settings_subuser.xml" value="0.1" />
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout/add_edit_activity_rooms.xml" value="0.12552083333333333" />
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout/energy_activity_rooms.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/whitebg.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-ar/activity_date_and_time_picker_for_moods.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-ar/activity_notification.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/aaaaaa.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/aaaaatest.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/aaatestly.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activate_mood_popup.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/activity_date_and_time_picker_for_away_mood.xml" value="0.17300724637681159" />
+        <entry key="app/src/main/res/layout/activity_date_and_time_picker_for_moods.xml" value="0.17300724637681159" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2006340579710145" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.13043478260869565" />
+        <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/add_edit_switch_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/add_mood_popup.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/button_on_off_popup.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/dialog_add_tariff_alert.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/notification_adapter_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/tariff_option_popup.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/tariff_setting_popup.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/up_date_activated_mood_popup_sub_user.xml" value="0.24114583333333334" />
       </map>
     </option>
   </component>

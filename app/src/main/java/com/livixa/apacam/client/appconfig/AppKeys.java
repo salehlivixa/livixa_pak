@@ -38,7 +38,11 @@ public class AppKeys {
 	public static final String KEY_USER_COUNTYY_CODE = "sh_user_country_code";
 	public static final String KEY_USER_TIME_ZONE = "sh_user_time_zone";
 	public static final String KEY_USER_TIME_ZONE_NAME= "sh_user_time_zone_name";
-	
+	public static final String pTarrifAlertLow = "tariff_alert_low";
+	public static final String pTarrifAlertMedium = "tariff_alert_medium";
+	public static final String pTarrifAlertHigh = "tariff_alert_high";
+
+
 	public static final String KEY_USER_EMAIL = "sh_user_email";
 	public static final String KEY_IS_SUB_USER = "sh_is_subuser";
 	public static final String KEY_SUB_USER_TAG = "sub_user";

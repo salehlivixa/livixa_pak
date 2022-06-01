@@ -8,7 +8,13 @@ import java.util.Locale;
 
 import com.activeandroid.query.Select;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -17,6 +23,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
@@ -25,6 +32,7 @@ import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
 import com.livixa.apacam.client.activity.Add_Edit_SwitchActivity.SwitchTypes;
 import com.livixa.apacam.client.activity.MoodsCommandManager.RequestTypes;
 import com.livixa.apacam.client.activity.Moods_RoomAndSwitchesTCPActivity.Buttons;
@@ -41,1976 +49,1639 @@ import com.livixa.apacam.dbmodel.Room_Model;
 import com.livixa.apacam.dbmodel.Switch_Model;
 import com.livixa.apacam.services.Sync_Service;
 import com.livixa.client.R;
+
 import object.p2pipcam.utils.MyDate;
 
 public class DateAndTimePickerForMoodsActivity extends Activity {
 
 
-	DatePicker datePicker;
+//    DatePicker _datePicker;
+//    TimePicker timePicker;
 
 
-	TimePicker timePicker;
+    LinearLayout dateContainer;
 
 
-	LinearLayout dateContainer;
+    LinearLayout dateTab;
+    LinearLayout timeTab;
 
 
-	LinearLayout dateTab;
+    boolean isDateTabSelected = true;
 
-	LinearLayout timeTab;
 
+    static TextView dateTV;
+    static TextView timeTV;
+    static TextView dateDaysTV;
 
-	boolean isDateTabSelected=true;
+    View dateSelected;
+    View timeSelected;
 
+    private Calendar calendar;
 
-	TextView dateTV;
+    static int year = 2000;
+    static int month = 1;
+    static int day = 1;
+    static int _temphours = 0;
+    static int _tempminutes = 0;
 
-	TextView timeTV;
 
-	TextView dateDaysTV;
+    Mood_Model mModdModel;
+    CheckBox reapeatCB;
 
-	View dateSelected;
 
-	View timeSelected;
+    private String currentCommand;
+    private String commandtoModify = "";
 
-	private Calendar calendar;
 
-	int year=2000;
+    String command1 = "";
+    String command2 = "";
+    String command3 = "";
 
-	int month=1;
-	int day=1;
 
-	int hours=1;
+    boolean isWiriteResponseArrived = false;
+    boolean isButtonOneActive = false;
+    boolean isButtonTwoActive = false;
+    boolean isButtonThreeActive = false;
 
-	int minutes=1;
 
+    public final static String dateFormate = "yyyy/MM/dd HH:mm:ss";
+    private Context mContext;
 
-	Mood_Model mModdModel;
 
-	CheckBox reapeatCB;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
 
 
-	private String currentCommand;
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_date_and_time_picker_for_moods);
 
-	private String commandtoModify="";
 
+//        _datePicker = (DatePicker) findViewById(R.id.dp);
+//        _datePicker.setSpinnersShown(true);
+//
+//        timePicker = (TimePicker) findViewById(R.id.tp);
+        defaultAssign();
 
-	String command1="";
+        handleIntent();
 
-	String command2="";
 
-	String command3="";
+        Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(this);
 
 
+        dateTV = (TextView) findViewById(R.id.dateTV);
 
-	boolean isWiriteResponseArrived=false;
+        timeTV = (TextView) findViewById(R.id.timeTV);
 
-	boolean isButtonOneActive=false;
-	boolean isButtonTwoActive=false;
-	boolean isButtonThreeActive=false;
+        dateDaysTV = (TextView) findViewById(R.id.dateDaysTV);
 
+        dateTab = (LinearLayout) findViewById(R.id.dateTab);
 
-	public final static String dateFormate = "yyyy/MM/dd HH:mm:ss";
+        timeTab = (LinearLayout) findViewById(R.id.timeTab);
 
-	boolean isDateChangedEventHappened=false;
+        dateSelected = findViewById(R.id.dateSelected);
 
-	private Context mContext;
+        timeSelected = findViewById(R.id.timeSelected);
 
+        reapeatCB = (CheckBox) findViewById(R.id.reapeatCB);
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
 
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
 
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
 
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_date_and_time_picker_for_moods);
+        Mood_Model moodModel = mModdModel;
 
-		mContext=this;
+        if (moodModel.time != null) {
 
-		datePicker=(DatePicker) findViewById(R.id.dp);
-		datePicker.setSpinnersShown(false);
+            int currentIndex = moodModel.moodIdentifer;
 
-		timePicker=(TimePicker) findViewById(R.id.tp);
+            int moodGap = 14;
 
 
-		handleIntent();
+            int startIndex = currentIndex * moodGap;
 
+            int endIndex = startIndex + moodGap;
 
-		Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(this);
 
+            String tempMoodValues = currentCommand.substring(startIndex, endIndex);
 
-		dateTV=(TextView) findViewById(R.id.dateTV);
 
-		timeTV=(TextView) findViewById(R.id.timeTV);
+            if (!tempMoodValues.equals("00000000000000")) {
 
-		dateDaysTV =(TextView) findViewById(R.id.dateDaysTV);
 
-		dateTab=(LinearLayout) findViewById(R.id.dateTab);
+                String hexDays = tempMoodValues.substring(0, 2);
 
-		timeTab=(LinearLayout) findViewById(R.id.timeTab);
+                String hexMonths = tempMoodValues.substring(2, 4);
 
-		dateSelected=findViewById(R.id.dateSelected);
+                String hexYears = tempMoodValues.substring(4, 8);
 
-		timeSelected=findViewById(R.id.timeSelected);
+                String hexHours = tempMoodValues.substring(8, 10);
 
-		reapeatCB=(CheckBox) findViewById(R.id.reapeatCB);
+                String hexMinutes = tempMoodValues.substring(10, 12);
 
+                String hexOnOffState = tempMoodValues.substring(12, 14);
 
 
-		calendar = Calendar.getInstance();
-		year = calendar.get(Calendar.YEAR);
+                if (tempMoodValues.substring(0, 8).equals("00000000")) {
 
-		month = calendar.get(Calendar.MONTH);
-		day = calendar.get(Calendar.DAY_OF_MONTH);
+                    reapeatCB.setChecked(true);
 
-		hours = calendar.get(Calendar.HOUR_OF_DAY);
-		minutes = calendar.get(Calendar.MINUTE);
 
-		timePicker.setIs24HourView(true);
+                    int mins = Integer.parseInt(hexMinutes, 16);
+                    int hours = Integer.parseInt(hexHours, 16);
 
+                    _tempminutes = mins;
+                    _temphours = hours;
 
+                    setRepeatDate(hours, mins);
 
+                } else {
+                    reapeatCB.setChecked(false);
 
 
-		Mood_Model moodModel=mModdModel;
+                    if (isValidDateAndTime(hexDays, hexMonths, hexYears, hexMinutes, hexHours)) {
 
 
-		if(moodModel.time!=null)
-		{
+                        day = Integer.parseInt(hexDays, 16);
+                        month = Integer.parseInt(hexMonths, 16);
+                        year = Integer.parseInt(hexYears, 16);
+                        int mins = Integer.parseInt(hexMinutes, 16);
+                        int hours = Integer.parseInt(hexHours, 16);
 
-			int currentIndex=moodModel.moodIdentifer;
 
-			int moodGap=14;
+                        _tempminutes = mins;
+                        _temphours = hours;
 
+                        setDateTime();
 
-			int startIndex=currentIndex*moodGap;
 
-			int endIndex=startIndex + moodGap;
+                    } else {
 
 
-			String tempMoodValues=currentCommand.substring( startIndex , endIndex);
+                    }
 
 
+                }
 
-			if(!tempMoodValues.equals("00000000000000"))
-			{
 
+            } else {
 
-				String hexDays=tempMoodValues.substring(0,2);
+                setDate();
 
-				String hexMonths=tempMoodValues.substring(2,4);
 
-				String hexYears=tempMoodValues.substring(4,8);
+            }
 
-				String hexHours=tempMoodValues.substring(8,10);
 
-				String hexMinutes=tempMoodValues.substring(10,12);
+        }//////////////////
 
-				String hexOnOffState=tempMoodValues.substring(12,14);
+        else {
 
+            setDate();
 
-				if(tempMoodValues.substring(0,8).equals("00000000"))
-				{
 
-					reapeatCB.setChecked(true);
+        }
 
+        timeTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onSetTimeTabClick();
+            }
+        });
+        onSetDateTabClick();
+        dateTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onSetDateTabClick();
+            }
+        });
 
-					int mins=Integer.parseInt(hexMinutes,16);
-					int hours=Integer.parseInt(hexHours,16);
 
-					setRepeatDate(hours,mins);
+    }
 
-					timePicker.setCurrentHour(hours);
+    public void defaultAssign() {
+        mContext = this;
+        year = 2000;
+        month = 1;
+        day = 1;
+        _temphours = 0;
+        _tempminutes = 0;
+    }
 
-					timePicker.setCurrentMinute(mins);
+    public void onhomeButttonClick(View view) {
 
-				}
-				else
-				{
-					reapeatCB.setChecked(false);
 
+        finish();
 
-					if(isValidDateAndTime(hexDays,hexMonths,hexYears,hexMinutes,hexHours))
-					{
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        // overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+        //overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);
+        KisafaApplication.perFormActivityBackTransition(this);
 
 
+    }
 
-						day=Integer.parseInt(hexDays,16);
-						month=Integer.parseInt(hexMonths,16);
-						year=Integer.parseInt(hexYears,16);
-						int mins=Integer.parseInt(hexMinutes,16);
-						int hours=Integer.parseInt(hexHours,16);
+    public void onbackClick(View view) {
 
-						setDate(hours,mins);
+        onBackPressed();
 
-						timePicker.setCurrentHour(hours);
+    }
 
-						timePicker.setCurrentMinute(mins);
 
+    @Override
+    public void onBackPressed() {
 
-					}
-					else
-					{
 
+        super.onBackPressed();
 
+        finish();
 
+        Intent intent = new Intent(DateAndTimePickerForMoodsActivity.this, Moods_RoomAndSwitchesTCPActivity.class);
 
-					}
+        String mRoomId = getIntent().getStringExtra(AppKeys.KEY_ROOM_ID_TAG);
+        String mRoomTitle = getIntent().getStringExtra(AppKeys.KEY_ROOM_TITLE_TAG);
 
+        String swId = getIntent().getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
 
-				}
+        intent.putExtra("CMD", currentCommand);
+        intent.putExtra(AppKeys.KEY_ROOM_ID_TAG, mRoomId);
+        intent.putExtra(AppKeys.KEY_ROOM_TITLE_TAG, mRoomTitle);
+        intent.putExtra(AppKeys.KEY_SWITCH_ID_TAG, swId);
+        intent.putExtra("scroll", (Parcelable) getIntent().getParcelableExtra("scroll"));
 
+        KisafaApplication.perFormActivityBackTransition(this);
 
+        startActivity(intent);
 
 
-			}
-			else
-			{
+    }
 
-				setDate();
 
+    public void onSetDateTabClick() {
 
+        isDateTabSelected = true;
+        dateSelected.setVisibility(View.VISIBLE);
+        timeSelected.setVisibility(View.INVISIBLE);
+        DialogFragment dialogfragment = new DatePickerFragment();
+        dialogfragment.show(getFragmentManager(), "DatePickerFragment");
 
-			}
 
+    }
 
+    public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
-		}//////////////////
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-		else
-		{
 
-			setDate();
+            DatePickerDialog datepickerdialog = new DatePickerDialog(getActivity(),
+                    AlertDialog.THEME_DEVICE_DEFAULT_LIGHT,this, DateAndTimePickerForMoodsActivity.year, DateAndTimePickerForMoodsActivity.month, DateAndTimePickerForMoodsActivity.day);
 
+            return datepickerdialog;
+        }
 
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            DateAndTimePickerForMoodsActivity.year = year;
+            DateAndTimePickerForMoodsActivity.month = month;//+1;
+            DateAndTimePickerForMoodsActivity.day = day;
+            setDateTime();
+            //  textview.setText(day + ":" + (month+1) + ":" + year);
 
-		}
+        }
+    }
 
+    @SuppressLint("ValidFragment")
+    public static class TimePickerFragment extends DialogFragment
+            implements TimePickerDialog.OnTimeSetListener {
 
-		datePicker.init(year, month, day, new OnDateChangedListener() {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current time as the default values for the picker
 
-			@Override
-			public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
+            // Create a new instance of TimePickerDialog and return it
+            return new TimePickerDialog(getActivity(),  AlertDialog.THEME_DEVICE_DEFAULT_LIGHT,this, DateAndTimePickerForMoodsActivity._temphours, DateAndTimePickerForMoodsActivity._tempminutes,
+                    DateFormat.is24HourFormat(getActivity()));
+        }
 
-				//Toast.makeText(DateAndTimePickerForMoodsActivity.this, ""+monthOfYear, Toast.LENGTH_SHORT).show();
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            // Do something with the time chosen by the user
+            DateAndTimePickerForMoodsActivity._tempminutes = minute;
+            DateAndTimePickerForMoodsActivity._temphours = hourOfDay;
+            setDateTime();
+        }
+    }
 
-				isDateChangedEventHappened=true;
+    public void onSetTimeTabClick() {
 
-				DateAndTimePickerForMoodsActivity.this.year=year;
-				DateAndTimePickerForMoodsActivity.this.month=monthOfYear;//+1;
-				DateAndTimePickerForMoodsActivity.this.day=dayOfMonth;
+        isDateTabSelected = false;
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getFragmentManager(), "timePicker");
 
+        dateSelected.setVisibility(View.INVISIBLE);
+        timeSelected.setVisibility(View.VISIBLE);
+//
+//        _datePicker.setVisibility(View.GONE);
+//        timePicker.setVisibility(View.VISIBLE);
 
-			}
-		});
+    }
 
+    public void onCancelClick(View view) {
 
 
+        onBackPressed();
 
+    }
 
 
+    public void onOkClick(View view) {
 
 
-	}
+        MyDate tempDate = setDate();
 
+        String tempCommand = currentCommand;
 
 
+        int currentIndex = mModdModel.moodIdentifer;
 
+        int moodGap = 14;
 
 
+        int startIndex = currentIndex * moodGap;
 
-	public void onhomeButttonClick(View view) {
+        int endIndex = startIndex + moodGap;
 
+        String hexDays = daysMonthsHoursToHexValue(tempDate.getDay());//tempMoodValues.substring(0,2);
 
+        String hexMonths = daysMonthsHoursToHexValue(tempDate.getMonth());//tempMoodValues.substring(2,4);
 
-		finish();
+        String hexYears = yearsToHexValue(tempDate.getYear());//tempMoodValues.substring(4,8);
 
-		Intent intent = new Intent(this, HomeActivity.class);
-		startActivity(intent);
-		// overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
-		//overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);
-		KisafaApplication.perFormActivityBackTransition(this);
+        String hexHours = daysMonthsHoursToHexValue(tempDate.getHour());//tempMoodValues.substring(8,10);
 
+        String hexMinutes = daysMonthsHoursToHexValue(tempDate.getMinute());//tempMoodValues.substring(10,12);
 
 
+        if (reapeatCB.isChecked()) {
 
-	}
+            tempCommand = tempCommand.substring(0, startIndex) + AppKeys.KEY_CASE_REPEAT + hexHours + hexMinutes + tempCommand.substring(endIndex - 2, tempCommand.length());
 
-	public void onbackClick(View view)
-	{
+            mModdModel.isRepeatOn = "1";
 
-		onBackPressed();
+        } else {
 
-	}
+            tempCommand = tempCommand.substring(0, startIndex) + hexDays + hexMonths + hexYears + hexHours + hexMinutes + tempCommand.substring(endIndex - 2, tempCommand.length());
 
+            mModdModel.isRepeatOn = "0";
+        }
 
-	@Override
-	public void onBackPressed() {
 
+        commandtoModify = tempCommand;
 
 
-		super.onBackPressed();
+        if (mModdModel.time == null) {
 
-		finish();
+            mModdModel.time = HomeActivity.getAndroidStringDateFromDate(tempDate);
+            mModdModel.save();
 
-		Intent intent = new Intent(DateAndTimePickerForMoodsActivity.this, Moods_RoomAndSwitchesTCPActivity.class);
+            currentCommand = commandtoModify;
 
-		String mRoomId = getIntent().getStringExtra(AppKeys.KEY_ROOM_ID_TAG);
-		String mRoomTitle = getIntent().getStringExtra(AppKeys.KEY_ROOM_TITLE_TAG);
+            onBackPressed();
 
-		String swId = getIntent().getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
+        } else {
 
-		intent.putExtra("CMD", currentCommand);
-		intent.putExtra(AppKeys.KEY_ROOM_ID_TAG, mRoomId);
-		intent.putExtra(AppKeys.KEY_ROOM_TITLE_TAG, mRoomTitle);
-		intent.putExtra(AppKeys.KEY_SWITCH_ID_TAG, swId);
-		intent.putExtra("scroll", (Parcelable) getIntent().getParcelableExtra("scroll"));
 
-		KisafaApplication.perFormActivityBackTransition(this);
+            String currentMoodButton1 = getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD));
+            String currentMoodButton2 = getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD));
+            String currentMoodButton3 = getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD));
 
-		startActivity(intent);
+            if (!currentMoodButton1.substring(12, 14).equals("00") || !currentMoodButton2.substring(12, 14).equals("00") || !currentMoodButton3.substring(12, 14).equals("00")) {
 
+                WaitingStaticProgress.showProgressDialog("Please wait...", DateAndTimePickerForMoodsActivity.this);
+                startTCPClient();
 
+                mModdModel.time = HomeActivity.getAndroidStringDateFromDate(tempDate);
 
+            } else {
+                mModdModel.time = HomeActivity.getAndroidStringDateFromDate(tempDate);
+                mModdModel.save();
 
 
-	}
+                currentCommand = commandtoModify;
 
-	public DatePicker getDatePicker()
-	{
+                onBackPressed();
 
-		DatePicker tempdatePicker=new DatePicker(this, null, R.style.CustomDatePickerTheme);
+            }
 
-		tempdatePicker.setSpinnersShown(true);
 
+        }
 
-		return tempdatePicker;
-	}
 
+    }
 
 
-	public void onSetDateTabClick(View view)
-	{
+    public String daysMonthsHoursToHexValue(int value) {
+        String temp = "";
 
-		isDateTabSelected=true;
+        temp = Integer.toString(value, 16);
 
+        if (temp.length() == 1) {
+            temp = "0" + temp;
+        }
 
-		datePicker.setVisibility(View.VISIBLE);
-		timePicker.setVisibility(View.GONE);
+        return temp;
 
-		dateSelected.setVisibility(View.VISIBLE);
-		timeSelected.setVisibility(View.INVISIBLE);
+    }
 
+    public String yearsToHexValue(int value) {
+        String temp = "" + value;
 
-	}
+        String completeYear = "";
 
-	public void onSetTimeTabClick(View view)
-	{
+        completeYear = Integer.toString(value, 16);
 
-		isDateTabSelected=false;
+        if (completeYear.length() < 4) {
 
-		dateSelected.setVisibility(View.INVISIBLE);
-		timeSelected.setVisibility(View.VISIBLE);
+            completeYear = "0" + completeYear;
+        }
 
-		datePicker.setVisibility(View.GONE);
-		timePicker.setVisibility(View.VISIBLE);
 
-	}
+        return completeYear;
 
-	public void onCancelClick(View view)
-	{
+    }
 
+    public MyDate setDate() {
 
-		onBackPressed();
 
-	}
+        int hour = _temphours;
+        int min = _tempminutes;
 
+        Calendar cal = Calendar.getInstance();
 
-	public void onOkClick(View view)
-	{
+        //calendar.set(year, month, day+1);
 
 
-		MyDate tempDate=setDate();
+        cal.set(year, month, day, hour, min);
 
-		String tempCommand=currentCommand;
+        String dayLongName = cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
+        dayLongName = dayLongName.substring(0, 1).toUpperCase() + dayLongName.substring(1, dayLongName.length());
 
-		int currentIndex=mModdModel.moodIdentifer;
+        String monthNmae = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
-		int moodGap=14;
+        monthNmae = monthNmae.substring(0, 1).toUpperCase() + monthNmae.substring(1);
 
+        String tempDay = "";
 
-		int startIndex=currentIndex*moodGap;
+        if (day < 10) {
 
-		int endIndex=startIndex + moodGap;
+            tempDay = "0" + day;
 
-		String hexDays=daysMonthsHoursToHexValue(tempDate.getDay());//tempMoodValues.substring(0,2);
+        } else {
+            tempDay = "" + day;
+        }
 
-		String hexMonths=daysMonthsHoursToHexValue(tempDate.getMonth());//tempMoodValues.substring(2,4);
+        dateTV.setText(dayLongName.substring(0, 3) + ", " + monthNmae.substring(0, 3) + " " + tempDay);
+        dateDaysTV.setText(tempDay);
 
-		String hexYears=yearsToHexValue(tempDate.getYear());//tempMoodValues.substring(4,8);
 
-		String hexHours=daysMonthsHoursToHexValue(tempDate.getHour());//tempMoodValues.substring(8,10);
+        String temphour = "";
 
-		String hexMinutes=daysMonthsHoursToHexValue(tempDate.getMinute());//tempMoodValues.substring(10,12);
+        if (hour < 10) {
 
+            temphour = "0" + hour;
 
+        } else {
+            temphour = "" + hour;
+        }
 
 
-		if(reapeatCB.isChecked())
-		{
+        String tempMin = "";
 
-			tempCommand=tempCommand.substring(0,startIndex) + AppKeys.KEY_CASE_REPEAT +hexHours+hexMinutes + tempCommand.substring(endIndex-2 ,tempCommand.length());
+        if (min < 10) {
 
-			mModdModel.isRepeatOn="1";
+            tempMin = "0" + min;
 
-		}
-		else
-		{
+        } else {
+            tempMin = "" + min;
+        }
 
-			tempCommand=tempCommand.substring(0,startIndex) + hexDays + hexMonths + hexYears +hexHours+hexMinutes+tempCommand.substring(endIndex-2 ,tempCommand.length());
 
-			mModdModel.isRepeatOn="0";
-		}
+        timeTV.setText(temphour + ":" + tempMin);
 
 
+        return new MyDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
 
+    }
 
-		commandtoModify=tempCommand;
 
+    public static void setDateTime() {
 
-		if(mModdModel.time==null)
-		{
 
-			mModdModel.time=HomeActivity.getAndroidStringDateFromDate(tempDate);
-			mModdModel.save();
+        Calendar calendar = Calendar.getInstance();
 
-			currentCommand=commandtoModify;
+        calendar.set(year, month, day, _temphours, _tempminutes);
 
-			onBackPressed();
 
-		}
-		else
-		{
+        String dayLongName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
+        dayLongName = dayLongName.substring(0, 1).toUpperCase() + dayLongName.substring(1);
 
+        String monthNmae = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
+        monthNmae = monthNmae.substring(0, 1).toUpperCase() + monthNmae.substring(1);
 
-			String currentMoodButton1=getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD));
-			String currentMoodButton2=getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD));
-			String currentMoodButton3=getButtonCurrentMood(mModdModel.moodIdentifer, AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD));
+        String tempDay = "";
 
-			if(!currentMoodButton1.substring(12, 14).equals("00") || !currentMoodButton2.substring(12, 14).equals("00") || !currentMoodButton3.substring(12, 14).equals("00"))
-			{
+        if (day < 10) {
 
-				WaitingStaticProgress.showProgressDialog("Please wait...", DateAndTimePickerForMoodsActivity.this);
-				startTCPClient();
+            tempDay = "0" + day;
 
-				mModdModel.time=HomeActivity.getAndroidStringDateFromDate(tempDate);
+        } else {
+            tempDay = "" + day;
+        }
 
-			}
+        dateTV.setText(dayLongName.substring(0, 3) + ", " + monthNmae.substring(0, 3) + " " + tempDay);
 
-			else
-			{
-				mModdModel.time=HomeActivity.getAndroidStringDateFromDate(tempDate);
-				mModdModel.save();
+        dateDaysTV.setText(tempDay);
 
 
-				currentCommand=commandtoModify;
+        String temphour = "";
 
-				onBackPressed();
+        if (_temphours < 10) {
 
-			}
+            temphour = "0" + _temphours;
 
+        } else {
+            temphour = "" + _temphours;
+        }
 
 
-		}
+        String tempMin = "";
 
+        if (_tempminutes < 10) {
 
-	}
+            tempMin = "0" + _tempminutes;
 
+        } else {
+            tempMin = "" + _tempminutes;
+        }
 
-	public String daysMonthsHoursToHexValue(int value)
-	{
-		String temp="";
 
-		temp=Integer.toString(value, 16);
+        timeTV.setText(temphour + ":" + tempMin);
 
-		if(temp.length()==1)
-		{
-			temp="0"+temp;
-		}
+    }
 
-		return temp;
 
-	}
+    public void setRepeatDate(int hour, int min) {
 
-	public String yearsToHexValue(int value)
-	{
-		String temp=""+value;
 
-		String completeYear="";
+        Calendar calendar = Calendar.getInstance();
 
-		completeYear=Integer.toString(value, 16);
+        calendar.set(year, month = month, day, hour, min);
 
-		if(completeYear.length()<4)
-		{
 
-			completeYear="0" + completeYear;
-		}
+        String dayLongName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
+        dayLongName = dayLongName.substring(0, 1).toUpperCase() + dayLongName.substring(1);
 
-		return completeYear;
+        String monthNmae = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
 
-	}
+        monthNmae = monthNmae.substring(0, 1).toUpperCase() + monthNmae.substring(1);
 
-	public MyDate  setDate()
-	{
+        String tempDay = "";
 
+        if (day < 10) {
 
+            tempDay = "0" + day;
 
-		int hour = timePicker.getCurrentHour();
-		int min = timePicker.getCurrentMinute();
+        } else {
+            tempDay = "" + day;
+        }
 
-		Calendar cal= Calendar.getInstance();
+        dateTV.setText(dayLongName.substring(0, 3) + ", " + monthNmae.substring(0, 3) + " " + tempDay);
 
-		//calendar.set(year, month, day+1);
+        dateDaysTV.setText(tempDay);
 
 
+        String temphour = "";
 
+        if (hour < 10) {
 
-		cal.set(year, month, day, hour, min);
+            temphour = "0" + hour;
 
-		String dayLongName = cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
+        } else {
+            temphour = "" + hour;
+        }
 
-		dayLongName=dayLongName.substring(0,1).toUpperCase()+dayLongName.substring(1,dayLongName.length());
 
-		String monthNmae =   calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
+        String tempMin = "";
 
-		monthNmae=monthNmae.substring(0,1).toUpperCase()+monthNmae.substring(1);
+        if (min < 10) {
 
-		String tempDay="";
+            tempMin = "0" + min;
 
-		if(day<10)
-		{
+        } else {
+            tempMin = "" + min;
+        }
 
-			tempDay="0"+day;
 
-		}
-		else
-		{
-			tempDay=""+day;
-		}
+        timeTV.setText(temphour + ":" + tempMin);
 
-		dateTV.setText(dayLongName.substring(0,3)+", "+ monthNmae.substring(0,3)+" "+tempDay);
+    }
 
-		dateDaysTV.setText(tempDay);
 
+    public void handleIntent() {
+        try {
 
+            Intent intent = getIntent();
 
-		String temphour="";
 
-		if(hour<10)
-		{
+            currentCommand = intent.getStringExtra("CMD");
 
-			temphour="0"+hour;
+            String moodId = intent.getStringExtra(AppKeys.KEY_MOOD_ID_TAG);
 
-		}
-		else
-		{
-			temphour=""+hour;
-		}
+            try {
+                mModdModel = new Select().from(Mood_Model.class).where("Mood_Model.moodId = ?", moodId).executeSingle();
+            } catch (Exception ex) {
+                ex.toString();
+            }
 
+            String switchId = intent.getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
 
 
-		String tempMin="";
+            mSwitchModel = getSwitchFromDb(switchId);
 
-		if(min<10)
-		{
 
-			tempMin="0"+min;
+            if (mModdModel.moodIdentifer > 6 && mModdModel.moodIdentifer < 14)
+                ((TextView) findViewById(R.id.tv_title)).setText(mModdModel.title);
+            else
+                ((TextView) findViewById(R.id.tv_title)).setText(getMoodTitle(mModdModel.moodIdentifer));
 
-		}
-		else
-		{
-			tempMin=""+min;
-		}
 
+        } catch (Exception ex) {
+            ex.toString();
+        }
+    }
 
-		timeTV.setText(temphour+":" + tempMin);
+    public String getMoodTitle(int identifer) {
 
 
+        if (identifer >= 1) {
 
+            if (identifer == 1) {
+                return getResources().getString(R.string.Travel);
+            } else if (identifer == 2) {
+                return getResources().getString(R.string.Sleep);
+            } else if (identifer == 3) {
+                return getResources().getString(R.string.Wakeup);
+            } else if (identifer == 4) {
+                return getResources().getString(R.string.Guest);
+            } else if (identifer == 5) {
+                return getResources().getString(R.string.Living);
+            } else if (identifer == 6) {
+                return getResources().getString(R.string.Safety);
+            } else if (identifer == 14) {
+                return getResources().getString(R.string.Away);
+            }
 
-		return new MyDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
+        }
 
-	}
+        return "";
+    }
 
+    private Switch_Model getSwitchFromDb(String roomId) {
+        Switch_Model switchModel = null;
 
+        try {
+            switchModel = new Select().from(Switch_Model.class).where("switch_id = ?", roomId).executeSingle();
+        } catch (Exception ex) {
+            ex.toString();
+        }
 
-	public void setDate(int hour, int min)
-	{
+        return switchModel;
 
+    }
 
 
+    public String getHextoSQLDate(String day, String month, String year, String min, String hour, boolean repeat) {
 
 
-		Calendar calendar= Calendar.getInstance();
+        int days = Integer.parseInt(day, 16);
+        int months = Integer.parseInt(month, 16);
+        int years = Integer.parseInt(year, 16);
+        int mins = Integer.parseInt(min, 16);
+        int hours = Integer.parseInt(hour, 16);
 
-		calendar.set(year, month=month-1, day,hour,min);
+        Calendar cal = Calendar.getInstance();
 
+        if (repeat) {
 
+            cal.set(Calendar.YEAR, 1990);
+            cal.set(Calendar.MONTH, 0);
+            cal.set(Calendar.DAY_OF_MONTH, 0);
+            cal.set(Calendar.HOUR_OF_DAY, hours);
+            cal.set(Calendar.MINUTE, mins);
+            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.MILLISECOND, 0);
 
 
-		String dayLongName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
+        } else {
+            cal.set(Calendar.YEAR, 2016);
+            cal.set(Calendar.MONTH, 8);
+            cal.set(Calendar.DAY_OF_MONTH, 53);
+            cal.set(Calendar.HOUR_OF_DAY, hours);
+            cal.set(Calendar.MINUTE, 10);
+            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.MILLISECOND, 0);
 
-		dayLongName=dayLongName.substring(0,1).toUpperCase()+dayLongName.substring(1);
 
-		String monthNmae =   calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
+        }
 
-		monthNmae=monthNmae.substring(0,1).toUpperCase()+monthNmae.substring(1);
 
-		String tempDay="";
+        Date date = cal.getTime();
 
-		if(day<10)
-		{
 
-			tempDay="0"+day;
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormate);
+        String dateString = sdf.format(date);
 
-		}
-		else
-		{
-			tempDay=""+day;
-		}
+        return dateString;
 
-		dateTV.setText(dayLongName.substring(0,3)+", "+ monthNmae.substring(0,3)+" "+tempDay);
+    }
 
-		dateDaysTV.setText(tempDay);
 
+    public boolean isValidDateAndTime(String day, String month, String year, String min, String hour) {
 
 
-		String temphour="";
+        int days = Integer.parseInt(day, 16);
+        int months = Integer.parseInt(month, 16);
+        int years = Integer.parseInt(year, 16);
+        int mins = Integer.parseInt(min, 16);
+        int hours = Integer.parseInt(hour, 16);
 
-		if(hour<10)
-		{
 
-			temphour="0"+hour;
+        if (days == 0) {
+            return false;
+        }
 
-		}
-		else
-		{
-			temphour=""+hour;
-		}
+        if (months == 0) {
+            return false;
+        }
 
+        if (years == 0) {
+            return false;
+        }
 
 
-		String tempMin="";
+        return true;
 
-		if(min<10)
-		{
+    }
 
-			tempMin="0"+min;
 
-		}
-		else
-		{
-			tempMin=""+min;
-		}
+    //-----------------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------
 
 
-		timeTV.setText(temphour+":" + tempMin);
+    Moods_TCPClient_New singleTcpClient;
 
-	}
+    connectTask task;
 
+    boolean isLatestCommand = false;
 
 
-	public void setRepeatDate(int hour, int min)
-	{
+    boolean isSocketConnected = false;
 
+    public static boolean isPerformingFirstConnection = true;
 
 
+    boolean isConnectionFailedEventOccured = false;
 
 
-		Calendar calendar= Calendar.getInstance();
+    private Switch_Model mSwitchModel;
 
-		calendar.set(year, month=month, day,hour,min);
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 
+    public void startTCPClient() {
 
-		String dayLongName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()).toLowerCase();
+        if (!isNetworkAvailable() && AppPreference.getSavedData(mContext, AppKeys.KEY_REMOTE_OPTION_TAG)) {
+            WaitingStaticProgress.hideProgressDialog();
 
-		dayLongName=dayLongName.substring(0,1).toUpperCase()+dayLongName.substring(1);
+            final CustomSimpleAlertDialogue cusDial = new CustomSimpleAlertDialogue(mContext, "No internet connection found");
 
-		String monthNmae =   calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()).toLowerCase();
+            cusDial.setListner(new CustomDialogueClickListner() {
 
-		monthNmae=monthNmae.substring(0,1).toUpperCase()+monthNmae.substring(1);
+                @Override
+                public void onCustomDialogueClick() {
 
-		String tempDay="";
 
-		if(day<10)
-		{
+                    cusDial.dismiss();
 
-			tempDay="0"+day;
+                    Intent intent = new Intent(DateAndTimePickerForMoodsActivity.this, MoodsRoomWithSwitchesActivity.class);
 
-		}
-		else
-		{
-			tempDay=""+day;
-		}
+                    String mRoomId = getIntent().getStringExtra(AppKeys.KEY_ROOM_ID_TAG);
+                    String mRoomTitle = getIntent().getStringExtra(AppKeys.KEY_ROOM_TITLE_TAG);
 
-		dateTV.setText(dayLongName.substring(0,3)+", "+ monthNmae.substring(0,3)+" "+tempDay);
+                    String swId = getIntent().getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
 
-		dateDaysTV.setText(tempDay);
+                    intent.putExtra("CMD", currentCommand);
+                    intent.putExtra(AppKeys.KEY_ROOM_ID_TAG, mRoomId);
+                    intent.putExtra(AppKeys.KEY_ROOM_TITLE_TAG, mRoomTitle);
+                    intent.putExtra(AppKeys.KEY_SWITCH_ID_TAG, swId);
 
+                    overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);
 
+                    startActivity(intent);
 
-		String temphour="";
+                    finish();
 
-		if(hour<10)
-		{
 
-			temphour="0"+hour;
+                }
+            });
 
-		}
-		else
-		{
-			temphour=""+hour;
-		}
 
+            cusDial.show();
 
+            return;
+        }
+        command1 = "";
+        command2 = "";
+        command3 = "";
 
-		String tempMin="";
+        singleTcpClient = null;
 
-		if(min<10)
-		{
+        task = new connectTask();
+        task.execute("");
 
-			tempMin="0"+min;
+    }
 
-		}
-		else
-		{
-			tempMin=""+min;
-		}
 
+    public void stopTCPClient() {
 
-		timeTV.setText(temphour+":" + tempMin);
+        command1 = "";
+        command2 = "";
+        command3 = "";
 
-	}
+        try {
+            if (singleTcpClient != null) {
+                singleTcpClient.stopClient();
 
+                task.cancel(true);
+                task = null;
+            }
+        } catch (Exception ex) {
 
-	public void handleIntent() {
-		try {
+        }
 
-			Intent intent = getIntent();
+    }
 
 
-			currentCommand=intent.getStringExtra("CMD");
+    public class connectTask extends AsyncTask<String, String, Moods_TCPClient_New> {
 
-			String moodId = intent.getStringExtra(AppKeys.KEY_MOOD_ID_TAG);
+        boolean firstMessageArrived = false;
 
-			try
-			{
-				mModdModel = new Select().from(Mood_Model.class).where("Mood_Model.moodId = ?", moodId ).executeSingle();
-			}catch(Exception ex)
-			{
-				ex.toString();
-			}
+        int currentActionIndex = 0;
 
-			String switchId = intent.getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
+        @Override
+        protected Moods_TCPClient_New doInBackground(String... message) {
 
+            //we create a TCPClient object and
+            try {
+                if (singleTcpClient == null) {
 
-			mSwitchModel=getSwitchFromDb(switchId);
+                    firstMessageArrived = false;
 
 
-			if(mModdModel.moodIdentifer > 6 && mModdModel.moodIdentifer < 14)
-				((TextView)findViewById(R.id.tv_title)).setText(mModdModel.title);
-			else
-				((TextView)findViewById(R.id.tv_title)).setText(getMoodTitle(mModdModel.moodIdentifer));
+                    singleTcpClient = new Moods_TCPClient_New(new Moods_TCPClient_New.OnMessageReceived() {
+                        @Override
 
+                        public void messageReceived(final String message) {
 
-		} catch (Exception ex) {
-			ex.toString();
-		}
-	}
 
-	public  String getMoodTitle(int identifer)
-	{
+                            currentActionIndex = 2;
 
+                            isSocketConnected = true;
 
+                            onProgressUpdate(message);
 
-		if(identifer>=1)
-		{
+                        }
 
-			if(identifer==1)
-			{
-				return getResources().getString(R.string.Travel);
-			}
-			else if(identifer==2)
-			{
-				return getResources().getString(R.string.Sleep);
-			}
-			else if(identifer==3)
-			{
-				return getResources().getString(R.string.Wakeup);
-			}
-			else if(identifer==4)
-			{
-				return getResources().getString(R.string.Guest);
-			}
-			else if(identifer==5)
-			{
-				return getResources().getString(R.string.Living);
-			}
-			else if(identifer==6)
-			{
-				return getResources().getString(R.string.Safety);
-			}
-			else if(identifer==14)
-			{
-				return getResources().getString(R.string.Away);
-			}
+                        @Override
+                        public void onsocketConnectionClosed(String message) {
 
-		}
 
-		return "";
-	}
+                            currentActionIndex = 5;
+                            isSocketConnected = false;
+                            isConnectionFailedEventOccured = true;
+                            onProgressUpdate(message);
 
-	private Switch_Model getSwitchFromDb(String roomId) {
-		Switch_Model switchModel = null;
 
-		try {
-			switchModel = new Select().from(Switch_Model.class).where("switch_id = ?", roomId).executeSingle();
-		} catch (Exception ex) {
-			ex.toString();
-		}
+                        }
 
-		return switchModel;
+                        @Override
+                        public void onsocketConnectionFailer(String message) {
 
-	}
+                            isSocketConnected = false;
+                            currentActionIndex = 4;
+                            isConnectionFailedEventOccured = true;
+                            onProgressUpdate(message);
+                        }
 
+                        @Override
+                        public void onSocketConnection(String message) {
 
+                            isSocketConnected = true;
 
+                            isConnectionFailedEventOccured = false;
 
-	public String getHextoSQLDate(String day,String month ,String year,String min,String hour,boolean repeat)
-	{
 
+                            currentActionIndex = 1;
 
-		int days=Integer.parseInt(day,16);
-		int months=Integer.parseInt(month,16);
-		int years=Integer.parseInt(year,16);
-		int mins=Integer.parseInt(min,16);
-		int hours=Integer.parseInt(hour,16);
+                            onProgressUpdate(message);
 
-		Calendar cal = Calendar.getInstance();
 
-		if(repeat)
-		{
+                        }
 
-			cal.set(Calendar.YEAR, 1990);
-			cal.set(Calendar.MONTH, 0);
-			cal.set(Calendar.DAY_OF_MONTH, 0);
-			cal.set(Calendar.HOUR_OF_DAY, hours);
-			cal.set(Calendar.MINUTE, mins);
-			cal.set(Calendar.SECOND, 0);
-			cal.set(Calendar.MILLISECOND, 0);
+                        @Override
+                        public void onSocketSelfClose(String message) {
 
+                            currentActionIndex = 3;
+                            isSocketConnected = false;
+                            isConnectionFailedEventOccured = true;
+                            onProgressUpdate(message);
 
-		}
-		else
-		{
-			cal.set(Calendar.YEAR, 2016);
-			cal.set(Calendar.MONTH, 8);
-			cal.set(Calendar.DAY_OF_MONTH, 53);
-			cal.set(Calendar.HOUR_OF_DAY, hours);
-			cal.set(Calendar.MINUTE, 10);
-			cal.set(Calendar.SECOND, 0);
-			cal.set(Calendar.MILLISECOND, 0);
+                        }
+                    }, DateAndTimePickerForMoodsActivity.this);
+                    singleTcpClient.run();
+                }
 
+            } catch (Exception ex) {
+            }
 
-		}
+            return null;
+        }
 
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
 
-		Date date=cal.getTime();
+            //hello
 
+            switch (currentActionIndex) {
+                case 1:
+                    onsocketConnection("");
+                    break;
 
+                case 2:
 
 
-		SimpleDateFormat sdf = new SimpleDateFormat(dateFormate);
-		String dateString = sdf.format(date);
+                    readMessageReponse(values[0]);
 
-		return dateString;
 
-	}
+                    break;
 
+                case 3:
 
-	public boolean  isValidDateAndTime(String day,String month ,String year,String min,String hour)
-	{
 
+                    onSocketConnectedSelfClose(values[0]);
 
-		int days=Integer.parseInt(day,16);
-		int months=Integer.parseInt(month,16);
-		int years=Integer.parseInt(year,16);
-		int mins=Integer.parseInt(min,16);
-		int hours=Integer.parseInt(hour,16);
 
+                    break;
 
 
-		if(days==0)
-		{
-			return false;
-		}
+                case 4:
 
-		if(months==0)
-		{
-			return false;
-		}
 
-		if(years==0)
-		{
-			return false;
-		}
+                    unableToCreateConnection(values[0]);
+                    break;
 
 
+                case 5:
 
-		return true;
 
-	}
+                    onSocketTimeOutFailier(values[0]);
 
 
+                    break;
 
-	//-----------------------------------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------------------------------
 
+                default:
+                    break;
+            }
 
+        }
 
 
-	Moods_TCPClient_New singleTcpClient;
+    }
 
-	connectTask task;
 
-	boolean isLatestCommand=false;
+    //----------------------------------------------------------------------------------------------------------------------
 
 
-	boolean isSocketConnected=false;
+    public void onsocketConnection(String message) {
 
-	public static  boolean isPerformingFirstConnection=true;
 
+        String tempButtomType = Buttons.BUTTON_ONE.getValue();
 
-	boolean  isConnectionFailedEventOccured=false;
 
+        if (message.trim().length() == 0) {
+            tempButtomType = Buttons.BUTTON_ONE.getValue();
+        }
 
-	private Switch_Model mSwitchModel;
 
+        if (message.trim().length() > 0) {
+            tempButtomType = message;
+        }
 
+        byte[] cmd = MoodsCommandManager.requestReadCommand(mSwitchModel.mac_address.substring(0, 6), mSwitchModel.type, tempButtomType);
 
 
+        singleTcpClient.setCallbackForGetCommand(new ServerMessageResopnse() {
 
-	private  boolean isNetworkAvailable() {
-		ConnectivityManager connectivityManager
-				= (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-		return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-	}
 
+            @Override
+            public void onGetCommandFromServer(final String cmd) {
 
 
+                if (command1.length() == 0) {
+                    command1 = cmd;
 
-	public void startTCPClient()
-	{
+                    if (mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue())) {
+                        onsocketConnection(Buttons.BUTTON_TWO.getValue());
+                    } else {
 
-		if(!isNetworkAvailable()&& AppPreference.getSavedData(mContext, AppKeys.KEY_REMOTE_OPTION_TAG))
-		{
-			WaitingStaticProgress.hideProgressDialog();
 
-			final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(mContext,"No internet connection found");
+                        String tempReadCMD = cmd;
 
-			cusDial.setListner(new CustomDialogueClickListner() {
 
-				@Override
-				public void onCustomDialogueClick() {
+                        String cmdToWrite = prePareWiteCommandForButton1(commandtoModify, tempReadCMD);
 
+                        byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
-					cusDial.dismiss();
+                        singleTcpClient.sendMessageByte(temp);
 
-					Intent intent = new Intent(DateAndTimePickerForMoodsActivity.this, MoodsRoomWithSwitchesActivity.class);
+                        isWiriteResponseArrived = false;
 
-					String mRoomId = getIntent().getStringExtra(AppKeys.KEY_ROOM_ID_TAG);
-					String mRoomTitle = getIntent().getStringExtra(AppKeys.KEY_ROOM_TITLE_TAG);
+                        //currentCommand=cmdToWrite;
 
-					String swId = getIntent().getStringExtra(AppKeys.KEY_SWITCH_ID_TAG);
+                        //wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
-					intent.putExtra("CMD", currentCommand);
-					intent.putExtra(AppKeys.KEY_ROOM_ID_TAG, mRoomId);
-					intent.putExtra(AppKeys.KEY_ROOM_TITLE_TAG, mRoomTitle);
-					intent.putExtra(AppKeys.KEY_SWITCH_ID_TAG, swId);
 
-					overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);
+                    }
 
-					startActivity(intent);
 
-					finish();
+                } else if (command2.length() == 0) {
+                    command2 = cmd;
+                    if (mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue())) {
+                        onsocketConnection(Buttons.BUTTON_THREE.getValue());
+                    } else {
 
+                        getActiveButtonsforCurrentMood();
 
 
-				}
-			});
+                        String buttonCommand = "";
 
+                        if (isButtonOneActive) {
+                            buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
 
-			cusDial.show();
 
-			return;
-		}
-		command1="";
-		command2="";
-		command3="";
+                        } else if (isButtonTwoActive) {
+                            buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-		singleTcpClient=null;
+                        }
 
-		task=new connectTask();
-		task.execute("");
+                        String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, cmd);
 
-	}
+                        String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
+                        byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
-	public void stopTCPClient()
-	{
+                        singleTcpClient.sendMessageByte(temp);
 
-		command1="";
-		command2="";
-		command3="";
+                        isWiriteResponseArrived = false;
 
-		try
-		{
-			if(singleTcpClient!=null)
-			{
-				singleTcpClient.stopClient();
+                        //currentCommand=cmdToWrite;
 
-				task.cancel(true);
-				task=null;
-			}
-		}catch(Exception ex)
-		{
 
-		}
+                        //wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
-	}
+                    }
 
+                } else {
 
-	public  class connectTask extends AsyncTask<String,String,Moods_TCPClient_New> {
+                    command3 = cmd;
 
-		boolean firstMessageArrived=false;
+                    getActiveButtonsforCurrentMood();
 
-		int currentActionIndex=0;
+                    //wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
-		@Override
-		protected Moods_TCPClient_New doInBackground(String... message) {
 
-			//we create a TCPClient object and
-			try
-			{
-				if(singleTcpClient==null)
-				{
+                    String buttonCommand = "";
 
-					firstMessageArrived=false;
+                    if (isButtonOneActive) {
+                        buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
 
 
+                    } else if (isButtonTwoActive) {
+                        buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-					singleTcpClient = new Moods_TCPClient_New(new Moods_TCPClient_New.OnMessageReceived() {
-						@Override
+                    } else if (isButtonThreeActive) {
 
-						public void messageReceived(final String message) {
+                        buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
 
 
-							currentActionIndex=2;
+                    }
 
-							isSocketConnected=true;
 
-							onProgressUpdate(message);
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, cmd);
 
-						}
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
-						@Override
-						public void onsocketConnectionClosed(String message) {
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
+                    singleTcpClient.sendMessageByte(temp);
 
-							currentActionIndex=5;
-							isSocketConnected=false;
-							isConnectionFailedEventOccured=true;
-							onProgressUpdate(message);
+                    isWiriteResponseArrived = false;
 
+                    //currentCommand=cmdToWrite;
 
 
-						}
+                }
 
-						@Override
-						public void onsocketConnectionFailer(String message) {
 
-							isSocketConnected=false;
-							currentActionIndex=4;
-							isConnectionFailedEventOccured=true;
-							onProgressUpdate(message);
-						}
+            }
+        }, cmd);
 
-						@Override
-						public void onSocketConnection(String message) {
 
-							isSocketConnected=true;
+    }
 
-							isConnectionFailedEventOccured=false;
 
+    public void onSocketTimeOutFailier(String string) {
 
-							currentActionIndex=1;
+        try {
 
-							onProgressUpdate(message);
 
+            runOnUiThread(new Runnable() {
 
-						}
+                @Override
+                public void run() {
 
-						@Override
-						public void onSocketSelfClose(String message) {
+                    WaitingStaticProgress.hideProgressDialog();
 
-							currentActionIndex=3;
-							isSocketConnected=false;
-							isConnectionFailedEventOccured=true;
-							onProgressUpdate(message);
 
-						}
-					},DateAndTimePickerForMoodsActivity.this);
-					singleTcpClient.run();
-				}
+                }
+            });
 
-			}catch(Exception ex){}
 
-			return null;
-		}
+            singleTcpClient.stopClient();
 
-		@Override
-		protected void onProgressUpdate(String... values) {
-			super.onProgressUpdate(values);
 
-			//hello
+        } catch (Exception ex) {
+        }
 
-			switch (currentActionIndex) {
-				case 1:
-					onsocketConnection("");
-					break;
+    }
 
-				case 2:
 
+    public void unableToCreateConnection(String string) {
 
-					readMessageReponse(values[0]);
+        try {
 
 
-					break;
+            runOnUiThread(new Runnable() {
 
-				case 3:
+                @Override
+                public void run() {
 
+                    WaitingStaticProgress.hideProgressDialog();
 
-					onSocketConnectedSelfClose(values[0]);
+                    final CustomSimpleAlertDialogue cusDial = new CustomSimpleAlertDialogue(DateAndTimePickerForMoodsActivity.this, mContext.getString(R.string.Errorinconnection));
 
+                    cusDial.setListner(new CustomDialogueClickListner() {
 
-					break;
+                        @Override
+                        public void onCustomDialogueClick() {
 
 
-				case 4:
+                            cusDial.dismiss();
 
 
-					unableToCreateConnection(values[0]);
-					break;
+                        }
+                    });
 
 
-				case 5:
+                    cusDial.show();
+                }
+            });
 
 
-					onSocketTimeOutFailier(values[0]);
+            singleTcpClient.stopClient();
 
 
+        } catch (Exception ex) {
+        }
+    }
 
-					break;
 
+    private void onSocketConnectedSelfClose(String string) {
 
 
+        try {
 
 
+            runOnUiThread(new Runnable() {
 
+                @Override
+                public void run() {
 
-				default:
-					break;
-			}
+                    WaitingStaticProgress.hideProgressDialog();
 
-		}
 
+                }
+            });
 
+            singleTcpClient.stopClient();
 
+        } catch (Exception ex) {
+        }
 
-	}
 
+    }
 
-	//----------------------------------------------------------------------------------------------------------------------
 
+    public void performEndOperation(String message) {
 
 
-	public void onsocketConnection(String message ) {
+        WaitingStaticProgress.hideProgressDialog();
 
+        currentCommand = message;
 
-		String tempButtomType=Buttons.BUTTON_ONE.getValue();
+        mModdModel.save();
 
+        stopTCPClient();
 
-		if(message.trim().length()==0)
 
-		{
-			tempButtomType=Buttons.BUTTON_ONE.getValue();
-		}
+        runOnUiThread(new Runnable() {
 
+            @Override
+            public void run() {
 
+                onBackPressed();
+            }
+        });
 
-		if(message.trim().length() > 0)
-		{
-			tempButtomType=message;
-		}
 
-		byte[] cmd = MoodsCommandManager.requestReadCommand( mSwitchModel.mac_address.substring(0,6),mSwitchModel.type , tempButtomType );
+    }
 
+    public void UpdateCommand(String message) {
+        currentCommand = message;
 
+    }
 
 
+    private void readMessageReponse(String message) {
 
-		singleTcpClient.setCallbackForGetCommand(new ServerMessageResopnse() {
 
+        saveCurrentResponse(getButtonType(message), message);
 
 
+        if (mSwitchModel.type.equals(SwitchTypes.SWITCH_1.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_SOCKET.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_AC.getValue())) {
 
+            performEndOperation(message);
 
-			@Override
-			public void onGetCommandFromServer(final String cmd) {
 
+        } else if (mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue())) {
 
+            String buttonType = getButtonType(message);
 
-				if(command1.length()==0)
-				{
-					command1=cmd;
 
-					if(mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue()))
-					{
-						onsocketConnection(Buttons.BUTTON_TWO.getValue());
-					}
-					else
-					{
+            if (buttonType.equals(Buttons.BUTTON_ONE.getValue()) && isButtonTwoActive) {
 
+                String buttonCommand = "";
 
-						String tempReadCMD=cmd;
+                buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
 
+                String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
-						String cmdToWrite=prePareWiteCommandForButton1(commandtoModify,tempReadCMD);
+                String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
-						byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
+                byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
-						singleTcpClient.sendMessageByte(temp);
+                singleTcpClient.sendMessageByte(temp);
 
-						isWiriteResponseArrived=false;
 
-						//currentCommand=cmdToWrite;
+                //currentCommand=RoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(currentCommand , cmdToWrite);
 
-						//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
+            } else if (buttonType.equals(Buttons.BUTTON_ONE.getValue()) && (!isButtonTwoActive)) {
+                performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
 
-					}
 
+            } else if (buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
+                performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
 
-				}
-				else if(command2.length()==0)
-				{
-					command2=cmd;
-					if( mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue()))
-					{
-						onsocketConnection(Buttons.BUTTON_THREE.getValue());
-					}
-					else
-					{
 
-						getActiveButtonsforCurrentMood();
+            }
 
 
-						String buttonCommand="";
+        } else if (mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue())) {
 
-						if(isButtonOneActive)
-						{
-							buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
 
+            String buttonType = getButtonType(message);
 
-						}
-						else if(isButtonTwoActive)
-						{
-							buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-						}
+            if (isButtonOneActive && isButtonTwoActive && isButtonThreeActive) {
 
-						String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,cmd);
+                if (buttonType.equals(Buttons.BUTTON_ONE.getValue())) {
 
-						String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
+                    String buttonCommand = "";
 
-						byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
+                    buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-						singleTcpClient.sendMessageByte(temp);
 
-						isWiriteResponseArrived=false;
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
-						//currentCommand=cmdToWrite;
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
 
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
+                    singleTcpClient.sendMessageByte(temp);
+                } else if (buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
 
-						//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+                    String buttonCommand = "";
 
-					}
+                    buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
 
-				}
-				else
-				{
 
-					command3=cmd;
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
-					getActiveButtonsforCurrentMood();
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
-					//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
+                    singleTcpClient.sendMessageByte(temp);
 
-					String buttonCommand="";
+                } else if (buttonType.equals(Buttons.BUTTON_THREE.getValue())) {
 
-					if(isButtonOneActive)
-					{
-						buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
+                    performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
 
+                }
 
-					}
-					else if(isButtonTwoActive)
-					{
-						buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-					}
-					else if(isButtonThreeActive)
-					{
+            } else if (!isButtonOneActive && isButtonTwoActive && isButtonThreeActive) {
 
-						buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
+                if (buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
 
+                    String buttonCommand = "";
 
-					}
+                    buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
 
 
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,cmd);
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
-					singleTcpClient.sendMessageByte(temp);
+                    singleTcpClient.sendMessageByte(temp);
 
-					isWiriteResponseArrived=false;
+                } else if (buttonType.equals(Buttons.BUTTON_THREE.getValue())) {
 
-					//currentCommand=cmdToWrite;
+                    performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
 
+                }
 
 
-				}
+            } else if (!isButtonOneActive && isButtonTwoActive && !isButtonThreeActive) {
 
+                if (buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
 
+                    performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
+                }
 
-			}
-		}, cmd);
 
+            } else if (isButtonOneActive && !isButtonTwoActive && isButtonThreeActive) {
 
+                if (buttonType.equals(Buttons.BUTTON_ONE.getValue())) {
 
+                    String buttonCommand = "";
 
+                    buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
 
-	}
 
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
 
-	public void onSocketTimeOutFailier(String string) {
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
-		try
-		{
+                    singleTcpClient.sendMessageByte(temp);
 
+                } else if (buttonType.equals(Buttons.BUTTON_THREE.getValue())) {
 
+                    performEndOperation(commandtoModify);
 
-			runOnUiThread(new Runnable() {
+                }
 
-				@Override
-				public void run() {
 
-					WaitingStaticProgress.hideProgressDialog();
+            } else if (isButtonOneActive && isButtonTwoActive && !isButtonThreeActive) {
 
+                if (buttonType.equals(Buttons.BUTTON_ONE.getValue())) {
 
-				}
-			});
+                    String buttonCommand = "";
 
+                    buttonCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-			singleTcpClient.stopClient();
 
+                    String cmdToWrite0 = prePareWiteCommandForButton1(commandtoModify, message);
 
-		}catch(Exception ex){}
+                    String cmdToWrite = prePareWiteCommandForButton1(cmdToWrite0, buttonCommand);
 
-	}
 
+                    byte[] temp = MoodsCommandManager.writeCommand(cmdToWrite);
 
+                    singleTcpClient.sendMessageByte(temp);
 
+                } else if (buttonType.equals(Buttons.BUTTON_THREE.getValue()) || buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
 
+                    performEndOperation(commandtoModify);
 
+                }
 
 
-	public void unableToCreateConnection(String string) {
+            } else if (!isButtonOneActive && !isButtonTwoActive && isButtonThreeActive) {
 
-		try
-		{
+                if (buttonType.equals(Buttons.BUTTON_THREE.getValue())) {
 
+                    performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify, message));
 
+                }
 
-			runOnUiThread(new Runnable() {
+            }
 
-				@Override
-				public void run() {
 
-					WaitingStaticProgress.hideProgressDialog();
+        }
 
-					final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(DateAndTimePickerForMoodsActivity.this,mContext.getString(R.string.Errorinconnection));
+    }
 
-					cusDial.setListner(new CustomDialogueClickListner() {
+    public String prePareWiteCommandForButton1(String preCommand, String readCommand) {
 
-						@Override
-						public void onCustomDialogueClick() {
+        String tempCommand = readCommand.substring(0, 8) + RequestTypes.WRITE.getValue() + readCommand.substring(10, readCommand.length());
 
+        int currentIndex = mModdModel.moodIdentifer;
 
-							cusDial.dismiss();
+        int moodGap = 14;
 
+        int startIndex = currentIndex * moodGap;
 
+        int endIndex = startIndex + moodGap;
 
 
-						}
-					});
+        tempCommand = tempCommand.substring(0, startIndex) + preCommand.substring(startIndex, endIndex) + tempCommand.substring(endIndex, tempCommand.length());
 
 
-					cusDial.show();
-				}
-			});
+        return tempCommand;
+    }
 
 
-			singleTcpClient.stopClient();
+    public void getActiveButtonsforCurrentMood() {
 
+        if (mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue())) {
 
-		}catch(Exception ex){}
-	}
+            String buttonOneCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
 
+            String buttonTwoCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-	private void onSocketConnectedSelfClose(String string) {
 
+            if (!getButtonCurrentMoodState(mModdModel.moodIdentifer, buttonOneCommand).equals("00")) {
+                isButtonOneActive = true;
+            } else {
+                isButtonOneActive = false;
+            }
 
-		try
-		{
+            if (!getButtonCurrentMoodState(mModdModel.moodIdentifer, buttonTwoCommand).equals("00")) {
+                isButtonTwoActive = true;
+            } else {
+                isButtonTwoActive = false;
+            }
 
 
+        } else if (mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue())) {
+            String buttonOneCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
 
-			runOnUiThread(new Runnable() {
+            String buttonTwoCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
-				@Override
-				public void run() {
+            String buttonThreeCommand = AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
 
-					WaitingStaticProgress.hideProgressDialog();
 
+            if (!getButtonCurrentMoodState(mModdModel.moodIdentifer, buttonOneCommand).equals("00")) {
+                isButtonOneActive = true;
+            } else {
+                isButtonOneActive = false;
+            }
 
+            if (!getButtonCurrentMoodState(mModdModel.moodIdentifer, buttonTwoCommand).equals("00")) {
+                isButtonTwoActive = true;
+            } else {
+                isButtonTwoActive = false;
+            }
 
-				}
-			});
 
-			singleTcpClient.stopClient();
+            if (!getButtonCurrentMoodState(mModdModel.moodIdentifer, buttonThreeCommand).equals("00")) {
+                isButtonThreeActive = true;
+            } else {
+                isButtonThreeActive = false;
+            }
 
-		}catch(Exception ex){}
 
+        }
 
-	}
 
+    }
 
 
-	public void performEndOperation(String message)
-	{
+    public static String getButtonCurrentMood(int moodIdentifire, String buttonCommand) {
 
+        if (buttonCommand == null || buttonCommand.length() == 0) {
 
-		WaitingStaticProgress.hideProgressDialog();
+            return "00000000000000";
+        }
 
-		currentCommand=message;
+        int currentIndex = moodIdentifire;
 
-		mModdModel.save();
+        int moodGap = 14;
 
-		stopTCPClient();
+        int startIndex = currentIndex * moodGap;
 
+        int endIndex = startIndex + moodGap;
 
-		runOnUiThread(new Runnable() {
 
-			@Override
-			public void run() {
+        return buttonCommand.substring(startIndex, endIndex);
+    }
 
-				onBackPressed();
-			}
-		});
+    public static String getButtonCurrentMoodState(int moodIdentifire, String buttonCommand) {
 
 
-	}
+        String tempMood = getButtonCurrentMood(moodIdentifire, buttonCommand);
 
-	public void UpdateCommand(String message)
-	{
-		currentCommand=message;
+        return tempMood.substring(12, 14);
+    }
 
-	}
 
+    public static String getButtonType(String buttonCommand) {
 
-	private void readMessageReponse(String message) {
 
+        return buttonCommand.substring(12, 14);
+    }
 
-		saveCurrentResponse(getButtonType(message),message);
 
+    public static Point getButtonCurrentMoodIndexes(int moodIdentifire, String buttonCommand) {
 
-		if(mSwitchModel.type.equals(SwitchTypes.SWITCH_1.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_SOCKET.getValue()) || mSwitchModel.type.equals(SwitchTypes.SWITCH_AC.getValue()))
-		{
 
-			performEndOperation(message);
+        int currentIndex = moodIdentifire;
 
+        int moodGap = 14;
 
-		}
-		else if(mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue()))
-		{
+        int startIndex = currentIndex * moodGap;
 
-			String buttonType=getButtonType(message);
+        int endIndex = startIndex + moodGap;
 
+        Point startEndIndexes = new Point(startIndex, endIndex);
 
-			if(buttonType.equals(Buttons.BUTTON_ONE.getValue()) && isButtonTwoActive)
-			{
 
-				String buttonCommand="";
+        return startEndIndexes;
+    }
 
-				buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
 
+    private void saveCurrentResponse(String buttonType, String message) {
+        if (buttonType.equals(Buttons.BUTTON_ONE.getValue())) {
 
-				String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
+            AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_ONE_CMD);
 
-				String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
 
-				byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
+        } else if (buttonType.equals(Buttons.BUTTON_TWO.getValue())) {
+            AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_TWO_CMD);
 
-				singleTcpClient.sendMessageByte(temp);
+        } else if (buttonType.equals(Buttons.BUTTON_THREE.getValue())) {
+            AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_THREE_CMD);
 
-
-
-				//currentCommand=RoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(currentCommand , cmdToWrite);
-
-
-
-
-			}
-			else if(buttonType.equals(Buttons.BUTTON_ONE.getValue()) && (!isButtonTwoActive))
-			{
-				performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-
-
-
-
-			}
-
-			else if(buttonType.equals(Buttons.BUTTON_TWO.getValue()) )
-			{
-				performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-
-
-
-			}
-
-
-
-		}
-		else if(mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue()))
-		{
-
-
-			String buttonType=getButtonType(message);
-
-
-			if(isButtonOneActive && isButtonTwoActive && isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_ONE.getValue()))
-				{
-
-					String buttonCommand="";
-
-					buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
-
-
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
-
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
-
-
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
-
-					singleTcpClient.sendMessageByte(temp);
-				}
-				else if(buttonType.equals(Buttons.BUTTON_TWO.getValue()))
-				{
-
-					String buttonCommand="";
-
-					buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
-
-
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
-
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
-
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
-
-					singleTcpClient.sendMessageByte(temp);
-
-				}
-				else if(buttonType.equals(Buttons.BUTTON_THREE.getValue()))
-				{
-
-					performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-
-				}
-
-
-			}
-
-
-
-			else if(!isButtonOneActive && isButtonTwoActive && isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_TWO.getValue()))
-				{
-
-					String buttonCommand="";
-
-					buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
-
-
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
-
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
-
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
-
-					singleTcpClient.sendMessageByte(temp);
-
-				}
-				else if(buttonType.equals(Buttons.BUTTON_THREE.getValue()))
-				{
-
-					performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-
-				}
-
-
-
-			}
-			else if(!isButtonOneActive && isButtonTwoActive && !isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_TWO.getValue()))
-				{
-
-					performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-				}
-
-
-
-
-			}
-			else if(isButtonOneActive && !isButtonTwoActive && isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_ONE.getValue()))
-				{
-
-					String buttonCommand="";
-
-					buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
-
-
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
-
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
-
-
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
-
-					singleTcpClient.sendMessageByte(temp);
-
-				}
-				else if(buttonType.equals(Buttons.BUTTON_THREE.getValue()))
-				{
-
-					performEndOperation(commandtoModify);
-
-				}
-
-
-
-			}
-			else if(isButtonOneActive && isButtonTwoActive && !isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_ONE.getValue()))
-				{
-
-					String buttonCommand="";
-
-					buttonCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
-
-
-					String cmdToWrite0=prePareWiteCommandForButton1(commandtoModify,message);
-
-					String cmdToWrite=prePareWiteCommandForButton1(cmdToWrite0,buttonCommand);
-
-
-					byte []temp=MoodsCommandManager.writeCommand(cmdToWrite);
-
-					singleTcpClient.sendMessageByte(temp);
-
-				}
-
-				else if(buttonType.equals(Buttons.BUTTON_THREE.getValue()) || buttonType.equals(Buttons.BUTTON_TWO.getValue()))
-				{
-
-					performEndOperation(commandtoModify);
-
-				}
-
-
-
-			}
-
-
-			else if(!isButtonOneActive && !isButtonTwoActive && isButtonThreeActive)
-			{
-
-				if(buttonType.equals(Buttons.BUTTON_THREE.getValue()))
-				{
-
-					performEndOperation(MoodsRoomWithSwitchesActivity.buttonsResponsetoSwitchRespnset2Button(commandtoModify , message));
-
-				}
-
-			}
-
-
-
-
-		}
-
-	}
-
-	public String prePareWiteCommandForButton1(String preCommand, String readCommand)
-	{
-
-		String tempCommand=readCommand.substring(0,8) + RequestTypes.WRITE.getValue() + readCommand.substring(10,readCommand.length());
-
-		int currentIndex=mModdModel.moodIdentifer;
-
-		int moodGap=14;
-
-		int startIndex=currentIndex*moodGap;
-
-		int endIndex=startIndex + moodGap;
-
-
-
-		tempCommand=tempCommand.substring(0,startIndex) + preCommand.substring(startIndex, endIndex)  +tempCommand.substring(endIndex ,tempCommand.length());
-
-
-
-
-		return tempCommand;
-	}
-
-
-	public void getActiveButtonsforCurrentMood()
-	{
-
-		if(mSwitchModel.type.equals(SwitchTypes.SWITCH_2.getValue()))
-		{
-
-			String buttonOneCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
-
-			String buttonTwoCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
-
-
-
-			if(!getButtonCurrentMoodState(mModdModel.moodIdentifer,buttonOneCommand).equals("00"))
-			{
-				isButtonOneActive=true;
-			}
-			else
-			{
-				isButtonOneActive=false;
-			}
-
-			if(!getButtonCurrentMoodState(mModdModel.moodIdentifer,buttonTwoCommand).equals("00"))
-			{
-				isButtonTwoActive=true;
-			}
-			else
-			{
-				isButtonTwoActive=false;
-			}
-
-
-		}
-		else if(mSwitchModel.type.equals(SwitchTypes.SWITCH_3.getValue()))
-		{
-			String buttonOneCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_ONE_CMD);
-
-			String buttonTwoCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_TWO_CMD);
-
-			String buttonThreeCommand=AppPreference.getValue(DateAndTimePickerForMoodsActivity.this, AppKeys.KEY_BUTTON_THREE_CMD);
-
-
-			if(!getButtonCurrentMoodState(mModdModel.moodIdentifer,buttonOneCommand).equals("00"))
-			{
-				isButtonOneActive=true;
-			}
-			else
-			{
-				isButtonOneActive=false;
-			}
-
-			if(!getButtonCurrentMoodState(mModdModel.moodIdentifer,buttonTwoCommand).equals("00"))
-			{
-				isButtonTwoActive=true;
-			}
-			else
-			{
-				isButtonTwoActive=false;
-			}
-
-
-			if(!getButtonCurrentMoodState(mModdModel.moodIdentifer,buttonThreeCommand).equals("00"))
-			{
-				isButtonThreeActive=true;
-			}
-			else
-			{
-				isButtonThreeActive=false;
-			}
-
-
-		}
-
-
-
-
-
-	}
-
-
-
-
-	public static  String getButtonCurrentMood(int moodIdentifire,String buttonCommand)
-	{
-
-		if(buttonCommand==null || buttonCommand.length()==0)
-		{
-
-			return "00000000000000";
-		}
-
-		int currentIndex=moodIdentifire;
-
-		int moodGap=14;
-
-		int startIndex=currentIndex*moodGap;
-
-		int endIndex=startIndex + moodGap;
-
-
-		return  buttonCommand.substring(startIndex, endIndex);
-	}
-
-	public static String getButtonCurrentMoodState(int moodIdentifire,String buttonCommand)
-	{
-
-
-
-		String tempMood=getButtonCurrentMood(moodIdentifire,buttonCommand);
-
-		return  tempMood.substring(12,14);
-	}
-
-
-
-
-
-
-
-	public static String getButtonType(String buttonCommand)
-	{
-
-
-
-
-
-		return  buttonCommand.substring(12,14);
-	}
-
-
-	public static Point getButtonCurrentMoodIndexes(int moodIdentifire,String buttonCommand)
-	{
-
-
-		int currentIndex=moodIdentifire;
-
-		int moodGap=14;
-
-		int startIndex=currentIndex*moodGap;
-
-		int endIndex=startIndex + moodGap;
-
-		Point startEndIndexes=new Point(startIndex, endIndex);
-
-
-		return  startEndIndexes;
-	}
-
-
-	private void saveCurrentResponse(String buttonType,String message)
-	{
-		if(buttonType.equals(Buttons.BUTTON_ONE.getValue()))
-		{
-
-			AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_ONE_CMD);
-
-
-		}
-		else if(buttonType.equals(Buttons.BUTTON_TWO.getValue()))
-		{
-			AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_TWO_CMD);
-
-		}
-		else if(buttonType.equals(Buttons.BUTTON_THREE.getValue()))
-		{
-			AppPreference.saveValue(mContext, message, AppKeys.KEY_BUTTON_THREE_CMD);
-
-		}
-	}
-
-
+        }
+    }
 
 
 }

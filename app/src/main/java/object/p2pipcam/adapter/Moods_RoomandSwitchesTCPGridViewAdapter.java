@@ -291,6 +291,7 @@ public class Moods_RoomandSwitchesTCPGridViewAdapter extends BaseAdapter {
 					.execute();
 		}catch(Exception ex)
 		{
+			ex.printStackTrace();
 			ex.toString();
 		}
 		return switchModelList;

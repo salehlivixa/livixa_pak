@@ -1073,7 +1073,9 @@ public class Sync_Service extends Service implements ServerConnectListener {
 			}).withMessage(errorMessage).withDuration(x).show__();
 			
 		}
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 	}
 	
 	public void showWarning(String message)

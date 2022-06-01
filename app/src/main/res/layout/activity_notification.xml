@@ -4,27 +4,24 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff" >
+    android:background="#fff">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#8669FC"
-        >
+        android:background="#8669FC">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_marginLeft="25dp"
-            >
+            android:orientation="vertical">
 
 
             <RelativeLayout
                 android:id="@+id/rl_bar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/action_bar_size"
-                >
+                android:layout_height="@dimen/action_bar_size">
 
 
                 <ImageView
@@ -56,47 +53,47 @@
         android:layout_height="match_parent"
         android:layout_marginTop="80dp"
         android:background="@drawable/whitebg"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notification_recylerview"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:layout_marginTop="100dp"
             android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginTop="100dp">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ic_no_notifications"
-                />
+                android:src="@drawable/ic_no_notifications" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No notifications"
-                android:textColor="#000"
-                android:textSize="25sp"
-                android:textAlignment="center"
                 android:fontFamily="@font/montbold"
-                />
+                android:text="No notifications"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="You have no notifications right now."
-                android:textAlignment="center"
-                android:fontFamily="@font/montsemibold"
                 android:layout_gravity="center_vertical|center_horizontal"
-                />
+                android:fontFamily="@font/montsemibold"
+                android:text="You have no notifications right now."
+                android:textAlignment="center" />
 
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

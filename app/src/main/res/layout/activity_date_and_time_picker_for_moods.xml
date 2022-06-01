@@ -3,10 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    >
+    android:background="@drawable/bg_1_1">
 
 
     <LinearLayout
@@ -75,10 +73,10 @@
                 <ImageView
                     android:id="@+id/logo"
                     android:layout_width="130dp"
-
                     android:layout_height="70dp"
                     android:layout_marginTop="@dimen/margin_max_x_large2"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/logo"
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -88,9 +86,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-
-
+            android:layout_height="400dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -105,8 +101,8 @@
                     android:layout_width="147dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/calender_tab_left"
-                    android:clickable="true"
-                    android:onClick="onSetDateTabClick"
+
+
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -166,9 +162,7 @@
                     android:layout_height="51dp"
                     android:layout_marginLeft="6dp"
                     android:background="@drawable/calender_tab_right"
-                    android:clickable="true"
                     android:gravity="center_vertical"
-                    android:onClick="onSetTimeTabClick"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -218,14 +212,17 @@
 
                 </LinearLayout> -->
             <DatePicker
+                android:visibility="gone"
                 android:id="@+id/dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:datePickerMode="spinner" />
+                style="@style/MySpinnerDatePickerStyle"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:background="#E0E0E0" />
 
             <TimePicker
                 android:id="@+id/tp"
-                style="@style/CustomDatePickerTheme"
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"

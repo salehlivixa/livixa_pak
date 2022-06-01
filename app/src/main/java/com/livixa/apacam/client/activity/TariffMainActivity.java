@@ -26,6 +26,7 @@ import android.widget.TextView;
 import com.livixa.apacam.client.activity.ShSwitchView.OnSwitchStateChangeListener;
 import com.livixa.apacam.client.appconfig.AppKeys;
 import com.livixa.apacam.client.base.KisafaApplication;
+import com.livixa.apacam.client.other.DialogAddTariffAlert;
 import com.livixa.apacam.client.response.tariff_energy.CustomTextWatcher;
 import com.livixa.apacam.client.response.tariff_energy.DecimalFilter;
 import com.livixa.apacam.client.utility.AppPreference;
@@ -237,7 +238,7 @@ private void tariffSettingPopup() {
 	final EditText  upperLimit=(EditText) popupView.findViewById(R.id.upperLimit);
 	final EditText  price=(EditText) popupView.findViewById(R.id.priceTariff);
 	
-	final ShSwitchView   s_switch=(ShSwitchView)popupView.findViewById(R.id.infiniteTriffValue);
+	final ShSwitchView s_switch=(ShSwitchView)popupView.findViewById(R.id.infiniteTriffValue);
 	
 	final PopupWindow popupWindow=new PopupWindow(popupView,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, true);
 
@@ -460,7 +461,8 @@ private void OptionPopup() {
 	TextView tv_cancel=(TextView) popupView.findViewById(R.id.cancelButton);
 	TextView tv_addNewTariff=(TextView) popupView.findViewById(R.id.tv_addNewTariff);
 	TextView tv_deleteAllTariffs=(TextView) popupView.findViewById(R.id.tv_deleteAllTariff);
-	
+	TextView tv_settarrifalert=(TextView) popupView.findViewById(R.id.tv_settarrifalert);
+
 	
 	
 	
@@ -535,7 +537,15 @@ private void OptionPopup() {
 				
 			}
 		});
-	 
+	tv_settarrifalert.setOnClickListener(new OnClickListener() {
+		@Override
+		public void onClick(View view) {
+
+			popupWindow.dismiss();
+			new DialogAddTariffAlert(TariffMainActivity.this);
+
+		}
+	});
 	 
 	 tv_deleteAllTariffs.setOnClickListener(new OnClickListener() {
 			
@@ -704,23 +714,13 @@ private void OptionPopup() {
 	  final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(TariffMainActivity.this,message);
 		
 		cusDial.setListner(new CustomDialogueClickListner() {
-			
 			@Override
 			public void onCustomDialogueClick() {
-				
-				
 				cusDial.dismiss();
-				
-				
-				
-				
 			}
 		});
-		
-		
 		cusDial.show();
-	  
-	  
+
   }
   
   

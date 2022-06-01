@@ -268,8 +268,17 @@
      <item name="android:colorForeground">@color/transparent</item>
      <item name="android:colorForegroundInverse">@color/transparent</item>
     </style>
-    
-    
+
+    <style name="MySpinnerDatePickerStyle" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MySpinnerDatePicker</item>
+    </style>
+
+    <style name="MySpinnerDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+        <item name="colorPrimary">#ff0000</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
     <style name="CustomDThemeSplash" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar.TranslucentDecor">
     <item name="android:windowIsTranslucent">true</item>
     <item name="android:backgroundDimEnabled">false</item>

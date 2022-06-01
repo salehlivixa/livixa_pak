@@ -18,8 +18,10 @@ import com.livixa.apacam.client.response.isdatasyncedwithserver.ShUserCamera;
 import com.livixa.apacam.client.response.isdatasyncedwithserver.Sync_DataRequestToServer;
 import com.livixa.apacam.client.response.isdatasyncedwithserver.Uploaded_Pictures_Response;
 import com.livixa.apacam.client.response.login.LoginResponse;
+import com.livixa.apacam.client.response.notification.NotificatioinResponse;
 import com.livixa.apacam.client.response.register.RegisterResponse;
 import com.livixa.apacam.client.response.request.RequestResponse;
+import com.livixa.apacam.client.response.tariff_energy.TariffAlertResponse;
 import com.livixa.apacam.client.response.tariff_energy.Watage_Response;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -62,11 +64,17 @@ public interface ApiService {
 	@POST(AppWebServices.API_FORGOT)
 	Call<RequestResponse> forgot(@FieldMap Map<String, String> params);
 
+	@FormUrlEncoded
+	@POST(AppWebServices.API_NOTIFICATION)
+	Call<NotificatioinResponse> getNotificatioins(@FieldMap Map<String, Object> params);
 
 	@FormUrlEncoded
 	@POST(AppWebServices.API_WAITAGE)
 	Call<Watage_Response> getWatageDetails(@FieldMap Map<String, Object> params);
-	
+
+	@FormUrlEncoded
+	@POST(AppWebServices.API_TarifAlert)
+	Call<TariffAlertResponse> setTarifAlert(@FieldMap Map<String, Object> params);
 	@FormUrlEncoded
 	@POST(AppWebServices.API_CHANGE_PASS)
 	Call<RequestResponse> changePassword(@FieldMap Map<String, String> params);

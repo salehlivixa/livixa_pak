@@ -25,6 +25,7 @@ public interface AppWebServices {
 	
 	public static final String API_WAITAGE = "wattage.php";
 	public static final String API_WAITAGE2 = "wattage2.php";
+	public static final String API_NOTIFICATION = "notifications.php";
 
 	public static final String API_FORGOT = "forgotpassword.php";
 	public static final String API_CHANGE_PASS = "changepassword.php";
@@ -37,8 +38,9 @@ public interface AppWebServices {
 	public static final String API_SUB_USER_CAM_ASSO = "sub_user_cam_asso.php";
 	
 	public static final String API_EDIT_PROFILE = "edit_profile.php";
-	
-	
+
+
+	public static final String API_TarifAlert = "set_tariffalert.php";
 	
 	public static final String API_UPLOAD_PICTURES = "upload_image.php";
 	

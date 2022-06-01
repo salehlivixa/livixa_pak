@@ -9,8 +9,8 @@ android {
         applicationId "com.livixa.client"
         minSdk 25
         targetSdk 32
-        versionCode 3
-        versionName "0.02"
+        versionCode 4
+        versionName "0.03"
     //    resConfigs "en", "ar"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -15,6 +15,8 @@ public class ServerCodes {
 		public static final int UPDATE_PICTURES_REQUEST_CODE = 10015;
 		public static final int FORGOT_REQUEST_CODE = 1001;
 		public static final int WATAGE_REQUEST_CODE = 1012;
+		public static final int NOTIFICATION_REQUEST_CODE = 1013;
+		public static final int TARRIF_ALERT_REQUEST_CODE = 1014;
 		public static final int LOGOUT_REQUEST_CODE = 10003;
 		
 		public static final int CHANGE_CURRENCY_REQUEST_CODE = 10016;

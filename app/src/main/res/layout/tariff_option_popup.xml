@@ -136,7 +136,38 @@
                     
                 </LinearLayout>
 
-                
+                <View android:layout_height="1dp"
+                    android:background="#AD9EBA"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_width="match_parent"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    >
+
+                    <object.p2pipcam.system.MyTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/tv_settarrifalert"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxWidth="200dp"
+                        android:minWidth="50dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/settarifalert"
+                        android:textColor="#2879DD"
+                        android:textSize="19dp" />
+
+
+                </LinearLayout>
  </LinearLayout>
  
             

@@ -50,10 +50,6 @@ public class ColorsAdapter extends RecyclerView.Adapter<ColorsAdapter.ViewHolder
         View v = LayoutInflater.from(mContext).inflate(R.layout.moods_horizontal_listitem_test,parent,false);
         ViewHolder vh = new ViewHolder(v);
 
-       
-        
-        
-        
         
         return vh;
     }
