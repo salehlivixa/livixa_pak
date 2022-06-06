@@ -8,15 +8,14 @@
 <RelativeLayout 
     android:layout_width="140dp"
     android:layout_height="150dp"
-   
     android:orientation="vertical" >
     
     
     
     
     <LinearLayout android:layout_width="120dp"
-        android:id="@+id/tileLayout"
-      android:layout_centerHorizontal="true"
+                       android:id="@+id/tileLayout"
+                       android:layout_centerHorizontal="true"
                         android:layout_height="120dp"
                          android:layout_marginTop="30dp"
                         android:gravity="center"
@@ -35,8 +34,6 @@
                          android:id="@+id/iv_switchName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        
-                        
                         android:gravity="center"
                         android:text="Bed"
                         android:textColor="@color/black"

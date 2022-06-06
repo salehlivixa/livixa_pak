@@ -95,14 +95,14 @@
 
                         <com.livixa.apacam.client.widget.CustomEditText
                             android:id="@+id/roomName"
-                            android:layout_width="220dp"
+                            android:layout_width="200dp"
                             android:layout_height="50dp"
                             android:background="@drawable/add_room_popup_tv_bg"
                             android:fontFamily="@font/montbold"
                             android:hint="@string/RoomName"
                             android:textAlignment="center"
                             android:textColor="@color/grgray"
-                            android:textSize="18sp" />
+                            android:textSize="12sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -120,7 +120,7 @@
                         <ImageView
                             android:id="@+id/iv_img_blob"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            android:layout_height="100dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerHorizontal="true"
                             android:background="@drawable/corner_border_gray"

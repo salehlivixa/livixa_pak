@@ -109,7 +109,7 @@
         <activity
             android:name="com.livixa.apacam.client.activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:theme="@style/Theme.login"
             android:windowSoftInputMode="stateUnspecified|stateHidden" />
         <activity
             android:name="com.livixa.apacam.client.activity.SettingsActivity"

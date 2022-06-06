@@ -70,7 +70,7 @@ public class SwitchScanActivity  extends Activity {
 		    }
 	};
 	
-	private ListView mSwitchListView;
+	private GridView mSwitchListView;
 	
 	private View mEmptyView;
 
@@ -101,7 +101,7 @@ public class SwitchScanActivity  extends Activity {
 	}
 
 	private void initUiComponents() {
-		mSwitchListView = (ListView) findViewById(R.id.switchListView);
+		mSwitchListView = (GridView) findViewById(R.id.switchListView);
 		mEmptyView= findViewById(R.id.switchEmptylayout);
 		btn_discover= (TextView) findViewById(R.id.startScan);
 		cancelButtonLyout=(LinearLayout) findViewById(R.id.cancelButtonLyout);

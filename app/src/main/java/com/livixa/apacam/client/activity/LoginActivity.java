@@ -46,6 +46,7 @@ import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
@@ -79,7 +80,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
-public class LoginActivity extends Activity implements OnClickListener,
+public class LoginActivity extends AppCompatActivity implements OnClickListener,
 		ServerConnectListener {
 
 	// Layout Variables
@@ -120,67 +121,67 @@ public class LoginActivity extends Activity implements OnClickListener,
 
 //		biometric work
 
-//		BiometricManager biometricManager = BiometricManager.from(this);
-//		switch (biometricManager.canAuthenticate(BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {
-//			case BiometricManager.BIOMETRIC_SUCCESS:
-//				Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
-//				break;
-//			case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-//				Log.e("MY_APP_TAG", "No biometric features available on this device.");
-//				break;
-//			case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-//				Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
-//				break;
-//			case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-//				// Prompts the user to create credentials that your app accepts.
-//				final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
-//				enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
-//						BIOMETRIC_STRONG | DEVICE_CREDENTIAL);
-//				startActivityForResult(enrollIntent, REQUEST_CODE);
-//				break;
-//		}
-//
-//		executor = ContextCompat.getMainExecutor(this);
-//		biometricPrompt = new BiometricPrompt(LoginActivity.this,
-//				executor, new BiometricPrompt.AuthenticationCallback()
-//		{
-//			@Override
-//			public void onAuthenticationError(int errorCode,
-//											  @NonNull CharSequence errString) {
-//				super.onAuthenticationError(errorCode, errString);
-//				Toast.makeText(getApplicationContext(),
-//						"Authentication error: " + errString, Toast.LENGTH_SHORT)
-//						.show();
-//			}
-//
-//			@Override
-//			public void onAuthenticationSucceeded(
-//					@NonNull BiometricPrompt.AuthenticationResult result) {
-//				super.onAuthenticationSucceeded(result);
-//				Toast.makeText(getApplicationContext(),
-//						"Authentication succeeded!", Toast.LENGTH_SHORT).show();
-//			}
-//
-//			@Override
-//			public void onAuthenticationFailed() {
-//				super.onAuthenticationFailed();
-//				Toast.makeText(getApplicationContext(), "Authentication failed",
-//						Toast.LENGTH_SHORT)
-//						.show();
-//			}
-//		});
+		BiometricManager biometricManager = BiometricManager.from(this);
+		switch (biometricManager.canAuthenticate(BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {
+			case BiometricManager.BIOMETRIC_SUCCESS:
+				Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
+				break;
+			case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+				Log.e("MY_APP_TAG", "No biometric features available on this device.");
+				break;
+			case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+				Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
+				break;
+			case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+				// Prompts the user to create credentials that your app accepts.
+				final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
+				enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+						BIOMETRIC_STRONG | DEVICE_CREDENTIAL);
+				startActivityForResult(enrollIntent, REQUEST_CODE);
+				break;
+		}
 
-//		promptInfo = new BiometricPrompt.PromptInfo.Builder()
-//				.setTitle("Biometric login for my app")
-//				.setSubtitle("Log in using your biometric credential")
-//				.setNegativeButtonText("Use account password")
-//				.build();
-//
-//
-//		Fingerlogin  = (ImageView) findViewById(R.id.fingerlogin);
-//		Fingerlogin.setOnClickListener(view -> {
-//			biometricPrompt.authenticate(promptInfo);
-//		});
+		executor = ContextCompat.getMainExecutor(this);
+		biometricPrompt = new BiometricPrompt(LoginActivity.this,
+				executor, new BiometricPrompt.AuthenticationCallback()
+		{
+			@Override
+			public void onAuthenticationError(int errorCode,
+											  @NonNull CharSequence errString) {
+				super.onAuthenticationError(errorCode, errString);
+				Toast.makeText(getApplicationContext(),
+						"Authentication error: " + errString, Toast.LENGTH_SHORT)
+						.show();
+			}
+
+			@Override
+			public void onAuthenticationSucceeded(
+					@NonNull BiometricPrompt.AuthenticationResult result) {
+				super.onAuthenticationSucceeded(result);
+				Toast.makeText(getApplicationContext(),
+						"Authentication succeeded!", Toast.LENGTH_SHORT).show();
+			}
+
+			@Override
+			public void onAuthenticationFailed() {
+				super.onAuthenticationFailed();
+				Toast.makeText(getApplicationContext(), "Authentication failed",
+						Toast.LENGTH_SHORT)
+						.show();
+			}
+		});
+
+		promptInfo = new BiometricPrompt.PromptInfo.Builder()
+				.setTitle("Biometric login for my app")
+				.setSubtitle("Log in using your biometric credential")
+				.setNegativeButtonText("Use account password")
+				.build();
+
+
+		Fingerlogin  = (ImageView) findViewById(R.id.fingerlogin);
+		Fingerlogin.setOnClickListener(view -> {
+			biometricPrompt.authenticate(promptInfo);
+		});
 
 
 //biometric end

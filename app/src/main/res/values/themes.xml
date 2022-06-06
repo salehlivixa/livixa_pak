@@ -10,6 +10,16 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.login" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
     <style name="MD_Light" parent="Theme_Light_Dialog">
         <item name="md_divider">@color/md_divider_black</item>
         <item name="md_selector">@drawable/md_selector</item>

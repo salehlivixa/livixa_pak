@@ -3,7 +3,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="140dp"
     android:layout_height="140dp"
-    android:rotationY="180"
     android:orientation="vertical" >
 <RelativeLayout 
     android:layout_width="140dp"

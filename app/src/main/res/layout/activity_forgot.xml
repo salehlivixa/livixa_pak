@@ -85,43 +85,47 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center">
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                    android:layout_alignParentLeft="true"
                     android:text="@string/Emailaddress"
                     android:textColor="#000"
                     android:textSize="18dp"
                     android:fontFamily="@font/montbold"
                     />
 
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_email"
-                    android:layout_width="366dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/montregular"
-                    android:background="@drawable/inputrounded"
-                    android:hint="Enter your Email Address"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#6E8498"
-                    android:textColorHint="#6E8498"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light"
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="Enter your Email Address"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light"
 
-                    />
+                        />
 
-
+                </RelativeLayout>
                 <com.livixa.apacam.client.widget.CustomButton
                     style="@style/ButtonStyle"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="25dp"
                     android:background="@drawable/ic_reset_password_btn"
                     android:text="Send Email"

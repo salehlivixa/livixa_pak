@@ -101,6 +101,31 @@ public class Add_Edit_SwitchActivity extends Activity {
 
     }
 
+    public void onbackButttonClick(View view) {
+        onBackPressed();
+    }
+
+    public void onhomeButttonClick(View view) {
+        finish();
+
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        /*overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);*/
+        KisafaApplication.perFormActivityBackTransition(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        finish();
+
+        Intent intent = new Intent(this, SettingsActivity.class);
+
+        KisafaApplication.perFormActivityBackTransition(this);
+
+        startActivity(intent);
+    }
     private void initUiComponents() {
         mSwitchListView = (GridView) findViewById(R.id.switchListView);
 
@@ -279,32 +304,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 
     }
 
-    public void onbackButttonClick(View view) {
-        onBackPressed();
-    }
 
-    public void onhomeButttonClick(View view) {
-        finish();
-
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-        /*overridePendingTransition(R.anim.out_to_right, R.anim.in_from_left);*/
-        KisafaApplication.perFormActivityBackTransition(Add_Edit_SwitchActivity.this);
-    }
-
-    @Override
-    public void onBackPressed() {
-
-        super.onBackPressed();
-
-
-        Intent intent = new Intent();
-        intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-        KisafaApplication.perFormActivityBackTransition(Add_Edit_SwitchActivity.this);
-        finish();
-
-    }
 
     private void showErrorDialogue(String message) {
 		/*MaterialDialog dialog = new MaterialDialog.Builder(Add_Edit_SwitchActivity.this).content(message)
@@ -920,3 +920,5 @@ public class Add_Edit_SwitchActivity extends Activity {
         return "";
     }
 }
+
+

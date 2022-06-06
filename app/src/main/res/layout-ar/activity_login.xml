@@ -24,14 +24,14 @@
                 android:layout_height="80dp"
                 android:src="@drawable/logo"
                 android:layout_marginTop="50dp"
-                android:layout_gravity="end"
+                android:layout_gravity="start"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="@string/Welcome"
-                android:layout_gravity="end"
+                android:layout_gravity="start"
                 android:textSize="28dp"
                 android:textColor="#fff"
                 android:fontFamily="@font/montbold"
@@ -42,7 +42,7 @@
                 android:layout_height="100dp"
                 android:text="@string/toaccess"
                 android:textSize="16dp"
-                android:layout_gravity="end"
+                android:layout_gravity="start"
                 android:fontFamily="@font/montsemibold"
                 />
 
@@ -84,8 +84,8 @@
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="30dp"
-                        android:layout_gravity="end"
-                        android:layout_marginRight="@dimen/margin_30dp"
+                        android:layout_gravity="start"
+                        android:layout_marginRight="@dimen/margin_50dp"
                         android:fontFamily="@font/montbold"
                         android:text="@string/UserNameHint"
                         android:textColor="#000"
@@ -94,7 +94,7 @@
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_username"
-                        android:layout_width="366dp"
+                        android:layout_width="300dp"
                         android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/inputrounded"
@@ -113,8 +113,8 @@
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="30dp"
-                        android:layout_gravity="end"
-                        android:layout_marginRight="@dimen/margin_30dp"
+                        android:layout_gravity="start"
+                        android:layout_marginRight="@dimen/margin_50dp"
                         android:fontFamily="@font/montbold"
                         android:text="@string/UserPassHint"
                         android:textColor="#000"
@@ -122,7 +122,7 @@
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_password"
-                        android:layout_width="366dp"
+                        android:layout_width="300dp"
                         android:layout_height="48dp"
                         android:inputType="textPassword"
                         android:layout_marginLeft="10dp"
@@ -138,9 +138,28 @@
 
 
                     <LinearLayout
-                        android:layout_width="380dp"
+                        android:layout_width="350dp"
                         android:layout_height="50dp"
                         android:gravity="center">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/check_box_selector"
+                            style="@style/CustomCheckbox02"
+                            android:layout_marginLeft="@dimen/margin_10dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montsemibold"
+                            android:text="حفظ كلمة المرور"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#002B54"
+                            android:textSize="12sp" />
+
+
 
 
 
@@ -156,38 +175,19 @@
                             android:text="نسيت كلمة المرور؟ "
                             android:textColor="#002B54"
 
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             app:CustomFontFamily="Light" />
 
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montsemibold"
-                            android:text="حفظ كلمة المرور"
-                            android:layout_marginRight="5dp"
-                            android:textColor="#002B54"
-                            android:textSize="14sp" />
 
-
-
-
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/check_box_selector"
-                            style="@style/CustomCheckbox02"
-                            android:layout_marginLeft="@dimen/margin_10dp"
-                            />
                     </LinearLayout>
 
 
                     <com.livixa.apacam.client.widget.CustomButton
                         android:id="@+id/btn_login"
                         style="@style/ButtonStyle"
-                        android:layout_width="366dp"
+                        android:layout_width="300dp"
                         android:layout_height="56dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
@@ -212,6 +212,7 @@
                             android:textAlignment="center" />
 
                         <ImageView
+                            android:id="@+id/fingerlogin"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:src="@drawable/ic_touchid_ic" />

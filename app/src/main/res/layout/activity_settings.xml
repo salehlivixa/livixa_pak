@@ -88,10 +88,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="Add/Edit Rooms"
-                        android:textSize="20sp"
                         android:fontFamily="@font/montsemibold"
-                        />
+                        android:text="Add/Edit Rooms"
+                        android:textSize="20sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -182,7 +181,8 @@
                         android:textSize="20sp" />
 
 
-                    <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                    <com.livixa.apacam.client.activity.ShSwitchView
+                        xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/remotlySwitch"
                         android:layout_width="50dip"
                         android:layout_height="60dip"

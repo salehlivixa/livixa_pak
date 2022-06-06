@@ -63,108 +63,139 @@
                 android:orientation="vertical">
 
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="end"
-                    android:layout_marginRight="@dimen/margin_30dp"
-                    android:fontFamily="@font/montbold"
-                    android:text="اسم المستخدم"
-                    android:textColor="#000"
-                    android:textSize="18dp" />
-
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_username"
-                    android:layout_width="366dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/inputrounded"
-                    android:fontFamily="@font/montregular"
-                    android:hint="@string/UserNameHint"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#6E8498"
-                    android:textColorHint="#6E8498"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light"
-
-                    />
-
-
-                <TextView
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="end"
-                    android:layout_marginRight="@dimen/margin_30dp"
-                    android:fontFamily="@font/montbold"
-                    android:layout_marginTop="@dimen/margin_30dp"
-                    android:text="بريد إلكتروني"
-                    android:textColor="#000"
-                    android:textSize="18dp" />
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_35dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/montbold"
+                        android:text="اسم المستخدم"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_username"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/inputrounded"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/montregular"
+                        android:hint="@string/UserNameHint"
+                        android:inputType="text"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light"
+
+                        />
+                </RelativeLayout>
 
 
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_email"
-                    android:layout_width="366dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/inputrounded"
-                    android:fontFamily="@font/montregular"
-                    android:hint="ادخل بريدك الإلكتروني"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#6E8498"
-                    android:textColorHint="#6E8498"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="end"
-                    android:layout_marginRight="@dimen/margin_30dp"
-                    android:layout_marginTop="@dimen/margin_30dp"
-                    android:fontFamily="@font/montbold"
-                    android:text="بريد إلكتروني"
-                    android:textColor="#000"
-                    android:textSize="18dp" />
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_35dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
 
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/et_password"
-                    android:layout_width="366dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/inputrounded"
-                    android:fontFamily="@font/montregular"
-                    android:hint="ادخل كلمة المرور"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#6E8498"
-                    android:textColorHint="#6E8498"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/montbold"
+                        android:text="بريد إلكتروني"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="ادخل بريدك الإلكتروني"
+                        android:inputType="text"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_35dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/montbold"
+                        android:text="بريد إلكتروني"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="ادخل كلمة المرور"
+                        android:inputType="text"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
+
+                </RelativeLayout>
 
 
                 <LinearLayout
                     android:layout_width="400dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:gravity="center">
 
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_country"
-                        android:layout_width="171dp"
+                        android:layout_width="150dp"
                         android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/inputrounded"
                         android:fontFamily="@font/montregular"
                         android:hint="@string/Country"
                         android:inputType="text"
-                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
                         android:singleLine="true"
                         android:textColor="#6E8498"
                         android:textColorHint="#6E8498"
@@ -173,14 +204,14 @@
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_city"
-                        android:layout_width="171dp"
+                        android:layout_width="150dp"
                         android:layout_height="48dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:background="@drawable/inputrounded"
                         android:fontFamily="@font/montregular"
                         android:hint="@string/City"
                         android:inputType="text"
-                        android:paddingLeft="10dp"
+                        android:paddingRight="20dp"
                         android:singleLine="true"
                         android:textColor="#6E8498"
                         android:textColorHint="#6E8498"
@@ -192,7 +223,7 @@
                 <com.livixa.apacam.client.widget.CustomButton
                     android:id="@+id/btn_register"
                     style="@style/ButtonStyle"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"

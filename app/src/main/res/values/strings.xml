@@ -714,7 +714,7 @@
 
     <string name="Thankyouregisteringwithus">Thank you for registering with us</string>
 
-    <string name="ForgotPassword">Forgot Password ?</string>
+    <string name="ForgotPassword"><u>Forgot Password ?</u></string>
     <string name="SendEmail">Send Email</string>
     <string name="EmailSend">Email Send</string>
     <string name="Please_check_your_email_msg">Please check your email to follow forget password instructions!</string>
@@ -825,7 +825,7 @@
     <string name="Editing">Editing</string>
     <string name="EditRoom">Edit Room</string>
     <string name="DeleteRoom">Delete Room</string>
-    <string name="RoomName">Room Name</string>
+    <string name="RoomName">Enter Room Name</string>
     <string name="Selecticon">Select icon</string>
     <string name="Roomnameisrequired">Room name is required !</string>
     <string name="Roomnamealreadyexist">Room name already exist !</string>

@@ -56,15 +56,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:orientation="vertical"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center">
 
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="SSID"
                     android:textColor="#000"
@@ -72,11 +79,11 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/sSDID"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
+                    android:layout_alignParentBottom="true"
                     android:hint="homewifiid"
                     android:inputType="text"
                     android:paddingLeft="10dp"
@@ -89,13 +96,21 @@
 
                     />
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    >
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Password"
                     android:textColor="#000"
@@ -104,11 +119,11 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/pass"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
+                    android:layout_alignParentBottom="true"
                     android:hint="Enter password"
                     android:inputType="text"
                     android:paddingLeft="10dp"
@@ -118,12 +133,22 @@
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    >
+
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="@dimen/margin_30dp"
+                  android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="DevicesNumber"
                     android:textColor="#000"
@@ -131,11 +156,11 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/taskCount"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
+                    android:layout_alignParentBottom="true"
                     android:hint="Add device numbers"
                     android:inputType="text"
                     android:paddingLeft="10dp"
@@ -144,15 +169,14 @@
                     android:textColorHint="#6E8498"
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
-
+                </RelativeLayout>
 
                 <com.livixa.apacam.client.widget.CustomTextView
                     style="@style/ButtonStyle"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/ic_reset_password_btn"
                     android:clickable="true"
                     android:fontFamily="@font/montsemibold"
@@ -161,6 +185,7 @@
                     android:textColor="@color/color_white"
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Regular" />
+
 
             </LinearLayout>
 

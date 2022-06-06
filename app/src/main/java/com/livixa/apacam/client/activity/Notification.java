@@ -51,6 +51,7 @@ public class Notification extends Activity implements ServerConnectListener {
 
     RecyclerView notification_recylerview;
     NotificationAdapter notificationAdapter;
+    LinearLayout notification_linear_layout;
     int offSet = 0;
 
     @Override
@@ -58,6 +59,7 @@ public class Notification extends Activity implements ServerConnectListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         offSet = 0;
+        notification_linear_layout = findViewById(R.id.notification_linear_layout);
         notification_recylerview = findViewById(R.id.notification_recylerview);
         notificationAdapter = new NotificationAdapter(Notification.this, new ArrayList<>());
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(Notification.this, RecyclerView.VERTICAL, false);
@@ -119,10 +121,18 @@ public class Notification extends Activity implements ServerConnectListener {
     public void onSuccess(ServerResponse response) {
         if (response.getRequestCode() == ServerCodes.ServerRequestCodes.NOTIFICATION_REQUEST_CODE) {
             NotificatioinResponse requestResponse = (NotificatioinResponse) response;
+
             ShResult Result = requestResponse.getShResult();
             if (Result.getSh_models() != null) {
                 offSet = Result.getSh_models().size();
-                notificationAdapter.setmDataSet(Result.getSh_models());
+                if(offSet > 0){
+                    notification_linear_layout.setVisibility(View.GONE);
+                    notification_recylerview.setVisibility(View.VISIBLE);
+                }
+                notificationAdapter = new NotificationAdapter(Notification.this,Result.getSh_models());
+                notification_recylerview.setAdapter(notificationAdapter);
+                LinearLayoutManager mLayoutManager = new LinearLayoutManager(Notification.this, RecyclerView.VERTICAL, false);
+                notification_recylerview.setLayoutManager(mLayoutManager);
                 WaitingStaticProgress.hideProgressDialog();
             } else {
                 WaitingStaticProgress.hideProgressDialog();
@@ -165,10 +175,6 @@ public class Notification extends Activity implements ServerConnectListener {
             mContext = context;
         }
 
-        public void setmDataSet(ArrayList<NotificationObject> mDataSet) {
-            this.mDataSet = mDataSet;
-            notifyDataSetChanged();
-        }
 
         @Override
         public NotificationAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

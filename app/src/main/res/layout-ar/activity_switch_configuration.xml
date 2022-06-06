@@ -74,7 +74,7 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/sSDID"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
@@ -107,7 +107,7 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/pass"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
@@ -135,7 +135,7 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/taskCount"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
@@ -152,7 +152,7 @@
 
                 <com.livixa.apacam.client.widget.CustomTextView
                     style="@style/ButtonStyle"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"

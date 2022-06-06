@@ -78,12 +78,17 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="80dp"
+               android:layout_gravity="center">
+
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                   android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Username"
                     android:textColor="#000"
@@ -91,9 +96,9 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_username"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
                     android:hint="@string/UserNameHint"
@@ -107,12 +112,21 @@
 
                     />
 
+           </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                   android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Email Address"
                     android:textColor="#000"
@@ -120,11 +134,11 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_email"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
+                    android:layout_alignParentBottom="true"
                     android:hint="Enter your email address"
                     android:inputType="text"
                     android:paddingLeft="10dp"
@@ -134,11 +148,21 @@
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Full name"
                     android:textColor="#000"
@@ -146,9 +170,9 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_fullname"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
                     android:hint="Enter your full Name"
@@ -160,11 +184,22 @@
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
+
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Password"
                     android:textColor="#000"
@@ -172,25 +207,35 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_password"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:inputType="textPassword"
-                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
                     android:hint="@string/UserPassHint"
+                    android:inputType="textPassword"
                     android:paddingLeft="10dp"
                     android:singleLine="true"
                     android:textColor="#6E8498"
                     android:textColorHint="#6E8498"
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    >
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="35dp"
+                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/montbold"
                     android:text="Mobile Number"
                     android:textColor="#000"
@@ -198,9 +243,9 @@
 
                 <com.livixa.apacam.client.widget.CustomEditText
                     android:id="@+id/et_phone"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@drawable/inputrounded"
                     android:fontFamily="@font/montregular"
                     android:hint="@string/error_mobile_number"
@@ -212,19 +257,19 @@
                     android:textSize="@dimen/font_large"
                     app:CustomFontFamily="Light" />
 
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="400dp"
-                    android:layout_height="50dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center">
 
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_country"
-                        android:layout_width="171dp"
+                        android:layout_width="150dp"
                         android:layout_height="48dp"
-                        android:layout_marginLeft="10dp"
                         android:background="@drawable/inputrounded"
                         android:fontFamily="@font/montregular"
                         android:hint="@string/Country"
@@ -238,7 +283,7 @@
 
                     <com.livixa.apacam.client.widget.CustomEditText
                         android:id="@+id/et_city"
-                        android:layout_width="171dp"
+                        android:layout_width="150dp"
                         android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/inputrounded"
@@ -257,10 +302,9 @@
                 <com.livixa.apacam.client.widget.CustomButton
                     android:id="@+id/btn_register"
                     style="@style/ButtonStyle"
-                    android:layout_width="366dp"
+                    android:layout_width="300dp"
                     android:layout_height="56dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/ic_reset_password_btn"
                     android:fontFamily="@font/montsemibold"

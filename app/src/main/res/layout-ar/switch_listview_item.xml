@@ -1,185 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.livixa.apacam.client.swipelistview.SwipeRevealLayout
-   xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="60dp"
-    
-    android:id="@+id/switchesListItemRoot"
-   
-    app:_mode="same_level"
-    app:dragEdge="left"
-    >
-  
-    
-    
-    
- 
-        
-    
-    
-<FrameLayout
-            android:layout_width="wrap_content"
-            android:background="#40ffffff"
-            android:gravity="center" 
-            android:layout_height="60dp">
-            
-        
-          <RelativeLayout android:layout_height="match_parent"
-       			 
-                  android:layout_width="80dp">
-                  
-               <TextView android:layout_height="match_parent"
-               android:background="#FF3B30"
-               android:text="@string/Delete"
-                android:textColor="@color/white"
-               android:gravity="center"
-               android:layout_alignParentRight="true"
-              
-               android:id="@+id/tv_switchDelete"
-                android:layout_width="80dp"
-                />
-              
-              
-                  </RelativeLayout>
-            
-        
-  </FrameLayout>
-    
-    
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="400dp"
+	android:layout_height="400dp"
+	android:id="@+id/switchesListItemRoot"
+	app:_mode="same_level"
+	app:dragEdge="right">
 
-       <FrameLayout
-            android:layout_width="match_parent"
-            android:background="#40ffffff"
-            android:gravity="center" 
-            android:layout_height="60dp">
-            
-            <LinearLayout android:layout_height="50dp"
-                android:id="@+id/itemContainerLY"
-       			 android:orientation="horizontal"
-       			 android:weightSum="5"
-       			 android:layout_marginTop="5dp"
-       			 android:gravity="center_vertical"
-       			  
-                  android:layout_width="match_parent">
-                  
-                
-                
-	         
-			              
-			       <LinearLayout android:layout_height="match_parent"
-			                     
-			                      android:gravity="center"
-			                      android:orientation="vertical"
-			                      android:layout_marginLeft="25dp"
-			                      android:layout_width="150dp">
-			                      
-			           
-			           <com.livixa.apacam.client.widget.CustomTextView
-                        android:layout_width="match_parent"
-                        android:background="@drawable/corner_border_white_less_less_corner"
-                        android:layout_height="20dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:gravity="center_vertical|right"
-                        android:layout_centerHorizontal="true"
-                       
-                        android:text="@string/Assignedto"
-                        android:singleLine="true"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
-                        android:id="@+id/switchAssignedTo"
-                        />
-			           
-			           
-			           <LinearLayout android:layout_width="match_parent" 
-			                         android:orientation="horizontal"
-			                         android:gravity="right"
-			                         android:layout_marginTop="3dp"
-			                         android:background="@drawable/corner_border_white_less_less_corner"
-			                         android:layout_height="18dp">
-			           
-			           
-			               
-			           <com.livixa.apacam.client.widget.CustomTextView
-                        android:layout_width="wrap_content"
-                        android:singleLine="true"
-                        
-                       
-                        android:layout_height="18dp"
-                        android:paddingLeft="5dp"
-                        android:textAlignment="viewEnd"
-                        
-                        android:paddingRight="5dp"
-                       
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center_vertical|right"
-                        android:text="N/A"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
-                        android:id="@+id/switchId"
-                        />
-			           
-			           
-			            <com.livixa.apacam.client.widget.CustomTextView
-                        android:layout_width="wrap_content"
-                        android:singleLine="true"
-                        
-                       
-                        android:layout_height="18dp"
-                        android:paddingLeft="5dp"
-                        android:textAlignment="viewEnd"
-                        
-                        android:paddingRight="5dp"
-                        
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center_vertical|right"
-                        android:text="@string/ID"
-                        android:textColor="@color/black"
-                        android:textSize="11dp"
-                        
-                        />   
-			               
-			               
-			           
-			           </LinearLayout>
-			           
-			       </LinearLayout>
-			       
-			       
-			       <TextView 
-			        android:id="@+id/tv_switchName"
-			        android:layout_width="0dp"
-			        android:layout_weight="5"
-			        android:text="switch1"
-			        android:singleLine="true"
-			        android:minWidth="100dp"
-			        android:layout_centerVertical="true"
-			        android:gravity="center_vertical|right"
-			        android:textColor="@color/white"
-			        android:textSize="16dp"
-			        android:paddingLeft="10dp"
-			        android:paddingRight="10dp"
-			        android:layout_height="wrap_content"/>
-			       
-			        <ImageView android:layout_height="40dp"
-	        		android:id="@+id/img_icon_switch"
-	       			android:layout_marginRight="10dp"
-	       			
-	        		android:layout_centerVertical="true"
-	              	android:src="@drawable/one_button_switch"
-	               	android:layout_width="40dp"/>
-	        
-	    
-    
-    
-    </LinearLayout>
-        
-        </FrameLayout>
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:background="#40ffffff"
+		android:gravity="center"
+		android:layout_height="60dp">
 
+
+		<RelativeLayout android:layout_height="match_parent"
+
+			android:layout_width="80dp">
+
+			<TextView android:layout_height="match_parent"
+				android:background="#FF3B30"
+				android:text="@string/Delete"
+				android:textColor="@color/white"
+				android:gravity="center"
+				android:layout_alignParentRight="true"
+
+				android:id="@+id/tv_switchDelete"
+				android:layout_width="80dp"
+				/>
+
+
+		</RelativeLayout>
+
+	</FrameLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:background="#40ffffff"
+		android:gravity="center"
+		android:layout_height="match_parent"
+
+		>
+
+		<RelativeLayout
+			android:layout_width="300dp"
+			android:layout_height="300dp"
+			android:layout_marginBottom="10dp"
+			android:orientation="vertical" >
+
+
+			<LinearLayout
+				android:id="@+id/itemContainerLY"
+				android:layout_width="wrap_content"
+				android:layout_height="260dp"
+				android:layout_marginTop="@dimen/margin_20dp"
+				android:background="@drawable/corner_border_white"
+				android:gravity="center"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="160dp"
+					android:layout_height="120dp"
+					android:background="@drawable/corner_border_gray"
+					android:gravity="center"
+					android:orientation="vertical"
+					android:padding="@dimen/margin_10dp">
+
+
+					<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_marginBottom="10dp"
+						android:src="@drawable/one_button_switch" />
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/margin_10dp"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/tv_switchName"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montsemibold"
+						android:text="الإضاءة"
+						android:textColor="#000" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="مفتاح إنارة خطين"
+						android:textSize="12sp"
+
+						/>
+
+					<View
+						android:layout_width="150dp"
+						android:layout_height="1dp"
+						android:layout_marginTop="15dp"
+						android:background="#c0c0c0"
+
+						/>
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/margin_10dp"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/margin_20dp"
+						android:orientation="vertical"
+
+						>
+
+						<com.livixa.apacam.client.widget.CustomTextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:fontFamily="@font/montsemibold"
+							android:hint="@string/Assignedto"
+							android:textColor="#000"
+							android:textSize="10sp" />
+
+						<com.livixa.apacam.client.widget.CustomTextView
+							android:id="@+id/switchAssignedTo"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/Assignedto"
+							android:textSize="10sp" />
+
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/margin_30dp"
+						android:orientation="vertical">
+
+						<com.livixa.apacam.client.widget.CustomTextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:fontFamily="@font/montsemibold"
+							android:text="ID"
+							android:textColor="#000"
+							android:textSize="10sp"
+
+							/>
+
+						<com.livixa.apacam.client.widget.CustomTextView
+							android:id="@+id/switchId"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="N/A"
+							android:textSize="10sp" />
+
+					</LinearLayout>
+
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+
+
+
+		</RelativeLayout >
+	</FrameLayout>
 </com.livixa.apacam.client.swipelistview.SwipeRevealLayout>
-
-
-
-
