@@ -95,7 +95,7 @@ public class Upload_Room_Pictures_On_Server implements  ServerConnectListener
 	}
 	
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		/*if(mRoomsList!=null)
 		mRoomsList.clear();*/

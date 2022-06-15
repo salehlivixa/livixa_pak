@@ -408,7 +408,7 @@ public class UpdateProfileActivity extends FragmentActivity implements
 	}
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		/*if (mProgressDialog != null) {
 			mProgressDialog.hide();
 		}*/

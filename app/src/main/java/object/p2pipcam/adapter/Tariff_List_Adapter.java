@@ -34,7 +34,7 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 {
 	
 	private Context mContext;
-	private LayoutInflater          mInflater;
+	private LayoutInflater  mInflater;
     private List<Tariff_Model>	 mTariffModelList;
    
     private View emptyView , listView;
@@ -161,7 +161,7 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 	}
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		
 	}

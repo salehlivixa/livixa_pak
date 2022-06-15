@@ -1,6 +1,7 @@
 package com.livixa.apacam.client.activity;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -58,6 +59,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,6 +97,8 @@ public class SettingsActivity extends Activity implements
 	private RelativeLayout rl_configureSwitches;
 	private RelativeLayout rl_inside_home;
 	private RelativeLayout rl_privacy_and_security;
+	private RelativeLayout rl_control_remotly;
+	private RelativeLayout rl_subscription;
 	
 	private RelativeLayout rl_profile;
 	private RelativeLayout rl_changePass;
@@ -144,7 +148,7 @@ public class SettingsActivity extends Activity implements
 				
 				
 		Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(SettingsActivity.this);
-			
+			hideui();
 		
 	}
 
@@ -164,6 +168,8 @@ public class SettingsActivity extends Activity implements
 		rl_profile=(RelativeLayout) findViewById(R.id.rl_profile);
 		rl_about=(RelativeLayout) findViewById(R.id.rl_about);
 		rl_privacy_and_security=(RelativeLayout)findViewById(R.id.rl_privacy_and_security);
+		rl_control_remotly=(RelativeLayout)findViewById(R.id.rl_control_remotly);
+		rl_subscription=(RelativeLayout)findViewById(R.id.rl_subscription);
 		
 		rl_energy=(RelativeLayout) findViewById(R.id.rl_energy);
 		rl_language=(RelativeLayout) findViewById(R.id.rl_language);
@@ -239,6 +245,7 @@ public class SettingsActivity extends Activity implements
      		rl_about.setOnClickListener(onclick);
 			rl_energy.setOnClickListener(onclick);
 			rl_language.setOnClickListener(onclick);
+			rl_subscription.setOnClickListener(onclick);
 			
 		}
 		
@@ -347,7 +354,7 @@ public class SettingsActivity extends Activity implements
 	}
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		/*if (mProgressDialog != null) {
 			mProgressDialog.hide();
 		}*/
@@ -643,6 +650,13 @@ public class SettingsActivity extends Activity implements
 
 			case R.id.rl_privacy_and_security:
 				intent = new Intent(this, Privacyandsecurity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				break;
+
+			case R.id.rl_subscription:
+				intent = new Intent(this, Subscription_packages.class);
 				startActivity(intent);
 				finish();
 				KisafaApplication.perFormActivityNextTransition(mContext);
@@ -1162,9 +1176,65 @@ public class SettingsActivity extends Activity implements
 			stopService(in);
 		}
 		
-		}catch(Exception ex){}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
 	}
 
-	
+	public void hideui(){
+		rl_control_remotly.setClickable(false);
+
+		rl_edit_users.setClickable(false);
+
+		remotlySwitch.setVisibility(View.GONE);
+		ArrayList<String> value = KisafaApplication.getSubscription(SettingsActivity.this);
+		if (value != null && value.size() != 0) {
+			String id = value.get(0);
+
+			if (id.equals("1")) {
+				rl_edit_users.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG).show();
+					}
+				});
+
+				rl_control_remotly.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
+
+			} else if (id.equals("2")) {
+				rl_edit_users.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG).show();
+					}
+				});
+
+				rl_control_remotly.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
+
+			}else if(id.equals("3")){
+				rl_control_remotly.setClickable(true);
+				rl_edit_users.setClickable(true);
+				remotlySwitch.setVisibility(View.GONE);
+			}else if(id.equals("4")){
+				rl_control_remotly.setClickable(true);
+				rl_edit_users.setClickable(true);
+				remotlySwitch.setVisibility(View.VISIBLE);
+			}
+		}
+
+
+	}
 }

@@ -186,7 +186,7 @@ public class ShSwitchView extends View {
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ShSwitchView);
 
-        tintColor = ta.getColor(R.styleable.ShSwitchView_tintColor, 0xFF9CE949);
+        tintColor = ta.getColor(R.styleable.ShSwitchView_tintColor, 0xFF8669FC);
         tempTintColor = tintColor;
 
         int defaultOuterStrokeWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1.5F, context.getResources().getDisplayMetrics());

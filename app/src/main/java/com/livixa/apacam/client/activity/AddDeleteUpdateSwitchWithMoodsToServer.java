@@ -91,7 +91,7 @@ public class AddDeleteUpdateSwitchWithMoodsToServer implements ServerConnectList
 
 
 	@Override
-	public void onSuccess(ServerResponse response) 
+	public void onSuccess(ServerResponse response,String raw)
 	{
 		
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.ADD_EDIT_SWITCH_REQUEST_CODE)

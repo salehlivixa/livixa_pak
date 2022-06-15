@@ -91,7 +91,7 @@ public class DialogAddTariffAlert {
                     Call<TariffAlertResponse> call = (Call<TariffAlertResponse>) service.setTarifAlert(map);
                     call.enqueue(new RestCallback<TariffAlertResponse>(new ServerConnectListener() {
                         @Override
-                        public void onSuccess(ServerResponse response) {
+                        public void onSuccess(ServerResponse response,String raw) {
                             if (response.getRequestCode() == ServerCodes.ServerRequestCodes.TARRIF_ALERT_REQUEST_CODE) {
 
                                 AppPreference.saveValue(mActivity, lowerAlert.getText().toString(), AppKeys.pTarrifAlertLow);

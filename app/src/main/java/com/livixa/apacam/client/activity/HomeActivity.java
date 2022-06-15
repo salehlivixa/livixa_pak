@@ -1,15 +1,19 @@
 package com.livixa.apacam.client.activity;
 
 import java.text.DateFormat;
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.activeandroid.query.Select;
 import com.bumptech.glide.Glide;
 import com.kisafa.user.profile.CircleImageView;
 import com.kisafa.user.profile.USER_Model;
@@ -17,6 +21,7 @@ import com.livixa.apacam.client.network.ApiService;
 import com.livixa.apacam.client.network.RestCallback;
 import com.livixa.apacam.client.network.ServerConnectListener;
 import com.livixa.apacam.client.response.ServerResponse;
+import com.livixa.apacam.client.response.isdatasyncedwithserver.Sh_Order;
 import com.livixa.apacam.client.response.tariff_energy.Sh_Room_Watage_result;
 import com.livixa.apacam.client.response.tariff_energy.Sh_Watage_result;
 import com.livixa.apacam.client.response.tariff_energy.Watage_Response;
@@ -38,6 +43,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.ParseException;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,6 +51,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.livixa.apacam.client.appconfig.AppKeys;
 import com.livixa.apacam.client.base.KisafaApplication;
@@ -56,6 +63,7 @@ import com.livixa.apacam.services.Sync_Service;
 import com.livixa.client.BridgeService;
 import com.livixa.client.MainActivity;
 import com.livixa.client.R;
+import com.sawas.ashisuto.methods.Method;
 
 import object.p2pipcam.adapter.EnergyRoomsGridViewAdapter;
 import object.p2pipcam.utils.MyDate;
@@ -72,6 +80,8 @@ public class HomeActivity extends Activity implements OnClickListener {
     private LinearLayout rl_moods;
     private ImageView notigif;
     private TextView activity_home_wattage;
+    private TextView activity_home_package_id;
+    private TextView activity_home_package_expriy;
     private RelativeLayout rl_energy;
 
     private LinearLayout profileContainer;
@@ -170,6 +180,8 @@ public class HomeActivity extends Activity implements OnClickListener {
         mRlSettings = (ImageView) findViewById(R.id.rl_settings);
         rl_rooms = (LinearLayout) findViewById(R.id.rl_rooms);
         rl_energy = (RelativeLayout) findViewById(R.id.rl_energy);
+        activity_home_package_id = findViewById(R.id.activity_home_package_id);
+        activity_home_package_expriy = findViewById(R.id.activity_home_package_expriy);
         notigif = (ImageView) findViewById(R.id.noti);
 //
 //
@@ -183,7 +195,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         syncDataTV = (TextView) findViewById(R.id.syncDataTV);
         activity_home_wattage = findViewById(R.id.activity_home_wattage);
 
-
+        hideui(); // ok // i m out //ok
     }
 
     public void setClickListner(OnClickListener onclick) {
@@ -246,6 +258,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         }
     }
 
+
     private int getMonth() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
@@ -266,6 +279,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         return year;
     }
 
+
     public void callServiceMehod(int month, int year) {
 
         HashMap<String, Object> map = new HashMap<>();
@@ -278,7 +292,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         Call<Watage_Response> call = (Call<Watage_Response>) service.getWatageDetails(map);
         call.enqueue(new RestCallback<Watage_Response>(new ServerConnectListener() {
             @Override
-            public void onSuccess(ServerResponse response) {
+            public void onSuccess(ServerResponse response,String raw) {
                 if (response.getRequestCode() == ServerCodes.ServerRequestCodes.WATAGE_REQUEST_CODE) {
                     Watage_Response requestResponse = (Watage_Response) response;
                     if (!requestResponse.getShMeta().getShErrorCode()
@@ -292,16 +306,18 @@ public class HomeActivity extends Activity implements OnClickListener {
                     if (watageResult != null) {
                         ArrayList<Sh_Room_Watage_result> roomResult = watageResult.getSh_rooms();
                         String watageUnit = "kWh";
+                        String watagepUnit = "$";
                         if (roomResult != null && roomResult.size() > 0) {
                             watageUnit = watageResult.getSh_wattage_unit();
                             String watageValue = watageResult.getSh_total_wattage();
+                            String watageprice = watageResult.getSh_total_price();
                             if (activity_home_wattage != null)
-                                activity_home_wattage.setText(watageValue + " " + watageUnit);
+                                activity_home_wattage.setText(watageValue + " " + watageUnit +" "+watageprice + " "+watagepUnit );
 
 
                         } else {
                             if (activity_home_wattage != null)
-                                activity_home_wattage.setText("0.0 kWh");
+                                activity_home_wattage.setText("0.0 kWh" + "   "+ "0.0 $");
                         }
                     }
                 }
@@ -313,7 +329,70 @@ public class HomeActivity extends Activity implements OnClickListener {
             }
         },
                 ServerCodes.ServerRequestCodes.WATAGE_REQUEST_CODE, HomeActivity.this));
+        setUISubs();
+        hideui(); //settings me bhi code he uihide ka
     }
+
+    public void setUISubs() {
+
+        ArrayList<String> value = KisafaApplication.getSubscription(HomeActivity.this);
+        if (value.size() != 0) {
+            String pack = "Package " + value.get(0);
+            activity_home_package_id.setText(pack);
+        }
+        if (value.size() > 2) {
+            Date date = stringToDate(value.get(3), "yyyy-MM-dd hh:mm:ss");
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date);
+            cal.add(Calendar.MONTH, 1);
+            String d = DateFormat.getDateInstance(DateFormat.SHORT).format(cal.getTime());
+            d = "Expiry : " + d;
+            activity_home_package_expriy.setText(d);
+        }
+    }
+
+    public void hideui(){
+        rl_moods.setVisibility(View.INVISIBLE);
+        rl_energy.setVisibility(View.INVISIBLE);
+
+        ArrayList<String> value = KisafaApplication.getSubscription(HomeActivity.this);
+
+        if(value != null && value.size() !=0) {
+            String id = value.get(0);
+
+            if (id.equals("1")) {
+            } else if (id.equals("2")) {
+                rl_moods.setVisibility(View.VISIBLE);
+            } else if (id.equals("3")) {
+                rl_moods.setVisibility(View.VISIBLE);
+                    }else if (id.equals("4")){
+                rl_moods.setVisibility(View.VISIBLE);
+                rl_energy.setVisibility(View.VISIBLE);
+
+            }
+
+
+        }
+
+    }
+
+    private Date stringToDate(String aDate, String aFormat) {
+
+        if (aDate == null) return null;
+        ParsePosition pos = new ParsePosition(0);
+        SimpleDateFormat simpledateformat = new SimpleDateFormat(aFormat);
+        Date stringDate = simpledateformat.parse(aDate, pos);
+        return stringDate;
+
+    }
+
+//    public void moveto(View view){
+//        Intent intent = new Intent(this, Subscription_packages.class);
+//
+//        startActivity(intent);
+//        finish();
+//        KisafaApplication.perFormActivityNextTransition(this);
+//    }
 
     @Override
     protected void onResume() {

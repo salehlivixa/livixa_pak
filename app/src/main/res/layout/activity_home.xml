@@ -148,13 +148,22 @@
 
         </LinearLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-35dp"
+            >
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginTop="-35dp"
             android:gravity="center"
             android:orientation="vertical">
+
+
+
 
 
             <LinearLayout
@@ -213,7 +222,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/roomscard"
-                            android:visibility="invisible" />
+                            android:visibility="invisible"
+
+                            />
 
                         <com.livixa.apacam.client.widget.CustomTextView
                             android:layout_width="wrap_content"
@@ -233,6 +244,7 @@
 
 
             </LinearLayout>
+
 
 
             <LinearLayout
@@ -296,7 +308,90 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="375dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/whitecard"
+                  >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                      android:layout_marginLeft="@dimen/margin_40dp"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subscription"
+                            android:textColor="#000"
+                            android:fontFamily="@font/montbold"
+                            android:textSize="16sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        >
+
+                        <TextView
+                            android:id="@+id/activity_home_package_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Package 1"
+                            android:textColor="#000"
+                            android:fontFamily="@font/montbold"
+                            android:layout_marginRight="110dp"
+                            android:textSize="16sp"
+                        />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        >
+
+                        <TextView
+                            android:id="@+id/activity_home_package_expriy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expiry: 20 June"
+                            android:fontFamily="@font/montbold"
+                            android:layout_marginRight="60dp"
+                            android:layout_marginTop="@dimen/margin_30dp"
+                            android:textSize="16sp"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
+        </ScrollView>
 
 
     </LinearLayout>

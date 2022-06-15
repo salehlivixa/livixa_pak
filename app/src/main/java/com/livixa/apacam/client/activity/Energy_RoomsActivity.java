@@ -320,7 +320,7 @@ public class Energy_RoomsActivity extends Activity implements ServerConnectListe
 
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 
 
 		//Log.e("response",response.getMessage());

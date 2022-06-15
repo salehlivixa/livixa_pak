@@ -251,22 +251,27 @@
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/layout/ipcamclientftest.xml" value="0.18802083333333333" />
         <entry key="..\:/Projects/Android/Livixa/app/src/main/res/xml/preferences.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_forgot.xml" value="0.1" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_home.xml" value="0.13168020521590423" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_register.xml" value="0.19581017528858485" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_register_for_sub_user.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_switch_configuration.xml" value="0.17272338606241983" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_switch_scann.xml" value="0.1" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/activity_update_profile.xml" value="0.2" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/add_edit_activity_rooms.xml" value="0.1742354031510658" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/add_edit_switch_activity.xml" value="0.17272338606241983" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/energy_activity_rooms.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/energy_room_with_switches_grid_item.xml" value="0.19581017528858485" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/energy_rooms_grid_view_item.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/moods_view_activity_rooms.xml" value="0.17272338606241983" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/room_switches_listitem.xml" value="0.17272338606241983" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/room_switches_listitem.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/room_with_switches_grid_item.xml" value="0.17272338606241983" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/rooms_grid_view_item.xml" value="0.17272338606241983" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/rooms_grid_view_item.xml" value="0.264" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/rooms_view_grid_view_item.xml" value="0.17272338606241983" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/scan_switch_listview_item.xml" value="0.264" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/switch_listview_item.xml" value="0.4" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/switch_listview_item.xml" value="0.45260663507109006" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout-ar/view_activity_rooms.xml" value="0.17272338606241983" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activate_mood_popup.xml" value="0.1" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_about.xml" value="0.178125" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_add__or__edit__user.xml" value="0.11979166666666667" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_change_password.xml" value="0.19581017528858485" />
@@ -283,24 +288,30 @@
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_room_and_switches_tcp.xml" value="0.176" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_room_switches.xml" value="0.264" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_room_with_switches.xml" value="1.0166666666666666" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_settings.xml" value="0.264" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_settings.xml" value="0.2" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_subscription_packages.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_switch_configuration.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_switch_scann.xml" value="0.19581017528858485" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_tariff_main.xml" value="0.264" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_tariff_main.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_update_profile.xml" value="0.1" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/add_edit_activity_rooms.xml" value="0.1" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/activity_user_profile.xml" value="0.2" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/add_edit_activity_rooms.xml" value="0.2" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/add_edit_switch_activity.xml" value="0.2" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/dialog_add_tariff_alert.xml" value="0.536" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_activity_rooms.xml" value="0.1" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_room_with_switches_grid_item.xml" value="0.264" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_rooms_grid_view_item.xml" value="0.1" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/room_switches_listitem.xml" value="0.17272338606241983" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/dialog_add_tariff_alert.xml" value="0.2" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_activity_rooms.xml" value="0.264" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_room_with_switches_grid_item.xml" value="0.30952380952380953" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/energy_rooms_grid_view_item.xml" value="0.152" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/grid_activity_rooms_setting_popup.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/room_switches_listitem.xml" value="0.4" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/room_with_switches_grid_item.xml" value="0.4" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/rooms_grid_view_item.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/rooms_view_grid_view_item.xml" value="0.19581017528858485" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/scan_switch_listview_item.xml" value="0.1933305192064162" />
-        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/switch_listview_item.xml" value="0.2" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/subscription_listview_item.xml" value="0.1" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/switch_listview_item.xml" value="0.4" />
         <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/tariff_listview_item.xml" value="0.264" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/tariff_option_popup.xml" value="0.15472972972972973" />
+        <entry key="..\:/Users/muhshoaib/Desktop/Newwork/Livixa-Andriod/app/src/main/res/layout/tariff_setting_popup.xml" value="0.1" />
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout-ar/activity_settings.xml" value="0.12552083333333333" />
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout/activity_faq.xml" value="0.12552083333333333" />
         <entry key="..\:/projects/Wajid Office/Livixa/app/src/main/res/layout/activity_moods_room_and_switches_tcp.xml" value="0.1" />

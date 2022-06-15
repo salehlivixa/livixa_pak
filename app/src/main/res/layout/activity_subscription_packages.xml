@@ -42,9 +42,10 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="@font/montbold"
-                    android:text="Add/Edit Rooms"
+                    android:text="Subscription"
                     android:textColor="#fff"
                     android:textSize="20sp" />
+
 
             </RelativeLayout>
         </LinearLayout>
@@ -59,50 +60,89 @@
         android:orientation="vertical"
         >
 
-        <RelativeLayout android:layout_width="match_parent"
-            android:layout_weight="6"
-            android:layout_height="0dp">
 
-            <GridView
-                android:id="@+id/roomsGridView"
-                android:layout_width="400dp"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="@dimen/margin_20dp"
-                android:columnWidth="180dp"
+        <LinearLayout
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:layout_width="match_parent">
+
+
+            <TextView android:layout_height="match_parent"
+                android:layout_weight="1.3"
                 android:gravity="center"
-                android:listSelector="@android:color/transparent"
-                android:numColumns="2"
-                android:scrollbars="none"
-                android:stretchMode="spacingWidthUniform"
-                android:verticalSpacing="10dp"
-                android:visibility="visible">
+                android:textColor="@color/black"
+                android:text="Package ID"
+                android:fontFamily="@font/montbold"
+                android:layout_width="80dp"/>
 
 
-            </GridView>
+            <View
+                android:layout_height="match_parent"
+                android:background="#BBBCBE"
+                android:layout_width="1dp"/>
+
+
+            <TextView android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montbold"
+                android:text="Description"
+                android:layout_width="150dp"/>
+
+
+
+
+            <View
+                android:layout_height="match_parent"
+                android:background="#BBBCBE"
+                android:layout_width="1dp"/>
+
+            <TextView android:layout_height="match_parent"
+                android:layout_weight="3.7"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="ExpiryDate"
+                android:fontFamily="@font/montbold"
+                android:layout_width="50dp"/>
+
+        </LinearLayout>
+
+
+        <ListView android:id="@+id/subscriptionlistview"
+            android:cacheColorHint="#00000000"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            >
+
+        </ListView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="200dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_marginTop="100dp"
-            android:id="@+id/roomsEmptylayout"
+            android:id="@+id/tariffEmptylayout"
             android:layout_weight="6"
             android:visibility="gone"
+
             >
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/norooms"
+                android:src="@drawable/ic_no_data"
                 />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No rooms added yet!"
+                android:text="No data available!"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textAlignment="center"
@@ -112,7 +152,7 @@
             <TextView
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="Navigate to settings and add one."
+                android:text="There’re no data to show right now."
                 android:textAlignment="center"
                 android:fontFamily="@font/montsemibold"
                 android:layout_gravity="center_vertical|center_horizontal"
@@ -120,47 +160,10 @@
 
 
         </LinearLayout>
-        </RelativeLayout>
 
-        <LinearLayout
-            android:layout_weight="2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:clickable="true"
-            android:gravity="center"
-            android:weightSum="10"
-            android:layout_height="0dp"
-            >
 
-            <LinearLayout android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:clickable="true"
-                android:onClick="onAddRoomClick"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:layout_width="wrap_content">
-
-                <com.livixa.apacam.client.widget.CustomTextView
-
-                     android:background="@drawable/ic_add_room_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/AddRooms"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montsemibold"
-                    android:textSize="13dp"
-                    android:visibility="visible"
-                    app:CustomFontFamily="Regular" />
-            </LinearLayout>
-
-        </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 

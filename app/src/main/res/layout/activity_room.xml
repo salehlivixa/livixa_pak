@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_margin="17dp"
@@ -28,11 +28,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-
-                android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
@@ -42,7 +39,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
 
                     >
@@ -51,8 +48,10 @@
                     <RelativeLayout
                         android:id="@+id/rl_bar"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/action_bar_size"
-                        android:layout_marginTop="@dimen/margin_10dp">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_gravity="center"
+                        >
 
 
                         <TextView
@@ -62,6 +61,7 @@
                             android:text="@string/RoomName"
                             android:textAlignment="center"
                             android:textColor="#000"
+                            android:layout_marginLeft="@dimen/margin_20dp"
                             android:textSize="16sp" />
 
 
@@ -71,7 +71,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginRight="@dimen/margin_15dp"
+                            android:layout_marginRight="@dimen/margin_45dp"
                             android:clickable="true"
                             android:src="@drawable/ic_close_ic" />
 
@@ -81,7 +81,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
 
                     >
@@ -89,16 +89,18 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_10dp">
 
 
                         <com.livixa.apacam.client.widget.CustomEditText
                             android:id="@+id/roomName"
-                            android:layout_width="200dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="50dp"
+                            android:layout_marginLeft="@dimen/margin_10dp"
                             android:background="@drawable/add_room_popup_tv_bg"
                             android:fontFamily="@font/montbold"
+                            android:layout_alignParentLeft="true"
                             android:hint="@string/RoomName"
                             android:textAlignment="center"
                             android:textColor="@color/grgray"
@@ -107,8 +109,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/margin_10dp"
-                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="@dimen/margin_20dp"
+                            android:layout_marginTop="60dp"
                             android:fontFamily="@font/montbold"
                             android:text="Select icon"
                             android:textColor="#000"
@@ -119,10 +121,11 @@
 
                         <ImageView
                             android:id="@+id/iv_img_blob"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerHorizontal="true"
+                            android:layout_marginRight="@dimen/margin_15dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/ic_icon_placeholder_ic" />
 
@@ -136,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10dp"
                     android:weightSum="10">
 
 
@@ -150,32 +154,32 @@
 
                         <ImageView
                             android:id="@+id/bedSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_bedroom_small" />
 
                         <ImageView
                             android:id="@+id/bathroomSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/margin_10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_bathroom_small" />
 
                         <ImageView
                             android:id="@+id/gestSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/margin_10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_guest_small" />
 
                         <ImageView
                             android:id="@+id/diningSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/margin_10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_dinning_small" />
 
@@ -191,32 +195,32 @@
 
                         <ImageView
                             android:id="@+id/bedLiving"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_living_small" />
 
                         <ImageView
                             android:id="@+id/gynSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_gym_small" />
 
                         <ImageView
                             android:id="@+id/kitchenSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_kitchen_small" />
 
                         <ImageView
                             android:id="@+id/garagSmall"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="35dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
                             android:background="@drawable/corner_border_gray"
                             android:src="@drawable/icon_garage_small" />
 
@@ -265,7 +269,7 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="15dp"
                     android:gravity="center">

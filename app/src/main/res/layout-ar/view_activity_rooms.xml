@@ -65,21 +65,22 @@
 
         <RelativeLayout android:layout_width="match_parent"
             android:layout_weight="6"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            >
 
             <GridView
                 android:id="@+id/viewroomsGridView"
-                android:visibility="visible"
-                android:numColumns="2"
-                android:listSelector="@android:color/transparent"
-                android:stretchMode="spacingWidthUniform"
-                android:gravity="center"
-                android:columnWidth="130dp"
-                android:verticalSpacing="10dp"
-                android:layout_width="match_parent"
-                android:scrollbars="none"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:layout_height="match_parent">
+                android:columnWidth="180dp"
+                android:gravity="center"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="10dp"
+                android:visibility="visible">
 
 
 

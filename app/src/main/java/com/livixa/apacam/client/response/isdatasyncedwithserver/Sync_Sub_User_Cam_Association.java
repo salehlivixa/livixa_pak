@@ -97,7 +97,7 @@ public class Sync_Sub_User_Cam_Association  implements ServerConnectListener{
 	
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		if (mProgressDialog != null) {
 			mProgressDialog.hide();

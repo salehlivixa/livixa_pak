@@ -9,7 +9,7 @@ public interface ServerConnectListener {
 	 * @param response
 	 */
 
-	void onSuccess(ServerResponse response);
+	void onSuccess(ServerResponse response,String raw);
 
 	/**
 	 * Called if server call was failed.

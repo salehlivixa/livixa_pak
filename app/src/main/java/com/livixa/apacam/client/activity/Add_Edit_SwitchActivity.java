@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ import android.view.WindowManager;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -53,6 +55,7 @@ import object.p2pipcam.adapter.Switch_List_Adapter;
 import object.p2pipcam.zxingtwodimensioncode.CaptureActivity;
 
 public class Add_Edit_SwitchActivity extends Activity {
+
 
     public enum SwitchIdStatus {
         OK, BAD_LENGHT, ID_NOT_HEXADECIMAL, INVALID_TYPE
@@ -84,7 +87,7 @@ public class Add_Edit_SwitchActivity extends Activity {
 
     private GridView mSwitchListView;
 
-
+    ImageView iv_switch_back;
     private View mEmptyView;
 
     private Switch_List_Adapter mSwitchListAdaptor;
@@ -99,11 +102,17 @@ public class Add_Edit_SwitchActivity extends Activity {
 
         Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(this);
 
+
     }
 
-    public void onbackButttonClick(View view) {
-        onBackPressed();
+    public void back(View view) {
+        Toast.makeText(this,
+                "This is a message displayed in a Toast",
+                Toast.LENGTH_SHORT).show();
     }
+
+
+
 
     public void onhomeButttonClick(View view) {
         finish();
@@ -118,17 +127,19 @@ public class Add_Edit_SwitchActivity extends Activity {
     public void onBackPressed() {
 
         super.onBackPressed();
-        finish();
 
-        Intent intent = new Intent(this, SettingsActivity.class);
+
+        Intent intent = new Intent(Add_Edit_SwitchActivity.this, SettingsActivity.class);
+
 
         KisafaApplication.perFormActivityBackTransition(this);
 
         startActivity(intent);
     }
+
     private void initUiComponents() {
         mSwitchListView = (GridView) findViewById(R.id.switchListView);
-
+        iv_switch_back = findViewById(R.id.iv_switch_back);
         mEmptyView = findViewById(R.id.switchEmptylayout);
     }
 
@@ -138,6 +149,10 @@ public class Add_Edit_SwitchActivity extends Activity {
 
         mSwitchListView.setAdapter(mSwitchListAdaptor);
 
+        iv_switch_back.setOnClickListener(v -> {
+          onBackPressed();
+        });
+        iv_switch_back.bringToFront();
 
     }
 
@@ -303,7 +318,6 @@ public class Add_Edit_SwitchActivity extends Activity {
         return SwitchIdStatus.OK;
 
     }
-
 
 
     private void showErrorDialogue(String message) {

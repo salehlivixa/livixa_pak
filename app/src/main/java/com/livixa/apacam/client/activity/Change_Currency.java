@@ -44,7 +44,7 @@ public class Change_Currency   implements ServerConnectListener
 	
 	
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.CHANGE_CURRENCY_REQUEST_CODE) {
 			RequestResponse requestResponse = (RequestResponse) response;

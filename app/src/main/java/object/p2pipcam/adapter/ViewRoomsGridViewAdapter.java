@@ -219,7 +219,7 @@ public class ViewRoomsGridViewAdapter extends BaseAdapter {
 					.on("User_Room_Model.room_id=Room_Model.room_id").where("User_Room_Model.userId = ? AND User_Room_Model.userId != ? AND Room_Model.modelStatus != ?  AND  User_Room_Model.modelStatus != ?  ORDER BY Room_Model.title", AppPreference.getValue(mContex, AppKeys.KEY_USER_ID),"",AppKeys.KEY_IS_DELETED,AppKeys.KEY_IS_DELETED).execute();
 		}catch(Exception ex)
 		{
-			ex.toString();
+			ex.printStackTrace();
 		}
 		
 		
@@ -241,7 +241,7 @@ public class ViewRoomsGridViewAdapter extends BaseAdapter {
 			
 		}catch(Exception ex)
 		{
-			ex.toString();
+			ex.printStackTrace();
 		}
 		return roomModelList;
 	}

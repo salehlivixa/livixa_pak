@@ -8,9 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 import com.livixa.apacam.client.response.tariff_energy.ShTariffResult;
 
+import org.json.JSONArray;
+
 public class ShResult implements Serializable {
 
-	
+	@SerializedName("sh_orders")
+	@Expose
+	private  ArrayList<Sh_Order> shOrders;
 	
 	@SerializedName("sh_cameras")
 	@Expose
@@ -39,12 +43,26 @@ public class ShResult implements Serializable {
 	@SerializedName("sh_tariffs")
 	@Expose
 	private ArrayList<ShTariffResult> shtariffList;
-	
-	
+
+	@SerializedName("sh_subscriptions")
+	@Expose
+	private ArrayList<Sh_Subscription> sh_subscriptions;
+
+	@SerializedName("sh_features")
+	@Expose
+	private ArrayList<Sh_Features> sh_features;
+
 	@SerializedName("sh_moods")
 	@Expose
 	private ArrayList<Sh_Mood> shMoodsList;
-	
+
+	public ArrayList<Sh_Order> getShOrders() {
+		return shOrders;
+	}
+
+	public void setShOrders(ArrayList<Sh_Order> shOrders) {
+		this.shOrders = shOrders;
+	}
 
 	public ArrayList<Sh_Camera> getShCameras() {
 		return shCameras;
@@ -101,8 +119,21 @@ public class ShResult implements Serializable {
 	public void setSHMoodList(ArrayList<Sh_Mood> shMoodsList) {
 		this.shMoodsList = shMoodsList;
 	}
-	
-	
-	
-	
+
+
+	public ArrayList<Sh_Subscription> getSh_subscriptions() {
+		return sh_subscriptions;
+	}
+
+	public void setSh_subscriptions(ArrayList<Sh_Subscription> sh_subscriptions) {
+		this.sh_subscriptions = sh_subscriptions;
+	}
+
+	public ArrayList<Sh_Features> getSh_features() {
+		return sh_features;
+	}
+
+	public void setSh_features(ArrayList<Sh_Features> sh_features) {
+		this.sh_features = sh_features;
+	}
 }

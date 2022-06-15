@@ -64,7 +64,7 @@ public class Sync_Data_to_Server_WebServiceCall extends AsyncTask<Void, Void, Bo
     }
 
     @Override
-    public void onSuccess(ServerResponse response) {
+    public void onSuccess(ServerResponse response,String raw) {
 
         if (Sync_Service.stopWebserviceCalling) {
             return;

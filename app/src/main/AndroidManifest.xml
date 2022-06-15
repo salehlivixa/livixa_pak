@@ -45,6 +45,9 @@
         android:usesCleartextTraffic="true"
         tools:ignore="HardcodedDebugMode">
         <activity
+            android:name="com.livixa.apacam.client.activity.Subscription_packages"
+            android:exported="false" />
+        <activity
             android:name="com.livixa.apacam.client.activity.launchloader"
             android:exported="false" />
         <activity

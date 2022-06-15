@@ -108,7 +108,7 @@ public class Upload_Moods_Pictures_On_Server implements  ServerConnectListener
 	}
 	
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		
           

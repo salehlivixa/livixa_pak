@@ -39,16 +39,22 @@
 	<FrameLayout
 		android:layout_width="match_parent"
 		android:background="#40ffffff"
-		android:gravity="center"
 		android:layout_height="match_parent"
-
 		>
 
 		<RelativeLayout
-			android:layout_width="300dp"
-			android:layout_height="300dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
 			android:layout_marginBottom="10dp"
-			android:orientation="vertical" >
+			android:orientation="vertical"
+			android:layout_gravity="end"
+			>
+
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="end"
+	>
 
 
 			<LinearLayout
@@ -79,22 +85,26 @@
 				</LinearLayout>
 
 				<LinearLayout
-					android:layout_width="wrap_content"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginLeft="@dimen/margin_10dp"
 					android:orientation="vertical">
+
 
 					<TextView
 						android:id="@+id/tv_switchName"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:fontFamily="@font/montsemibold"
+						android:layout_gravity="end"
 						android:text="الإضاءة"
-						android:textColor="#000" />
+						android:textColor="#000"
+						android:textSize="12sp"
+
+						/>
 
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+						android:layout_gravity="end"
 						android:text="مفتاح إنارة خطين"
 						android:textSize="12sp"
 
@@ -120,15 +130,13 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="@dimen/margin_20dp"
-						android:orientation="vertical"
-
-						>
+						android:orientation="vertical">
 
 						<com.livixa.apacam.client.widget.CustomTextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:fontFamily="@font/montsemibold"
-							android:hint="@string/Assignedto"
+							android:hint="مخصص إلى"
 							android:textColor="#000"
 							android:textSize="10sp" />
 
@@ -136,7 +144,7 @@
 							android:id="@+id/switchAssignedTo"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/Assignedto"
+							android:text="Office ENT"
 							android:textSize="10sp" />
 
 
@@ -152,7 +160,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:fontFamily="@font/montsemibold"
-							android:text="ID"
+							android:text="الرقم التعريفي"
 							android:textColor="#000"
 							android:textSize="10sp"
 
@@ -172,11 +180,8 @@
 
 
 			</LinearLayout>
+</LinearLayout>
 
-
-
-
-
-		</RelativeLayout >
+		</RelativeLayout>
 	</FrameLayout>
 </com.livixa.apacam.client.swipelistview.SwipeRevealLayout>

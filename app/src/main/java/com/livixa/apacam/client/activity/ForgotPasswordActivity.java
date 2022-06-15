@@ -122,7 +122,7 @@ public class ForgotPasswordActivity extends Activity implements
 	}
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		/*if (mProgressDialog != null) {
 			mProgressDialog.hide();
 		}*/

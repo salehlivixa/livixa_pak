@@ -60,6 +60,11 @@
         android:id="@+id/ll_1"
         >
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="550dp">
@@ -75,7 +80,9 @@
                 <RelativeLayout
                     android:id="@+id/rl_add_edit_rooms"
                     android:layout_width="350dp"
-                    android:layout_height="30dp">
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    >
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -105,7 +112,7 @@
                     android:id="@+id/rl_add_edit_switch"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -118,8 +125,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="Add/Edit Switches"
                         android:fontFamily="@font/montsemibold"
+                        android:text="Switches"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -134,7 +141,7 @@
                     android:id="@+id/rl_inside_home"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -147,8 +154,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="Inside Home Control"
                         android:fontFamily="@font/montsemibold"
+                        android:text="Check Connection"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -163,7 +170,7 @@
                     android:id="@+id/rl_control_remotly"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -176,17 +183,18 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
+
                         android:fontFamily="@font/montsemibold"
                         android:text="@string/ControlRemotly"
                         android:textSize="20sp" />
 
 
-                    <com.livixa.apacam.client.activity.ShSwitchView
-                        xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                    <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/remotlySwitch"
                         android:layout_width="50dip"
                         android:layout_height="60dip"
                         android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/margin_basic_5"
                         shSwitch:shadowSpace="7dip">
 
                     </com.livixa.apacam.client.activity.ShSwitchView>
@@ -196,7 +204,7 @@
                     android:id="@+id/rl_configureSwitches"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -226,7 +234,7 @@
                     android:id="@+id/rl_edit_users"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -257,7 +265,7 @@
                     android:id="@+id/rl_energy"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -285,7 +293,7 @@
                 <RelativeLayout
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
                     android:id="@+id/rl_about"
                     >
 
@@ -314,8 +322,39 @@
                         android:src="@drawable/ic_open_arrow_ic" />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="350dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    android:id="@+id/rl_subscription"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ic_livixa_store_ic"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montsemibold"
+                        android:text="Subscription Detail"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_open_arrow_ic" />
+                </RelativeLayout>
+
                 <View
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="15dp"
                     android:background="#c0c0c0" />
@@ -324,7 +363,7 @@
 
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
                     android:id="@+id/rl_privacy_and_security"
                     >
 
@@ -353,7 +392,7 @@
                     android:id="@+id/rl_language"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -380,7 +419,7 @@
                     android:id="@+id/rl_notification"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -408,7 +447,7 @@
                 <RelativeLayout
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -435,7 +474,7 @@
                     android:id="@+id/rl_logout"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp">
+                    android:layout_marginTop="@dimen/margin_15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -464,7 +503,7 @@
             </LinearLayout>
 
         </RelativeLayout>
-
+        </ScrollView>
 
     </LinearLayout>
 

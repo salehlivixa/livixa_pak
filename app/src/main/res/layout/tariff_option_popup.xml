@@ -83,6 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                    android:gravity="center"
+                    android:visibility="gone"
                      >
 
                     <object.p2pipcam.system.MyTextView
@@ -92,7 +93,7 @@
                         android:ellipsize="marquee"
                         android:gravity="center"
                         android:focusableInTouchMode="true"
-                        
+
                         android:marqueeRepeatLimit="marquee_forever"
                          android:id="@+id/tv_addNewTariff"
                         android:scrollHorizontally="true"
@@ -114,6 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                    android:gravity="center"
+                    android:visibility="gone"
                      >
 
                     <object.p2pipcam.system.MyTextView

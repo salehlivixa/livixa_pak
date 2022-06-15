@@ -118,7 +118,7 @@ public class Notification extends Activity implements ServerConnectListener {
     }
 
     @Override
-    public void onSuccess(ServerResponse response) {
+    public void onSuccess(ServerResponse response,String raw) {
         if (response.getRequestCode() == ServerCodes.ServerRequestCodes.NOTIFICATION_REQUEST_CODE) {
             NotificatioinResponse requestResponse = (NotificatioinResponse) response;
 

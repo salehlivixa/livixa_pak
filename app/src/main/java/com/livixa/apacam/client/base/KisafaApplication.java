@@ -1,6 +1,7 @@
 package com.livixa.apacam.client.base;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import com.livixa.apacam.client.activity.HomeActivity;
@@ -57,6 +58,7 @@ import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.oro.orochi.application.Orochi;
+import com.sawas.ashisuto.db.TinyDB;
 
 public class KisafaApplication extends Orochi {
 	public static String TAG = "Livixa Application";
@@ -360,9 +362,61 @@ public class KisafaApplication extends Orochi {
 		file.mkdirs();
 	}
 
-	
-	
-	
+	public static void set_sh_features(Context context, String values){
+		TinyDB tb = new TinyDB(context);
+		tb.putString("__sh_features",values);
+	}
+
+	public static String get_sh_features(Context context){
+		return new TinyDB(context).getString("__sh_features");
+	}
+
+	public static void set_sh_subscriptions(Context context, String values){
+		TinyDB tb = new TinyDB(context);
+		tb.putString("__sh_subscriptions",values);
+	}
+
+	public static String get_sh_subscriptions(Context context){
+		return new TinyDB(context).getString("__sh_subscriptions");
+	}
+
+	public static void setSubscription(Context context, ArrayList<String> values){
+		TinyDB tb = new TinyDB(context);
+		tb.putList("__subscription",values);
+	}
+
+	public static ArrayList<String> getSubscription(Context context){
+		return new TinyDB(context).getList("__subscription");
+	}
+
+//	Sh_subscription
+
+	public static void setShsubscription(Context context, ArrayList<String> values){
+		TinyDB tb = new TinyDB(context);
+		tb.putList("__ShSubscription",values);
+	}
+
+	public static ArrayList<String> getShSubscription(Context context){
+		return new TinyDB(context).getList("__ShSubscription");
+	}
+
+//end
+
+//	Sh_Feature
+
+	public static void setShFeatures(Context context, ArrayList<String> values){
+		TinyDB tb = new TinyDB(context);
+		tb.putList("__ShFeatures",values);
+	}
+
+	public static ArrayList<String> getShFeatures(Context context){
+		return new TinyDB(context).getList("__ShFeatures");
+	}
+
+
+//end
+
+
 	public void initParse() {
 		// Parse.initialize(this,
 		// AppKeys.getInstance().getParseAppId(),

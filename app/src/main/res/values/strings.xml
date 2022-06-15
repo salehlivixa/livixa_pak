@@ -789,7 +789,7 @@
     <string name="AddEditRooms">Add/Edit Rooms</string>
     <string name="AddEditSwitches">Add/Edit Switches</string>
     <string name="Controlinsidehome">Control inside home</string>
-    <string name="ControlRemotly">Control Remotly</string>
+    <string name="ControlRemotly">Access From Anywhere</string>
     <string name="ConfigureSwitches">Configure Switches</string>
     <string name="EditUsers">Edit Users</string>
     <string name="ElectricityTariff">Electricity Tariff</string>
@@ -800,7 +800,7 @@
     <string name="Language_Currency">Language &amp; Currency</string>
     <string name="SystemReset">System Reset</string>
     <string name="AddEditMoods">Add/Edit Moods</string>
-    <string name="ScanSwitches">Scan Switches</string>
+    <string name="ScanSwitches">Check Connection</string>
     <string name="Areyousuretologout">Are you sure to logout?</string>
     <string name="Yourdataneedstobesyncedwithserverlogout">Your data needs to be synced with server!. Do you want to logout without syncing?</string>
 
@@ -841,7 +841,7 @@
     <string name="UnabletoreadBarcode">Unable to read Barcode !</string>
     <string name="Noswitchesaddedyet">No switches added yet!</string>
     <string name="AddSwitch">Add Switch</string>
-    <string name="Assignedto">Assigned to : </string>
+    <string name="Assignedto">A<b>ssigned to :</b> </string>
 
 
     <string name="Switch1">Switch 1</string>
@@ -961,7 +961,7 @@
     <string name="Slabin">Slab in</string>
     <string name="ResidentialTariffin">Residential Tariff in</string>
     <string name="notyetaddedupperlimit">You have not yet added tariff with infinite upper limit!, Do you want to add infinte upper limit?</string>
-    <string name="Options">Options</string>
+    <string name="Options">Alert</string>
     <string name="Addnewtariff">Add new tariff</string>
     <string name="alreadyaddedtariff">You have already added tariff with infinite upper limit!</string>
     <string name="Deletealltariffs">Delete all tariffs</string>
@@ -987,9 +987,9 @@
     <string name="Update">Update</string>
 
 
-    <string name="LowerLimitAlert">Lower Limit Alert</string>
-    <string name="MediumLimitAlert">Medium Limit Alert</string>
-    <string name="HighLimitAlert">High Limit Alert</string>
+    <string name="LowerLimitAlert">Minimum Price</string>
+    <string name="MediumLimitAlert">Medium Price</string>
+    <string name="HighLimitAlert">Higher Price</string>
 
 
     <!-- // ChangePasswordViewController -->

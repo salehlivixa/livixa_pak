@@ -4,7 +4,8 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
+    android:background="@drawable/bg"
+    >
 
 
 
@@ -190,7 +191,9 @@
 
         <RelativeLayout android:layout_width="match_parent"
             android:layout_weight="8"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:supportsRtl="true"
+            >
 
 
             <GridView
@@ -201,6 +204,7 @@
                 android:layout_marginTop="15dp"
                 android:columnWidth="130dp"
                 android:gravity="center"
+
                 android:listSelector="@android:color/transparent"
                 android:numColumns="2"
                 android:scrollbars="none"

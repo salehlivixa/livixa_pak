@@ -174,7 +174,7 @@ public class Switch_List_Adapter extends BaseAdapter implements ServerConnectLis
 	}
 
 	@Override
-	public void onSuccess(ServerResponse response) {
+	public void onSuccess(ServerResponse response,String raw) {
 		
 		
 	}

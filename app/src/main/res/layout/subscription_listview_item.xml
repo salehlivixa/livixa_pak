@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#40ffffff">
+
+
+    <TextView
+        android:id="@+id/Sub_id"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sub_package"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="#BBBCBE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sub_package"
+        app:layout_constraintStart_toEndOf="@id/Sub_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sub_package"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="FreePackage"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_2"
+        app:layout_constraintStart_toEndOf="@id/view_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="#BBBCBE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sub_exp_date"
+        app:layout_constraintStart_toEndOf="@id/sub_package"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sub_exp_date"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

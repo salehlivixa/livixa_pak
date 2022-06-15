@@ -56,7 +56,7 @@
                     android:clickable="true"
                     android:fontFamily="@font/montbold"
                     android:onClick="onOptionClick"
-                    android:text="@string/Options"
+                    android:text="Alert"
                     android:textColor="#fff"
                     android:textSize="15sp" />
 
@@ -208,7 +208,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_add_manually_btn"
-                    android:text="Add New Tariff"
+                    android:text="Select Country"
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"

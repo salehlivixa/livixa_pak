@@ -2,6 +2,7 @@ package com.livixa.apacam.client.network;
 
 import java.io.IOException;
 
+import com.google.gson.Gson;
 import com.livixa.apacam.client.response.ServerResponse;
 import com.livixa.apacam.client.utility.AppStrings;
 import retrofit2.Call;
@@ -45,7 +46,7 @@ public class RestCallback<T> implements Callback {
 			if (response.body() != null) {
 				ServerResponse callResponse = (ServerResponse) response.body();
 				callResponse.setRequestCode(requestCode);
-				listener.onSuccess(callResponse);
+				listener.onSuccess(callResponse,new Gson().toJson(response));
 
 			} else {
 				setErrorMessage(response.raw().message());
