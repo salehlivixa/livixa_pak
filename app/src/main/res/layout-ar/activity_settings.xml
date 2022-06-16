@@ -65,7 +65,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="550dp">
+            android:layout_height="650dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -121,8 +121,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/AddEditSwitches"
                         android:fontFamily="@font/montsemibold"
+                        android:text="@string/AddEditSwitches"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -150,8 +150,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/Controlinsidehome"
                         android:fontFamily="@font/montsemibold"
+                        android:text="@string/Controlinsidehome"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -184,14 +184,12 @@
                         android:textSize="20sp" />
 
 
-
                     <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/remotlySwitch"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="50dip"
                         android:layout_height="60dip"
-                        shSwitch:shadowSpace="7dip"
-                        >
+                        android:layout_alignParentLeft="true"
+                        shSwitch:shadowSpace="7dip">
 
                     </com.livixa.apacam.client.activity.ShSwitchView>
                 </RelativeLayout>
@@ -243,8 +241,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/EditUsers"
                         android:fontFamily="@font/montsemibold"
+                        android:text="@string/EditUsers"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -252,9 +250,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_open_arrow_ic__ar_"
                         android:fontFamily="@font/montsemibold"
-                        />
+                        android:src="@drawable/ic_open_arrow_ic__ar_" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -274,8 +271,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/ElectricityTariff"
                         android:fontFamily="@font/montsemibold"
+                        android:text="@string/ElectricityTariff"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -287,11 +284,10 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/rl_about"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp"
-                    android:id="@+id/rl_about"
-                    >
+                    android:layout_marginTop="@dimen/margin_10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -318,6 +314,35 @@
                         android:src="@drawable/ic_open_arrow_ic__ar_" />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/rl_subscription"
+                    android:layout_width="350dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/margin_15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_livixa_store_ic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montsemibold"
+                        android:text="Subscription Detail"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_open_arrow_ic__ar_" />
+                </RelativeLayout>
+
                 <View
                     android:layout_width="300dp"
                     android:layout_height="2dp"
@@ -326,11 +351,10 @@
 
                 <RelativeLayout
 
+                    android:id="@+id/rl_privacy_and_security"
                     android:layout_width="350dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="@dimen/margin_10dp"
-                    android:id="@+id/rl_privacy_and_security"
-                    >
+                    android:layout_marginTop="@dimen/margin_10dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -369,8 +393,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/Language_Currency"
                         android:fontFamily="@font/montsemibold"
+                        android:text="@string/Language_Currency"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -402,11 +426,10 @@
 
                     <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/enablenoti"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="50dip"
                         android:layout_height="60dip"
-                        shSwitch:shadowSpace="7dip"
-                        />
+                        android:layout_alignParentLeft="true"
+                        shSwitch:shadowSpace="7dip" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -451,11 +474,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montsemibold"
                         android:text="@string/Logout"
                         android:textColor="#FF003B"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/montsemibold"
-                        />
+                        android:textSize="20sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"

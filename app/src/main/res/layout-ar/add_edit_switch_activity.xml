@@ -151,7 +151,7 @@
                     android:textColor="@color/white"
                     android:textSize="13dp"
                     android:fontFamily="@font/montsemibold"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     />
             </LinearLayout>
 
@@ -176,7 +176,7 @@
                     android:text="@string/SwitchScan"
                     android:textColor="@color/white"
                     android:textSize="13dp"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
             </LinearLayout>
 
 

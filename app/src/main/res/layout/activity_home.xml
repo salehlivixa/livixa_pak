@@ -364,19 +364,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="end"
-                        >
+                        android:gravity="end">
 
                         <TextView
                             android:id="@+id/activity_home_package_expriy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Expiry: 20 June"
-                            android:fontFamily="@font/montbold"
-                            android:layout_marginRight="60dp"
                             android:layout_marginTop="@dimen/margin_30dp"
-                            android:textSize="16sp"
-                            />
+                            android:layout_marginRight="60dp"
+                            android:fontFamily="@font/montbold"
+                            android:text="Expiry: 20 June"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 

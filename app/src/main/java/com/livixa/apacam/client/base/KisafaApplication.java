@@ -380,6 +380,34 @@ public class KisafaApplication extends Orochi {
 		return new TinyDB(context).getString("__sh_subscriptions");
 	}
 
+	public static void set_email(Context context, String values){
+		TinyDB tb = new TinyDB(context);
+		tb.putString("__email",values);
+	}
+
+	public static String get_email(Context context){
+		return new TinyDB(context).getString("__email");
+	}
+
+	public static void set_password(Context context, String values){
+		TinyDB tb = new TinyDB(context);
+		tb.putString("__password",values);
+	}
+
+	public static String get_password(Context context){
+		return new TinyDB(context).getString("__password");
+	}
+
+
+	public static void setbiometricstatus(Context context, boolean values){
+		TinyDB tb = new TinyDB(context);
+		tb.putBoolean("__biometricstatus",values);
+	}
+
+	public static boolean get_biometricstatus(Context context){
+		return new TinyDB(context).getBoolean("__biometricstatus",false);
+	}
+
 	public static void setSubscription(Context context, ArrayList<String> values){
 		TinyDB tb = new TinyDB(context);
 		tb.putList("__subscription",values);

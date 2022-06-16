@@ -300,6 +300,88 @@
             </LinearLayout>
 
 
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:layout_width="375dp"
+                android:layout_height="200dp"
+                android:background="@drawable/whitecard"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="end"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subscription"
+                        android:textColor="#000"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="16sp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    >
+
+                    <TextView
+                        android:id="@+id/activity_home_package_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Package 1"
+                        android:textColor="#000"
+                        android:fontFamily="@font/montbold"
+                        android:layout_marginRight="110dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                    <TextView
+                        android:id="@+id/activity_home_package_expriy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="@dimen/margin_50dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="Expiry: 20 June"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
         </LinearLayout>
 
 
