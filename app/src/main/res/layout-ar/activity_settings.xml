@@ -332,7 +332,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montsemibold"
-                        android:text="Subscription Detail"
+                        android:text="معلومات الاشتراك"
                         android:textSize="20sp" />
 
                     <ImageView

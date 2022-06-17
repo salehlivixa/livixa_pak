@@ -66,9 +66,9 @@
                     android:layout_height="30dp"
                     android:layout_gravity="end"
                     android:layout_marginRight="@dimen/margin_50dp"
-                    android:paddingLeft="@dimen/padding_30dp"
                     android:fontFamily="@font/montbold"
-                    android:text="إعداد المفاتيح"
+                    android:paddingLeft="@dimen/padding_30dp"
+                    android:text="اسم الراوتر"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
@@ -100,7 +100,7 @@
                     android:paddingLeft="@dimen/padding_30dp"
                     android:layout_marginTop="@dimen/margin_30dp"
                     android:fontFamily="@font/montbold"
-                    android:text="كلمة المرور"
+                    android:text="كلمة مرور الواي فايكلمة المرور"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
@@ -129,7 +129,7 @@
                     android:paddingLeft="@dimen/padding_30dp"
                     android:layout_marginTop="@dimen/margin_30dp"
                     android:fontFamily="@font/montbold"
-                    android:text="عدد الأجهزة"
+                    android:text="مجموع الأجهزة الجاهزة للربطعدد الأجهزة"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
@@ -228,61 +228,62 @@
 
     <LinearLayout
         android:id="@+id/cancelButtonLyout"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
         android:background="#99000000"
         android:gravity="center"
-        >
+        android:orientation="vertical"
+        android:visibility="visible">
 
 
-        <LinearLayout android:layout_width="match_parent"
-            android:orientation="vertical"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
             android:gravity="center"
-            android:layout_height="140dp">
+            android:orientation="vertical">
 
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/load"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-            <TextView android:layout_height="50dp"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/montbold"
                 android:gravity="center"
                 android:text="يرجى الانتظار قد يستغرق هذا بضع دقائق."
-                android:fontFamily="@font/montbold"
-                android:layout_width="match_parent"/>
-
-            <TextView android:layout_height="20dp"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
                 android:layout_marginTop="@dimen/margin_10dp"
                 android:gravity="center"
                 android:text=""
-                android:layout_width="match_parent"/>
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
 
         <object.p2pipcam.system.MyTextView
 
+            android:id="@+id/tv_Cancel"
             android:layout_width="200dp"
             android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:ellipsize="marquee"
-            android:gravity="center"
-
-            android:focusableInTouchMode="true"
-            android:id="@+id/tv_Cancel"
-            android:background="@drawable/ic_cancel_btn"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+
             android:layout_marginRight="15dp"
+            android:background="@drawable/ic_cancel_btn"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
             android:scrollHorizontally="true"
             android:singleLine="true"
             android:text="@string/Cancel"

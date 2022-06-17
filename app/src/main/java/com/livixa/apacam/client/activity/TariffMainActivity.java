@@ -214,6 +214,9 @@ public void onbackButttonClick(View view)
 }
 
 
+public void oncountryclick(View view){
+	countryPopup();
+}
 
 public void onOptionClick(View view)
 {
@@ -450,6 +453,42 @@ private void tariffSettingPopup() {
 	
 }
 
+	private void countryPopup() {
+
+		LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+		View popupView = layoutInflater.inflate(R.layout.activity_tariff_option_country_popup, null);
+
+		TextView tv_cancel=(TextView) popupView.findViewById(R.id.cancelButton);
+
+
+
+		final PopupWindow popupWindow=new PopupWindow(popupView,
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,
+				true);
+
+		popupWindow.setTouchable(true);
+		popupWindow.setFocusable(true);
+
+		popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
+
+
+
+		popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+		tv_cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+			}
+		});
+
+
+
+
+	}
 
 
 private void OptionPopup() {

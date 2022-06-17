@@ -103,7 +103,7 @@
 		<string name="AddEditRooms">إضافة / تعديل الغرف</string>
 		<string name="AddEditSwitches">إضافة / تعديل مفاتيح </string>
 		<string name="Controlinsidehome">التحكم بداخل المنزل</string>
-		<string name="ControlRemotly">التحكم عن بعد </string>
+		<string name="ControlRemotly">التحكم من الخارج</string>
 		<string name="ConfigureSwitches">إعداد المفاتيح</string>
 		<string name="EditUsers">إضافة / تعديل مستخدمين</string>
 		<string name="ElectricityTariff">تعرفة الكهرباء</string>
@@ -223,7 +223,7 @@
 		<string name="isconnectedtothewifi">متصل بالشبكة</string>
 		<string name="EspTouchDelegateImpl">EspTouchDelegateImpl onEsptouchResultAddedWithResult bssid:</string>
 		<string name="Configuration">تهيئة</string>
-		<string name="Confirm">تأكيد</string>
+		<string name="Confirm">متصل</string>
 
 		<string name="Iknow">أعرف</string>
 		<string name="ExecuteResult">تنفيذ النتائج</string>
