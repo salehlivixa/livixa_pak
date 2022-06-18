@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: E./Livixa/Livixa-Andriod/app/libs/zxing.jar">
+  <library name="Gradle: ./app/libs/zxing.jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/zxing.jar!/" />
     </CLASSES>

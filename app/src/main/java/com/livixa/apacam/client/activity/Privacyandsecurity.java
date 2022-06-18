@@ -35,64 +35,36 @@ public class Privacyandsecurity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacyandsecurity);
 
-//        boolean value = KisafaApplication.get_biometricstatus(this);
-//        ShSwitchView touchid = (ShSwitchView)findViewById(R.id.touchid);
-//        touchid.setOn(value);
-//        touchid.setOnSwitchStateChangeListener(b->{KisafaApplication.setbiometricstatus(Privacyandsecurity.this,b);
-//            if (b) {
-//                BiometricManager biometricManager = BiometricManager.from(this);
-//                switch (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_STRONG)) {
-//                    case BiometricManager.BIOMETRIC_SUCCESS:
-//                        Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
-//                        break;
-//                    case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-//                        Log.e("MY_APP_TAG", "No biometric features available on this device.");
-//                        break;
-//                    case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-//                        Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
-//                        break;
-//                    case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-//                        // Prompts the user to create credentials that your app accepts.
-//                        final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
-//                        enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
-//                                BIOMETRIC_STRONG | DEVICE_CREDENTIAL);
-//                        startActivityForResult(enrollIntent, REQUEST_CODE);
-//                        break;
-//                }
-//
-//                executor = ContextCompat.getMainExecutor(this);
-//                biometricPrompt = new BiometricPrompt(Privacyandsecurity.this,
-//                        executor, new BiometricPrompt.AuthenticationCallback()
-//                {
-//                    @Override
-//                    public void onAuthenticationError(int errorCode,
-//                                                      @NonNull CharSequence errString) {
-//                        super.onAuthenticationError(errorCode, errString);
-//                        Toast.makeText(getApplicationContext(),
-//                                "Authentication error: " + errString, Toast.LENGTH_SHORT)
-//                                .show();
-//                    }
-//
-//                    @Override
-//                    public void onAuthenticationSucceeded(
-//                            @NonNull BiometricPrompt.AuthenticationResult result) {
-//                        super.onAuthenticationSucceeded(result);
-//                        Toast.makeText(getApplicationContext(),
-//                                "Authentication succeeded!", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                    @Override
-//                    public void onAuthenticationFailed() {
-//                        super.onAuthenticationFailed();
-//                        Toast.makeText(getApplicationContext(), "Authentication failed",
-//                                Toast.LENGTH_SHORT)
-//                                .show();
-//                    }
-//                });
+        boolean value = KisafaApplication.get_biometricstatus(this);
+        ShSwitchView touchid = (ShSwitchView)findViewById(R.id.touchid);
+        touchid.setOn(value);
+        touchid.setOnSwitchStateChangeListener(b->{KisafaApplication.setbiometricstatus(Privacyandsecurity.this,b);
+            if (b) {
+                KisafaApplication.setbiometricstatus(this,true);
+
+                BiometricManager biometricManager = BiometricManager.from(this);
+                switch (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_STRONG)) {
+                    case BiometricManager.BIOMETRIC_SUCCESS:
+                        Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
+                       break;
+                    case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                        Log.e("MY_APP_TAG", "No biometric features available on this device.");
+                        break;
+                    case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                        Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
+                        break;
+                    case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                        // Prompts the user to create credentials that your app accepts.
+                        final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);
+                        enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+                                BIOMETRIC_STRONG | DEVICE_CREDENTIAL);
+                        startActivityForResult(enrollIntent, REQUEST_CODE);
+                        break;
+                }
 
 
-//            }
-//        });
+            }
+        });
 
 
 

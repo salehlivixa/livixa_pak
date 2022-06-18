@@ -209,7 +209,8 @@ public class KisafaApplication extends Orochi {
 			 
 		 }catch(Exception ex)
 		 {
-			 ex.toString();
+			 ex.printStackTrace();
+
 		 }
 		 
 		 
@@ -416,33 +417,6 @@ public class KisafaApplication extends Orochi {
 	public static ArrayList<String> getSubscription(Context context){
 		return new TinyDB(context).getList("__subscription");
 	}
-
-//	Sh_subscription
-
-	public static void setShsubscription(Context context, ArrayList<String> values){
-		TinyDB tb = new TinyDB(context);
-		tb.putList("__ShSubscription",values);
-	}
-
-	public static ArrayList<String> getShSubscription(Context context){
-		return new TinyDB(context).getList("__ShSubscription");
-	}
-
-//end
-
-//	Sh_Feature
-
-	public static void setShFeatures(Context context, ArrayList<String> values){
-		TinyDB tb = new TinyDB(context);
-		tb.putList("__ShFeatures",values);
-	}
-
-	public static ArrayList<String> getShFeatures(Context context){
-		return new TinyDB(context).getList("__ShFeatures");
-	}
-
-
-//end
 
 
 	public void initParse() {

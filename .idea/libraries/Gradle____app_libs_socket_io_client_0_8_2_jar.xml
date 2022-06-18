@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: E./Livixa/Livixa-Andriod/app/libs/socket.io-client-0.8.2.jar">
+  <library name="Gradle: ./app/libs/socket.io-client-0.8.2.jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/socket.io-client-0.8.2.jar!/" />
     </CLASSES>

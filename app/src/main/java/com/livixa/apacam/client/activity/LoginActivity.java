@@ -94,7 +94,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 
 //	boimetric
 	private ImageView Fingerlogin;
-	private static  final int REQUEST_CODE = 101010;
 	private Executor executor;
 	private BiometricPrompt biometricPrompt;
 	private BiometricPrompt.PromptInfo promptInfo;
@@ -118,52 +117,20 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 		initComponents();
 		//getSupportActionBar().hide();
 		setClickListner(this);
-
-//		biometric work
-
-//		executor = ContextCompat.getMainExecutor(this);
-//		biometricPrompt = new BiometricPrompt(LoginActivity.this,
-//				executor, new BiometricPrompt.AuthenticationCallback()
-//		{
-//			@Override
-//			public void onAuthenticationError(int errorCode,
-//											  @NonNull CharSequence errString) {
-//				super.onAuthenticationError(errorCode, errString);
-//				Toast.makeText(getApplicationContext(),
-//						"Authentication error: " + errString, Toast.LENGTH_SHORT)
-//						.show();
-//			}
+		bioConfig();
 //
-//			@Override
-//			public void onAuthenticationSucceeded(
-//					@NonNull BiometricPrompt.AuthenticationResult result) {
-//				super.onAuthenticationSucceeded(result);
-//				Toast.makeText(getApplicationContext(),
-//						"Authentication succeeded!", Toast.LENGTH_SHORT).show();
-//			}
-//
-//			@Override
-//			public void onAuthenticationFailed() {
-//				super.onAuthenticationFailed();
-//				Toast.makeText(getApplicationContext(), "Authentication failed",
-//						Toast.LENGTH_SHORT)
-//						.show();
-//			}
-//		});
-//
-//		promptInfo = new BiometricPrompt.PromptInfo.Builder()
-//				.setTitle("Biometric login for my app")
-//				.setSubtitle("Log in using your biometric credential")
-//				.setNegativeButtonText("Use account password")
-//				.build();
-//
-//
-//		Fingerlogin  = (ImageView) findViewById(R.id.fingerlogin);
-//		Fingerlogin.setOnClickListener(view -> {
-//			biometricPrompt.authenticate(promptInfo);
-//		});
 
 
+		Fingerlogin  = (ImageView) findViewById(R.id.fingerlogin);
+		Fingerlogin.setOnClickListener(view -> {
+			if(KisafaApplication.get_biometricstatus(LoginActivity.this)) {
+				biometricPrompt.authenticate(promptInfo);
+			}else{
+				Toast.makeText(getApplicationContext(),
+								"You need to activate from setting first", Toast.LENGTH_SHORT)
+						.show();
+			}
+		});
 //biometric end
 
 
@@ -173,45 +140,44 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 	}
 
 
-	private void CommingFromLogoutThenFreeResources()
-	{
-		try
-		{
-		boolean isUserLogout=getIntent().getBooleanExtra("IsUserLogOut", false);
-		
-		if(isUserLogout)
-		{
-			/*new Thread(new Runnable() {
-				@Override
-				public void run() {
-					try {
-						NativeCaller.PPPPInitial("");
-						NativeCaller.Free();
-						
-					} catch (Exception e) {
+	private void bioConfig(){
+		// biometric work
 
-					}
-				}
-			}).start();*/
-			
-			
-			Intent mStartActivity = new Intent(this, LoginActivity.class);
-			//mStartActivity.addFlags(Intent.ACTION_);
-			int mPendingIntentId = 123456;
-			PendingIntent mPendingIntent = PendingIntent.getActivity(this, mPendingIntentId,    mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
-			AlarmManager mgr = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-			mgr.setExact(AlarmManager.RTC, System.currentTimeMillis() + 10, mPendingIntent);
-			//mgr.setExact(type, triggerAtMillis, operation);
-			//System.exit(0);*/
-			Runtime.getRuntime().exit(0);
-			
+		executor = ContextCompat.getMainExecutor(this);
+		biometricPrompt = new BiometricPrompt(LoginActivity.this,
+				executor, new BiometricPrompt.AuthenticationCallback()
+		{
+			@Override
+			public void onAuthenticationError(int errorCode,
+											  @NonNull CharSequence errString) {
+				super.onAuthenticationError(errorCode, errString);
+				Toast.makeText(getApplicationContext(),
+								"AuthenticationError : " + errString , Toast.LENGTH_SHORT)
+						.show();
+			}
 
-		}
-		
-		}catch(Exception ex){}
+			@Override
+			public void onAuthenticationSucceeded(
+					@NonNull BiometricPrompt.AuthenticationResult result) {
+				super.onAuthenticationSucceeded(result);
+
+				validateLogin(KisafaApplication.get_email(LoginActivity.this),KisafaApplication.get_password(LoginActivity.this),"1");
+			}
+
+			@Override
+			public void onAuthenticationFailed() {
+				super.onAuthenticationFailed();
+
+			}
+		});
+
+		promptInfo = new BiometricPrompt.PromptInfo.Builder()
+				.setTitle("Biometric login for my app")
+				.setSubtitle("Log in using your biometric credential")
+				.setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK | BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+				.setConfirmationRequired(false)
+				.build();
 	}
-	
-
 	// Helping Methods
 	public void initComponents() {
 
@@ -353,49 +319,28 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 	}
 
 	private void showDialog(String text) {
-		/*MaterialDialog dialog = new MaterialDialog.Builder(mContext)
-				.content(text)
-				.positiveText(android.R.string.ok)
-				.negativeText(android.R.string.cancel)
-				.negativeColor(
-						KisafaApplication.getAppResources().getColor(
-								R.color.app_header_bg))
-				.positiveColor(
-						KisafaApplication.getAppResources().getColor(
-								R.color.app_header_bg))
-				.callback(new MaterialDialog.ButtonCallback() {
-					@Override
-					public void onPositive(MaterialDialog dialog) {
-						verifyData(true);
-					}
-				}).build();
-		dialog.show();*/
-		
-		
-		
-		
 		final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(LoginActivity.this,text);
-		
+
 		myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
-			
+
 			@Override
 			public void onCustomDialoguePositiveClick() {
-				
+
 				myASlertDialog.dismiss();
 				verifyData(true);
-				
+
 			}
-			
+
 			@Override
 			public void onCustomDialogueNegativeClick() {
-				
+
 				myASlertDialog.dismiss();
-				
+
 			}
 		});
-		
+
 		myASlertDialog.show();
-		
+
 		
 	}
 	
@@ -478,9 +423,11 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 		map.put("device_type", AppPreference.getValue(this, AppKeys.deviceType));
 		showProgressDialog("", 100);
 		
-		
-		KisafaApplication.set_email(this,username);
-		KisafaApplication.set_password(this,password);
+		if(!KisafaApplication.get_biometricstatus(this)) {
+			KisafaApplication.set_email(this, username);
+			KisafaApplication.set_password(this, password);
+		}
+
 		ApiService service = KisafaApplication.getRestClient().getApiService();
 		
 		Gson gson = new GsonBuilder().setDateFormat(
@@ -490,19 +437,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 		Call<LoginResponse> call = service.login(map);
 		call.enqueue(new RestCallback<LoginResponse>(this,ServerCodes.ServerRequestCodes.LOGIN_REQUEST_CODE, mContext));
 		
-		
-		//LoginService loginService =  ServiceGenerator.createService(LoginService.class);
-		//Call<user> call1 = loginService.createTask(_user);  
-		//call1.enqueue(new RestCallback<LoginResponse>(this,ServerCodes.ServerRequestCodes.LOGIN_REQUEST_CODE, mContext));  
-		
+
 	}
 
 	@Override
 	public void onSuccess(ServerResponse response,String raw) {
-		/*if (mProgressDialog != null) {
-			mProgressDialog.hide();
-		}*/
-		//Log.e("ServerResponse",response.getMessage());
+
 		
 		
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.LOGIN_REQUEST_CODE) {
@@ -716,129 +656,5 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener,
 		
 	}
 	
-	
-	public interface TaskService {  
-		
-		@POST(AppWebServices.API_LOGIN)
-	    Call<user> createTask(@Body user task);
-	}
-	
-	public interface LoginService {  
-		@POST(AppWebServices.API_LOGIN)
-		 Call<user> createTask(@Body user _user);
-	}
-	
-	public class BitmapDownloaderTask extends AsyncTask<String, Void, Bitmap> {
 
-
-	    private String url;
-	    private String path, imgName;
-	    //private final WeakReference<ImageView> imageViewReference;
-
-
-	    public BitmapDownloaderTask(ImageView imageView, String path, String imgName) {
-
-	        //imageViewReference = new WeakReference<ImageView>(imageView);
-
-	        this.path = path;
-	        this.imgName = imgName;
-
-	    }//BitmapDownloaderTask
-
-
-	    @Override
-	    // Actual download method, run in the task thread
-	    protected Bitmap doInBackground(String... params) {
-	        // params comes from the execute() call: params[0] is the url.
-	        return getBitmapFromURL(path);
-
-	    }//doInBackground
-
-
-	    @Override
-	    // Once the image is downloaded, associates it to the imageView
-	    protected void onPostExecute(Bitmap bitmap) {
-
-	        if (isCancelled()) {
-	            bitmap = null;
-	        }
-
-	       
-	        
-	        try
-	        {
-	        USER_Model   user =USER_Model.GetUser();
-	        
-	        if(bitmap!=null)
-	        {
-	        	ByteArrayOutputStream baos = new ByteArrayOutputStream();  
-//	        	bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-		        byte[] photo = baos.toByteArray();
-		        
-		        if(user==null)
-		        {
-		        user=new USER_Model();
-		        user.sh_user_id=USER_Model.USER_TEMP_ID;
-		        }
-		        
-	        	user.profile_image=photo;
-	        	
-	        	user.save();
-	        	
-	        }
-	        else
-	        {
-	        
-	        	if(user!=null)
-	        	{
-	        		user.profile_image=null;
-		        	
-		        	user.save();
-	        	}
-	        	
-	        }
-	        }catch(Exception ex)
-	        {
-	        	ex.toString();
-	        }
-	        
-	        
-	        
-	        WaitingStaticProgress.hideProgressDialog();
-	        
-	       
-			loginSc.setVisibility(View.GONE);
-			tv_message_lyout.setVisibility(View.VISIBLE);
-		    //showProgressDialog("Please wait loading data", 100);
-			LoadAllDataFromServer loadAllDataFromServer=new LoadAllDataFromServer(AppPreference.getValue(LoginActivity.this,AppKeys.KEY_SESSION),LoginActivity.this);
-			loadAllDataFromServer.execute();
-
-	    }//onPostExecute
-
-
-	    public  Bitmap getBitmapFromURL(String link) {
-	        /* this method downloads an Image from the given URL,
-	        *  then decodes and returns a Bitmap object
-	        */
-	        try {
-	            URL url = new URL(link);
-	            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-	            connection.setDoInput(true);
-	            connection.connect();
-	            connection.setReadTimeout(10000);
-	            InputStream input = connection.getInputStream();
-	            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-
-	            return myBitmap;
-
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	            Log.e("getBmpFromUrl error: ", e.getMessage().toString());
-	            return null;
-	        }
-
-	    }//getBitmapFromURL
-
-
-	}//class
 }
