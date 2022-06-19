@@ -4,19 +4,39 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_home.xml" value="0.264" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_login.xml" value="0.23854166666666668" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_settings.xml" value="0.24010416666666667" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_subscription_packages.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_switch_configuration.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_switch_scann.xml" value="0.1" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/activity_tariff_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/add_edit_switch_activity.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/moods_view_activity_rooms.xml" value="0.21666666666666667" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/rooms_view_grid_view_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/scan_switch_listview_item.xml" value="0.264" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/switch_listview_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/tariff_listview_item.xml" value="0.23854166666666668" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/tariff_setting_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout-ar/view_activity_rooms.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_login.xml" value="0.23854166666666668" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_subscription_packages.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_switch_configuration.xml" value="0.264" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_switch_scann.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_tariff_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/activity_tariff_option_country_popup.xml" value="0.264" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/add_edit_switch_activity.xml" value="0.23854166666666668" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/layout.xml" value="0.1" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/moods_view_activity_rooms.xml" value="0.21666666666666667" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/rooms_grid_view_item.xml" value="0.23489583333333333" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/rooms_view_grid_view_item.xml" value="0.21666666666666667" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/scan_switch_listview_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/scann_switch_setting_popup.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/subscription_listview_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/switch_listview_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/tariff_listview_item.xml" value="0.23854166666666668" />
         <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/tariff_option_popup.xml" value="0.25416666666666665" />
+        <entry key="..\:/Livixa/Livixa-Andriod/app/src/main/res/layout/view_activity_rooms.xml" value="0.23854166666666668" />
         <entry key="..\:/Newwork/Livixa-Andriod/app/src/main/res/drawable/add_room_popup_tv_bg.xml" value="0.2445" />
         <entry key="..\:/Newwork/Livixa-Andriod/app/src/main/res/drawable/backarrowwhite.xml" value="0.217" />
         <entry key="..\:/Newwork/Livixa-Andriod/app/src/main/res/drawable/background_white_corner.xml" value="0.122" />

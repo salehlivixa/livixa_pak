@@ -7,12 +7,7 @@ import com.activeandroid.annotation.Column;
 
 public class Mood_Model extends Model
 {
-	
-	
-	
 
-	
-	
 	@Column(name = "awayEndTime")
 	public
 	String awayEndTime=null;   

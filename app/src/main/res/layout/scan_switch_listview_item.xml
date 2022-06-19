@@ -32,13 +32,23 @@
 				android:padding="@dimen/margin_10dp">
 
 
-				<ImageView android:layout_height="wrap_content"
+<!--				<ImageView android:layout_height="wrap_content"-->
+<!--					android:id="@+id/ipStatus"-->
+<!--					android:src="@drawable/ip_available_red"-->
+<!--					android:layout_marginRight="7dp"-->
+<!--					android:layout_marginTop="2dp"-->
+<!--					android:layout_gravity="center_vertical"-->
+<!--					android:layout_width="20dp"/>-->
+
+				<com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
 					android:id="@+id/ipStatus"
-					android:src="@drawable/ip_available_red"
-					android:layout_marginRight="7dp"
-					android:layout_marginTop="2dp"
+					android:layout_width="40dp"
+					android:layout_height="30dp"
 					android:layout_gravity="center_vertical"
-					android:layout_width="20dp"/>
+					android:layout_marginTop="@dimen/margin_basic_5"
+					shSwitch:shadowSpace="7dip">
+
+				</com.livixa.apacam.client.activity.ShSwitchView>
 
 				<ImageView
 					android:layout_width="40dp"

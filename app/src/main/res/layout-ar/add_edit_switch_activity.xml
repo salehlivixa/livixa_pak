@@ -74,7 +74,7 @@
             android:columnWidth="180dp"
             android:gravity="center"
             android:listSelector="@android:color/transparent"
-            android:numColumns="2"
+            android:numColumns="1"
             android:stretchMode="spacingWidthUniform"
             android:verticalSpacing="10dp"
             >

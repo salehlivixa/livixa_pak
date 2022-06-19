@@ -78,6 +78,7 @@ public class SwitchScanActivity  extends Activity {
 
 	private TextView btn_discover;
 
+
 	private WifiP2pManager mManager;
 
 	private Channel mChannel;
@@ -85,6 +86,8 @@ public class SwitchScanActivity  extends Activity {
 	private LinearLayout cancelButtonLyout;
 	
 	Ip_Scanner_Local ip_Scann;
+
+//	ShSwitchView Ipstatus;
 	
 	boolean disableGoingBack=false;
 
@@ -97,6 +100,9 @@ public class SwitchScanActivity  extends Activity {
 		
 		
 		Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(this);
+//		ShSwitchView Ipstatus = (ShSwitchView) findViewById(R.id.ipStatus);
+//		Ipstatus.setEnabled(true);
+
 		
 	}
 
@@ -244,6 +250,7 @@ public class SwitchScanActivity  extends Activity {
 							ip_Scann.cancel(true);
 							ip_Scann.cancelThisTask();
 							cancelButtonLyout.setVisibility(View.GONE);
+
 							
 							
 						}

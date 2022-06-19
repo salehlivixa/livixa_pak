@@ -1046,6 +1046,7 @@ public class Manage_DB_Model {
 			tariffModel.save();
 
 		} catch (Exception ex) {
+		ex.printStackTrace();
 		}
 
 	}
@@ -1089,6 +1090,7 @@ public static void update_OR_Create_Tariff_ModelInDB_User_Case(ShTariffResult sh
 			tariffModel.save();
 
 		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
 
 	}

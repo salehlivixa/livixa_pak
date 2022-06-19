@@ -64,20 +64,20 @@
         <RelativeLayout android:layout_width="match_parent"
             android:layout_weight="6"
             android:layout_height="0dp">
+
             <GridView
                 android:id="@+id/roomsGridView"
-                android:visibility="visible"
-                android:numColumns="2"
-                android:listSelector="@android:color/transparent"
-                android:stretchMode="spacingWidthUniform"
-                android:gravity="center"
-                android:columnWidth="130dp"
-                android:verticalSpacing="10dp"
                 android:layout_width="match_parent"
-                android:scrollbars="none"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:layout_height="match_parent">
-
+                android:columnWidth="130dp"
+                android:gravity="center"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="1"
+                android:scrollbars="none"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="10dp"
+                android:visibility="visible">
 
 
             </GridView>

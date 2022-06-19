@@ -32,6 +32,8 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.livixa.apacam.client.activity.ShSwitchView;
 import com.livixa.client.R;
 import com.livixa.apacam.client.activity.Add_Edit_SwitchActivity;
 import com.livixa.apacam.client.activity.Add_Edit_SwitchActivity.SwitchTypes;
@@ -64,8 +66,10 @@ public class Switch_Scann_List_Adapter extends BaseAdapter
 {
 	
 	private Context mContext;
-	private LayoutInflater          mInflater;
+	private LayoutInflater  mInflater;
     private List<Switch_Model>	 mSwitchModelList;
+
+
    
     private View emptyView , listView;
    
@@ -83,7 +87,8 @@ public class Switch_Scann_List_Adapter extends BaseAdapter
 		this.mInflater = LayoutInflater.from(mContext);
 		this.emptyView=emptyView;
 		this.listView=listView;
-		
+
+
 		mSwitchModelList = fetchSwitchesFromDb();
 		
 		
@@ -159,7 +164,8 @@ public class Switch_Scann_List_Adapter extends BaseAdapter
 				switchViewHolder.switchName=(TextView) convertView.findViewById(R.id.tv_switchName);
 				switchViewHolder.switchId=(TextView) convertView.findViewById(R.id.switchId);
 				switchViewHolder.switchIp=(TextView) convertView.findViewById(R.id.switchIP);
-				switchViewHolder.IpStatus=(ImageView) convertView.findViewById(R.id.ipStatus);
+				switchViewHolder.IpStatus=(ShSwitchView) convertView.findViewById(R.id.ipStatus);
+				switchViewHolder.IpStatus.setOn(false);
 				switchViewHolder.switchAssignedTo=(TextView) convertView.findViewById(R.id.switchAssignedTo);
 			}
 			
@@ -190,12 +196,12 @@ public class Switch_Scann_List_Adapter extends BaseAdapter
 			if(switch_Model.ip_address.equals(""))
 			{
 				switchViewHolder.switchIp.setText("N/A");
-				switchViewHolder.IpStatus.setImageResource(R.drawable.ip_available_red);
+			    switchViewHolder.IpStatus.setOn(true);
 			}
 			else
 			{
 				switchViewHolder.switchIp.setText(switch_Model.ip_address);
-				switchViewHolder.IpStatus.setImageResource(R.drawable.ip_available_green);
+				switchViewHolder.IpStatus.setOn(true);
 			}
 			
 			
@@ -241,7 +247,7 @@ public class Switch_Scann_List_Adapter extends BaseAdapter
 	class SwitchViewHolder
 	{
 		public ImageView  switchIcon;
-		public ImageView IpStatus;
+		public ShSwitchView IpStatus;
 		public TextView  switchName;
 		public TextView  switchIp;
 		public TextView  switchId;

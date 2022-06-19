@@ -271,7 +271,7 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
                     String text_eng = sus.getSubscription_eng();
                     String text_ara = sus.getSubscription_arabic();
 
-                    values.add(_id);
+                    values.add(_id); // "4"
                     values.add(text_eng);
                     values.add(text_ara);
                     values.add(updateDate);
@@ -283,7 +283,7 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
                        String Sh_subscriptions = new Gson().toJson(obj.getSh_subscriptions());
                        KisafaApplication.set_sh_subscriptions(cntxt,Sh_subscriptions);
                        String sh_features = new Gson().toJson(obj.getSh_features());
-                        KisafaApplication.set_sh_features(cntxt, sh_features);
+                       KisafaApplication.set_sh_features(cntxt, sh_features);
 
 
             //if(Member.va)
@@ -314,7 +314,6 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
             if (listtariff != null)
                 for (int i = 0; i < listtariff.size(); i++) {
                     Manage_DB_Model.update_OR_Create_Tariff_ModelInDB(listtariff.get(i));
-
                 }
 
             if (moodsList != null)

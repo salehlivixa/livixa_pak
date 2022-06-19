@@ -663,8 +663,6 @@ public class SettingsActivity extends Activity implements
 				break;
 
 
-
-
 			default:
 			break;
 		}
@@ -1184,13 +1182,79 @@ public class SettingsActivity extends Activity implements
 
 	public void hideui(){
 		rl_control_remotly.setClickable(false);
-
 		rl_edit_users.setClickable(false);
 
-		remotlySwitch.setVisibility(View.GONE);
+	remotlySwitch.setVisibility(View.GONE);
 		ArrayList<String> value = KisafaApplication.getSubscription(SettingsActivity.this);
 		if (value != null && value.size() != 0) {
 			String id = value.get(0);
+			Log.e("value==>", "hideui: "+value );
+
+			if(id.equals("0")){
+
+				rl_control_remotly.setClickable(false);
+				rl_edit_users.setClickable(false);
+//				rl_configureSwitches.setClickable(false);
+				rl_add_edit_switch.setClickable(false);
+//				rl_energy.setClickable(false);
+				rl_add_edit_rooms.setClickable(false);
+				rl_inside_home.setClickable(false);
+
+
+				rl_edit_users.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG).show();
+					}
+				});
+
+				rl_inside_home.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG).show();
+					}
+				});
+
+				rl_control_remotly.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
+
+				rl_add_edit_rooms.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
+
+				rl_add_edit_switch.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
+
+//				rl_configureSwitches.setOnClickListener(new OnClickListener() {
+//					@Override
+//					public void onClick(View view) {
+//						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+//						toast.show();
+//					}
+//				});
+
+//				rl_energy.setOnClickListener(new OnClickListener() {
+//					@Override
+//					public void onClick(View view) {
+//						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+//						toast.show();
+//					}
+//				});
+			}
 
 			if (id.equals("1")) {
 				rl_edit_users.setOnClickListener(new OnClickListener() {

@@ -47,15 +47,15 @@
                     android:textSize="20sp" />
 
                 <com.livixa.apacam.client.widget.CustomTextView
+                    android:id="@+id/startScan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/margin_30dp"
                     android:layout_marginRight="@dimen/margin_15dp"
-                    android:fontFamily="@font/montbold"
-                    android:id="@+id/startScan"
                     android:clickable="true"
+                    android:fontFamily="@font/montbold"
                     android:onClick="onStartScann"
                     android:text="@string/Start"
                     android:textColor="#fff"

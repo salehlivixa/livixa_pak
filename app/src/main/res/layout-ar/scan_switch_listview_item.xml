@@ -10,18 +10,18 @@
 
 	<RelativeLayout
 		android:layout_width="match_parent"
-		android:layout_height="300dp"
+		android:layout_height="330dp"
 		android:layout_marginBottom="10dp"
-		android:orientation="vertical"
 		android:gravity="end"
-		>
+		android:orientation="vertical">
 
 
 		<LinearLayout
 			android:id="@+id/tileLayout"
 			android:layout_width="190dp"
-			android:layout_height="300dp"
+			android:layout_height="320dp"
 			android:layout_marginTop="15dp"
+			android:layout_marginRight="20dp"
 			android:background="@drawable/corner_border_white"
 			android:gravity="center"
 			android:orientation="vertical">
@@ -36,14 +36,24 @@
 				android:padding="@dimen/margin_10dp">
 
 
-				<ImageView
+				<!--				<ImageView-->
+				<!--					android:id="@+id/ipStatus"-->
+				<!--					android:layout_width="20dp"-->
+				<!--					android:layout_height="wrap_content"-->
+				<!--					android:layout_gravity="center_vertical"-->
+				<!--					android:layout_marginTop="2dp"-->
+				<!--					android:layout_marginRight="7dp"-->
+				<!--					android:src="@drawable/ip_available_red" />-->
+
+				<com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
 					android:id="@+id/ipStatus"
-					android:layout_width="20dp"
-					android:layout_height="wrap_content"
+					android:layout_width="40dp"
+					android:layout_height="30dp"
 					android:layout_gravity="center_vertical"
-					android:layout_marginTop="2dp"
-					android:layout_marginRight="7dp"
-					android:src="@drawable/ip_available_red" />
+					android:layout_marginTop="@dimen/margin_basic_5"
+					shSwitch:shadowSpace="7dip">
+
+				</com.livixa.apacam.client.activity.ShSwitchView>
 
 				<ImageView
 					android:layout_width="40dp"
@@ -147,9 +157,9 @@
 				<com.livixa.apacam.client.widget.CustomTextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
+					android:fontFamily="@font/montsemibold"
 					android:text="مخصص إلى"
 					android:textColor="#000"
-					android:fontFamily="@font/montsemibold"
 
 					/>
 

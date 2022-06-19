@@ -50,137 +50,138 @@
 			android:layout_gravity="end"
 			>
 
-<LinearLayout
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:gravity="end"
-	>
-
-
 			<LinearLayout
-				android:id="@+id/itemContainerLY"
-				android:layout_width="wrap_content"
-				android:layout_height="260dp"
-				android:layout_marginTop="@dimen/margin_20dp"
-				android:background="@drawable/corner_border_white"
-				android:gravity="center"
-				android:orientation="vertical">
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="end"
+				>
+
 
 				<LinearLayout
-					android:layout_width="160dp"
-					android:layout_height="120dp"
-					android:background="@drawable/corner_border_gray"
+					android:id="@+id/itemContainerLY"
+					android:layout_width="wrap_content"
+					android:layout_height="260dp"
+					android:layout_marginTop="@dimen/margin_20dp"
+					android:layout_marginRight="20dp"
+					android:background="@drawable/corner_border_white"
 					android:gravity="center"
-					android:orientation="vertical"
-					android:padding="@dimen/margin_10dp">
-
-
-					<ImageView
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:layout_marginBottom="10dp"
-						android:src="@drawable/one_button_switch" />
-
-
-				</LinearLayout>
-
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
 					android:orientation="vertical">
 
-
-					<TextView
-						android:id="@+id/tv_switchName"
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_gravity="end"
-						android:text="الإضاءة"
-						android:textColor="#000"
-						android:textSize="12sp"
-
-						/>
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_gravity="end"
-						android:text="مفتاح إنارة خطين"
-						android:textSize="12sp"
-
-						/>
-
-					<View
-						android:layout_width="150dp"
-						android:layout_height="1dp"
-						android:layout_marginTop="15dp"
-						android:background="#c0c0c0"
-
-						/>
-				</LinearLayout>
-
-
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginTop="@dimen/margin_10dp"
-					android:orientation="horizontal">
-
 					<LinearLayout
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_marginLeft="@dimen/margin_20dp"
-						android:orientation="vertical">
+						android:layout_width="160dp"
+						android:layout_height="120dp"
+						android:background="@drawable/corner_border_gray"
+						android:gravity="center"
+						android:orientation="vertical"
+						android:padding="@dimen/margin_10dp">
 
-						<com.livixa.apacam.client.widget.CustomTextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:fontFamily="@font/montsemibold"
-							android:hint="مخصص إلى"
-							android:textColor="#000"
-							android:textSize="10sp" />
 
-						<com.livixa.apacam.client.widget.CustomTextView
-							android:id="@+id/switchAssignedTo"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="Office ENT"
-							android:textSize="10sp" />
+						<ImageView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_marginBottom="10dp"
+							android:src="@drawable/one_button_switch" />
 
 
 					</LinearLayout>
 
 					<LinearLayout
-						android:layout_width="wrap_content"
+						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:layout_marginLeft="@dimen/margin_30dp"
 						android:orientation="vertical">
 
-						<com.livixa.apacam.client.widget.CustomTextView
+
+						<TextView
+							android:id="@+id/tv_switchName"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:fontFamily="@font/montsemibold"
-							android:text="الرقم التعريفي"
+							android:layout_gravity="end"
+							android:text="الإضاءة"
 							android:textColor="#000"
-							android:textSize="10sp"
+							android:textSize="14sp"
 
 							/>
 
-						<com.livixa.apacam.client.widget.CustomTextView
-							android:id="@+id/switchId"
+						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="N/A"
-							android:textSize="10sp" />
+							android:layout_gravity="end"
+							android:text="مفتاح إنارة خطين"
+							android:textSize="14sp"
+
+							/>
+
+						<View
+							android:layout_width="150dp"
+							android:layout_height="1dp"
+							android:layout_marginTop="15dp"
+							android:background="#c0c0c0"
+
+							/>
+					</LinearLayout>
+
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/margin_10dp"
+						android:orientation="horizontal">
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/margin_20dp"
+							android:orientation="vertical">
+
+							<com.livixa.apacam.client.widget.CustomTextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:fontFamily="@font/montsemibold"
+								android:hint="مخصص إلى"
+								android:textColor="#000"
+								android:textSize="11sp" />
+
+							<com.livixa.apacam.client.widget.CustomTextView
+								android:id="@+id/switchAssignedTo"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Office ENT"
+								android:textSize="11sp" />
+
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/margin_30dp"
+							android:orientation="vertical">
+
+							<com.livixa.apacam.client.widget.CustomTextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:fontFamily="@font/montsemibold"
+								android:text="الرقم التعريفي"
+								android:textColor="#000"
+								android:textSize="11sp"
+
+								/>
+
+							<com.livixa.apacam.client.widget.CustomTextView
+								android:id="@+id/switchId"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="N/A"
+								android:textSize="11sp" />
+
+						</LinearLayout>
+
 
 					</LinearLayout>
 
 
 				</LinearLayout>
-
-
 			</LinearLayout>
-</LinearLayout>
 
 		</RelativeLayout>
 	</FrameLayout>

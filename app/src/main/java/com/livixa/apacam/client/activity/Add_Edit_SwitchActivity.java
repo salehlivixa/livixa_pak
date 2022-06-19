@@ -90,6 +90,7 @@ public class Add_Edit_SwitchActivity extends Activity {
     ImageView iv_switch_back;
     private View mEmptyView;
 
+
     private Switch_List_Adapter mSwitchListAdaptor;
 
 
@@ -101,6 +102,7 @@ public class Add_Edit_SwitchActivity extends Activity {
         initOthers();
 
         Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(this);
+
 
 
     }

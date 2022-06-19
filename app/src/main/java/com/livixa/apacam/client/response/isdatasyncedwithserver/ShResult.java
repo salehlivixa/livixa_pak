@@ -56,6 +56,8 @@ public class ShResult implements Serializable {
 	@Expose
 	private ArrayList<Sh_Mood> shMoodsList;
 
+
+
 	public ArrayList<Sh_Order> getShOrders() {
 		return shOrders;
 	}

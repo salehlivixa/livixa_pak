@@ -26,6 +26,7 @@
                <TextView android:layout_height="match_parent"
                android:background="#FF3B30"
                android:text="@string/Delete"
+                   android:visibility="gone"
                 android:textColor="@color/white"
                android:gravity="center"
                android:layout_alignParentRight="true"
