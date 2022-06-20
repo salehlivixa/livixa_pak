@@ -12,9 +12,9 @@ public class Sh_Order implements Serializable {
     @Expose
     private String sh_created_at;
 
-    @SerializedName( "sh_updated_at")
+    @SerializedName( "sh_subscription_end")
     @Expose
-    private String sh_updated_at;
+    private String sh_subscription_end;
 
     @SerializedName( "sh_order_details")
     @Expose
@@ -28,12 +28,12 @@ public class Sh_Order implements Serializable {
         this.sh_created_at = sh_created_at;
     }
 
-    public String getSh_updated_at() {
-        return sh_updated_at;
+    public String getSh_subscription_end() {
+        return sh_subscription_end;
     }
 
-    public void setSh_updated_at(String sh_updated_at) {
-        this.sh_updated_at = sh_updated_at;
+    public void setSh_subscription_end(String sh_subscription_end) {
+        this.sh_subscription_end = sh_subscription_end;
     }
 
     public ArrayList<Sh_Order_Detail> getSh_order_details() {

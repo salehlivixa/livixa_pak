@@ -151,7 +151,7 @@ public void onBackPressed() {
 						isAllowedToMoveBack=false;
 						
 						
-						tariffSettingPopup();
+					//	tariffSettingPopup();
 						
 						
 					}
@@ -228,7 +228,7 @@ public void onOptionClick(View view)
 
 
 
-private void tariffSettingPopup() {
+private void tariffSettingPopup_1() {
 
 	 LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -353,7 +353,7 @@ private void tariffSettingPopup() {
 					
 					}catch(Exception ex)
 					{
-						
+						ex.printStackTrace();
 					}
 					
 					
@@ -570,7 +570,7 @@ private void OptionPopup() {
 				 }
 				else
 				{
-				 tariffSettingPopup();
+				// tariffSettingPopup();
 				}
 				
 				

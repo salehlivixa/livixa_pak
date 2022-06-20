@@ -57,7 +57,7 @@ public class Subscription_List_Adapter extends BaseAdapter {
         String value = object.getSh_subscription_eng() + "\n" + ConcatEnglish(object.getSh_feature_id());
         Sub_id.setText(object.getSh_id());
         sub_package.setText(value);
-        sub_exp_date.setText("30 days");
+        sub_exp_date.setText(object.getSh_subscriptions_period());
 
         return convertView;
     }

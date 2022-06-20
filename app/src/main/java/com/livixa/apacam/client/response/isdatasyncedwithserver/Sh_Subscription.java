@@ -29,6 +29,9 @@ public class Sh_Subscription implements Serializable {
     @Expose
     private String sh_feature_id;
 
+    @SerializedName( "sh_subscriptions_period")
+    @Expose
+    private String sh_subscriptions_period;
     public String getSh_id() {
         return sh_id;
     }
@@ -67,5 +70,13 @@ public class Sh_Subscription implements Serializable {
 
     public void setSh_feature_id(String sh_feature_id) {
         this.sh_feature_id = sh_feature_id;
+    }
+
+    public String getSh_subscriptions_period() {
+        return sh_subscriptions_period;
+    }
+
+    public void setSh_subscriptions_period(String sh_subscriptions_period) {
+        this.sh_subscriptions_period = sh_subscriptions_period;
     }
 }

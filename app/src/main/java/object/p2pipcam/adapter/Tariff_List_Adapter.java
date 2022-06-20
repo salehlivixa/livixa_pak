@@ -50,7 +50,7 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 		this.emptyView=emptyView;
 		this.listView=listView;
 		
-		mTariffModelList = fetchTriffesFromDb_();
+		mTariffModelList = fetchTriffesFromDb();
 		
 		
 		
@@ -146,7 +146,7 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 		tariffViewHolder.upperLimit.setText(upperValue);
 		}catch(Exception ex)
 		{
-			
+			ex.printStackTrace();
 		}
 		tariffViewHolder.priceView.setText(tariff_Model.price);
 		
@@ -223,61 +223,11 @@ public class Tariff_List_Adapter extends BaseAdapter implements ServerConnectLis
 			tariffModelList = new Select().from(Tariff_Model.class).where("Tariff_Model.model_status != ? ORDER BY lower_limit", AppKeys.KEY_IS_DELETED).execute();
 		}catch(Exception ex)
 		{
-			ex.toString();
+			ex.printStackTrace();
 		}
 		return tariffModelList;
 	}
-	
-	
-	public List<Tariff_Model> fetchTriffesFromDb_()
-	{
-		List<Tariff_Model> tariffModelList=null;
-		
-		List<Tariff_Model> temptariffModelList=new ArrayList<>();
-		
-		try
-		{
-			tariffModelList = new Select().from(Tariff_Model.class).where("Tariff_Model.model_status != ? ", AppKeys.KEY_IS_DELETED).execute();
-		}catch(Exception ex)
-		{
-			ex.toString();
-		}
-		
-		try
-		{
-			
-			if(tariffModelList!=null)
-			
-			temptariffModelList=new ArrayList<>();
-		Tariff_Model minModel=tariffModelList.get(0);
-		
-		for(int i=0; i<tariffModelList.size(); i++)
-		{
-			
-			
-			for(int j=1+1; j<tariffModelList.size(); j++)
-			{
-				
-				if(Integer.parseInt(tariffModelList.get(i).lower_limit) <= Integer.parseInt(tariffModelList.get(j).lower_limit))
-				{
-					
-					minModel=tariffModelList.get(i);
-					
-				}
-				
-			}
-			
-			
-			temptariffModelList.add(minModel);
-			
-			
-		}
-		
-		}catch(Exception ex){}
-		
-		return temptariffModelList;
-	}
-	
+
 	
 	
 	private boolean deleteTariff(String tariffId)

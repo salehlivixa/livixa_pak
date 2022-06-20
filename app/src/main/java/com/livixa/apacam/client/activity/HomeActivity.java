@@ -292,7 +292,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         Call<Watage_Response> call = (Call<Watage_Response>) service.getWatageDetails(map);
         call.enqueue(new RestCallback<Watage_Response>(new ServerConnectListener() {
             @Override
-            public void onSuccess(ServerResponse response,String raw) {
+            public void onSuccess(ServerResponse response, String raw) {
                 if (response.getRequestCode() == ServerCodes.ServerRequestCodes.WATAGE_REQUEST_CODE) {
                     Watage_Response requestResponse = (Watage_Response) response;
                     if (!requestResponse.getShMeta().getShErrorCode()
@@ -312,12 +312,12 @@ public class HomeActivity extends Activity implements OnClickListener {
                             String watageValue = watageResult.getSh_total_wattage();
                             String watageprice = watageResult.getSh_total_price();
                             if (activity_home_wattage != null)
-                                activity_home_wattage.setText(watageValue + " " + watageUnit +" "+watageprice + " "+watagepUnit );
+                                activity_home_wattage.setText(watageValue + " " + watageUnit + " " + watageprice + " " + watagepUnit);
 
 
                         } else {
                             if (activity_home_wattage != null)
-                                activity_home_wattage.setText("0.0 kWh" + "   "+ "0.0 $");
+                                activity_home_wattage.setText("0.0 kWh" + "   " + "0.0 $");
                         }
                     }
                 }
@@ -341,31 +341,36 @@ public class HomeActivity extends Activity implements OnClickListener {
             activity_home_package_id.setText(pack);
         }
         if (value.size() > 2) {
-            Date date = stringToDate(value.get(3), "yyyy-MM-dd hh:mm:ss");
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(date);
-            cal.add(Calendar.MONTH, 1);
-            String d = DateFormat.getDateInstance(DateFormat.SHORT).format(cal.getTime());
+            Date date = stringToDate(value.get(3), "yyyy-MM-dd");
+            String d = DateFormat.getDateInstance(DateFormat.SHORT).format(date);
             d = "Expiry : " + d;
+            activity_home_package_expriy.setText(d);
+            String current = Method.getCurrentDate("yyyy-MM-dd");
+            Date current_date = stringToDate(current, "yyyy-MM-dd");
+            if(current_date.after(date)){
+                d = "Expired";
+                value.set(0,"0");
+                KisafaApplication.setSubscription(HomeActivity.this,value);
+            }
             activity_home_package_expriy.setText(d);
         }
     }
 
-    public void hideui(){
+    public void hideui() {
         rl_moods.setVisibility(View.INVISIBLE);
         rl_energy.setVisibility(View.INVISIBLE);
 
         ArrayList<String> value = KisafaApplication.getSubscription(HomeActivity.this);
 
-        if(value != null && value.size() !=0) {
+        if (value != null && value.size() != 0) {
             String id = value.get(0);
-
-            if (id.equals("1")) {
+            if (id.equals("0")) {
+            } else if (id.equals("1")) {
             } else if (id.equals("2")) {
                 rl_moods.setVisibility(View.VISIBLE);
             } else if (id.equals("3")) {
                 rl_moods.setVisibility(View.VISIBLE);
-                    }else if (id.equals("4")){
+            } else if (id.equals("4")) {
                 rl_moods.setVisibility(View.VISIBLE);
                 rl_energy.setVisibility(View.VISIBLE);
 

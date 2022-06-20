@@ -265,7 +265,7 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
                 if (orders.size() != 0) {
                     ArrayList<String> values = new ArrayList<>();
                     Sh_Order order = orders.get(0);
-                    String updateDate = order.getSh_updated_at();
+                    String Sh_subscription_end = order.getSh_subscription_end();
                     Subscription sus = order.getSh_order_details().get(0).getSubscriptions().get(0);
                     String _id = sus.getId();
                     String text_eng = sus.getSubscription_eng();
@@ -274,7 +274,7 @@ public class LoadAllDataFromServer extends AsyncTask<Void, Void, Boolean> implem
                     values.add(_id); // "4"
                     values.add(text_eng);
                     values.add(text_ara);
-                    values.add(updateDate);
+                    values.add(Sh_subscription_end);
                     KisafaApplication.setSubscription(cntxt, values);
                 }
             }
