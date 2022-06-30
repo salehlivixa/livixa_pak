@@ -78,6 +78,7 @@
                 android:background="#AD9EBA"
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
+                android:visibility="gone"
                 android:layout_width="match_parent"/>
 
             <LinearLayout
@@ -152,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
+                android:visibility="gone"
                 >
 
                 <object.p2pipcam.system.MyTextView
@@ -167,12 +169,26 @@
                     android:scrollHorizontally="true"
                     android:singleLine="true"
                     android:text="Saudia Arabia"
+                    android:visibility="gone"
                     android:textColor="#2879DD"
                     android:textSize="19dp" />
 
 
             </LinearLayout>
         </LinearLayout>
+
+        <TextView android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Saudia Arabia"
+            android:id="@+id/country"
+            android:textColor="#176FD7"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@drawable/popup_button_selector_white"
+            android:layout_width="match_parent"/>
 
 
         <TextView android:layout_height="48dp"

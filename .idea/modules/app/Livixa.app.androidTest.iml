@@ -33,23 +33,23 @@
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Livixa.app.main" scope="TEST" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/freemarker-2.3.20.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/devsmartlib.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/socket.io-client-0.8.2.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/zxing.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/universal-image-loader-1.9.2.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/gson-2.7.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/okhttp-3.4.1.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/okio-1.9.0.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/retrofit-2.1.0.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/logging-interceptor-3.4.1.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/converter-gson-2.1.0.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/greendao-1.3.0-beta-1.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/android-query-full.0.26.7.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/greendao-generator-2.1.0.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/socketio.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/activeandroid-3.1.0-SNAPSHOT.jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/slider-1.3.0-sources.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/activeandroid-3.1.0-SNAPSHOT.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/android-query-full.0.26.7.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/converter-gson-2.1.0.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/devsmartlib.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/freemarker-2.3.20.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/greendao-1.3.0-beta-1.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/greendao-generator-2.1.0.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/gson-2.7.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/logging-interceptor-3.4.1.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/okhttp-3.4.1.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/okio-1.9.0.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/retrofit-2.1.0.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/slider-1.3.0-sources.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/socket.io-client-0.8.2.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/socketio.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/universal-image-loader-1.9.2.jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/zxing.jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
@@ -64,8 +64,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:disklrucache:4.13.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:annotations:4.13.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/esptouch-1.0.0.aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: ./app/libs/Orochi.aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/esptouch-1.0.0.aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: C./Users/muhshoaib/Desktop/Livixa/Livixa-Andriod/app/libs/Orochi.aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.3@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.4.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.4.0@aar" level="project" />

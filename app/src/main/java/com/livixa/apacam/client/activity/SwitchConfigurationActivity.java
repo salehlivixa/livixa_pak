@@ -61,7 +61,11 @@ public class SwitchConfigurationActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_switch_configuration);
-		
+
+
+
+		Toast.makeText(this,"For reset the device please hold the button of switch  for 20 seconds",Toast.LENGTH_LONG).show();
+
 		
 		mSSID=(CustomEditText) findViewById(R.id.sSDID);
 		mPassword=(CustomEditText) findViewById(R.id.pass);
@@ -104,12 +108,13 @@ public class SwitchConfigurationActivity extends Activity {
 			}
 		});
 	}
-	
+
+
 	
 	@Override
 	protected void onResume() {
-	
-		
+
+
 		String apSsid = mWifiAdmin.getWifiConnectedSsid();
 		if (apSsid != null) {
 			mSSID.setText(apSsid);

@@ -199,6 +199,8 @@ public class AssignedRoomsToSubusersGridAdapter extends BaseAdapter {
 		settingIconClick(gridViewItemHolder.settingButton,pos);
 		
 		gridViewItemHolder.roomName.setText(roomModel.title);
+
+
 		
 		
 		
@@ -641,10 +643,6 @@ public class AssignedRoomsToSubusersGridAdapter extends BaseAdapter {
 	
 	private void assign_or_unassign_rooms(final CheckBox view,final int pos)
 	{
-
-		
-		
-		
 		
 		Room_Model roomModel=mRoomModelList.get(pos);
 		
@@ -661,7 +659,6 @@ public class AssignedRoomsToSubusersGridAdapter extends BaseAdapter {
 				if(user_Room_Model!=null)
 				{
 					user_Room_Model.modelStatus=AppKeys.KEY_IS_UPDATED;
-				
 					user_Room_Model.isSyncedWithServer=AppKeys.KEY_IS_NOT_SYNCED;
 					user_Room_Model.save();
 				}

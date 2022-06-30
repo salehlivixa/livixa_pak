@@ -117,21 +117,21 @@
                     android:textSize="18dp" />
 
 
-                <com.livixa.apacam.client.widget.CustomEditText
-                    android:id="@+id/pass"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/inputrounded"
-                    android:fontFamily="@font/montregular"
-                    android:layout_alignParentBottom="true"
-                    android:hint="Enter password"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#6E8498"
-                    android:textColorHint="#6E8498"
-                    android:textSize="@dimen/font_large"
-                    app:CustomFontFamily="Light" />
+                    <com.livixa.apacam.client.widget.CustomEditText
+                        android:id="@+id/pass"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/inputrounded"
+                        android:fontFamily="@font/montregular"
+                        android:hint="Enter password"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="#6E8498"
+                        android:textColorHint="#6E8498"
+                        android:textSize="@dimen/font_large"
+                        app:CustomFontFamily="Light" />
 
                 </RelativeLayout>
 
@@ -280,19 +280,19 @@
 <!--                android:fontFamily="@font/montbold"-->
 <!--                android:layout_width="match_parent"/>-->
 
-            <TextView android:layout_height="80dp"
+            <TextView android:layout_height="50dp"
                 android:textColor="#FFFFFF"
                 android:lineHeight="25dp"
                 android:textSize="16dp"
                 android:gravity="center"
-                android:text="Please wait \n This may take few minutes \n For reset the device please hold \nthe button of switch for 20 seconds"
+                android:text="Please wait \n This may take few minutes \n"
                 android:fontFamily="@font/montbold"
                 android:layout_width="match_parent"/>
 
             <TextView android:layout_height="20dp"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:layout_marginTop="@dimen/margin_50dp"
+                android:layout_marginTop="@dimen/margin_30dp"
                 android:gravity="center"
                 android:text=""
                 android:layout_width="match_parent"/>

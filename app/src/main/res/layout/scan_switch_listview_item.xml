@@ -16,7 +16,7 @@
 		<LinearLayout
 			android:id="@+id/tileLayout"
 			android:layout_width="190dp"
-			android:layout_height="300dp"
+			android:layout_height="wrap_content"
 			android:layout_marginTop="15dp"
 			android:background="@drawable/corner_border_white"
 			android:gravity="center"
@@ -32,13 +32,13 @@
 				android:padding="@dimen/margin_10dp">
 
 
-<!--				<ImageView android:layout_height="wrap_content"-->
-<!--					android:id="@+id/ipStatus"-->
-<!--					android:src="@drawable/ip_available_red"-->
-<!--					android:layout_marginRight="7dp"-->
-<!--					android:layout_marginTop="2dp"-->
-<!--					android:layout_gravity="center_vertical"-->
-<!--					android:layout_width="20dp"/>-->
+				<!--				<ImageView android:layout_height="wrap_content"-->
+				<!--					android:id="@+id/ipStatus"-->
+				<!--					android:src="@drawable/ip_available_red"-->
+				<!--					android:layout_marginRight="7dp"-->
+				<!--					android:layout_marginTop="2dp"-->
+				<!--					android:layout_gravity="center_vertical"-->
+				<!--					android:layout_width="20dp"/>-->
 
 				<com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
 					android:id="@+id/ipStatus"
@@ -54,15 +54,19 @@
 					android:layout_width="40dp"
 					android:layout_height="40dp"
 					android:layout_marginBottom="10dp"
+					android:id="@+id/img_icon_switch"
 					android:src="@drawable/one_button_switch" />
 
 
 			</LinearLayout>
 
 			<LinearLayout
-				android:layout_width="wrap_content"
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:orientation="vertical">
+				android:orientation="vertical"
+				android:layout_marginLeft="@dimen/_5sdp"
+				>
+
 
 				<TextView
 					android:layout_width="wrap_content"
@@ -70,97 +74,87 @@
 					android:text="Lightning" />
 
 				<TextView
+					android:id="@+id/tv_switchName"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="Two gangs lightning Switch" />
 
-				<View
-					android:layout_width="150dp"
-					android:layout_height="1dp"
-					android:layout_marginTop="15dp"
-					android:background="#c0c0c0"
 
-					/>
 			</LinearLayout>
 
+			<View
+				android:layout_width="200dp"
+				android:layout_height="1dp"
+				android:layout_marginTop="@dimen/_5sdp"
+				android:background="#c0c0c0"
 
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:layout_marginTop="@dimen/margin_10dp"
-				>
+				/>
+
+
 				<LinearLayout
-					android:layout_width="wrap_content"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical"
-					android:layout_marginLeft="@dimen/margin_10dp"
+					android:orientation="horizontal"
+					android:layout_marginLeft="@dimen/_5sdp"
 
 					>
 
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="Mac           " />
+						android:text="Mac :"
+						android:textColor="#000"
+						/>
 
-
-
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/switchId"
+						/>
 
 
 				</LinearLayout>
 
 				<LinearLayout
-					android:layout_width="wrap_content"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical"
-					android:layout_marginLeft="@dimen/margin_30dp"
+					android:orientation="horizontal"
+					android:layout_marginLeft="@dimen/_5sdp"
+					android:layout_marginTop="@dimen/_5sdp"
 					>
 
 					<com.livixa.apacam.client.widget.CustomTextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="IP"
-						android:id="@+id/switchId"
+						android:text="IP :"
+						android:textColor="#000"
 						/>
 
 					<com.livixa.apacam.client.widget.CustomTextView
+					android:id="@+id/switchIP"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="N/A"
-						android:id="@+id/switchIP"
-						/>
+						android:text="N/A" />
 
 				</LinearLayout>
-
-
-
-
-
-			</LinearLayout>
-
 
 
 			<LinearLayout
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:orientation="vertical"
 				android:layout_gravity="left"
 				android:layout_marginLeft="@dimen/margin_10dp"
 				android:layout_marginTop="@dimen/margin_10dp"
+				android:orientation="vertical"
+
 				>
 
-				<com.livixa.apacam.client.widget.CustomTextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/Assignedto"
-
-					/>
-
 				<TextView
+					android:id="@+id/switchAssignedTo"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="Office ENT"
-					android:id="@+id/switchAssignedTo"
+
 					/>
 
 			</LinearLayout>

@@ -213,11 +213,11 @@ public class RegisterActivityForSubUser extends FragmentActivity implements
 						if (!flag) {
 							
 							if (!flag) {
-								flag = setErrorMsg(mEtCountry, getString(R.string.Countryisrequired));
+								//flag = setErrorMsg(mEtCountry, getString(R.string.Countryisrequired));
 							
 							
 							if (!flag) {
-								flag = setErrorMsg(mEtCity, getString(R.string.Cityisrequired));
+								//flag = setErrorMsg(mEtCity, getString(R.string.Cityisrequired));
 							
 							
 							if (AppUtil.isEmailValid(mEtEmail.getText()

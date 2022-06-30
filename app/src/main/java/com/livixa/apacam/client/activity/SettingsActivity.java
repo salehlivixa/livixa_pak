@@ -99,18 +99,18 @@ public class SettingsActivity extends Activity implements
 	private RelativeLayout rl_privacy_and_security;
 	private RelativeLayout rl_control_remotly;
 	private RelativeLayout rl_subscription;
-	
+
 	private RelativeLayout rl_profile;
 	private RelativeLayout rl_changePass;
 	private RelativeLayout rl_about;
-	
+
 	private RelativeLayout rl_energy;
-	
+
 	private RelativeLayout rl_language;
-	
-	
+
+
 	private ShSwitchView remotlySwitch;
-	
+
 	private LinearLayout   topLinearLyout;
 	private RelativeLayout mRlLogout;
 	private ProgressDialog mProgressDialog;
@@ -121,35 +121,35 @@ public class SettingsActivity extends Activity implements
 
 	private DataBaseHelper helper = null;
 	private Context mContext;
-	
-	
+
+
 	// Class Methods
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//setOrientation();
-		
-		
+
+
 		if(AppPreference.getValue(SettingsActivity.this,AppKeys.KEY_IS_SUB_USER)!=null && AppPreference.getValue(SettingsActivity.this,AppKeys.KEY_IS_SUB_USER).equals("1"))
 		{
-			
+
 			setContentView(R.layout.activity_settings_subuser);
 		}
 		else
 		{
 			setContentView(R.layout.activity_settings);
 		}
-		
-		
-				initComponents();
-				
-				setClickListner(SettingsActivity.this);
-				
-				
-				
+
+
+		initComponents();
+
+		setClickListner(SettingsActivity.this);
+
+
+
 		Sync_Service.setActivityToDisplayLogoutErrorThroughtTheApp(SettingsActivity.this);
-			hideui();
-		
+		hideui();
+
 	}
 
 	// Helping Methods
@@ -158,7 +158,7 @@ public class SettingsActivity extends Activity implements
 		mContext = this;
 		view = (View) findViewById(R.id.rl_root);
 		mRlLogout = (RelativeLayout) findViewById(R.id.rl_logout);
-		
+
 		topLinearLyout=(LinearLayout) findViewById(R.id.ll_1);
 		rl_add_edit_rooms=(RelativeLayout) findViewById(R.id.rl_add_edit_rooms);
 		rl_add_edit_switch=(RelativeLayout) findViewById(R.id.rl_add_edit_switch);
@@ -170,67 +170,74 @@ public class SettingsActivity extends Activity implements
 		rl_privacy_and_security=(RelativeLayout)findViewById(R.id.rl_privacy_and_security);
 		rl_control_remotly=(RelativeLayout)findViewById(R.id.rl_control_remotly);
 		rl_subscription=(RelativeLayout)findViewById(R.id.rl_subscription);
-		
+
 		rl_energy=(RelativeLayout) findViewById(R.id.rl_energy);
 		rl_language=(RelativeLayout) findViewById(R.id.rl_language);
 		mIvBack = (ImageView) findViewById(R.id.iv_back);
-		
+
 		rl_edit_users=(RelativeLayout) findViewById(R.id.rl_edit_users);
 //		rl_changePass=(RelativeLayout) findViewById(R.id.rl_changePass);
-		
-		
-		
-		
-			try
-			{
-			
+
+
+
+
+		try
+		{
+
 			remotlySwitch.setOn(AppPreference.getSavedData(mContext, AppKeys.KEY_REMOTE_OPTION_TAG));
-			
-			}catch (Exception e) {
-				
-			}
-		
+
+		}catch (Exception e) {
+
+		}
+
 		remotlySwitch.setOnSwitchStateChangeListener(new OnSwitchStateChangeListener() {
-			
+
 			@Override
 			public void onSwitchStateChange(boolean isOn) {
-				
-				
+
+
 				if(isOn)
 				{
 					//Toast.makeText(SettingsActivity.this, "On", Toast.LENGTH_SHORT).show();
-					
+
 					AppPreference.saveData(mContext, true, AppKeys.KEY_REMOTE_OPTION_TAG);
 				}
 				else
 				{
 					//Toast.makeText(SettingsActivity.this, "Off", Toast.LENGTH_SHORT).show();
-					
+
 					AppPreference.saveData(mContext, false, AppKeys.KEY_REMOTE_OPTION_TAG);
 				}
-				
+
 			}
 		});
-		
-		
-		
+
+
+
 	}
 
 	public void setClickListner(OnClickListener onclick) {
 		mRlLogout.setOnClickListener(onclick);
 		mIvBack.setOnClickListener(onclick);
-		
-		
+
+
 		if(AppPreference.getValue(SettingsActivity.this,AppKeys.KEY_IS_SUB_USER)!=null && AppPreference.getValue(SettingsActivity.this,AppKeys.KEY_IS_SUB_USER).equals("1"))
 		{
-		
+
 			rl_inside_home.setOnClickListener(onclick);
-			rl_profile.setOnClickListener(onclick);
-			rl_changePass.setOnClickListener(onclick);
+//			rl_profile.setOnClickListener(onclick);
+//			rl_changePass.setOnClickListener(onclick);
 			rl_about.setOnClickListener(onclick);
-			//rl_energy.setOnClickListener(onclick);
-			
-			
+			rl_energy.setOnClickListener(onclick);
+			rl_add_edit_rooms.setOnClickListener(onclick);
+			rl_subscription.setOnClickListener(onclick);
+			rl_privacy_and_security.setOnClickListener(onclick);
+			rl_language.setOnClickListener(onclick);
+//			rl_energy.setOnClickListener(onclick);
+			rl_configureSwitches.setOnClickListener(onclick);
+			rl_edit_users.setOnClickListener(onclick);
+
+
 		}
 		else
 		{
@@ -242,14 +249,14 @@ public class SettingsActivity extends Activity implements
 			rl_privacy_and_security.setOnClickListener(onclick);
 //			rl_profile.setOnClickListener(onclick);
 //			rl_changePass.setOnClickListener(onclick);
-     		rl_about.setOnClickListener(onclick);
+			rl_about.setOnClickListener(onclick);
 			rl_energy.setOnClickListener(onclick);
 			rl_language.setOnClickListener(onclick);
 			rl_subscription.setOnClickListener(onclick);
-			
+
 		}
-		
-		
+
+
 	}
 
 	public void setOrientation() {
@@ -271,29 +278,29 @@ public class SettingsActivity extends Activity implements
 	}
 
 	public void callIntentWithFlag() {
-		
+
 		try
 		{
-		Intent intent = new Intent();
-		intent = new Intent(mContext, LoginActivity.class);
-		intent.putExtra("IsUserLogOut", true);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-		startActivity(intent);
-		finish();
-		KisafaApplication.perFormActivityBackTransition(this);
-			
+			Intent intent = new Intent();
+			intent = new Intent(mContext, LoginActivity.class);
+			intent.putExtra("IsUserLogOut", true);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+			startActivity(intent);
+			finish();
+			KisafaApplication.perFormActivityBackTransition(this);
+
 			//Runtime.getRuntime().exit(0);
 		/*
 		Intent i = getBaseContext().getPackageManager()
 	             .getLaunchIntentForPackage( getBaseContext().getPackageName() );
 	      i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 	      startActivity(i);*/
-		
-		//overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
-		//KisafaApplication.perFormActivityBackTransition(this);
-		
-		
-		/* 
+
+			//overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+			//KisafaApplication.perFormActivityBackTransition(this);
+
+
+		/*
 		Intent mStartActivity = new Intent(this, LoginActivity.class);
 		mStartActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		int mPendingIntentId = 123456;
@@ -301,26 +308,26 @@ public class SettingsActivity extends Activity implements
 		AlarmManager mgr = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
 		mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
 		//System.exit(0);*/
-		 //Runtime.getRuntime().exit(0);	*/
-		 
-		 	
-		
-		
+			//Runtime.getRuntime().exit(0);	*/
+
+
+
+
 		}catch(Exception ex)
 		{
-			
+
 		}
-		
+
 	}
-	
-	
-	
+
+
+
 
 	private void showDialog(String text) {
-		
-		
-		
-		
+
+
+
+
 		MaterialDialog dialog = new MaterialDialog.Builder(mContext)
 				.content(text)
 				.positiveText("Yes")
@@ -358,9 +365,9 @@ public class SettingsActivity extends Activity implements
 		/*if (mProgressDialog != null) {
 			mProgressDialog.hide();
 		}*/
-		
+
 		WaitingStaticProgress.hideProgressDialog();
-		
+
 		if (response.getRequestCode() == ServerCodes.ServerRequestCodes.LOGOUT_REQUEST_CODE) {
 			RequestResponse requestResponse = (RequestResponse) response;
 			if (requestResponse.getShMeta().getShErrorCode()
@@ -368,26 +375,26 @@ public class SettingsActivity extends Activity implements
 				AppPreference.saveData(this, false, AppKeys.KEY_IS_LOGIN);
 				AppPreference.saveValue(this, null, AppKeys.KEY_SESSION);
 				ACache.get(this).remove(AppConstants.USER_OBJECT);
-				
-				
-				
+
+
+
 				try
 				{
 					Sync_Service.stopWebserviceCalling=true;
 					Intent in = new Intent(SettingsActivity.this,Sync_Service.class);
 					stopService(in);
-					
+
 				}
 				catch(Exception ex)
 				{
-					
-				}	
-				
-				
+
+				}
+
+
 				try
 				{
 					if(SystemValue.arrayList!=null)
-					SystemValue.arrayList.clear();
+						SystemValue.arrayList.clear();
 					helper.deleteAllCameras();
 					//Toast.makeText(mContext, "Cleared", Toast.LENGTH_SHORT).show();
 				}
@@ -404,43 +411,43 @@ public class SettingsActivity extends Activity implements
 					new Delete().from(Room_Model.class).execute();
 					new Delete().from(User_Room_Model.class).execute();
 					new Delete().from(ESP_Result_Model.class).execute();
-					
+
 					new Delete().from(Mood_Model.class).execute();
-					
+
 					new Delete().from(Tariff_Model.class).execute();
-					
-					
-					
-					
+
+
+
+
 					AppPreference.saveData(mContext, false, AppKeys.KEY_REMOTE_OPTION_TAG);
-					
-					
+
+
 					ImageLoader.getInstance().clearMemoryCache();
 					ImageLoader.getInstance().clearDiskCache();
-				
+
 				}catch(Exception ex)
 				{
-					
+
 				}
 				//stop sync service
-				
-				
+
+
 				RemoveCameraServiceThreadAndActivityIfRunning();
-				
+
 				mIvBack.postDelayed(new Runnable() {
-					
+
 					@Override
 					public void run() {
-						
+
 						callIntentWithFlag();
-						
+
 					}
 				}, 300);
-				
-				
-				
-				
-				
+
+
+
+
+
 			} else {
 				onFailure(requestResponse.getShMeta().getShMessage());
 			}
@@ -453,9 +460,9 @@ public class SettingsActivity extends Activity implements
 	}
 
 	public void onFailure(String retrofitError) {
-		
-			WaitingStaticProgress.hideProgressDialog();
-		
+
+		WaitingStaticProgress.hideProgressDialog();
+
 		new SnackBar.Builder((Activity) mContext).withMessage(retrofitError)
 				.withDuration(SnackBar.SHORT_SNACK).show();
 	}
@@ -463,182 +470,182 @@ public class SettingsActivity extends Activity implements
 	// Override Methods
 	@Override
 	public void onClick(View v) {
-		 
+
 		Intent intent = null;
 		switch (v.getId()) {
-		case R.id.rl_logout:
-			//showDialog("Are you sure to logout?");
-			
-			
-			
-			
-			    final Sync_Data_to_Server_WebServiceCall sync_Data_to_Server_WebServiceCall=new Sync_Data_to_Server_WebServiceCall(SettingsActivity.this);
-	    	   
-			    if(sync_Data_to_Server_WebServiceCall.isSyncedRequired())
-		   		{
-	    		  
-			    	
-			    	final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getResources().getString(string.Yourdataneedstobesyncedwithserverlogout));
-					
+			case R.id.rl_logout:
+				//showDialog("Are you sure to logout?");
+
+
+
+
+				final Sync_Data_to_Server_WebServiceCall sync_Data_to_Server_WebServiceCall=new Sync_Data_to_Server_WebServiceCall(SettingsActivity.this);
+
+				if(sync_Data_to_Server_WebServiceCall.isSyncedRequired())
+				{
+
+
+					final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getResources().getString(string.Yourdataneedstobesyncedwithserverlogout));
+
 					myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
-						
+
 						@Override
 						public void onCustomDialoguePositiveClick() {
-							
+
 							myASlertDialog.dismiss();
-							
+
 							helper = DataBaseHelper.getInstance(SettingsActivity.this);
-							
+
 							logout();
-							
+
 						}
-						
+
 						@Override
 						public void onCustomDialogueNegativeClick() {
-							
+
 							myASlertDialog.dismiss();
-							
+
 						}
 					});
-					
+
 					myASlertDialog.show();
-			    	
+
 				}
-			    else
-			    {
-			    	final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getResources().getString(string.Areyousuretologout));
-					
+				else
+				{
+					final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getResources().getString(string.Areyousuretologout));
+
 					myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
-						
+
 						@Override
 						public void onCustomDialoguePositiveClick() {
-							
+
 							myASlertDialog.dismiss();
-							
+
 							helper = DataBaseHelper.getInstance(SettingsActivity.this);
-							
+
 							logout();
-							
+
 						}
-						
+
 						@Override
 						public void onCustomDialogueNegativeClick() {
-							
+
 							myASlertDialog.dismiss();
-							
+
 						}
 					});
-					
+
 					myASlertDialog.show();
-			    	
-			    }
-			
-			
-			
-			
-			break;
-		case R.id.iv_back:
-			
-			intent = new Intent(SettingsActivity.this, HomeActivity.class);
-			
-			startActivity(intent);
-			
-			finish();
-			
-			
-			KisafaApplication.perFormActivityBackTransition(mContext);
-			break;
-		
-		case R.id.rl_edit_users:
-			
-			intent = new Intent(this, Add_OR_Edit_UserActivity.class);
-			startActivity(intent);
-			finish();
-			//overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
-			
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			
-			//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
-			break;
-		case R.id.rl_add_edit_rooms:
-			
-			intent = new Intent(this, Add_Edit_RoomsActivity.class);
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
-			break;
-		case R.id.rl_add_edit_switch:
-			
-			intent = new Intent(this, Add_Edit_SwitchActivity.class);
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
-			break;
-		case R.id.rl_configureSwitches:
-			
-			intent = new Intent(this, SwitchConfigurationActivity.class);
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
-			break;
-			
-		case R.id.rl_inside_home:
-			
-			intent = new Intent(this, SwitchScanActivity.class);
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			
-			
-			
-			break;	
-			
+
+				}
+
+
+
+
+				break;
+			case R.id.iv_back:
+
+				intent = new Intent(SettingsActivity.this, HomeActivity.class);
+
+				startActivity(intent);
+
+				finish();
+
+
+				KisafaApplication.perFormActivityBackTransition(mContext);
+				break;
+
+			case R.id.rl_edit_users:
+
+				intent = new Intent(this, Add_OR_Edit_UserActivity.class);
+				startActivity(intent);
+				finish();
+				//overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+
+				KisafaApplication.perFormActivityNextTransition(mContext);
+
+				//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
+				break;
+			case R.id.rl_add_edit_rooms:
+
+				intent = new Intent(this, Add_Edit_RoomsActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
+				break;
+			case R.id.rl_add_edit_switch:
+
+				intent = new Intent(this, Add_Edit_SwitchActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
+				break;
+			case R.id.rl_configureSwitches:
+
+				intent = new Intent(this, SwitchConfigurationActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+				//overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);
+				break;
+
+			case R.id.rl_inside_home:
+
+				intent = new Intent(this, SwitchScanActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+
+
+
+				break;
+
 			case R.id.rl_profile:
-			
-			intent = new Intent(this, UpdateProfileActivity.class);
-			startActivity(intent);
-			finish();
-			KisafaApplication.perFormActivityNextTransition(mContext);
-			
-			
-			
-			break;	
-			
+
+				intent = new Intent(this, UpdateProfileActivity.class);
+				startActivity(intent);
+				finish();
+				KisafaApplication.perFormActivityNextTransition(mContext);
+
+
+
+				break;
+
 			case R.id.rl_changePass:
-				
+
 				intent = new Intent(this, ChangePasswordActivity.class);
 				startActivity(intent);
 				finish();
 				KisafaApplication.perFormActivityNextTransition(mContext);
-				
-				break;	
-				
+
+				break;
+
 			case R.id.rl_about:
-				
+
 				intent = new Intent(this, AboutActivity.class);
 				startActivity(intent);
 				finish();
 				KisafaApplication.perFormActivityNextTransition(mContext);
-				
-				break;	
-				
+
+				break;
+
 
 			case R.id.rl_energy:
 				intent = new Intent(this, TariffMainActivity.class);
 				startActivity(intent);
 				finish();
 				KisafaApplication.perFormActivityNextTransition(mContext);
-				
-				break;	
-				
-				
+
+				break;
+
+
 			case R.id.rl_language:
-				
+
 				LanguageAndCurrencySettingPopup();
-				
+
 				break;
 
 			case R.id.rl_notification:
@@ -664,19 +671,19 @@ public class SettingsActivity extends Activity implements
 
 
 			default:
-			break;
+				break;
 		}
 	}
-	
-	
-	
+
+
+
 	@Override
 	public void onBackPressed() {
-		 
+
 		super.onBackPressed();
-		
-		
-		
+
+
+
 		Intent intent = new Intent();
 		intent = new Intent(SettingsActivity.this, HomeActivity.class);
 		/*intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -687,20 +694,20 @@ public class SettingsActivity extends Activity implements
 				| Intent.FLAG_ACTIVITY_NEW_TASK);*/
 		startActivity(intent);
 		/*overridePendingTransition(R.anim.out_to_right,R.anim.in_from_left);*/
-		
+
 		KisafaApplication.perFormActivityBackTransition(mContext);
 		finish();
 	}
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	public void onhomeButttonClick(View view)
 	{
-		
+
 		Intent intent = new Intent();
 		intent = new Intent(SettingsActivity.this, HomeActivity.class);
 		/*intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -713,34 +720,34 @@ public class SettingsActivity extends Activity implements
 		KisafaApplication.perFormActivityBackTransition(mContext);
 		finish();
 	}
-	
-	
+
+
 	private void LanguageAndCurrencySettingPopup() {
 
-		 LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		 View popupView = layoutInflater.inflate(R.layout.language_currency_setting_popup, null);
-		
+		View popupView = layoutInflater.inflate(R.layout.language_currency_setting_popup, null);
+
 		TextView tv_cancel=(TextView) popupView.findViewById(R.id.tv_Cancel);
 		TextView tv_Done=(TextView) popupView.findViewById(R.id.tv_Done);
-		
+
 		final View  languageView=popupView.findViewById(R.id.linearLayout1);
-		
+
 		final View  currencyView=popupView.findViewById(R.id.currencyLY);
-		
+
 		final  TextView  engTV=(TextView) popupView.findViewById(R.id.engTV);
-		
+
 		final  TextView  curTV=(TextView) popupView.findViewById(R.id.curTV);
-		
-		
+
+
 		if(KisafaApplication.currentAppLanguage.equals(LANGUAGES.ENGLISH))
 		{
-			
+
 			String curentCrncy=AppPreference.getValue(SettingsActivity.this, AppKeys.KEY_CURRENT_CURRENCY);
-			
-			
+
+
 			engTV.setText(getString(string.ENGLISH));
-			
+
 			if(curentCrncy==null || curentCrncy.equals("USD"))
 			{
 				curTV.setText(getString(string.USD));
@@ -749,16 +756,16 @@ public class SettingsActivity extends Activity implements
 			{
 				curTV.setText(getString(string.SAR));
 			}
-			
-			
+
+
 		}
 		else
 		{
 			String curentCrncy=AppPreference.getValue(SettingsActivity.this, AppKeys.KEY_CURRENT_CURRENCY);
-			
-			
+
+
 			engTV.setText(getString(string.ARABIC));
-			
+
 			if(curentCrncy==null || curentCrncy.equals("دولار أمريكي"))
 			{
 				curTV.setText(getString(string.USD));
@@ -767,424 +774,424 @@ public class SettingsActivity extends Activity implements
 			{
 				curTV.setText(getString(string.SAR));
 			}
-			
+
 		}
-		
-		
+
+
 		final PopupWindow popupWindow=new PopupWindow(popupView,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, true);
 
-		 popupWindow.setTouchable(true);
-		 popupWindow.setFocusable(true);
-		 
-		 popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
-		 
-		 popupWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+		popupWindow.setTouchable(true);
+		popupWindow.setFocusable(true);
 
-		 popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
-		 
-		 
-		 
-		 
-		 languageView.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					
-					LanguageCallPopup(engTV);
-					
-				}
-			});
-		 
-		 
-		 
-		 
-		 currencyView.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					CurrencyCallPopup(curTV);
-				}
-			});
-		 
-		
-		 
-		 tv_cancel.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-				}
-			});
-		 
-		 tv_Done.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					
-					
-					popupWindow.dismiss();
-					
-					
-					
-					
-				}
-			});
-		 
-		 
-		
+		popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
+
+		popupWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+		popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+
+
+
+		languageView.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+
+				LanguageCallPopup(engTV);
+
+			}
+		});
+
+
+
+
+		currencyView.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				CurrencyCallPopup(curTV);
+			}
+		});
+
+
+
+		tv_cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+			}
+		});
+
+		tv_Done.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+
+
+				popupWindow.dismiss();
+
+
+
+
+			}
+		});
+
+
+
 	}
-	
-	
-	
-	
+
+
+
+
 	private void LanguageCallPopup(final TextView language) {
 
-		 LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		 View popupView = layoutInflater.inflate(R.layout.select_language, null);
-		
+		View popupView = layoutInflater.inflate(R.layout.select_language, null);
+
 		TextView tv_cancel=(TextView) popupView.findViewById(R.id.tv_cancel);
-		
+
 		TextView tv_englishSelection=(TextView) popupView.findViewById(R.id.tv_englishSelection);
-		
+
 		TextView tv_arabicSelection=(TextView) popupView.findViewById(R.id.tv_arabicSelection);
-		
-		
-		
-		
+
+
+
+
 
 		final PopupWindow popupWindow=new PopupWindow(popupView,
-		         LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,        
-		 true);
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,
+				true);
 
-		 popupWindow.setTouchable(true);
-		 popupWindow.setFocusable(true);
-		 
-		 popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
-		 
-		
+		popupWindow.setTouchable(true);
+		popupWindow.setFocusable(true);
 
-		 popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
-		 
-		 tv_cancel.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
+		popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
+
+
+
+		popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+		tv_cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+			}
+		});
+
+
+		tv_englishSelection.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+
+
+				if(language.getText().toString().equals(getString(string.ENGLISH)))
+				{
+
+					final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(SettingsActivity.this,getString(string.ENGLISH) +" "+ getString(string.isalreadyappscurrentlanguage));
+
+					cusDial.setListner(new CustomDialogueClickListner() {
+
+						@Override
+						public void onCustomDialogueClick() {
+
+							cusDial.dismiss();
+
+						}
+					});
+
+
+					cusDial.show();
+
 				}
-			});
-		 
-		 
-		 tv_englishSelection.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-					
-					
-					if(language.getText().toString().equals(getString(string.ENGLISH)))
-					{
-						
-						final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(SettingsActivity.this,getString(string.ENGLISH) +" "+ getString(string.isalreadyappscurrentlanguage));
-						
-						cusDial.setListner(new CustomDialogueClickListner() {
-							
-							@Override
-							public void onCustomDialogueClick() {
-								
-								cusDial.dismiss();
-								
-							}
-						});
-						
-						
-						cusDial.show();
-						
-					}
-					else
-					{
-						
-						final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getString(string.Areyousuretochangeyourlanguageto)+" " +getString(string.ENGLISH));
-						myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
-							@Override
-							public void onCustomDialoguePositiveClick() {
-								myASlertDialog.dismiss();
-								language.setText(getString(string.ENGLISH));
-								
-								try
-								{
-									Locale locale = new Locale("en");
-									Locale.setDefault(locale);
-									Configuration config = getBaseContext().getResources().getConfiguration();
-									config.locale = locale;
-									getBaseContext().getResources().updateConfiguration(config,
-									      getBaseContext().getResources().getDisplayMetrics());
-									
-								}catch(Exception ex)
-								{
-									ex.toString();
-									ex.printStackTrace();
-								}
-								
-								AppPreference.saveValue(getApplicationContext(),LANGUAGES.ENGLISH.getValue(), AppKeys.KEY_CURRENT_LANGUAGE);
-								
-								KisafaApplication.currentAppLanguage=LANGUAGES.ENGLISH;
-								
-								
-								Sync_Service.removeWaringMessageOnLanguageChange();
-								
-								/*Intent  intnt=getIntent();
-								finish();
-								startActivity(intnt);*/
-								
-								RemoveCameraServiceThreadAndActivityIfRunning();
-								
-								mIvBack.postDelayed(new Runnable() {
-									
-									@Override
-									public void run() {
-										
-										Intent intent = new Intent();
-										intent = new Intent(mContext, SettingsActivity.class);
-										intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-										startActivity(intent);
-										finish();
-										
-									}
-								}, 300);
-							}
-							
-							@Override
-							public void onCustomDialogueNegativeClick() {
-								
-								myASlertDialog.dismiss();
-								}
-						});
-						
-						myASlertDialog.show();
-					}
-					
-					
-					
-				}
-			});
-		 
-		 tv_arabicSelection.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-					
-					if(language.getText().toString().equals(getString(string.ARABIC)))
-					{
-						
-						final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(SettingsActivity.this,getString(string.ARABIC) +" "+ getString(string.isalreadyappscurrentlanguage));
-						
-						cusDial.setListner(new CustomDialogueClickListner() {
-							
-							@Override
-							public void onCustomDialogueClick() {
-								
-								cusDial.dismiss();
-								
-							}
-						});
-						
-						
-						cusDial.show();
-						
-					}
-					else
-					{
-						
-						final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getString(string.Areyousuretochangeyourlanguageto)+" " +getString(string.ARABIC));
-						myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
-							@Override
-							public void onCustomDialoguePositiveClick() {
-								myASlertDialog.dismiss();
-								language.setText(getString(string.ARABIC));
-								
-								try
-								{
-									Locale locale = new Locale("ar");
-									Locale.setDefault(locale);
-									Configuration config = getBaseContext().getResources().getConfiguration();
-									config.locale = locale;
-									getBaseContext().getResources().updateConfiguration(config,
-									      getBaseContext().getResources().getDisplayMetrics());
-									
-								}catch(Exception ex)
-								{
+				else
+				{
+
+					final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getString(string.Areyousuretochangeyourlanguageto)+" " +getString(string.ENGLISH));
+					myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
+						@Override
+						public void onCustomDialoguePositiveClick() {
+							myASlertDialog.dismiss();
+							language.setText(getString(string.ENGLISH));
+
+							try
+							{
+								Locale locale = new Locale("en");
+								Locale.setDefault(locale);
+								Configuration config = getBaseContext().getResources().getConfiguration();
+								config.locale = locale;
+								getBaseContext().getResources().updateConfiguration(config,
+										getBaseContext().getResources().getDisplayMetrics());
+
+							}catch(Exception ex)
+							{
+								ex.toString();
 								ex.printStackTrace();
-									ex.toString();
-								}
-								
-								AppPreference.saveValue(getApplicationContext(),LANGUAGES.ARABIC.getValue(), AppKeys.KEY_CURRENT_LANGUAGE);
-								
-								
-								KisafaApplication.currentAppLanguage=LANGUAGES.ARABIC;
-								
-								Sync_Service.removeWaringMessageOnLanguageChange();
-								
+							}
+
+							AppPreference.saveValue(getApplicationContext(),LANGUAGES.ENGLISH.getValue(), AppKeys.KEY_CURRENT_LANGUAGE);
+
+							KisafaApplication.currentAppLanguage=LANGUAGES.ENGLISH;
+
+
+							Sync_Service.removeWaringMessageOnLanguageChange();
+
 								/*Intent  intnt=getIntent();
 								finish();
 								startActivity(intnt);*/
-								
-								RemoveCameraServiceThreadAndActivityIfRunning();
-								
-								mIvBack.postDelayed(new Runnable() {
-									
-									@Override
-									public void run() {
-										
-										Intent intent = new Intent();
-										intent = new Intent(mContext, SettingsActivity.class);
-										intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-										startActivity(intent);
-										finish();
-										
-									}
-								}, 300);
-								
-								
-							}
-							
-							@Override
-							public void onCustomDialogueNegativeClick() {
-								
-								myASlertDialog.dismiss();
+
+							RemoveCameraServiceThreadAndActivityIfRunning();
+
+							mIvBack.postDelayed(new Runnable() {
+
+								@Override
+								public void run() {
+
+									Intent intent = new Intent();
+									intent = new Intent(mContext, SettingsActivity.class);
+									intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+									startActivity(intent);
+									finish();
+
 								}
-						});
-						
-						myASlertDialog.show();
-					}
-					
+							}, 300);
+						}
+
+						@Override
+						public void onCustomDialogueNegativeClick() {
+
+							myASlertDialog.dismiss();
+						}
+					});
+
+					myASlertDialog.show();
 				}
-			});
-		 
-		 
-		 
-		 
-		
+
+
+
+			}
+		});
+
+		tv_arabicSelection.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+
+				if(language.getText().toString().equals(getString(string.ARABIC)))
+				{
+
+					final CustomSimpleAlertDialogue cusDial=new CustomSimpleAlertDialogue(SettingsActivity.this,getString(string.ARABIC) +" "+ getString(string.isalreadyappscurrentlanguage));
+
+					cusDial.setListner(new CustomDialogueClickListner() {
+
+						@Override
+						public void onCustomDialogueClick() {
+
+							cusDial.dismiss();
+
+						}
+					});
+
+
+					cusDial.show();
+
+				}
+				else
+				{
+
+					final CustomAlertDialogueTwoButtons myASlertDialog=new CustomAlertDialogueTwoButtons(SettingsActivity.this,getString(string.Areyousuretochangeyourlanguageto)+" " +getString(string.ARABIC));
+					myASlertDialog.setListner(new CustomDialogueTwoButtonsClickListner() {
+						@Override
+						public void onCustomDialoguePositiveClick() {
+							myASlertDialog.dismiss();
+							language.setText(getString(string.ARABIC));
+
+							try
+							{
+								Locale locale = new Locale("ar");
+								Locale.setDefault(locale);
+								Configuration config = getBaseContext().getResources().getConfiguration();
+								config.locale = locale;
+								getBaseContext().getResources().updateConfiguration(config,
+										getBaseContext().getResources().getDisplayMetrics());
+
+							}catch(Exception ex)
+							{
+								ex.printStackTrace();
+								ex.toString();
+							}
+
+							AppPreference.saveValue(getApplicationContext(),LANGUAGES.ARABIC.getValue(), AppKeys.KEY_CURRENT_LANGUAGE);
+
+
+							KisafaApplication.currentAppLanguage=LANGUAGES.ARABIC;
+
+							Sync_Service.removeWaringMessageOnLanguageChange();
+
+								/*Intent  intnt=getIntent();
+								finish();
+								startActivity(intnt);*/
+
+							RemoveCameraServiceThreadAndActivityIfRunning();
+
+							mIvBack.postDelayed(new Runnable() {
+
+								@Override
+								public void run() {
+
+									Intent intent = new Intent();
+									intent = new Intent(mContext, SettingsActivity.class);
+									intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+									startActivity(intent);
+									finish();
+
+								}
+							}, 300);
+
+
+						}
+
+						@Override
+						public void onCustomDialogueNegativeClick() {
+
+							myASlertDialog.dismiss();
+						}
+					});
+
+					myASlertDialog.show();
+				}
+
+			}
+		});
+
+
+
+
+
 	}
-	
-	
-	
+
+
+
 	private void CurrencyCallPopup(final TextView currency) {
 
-		 LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		 View popupView = layoutInflater.inflate(R.layout.select_currency, null);
-		
+		View popupView = layoutInflater.inflate(R.layout.select_currency, null);
+
 		TextView tv_cancel=(TextView) popupView.findViewById(R.id.tv_cancel);
-		
+
 		TextView tv_USD_Selection=(TextView) popupView.findViewById(R.id.tv_USD_Selection);
-		
+
 		TextView tv_SAR_Selection=(TextView) popupView.findViewById(R.id.tv_SAR_Selection);
-		
-		
-		
-		
+
+
+
+
 
 		final PopupWindow popupWindow=new PopupWindow(popupView,
-		         LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,        
-		 true);
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT,
+				true);
 
-		 popupWindow.setTouchable(true);
-		 popupWindow.setFocusable(true);
-		 
-		 popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
-		 
-		
+		popupWindow.setTouchable(true);
+		popupWindow.setFocusable(true);
 
-		 popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
-		 
-		 tv_cancel.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-				}
-			});
-		 
-		 
-		 tv_USD_Selection.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-					
-					
-					currency.setText(getString(string.USD));
-					
-					
-					
-					Change_Currency change_Currency=new Change_Currency(getString(string.USD),mContext);
-				}
-			});
-		 
-		 tv_SAR_Selection.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					
-					popupWindow.dismiss();
-					
-					currency.setText(getString(string.SAR));
-					
-					
-					
-					Change_Currency change_Currency=new Change_Currency(getString(string.SAR),mContext);
-					
-				}
-			});
-		 
-		 
-		 
-		 
-		
+		popupWindow.setAnimationStyle(R.style.BottonUpAnimation);
+
+
+
+		popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+		tv_cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+			}
+		});
+
+
+		tv_USD_Selection.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+
+
+				currency.setText(getString(string.USD));
+
+
+
+				Change_Currency change_Currency=new Change_Currency(getString(string.USD),mContext);
+			}
+		});
+
+		tv_SAR_Selection.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				popupWindow.dismiss();
+
+				currency.setText(getString(string.SAR));
+
+
+
+				Change_Currency change_Currency=new Change_Currency(getString(string.SAR),mContext);
+
+			}
+		});
+
+
+
+
+
 	}
-	
+
 	private boolean isMyServiceRunning(Class<?> serviceClass) {
-	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-	        if (serviceClass.getName().equals(service.service.getClassName())) {
-	            return true;
-	        }
-	    }
-	    return false;
+		ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+		for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+			if (serviceClass.getName().equals(service.service.getClassName())) {
+				return true;
+			}
+		}
+		return false;
 	}
-	
+
 	private void RemoveCameraServiceThreadAndActivityIfRunning()
 	{
 		try
 		{
-		if(isMyServiceRunning(BridgeService.class))
-		{
-			Intent in = new Intent(this,BridgeService.class);
-			stopService(in);
-		}
-		
+			if(isMyServiceRunning(BridgeService.class))
+			{
+				Intent in = new Intent(this,BridgeService.class);
+				stopService(in);
+			}
+
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}
-		
+
 	}
 
 	public void hideui(){
-		rl_control_remotly.setClickable(false);
-		rl_edit_users.setClickable(false);
+//		rl_control_remotly.setClickable(false);
+//		rl_edit_users.setClickable(false);
+//	    remotlySwitch.setVisibility(View.GONE);
 
-	remotlySwitch.setVisibility(View.GONE);
 		ArrayList<String> value = KisafaApplication.getSubscription(SettingsActivity.this);
 		if (value != null && value.size() != 0) {
 			String id = value.get(0);
@@ -1194,12 +1201,12 @@ public class SettingsActivity extends Activity implements
 
 				rl_control_remotly.setClickable(false);
 				rl_edit_users.setClickable(false);
-//				rl_configureSwitches.setClickable(false);
+				rl_configureSwitches.setClickable(false);
 				rl_add_edit_switch.setClickable(false);
-//				rl_energy.setClickable(false);
+				rl_energy.setClickable(false);
 				rl_add_edit_rooms.setClickable(false);
 				rl_inside_home.setClickable(false);
-
+				remotlySwitch.setVisibility(View.GONE);
 
 				rl_edit_users.setOnClickListener(new OnClickListener() {
 					@Override
@@ -1239,24 +1246,27 @@ public class SettingsActivity extends Activity implements
 					}
 				});
 
-//				rl_configureSwitches.setOnClickListener(new OnClickListener() {
-//					@Override
-//					public void onClick(View view) {
-//						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
-//						toast.show();
-//					}
-//				});
+				rl_configureSwitches.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
 
-//				rl_energy.setOnClickListener(new OnClickListener() {
-//					@Override
-//					public void onClick(View view) {
-//						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
-//						toast.show();
-//					}
-//				});
+				rl_energy.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Toast toast =Toast.makeText(getApplicationContext(),"You are not authorized for this feature",Toast.LENGTH_LONG);
+						toast.show();
+					}
+				});
 			}
 
 			if (id.equals("1")) {
+				rl_control_remotly.setClickable(false);
+				rl_edit_users.setClickable(false);
+				remotlySwitch.setVisibility(View.GONE);
 				rl_edit_users.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View view) {
@@ -1273,6 +1283,9 @@ public class SettingsActivity extends Activity implements
 				});
 
 			} else if (id.equals("2")) {
+				rl_control_remotly.setClickable(false);
+				rl_edit_users.setClickable(false);
+				remotlySwitch.setVisibility(View.GONE);
 				rl_edit_users.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View view) {
@@ -1289,9 +1302,9 @@ public class SettingsActivity extends Activity implements
 				});
 
 			}else if(id.equals("3")){
-				rl_control_remotly.setClickable(true);
-				rl_edit_users.setClickable(true);
-				remotlySwitch.setVisibility(View.GONE);
+//				rl_control_remotly.setClickable(true);
+//				rl_edit_users.setClickable(true);
+				remotlySwitch.setVisibility(View.VISIBLE);
 			}else if(id.equals("4")){
 				rl_control_remotly.setClickable(true);
 				rl_edit_users.setClickable(true);

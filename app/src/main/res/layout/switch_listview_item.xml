@@ -54,7 +54,7 @@
 		<LinearLayout
 			android:id="@+id/itemContainerLY"
 			android:layout_width="170dp"
-			android:layout_height="265dp"
+			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/margin_20dp"
 			android:background="@drawable/corner_border_white"
 			android:gravity="center"
@@ -63,6 +63,7 @@
 			<LinearLayout
 				android:layout_width="140dp"
 				android:layout_height="120dp"
+				android:layout_marginTop="@dimen/_5sdp"
 				android:background="@drawable/corner_border_gray"
 				android:gravity="center"
 				android:orientation="vertical"
@@ -73,6 +74,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
 					android:layout_marginBottom="10dp"
+					android:id="@+id/img_icon_switch"
 					android:src="@drawable/one_button_switch" />
 
 
@@ -81,19 +83,21 @@
 			<LinearLayout
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginLeft="@dimen/margin_2dp"
+				android:layout_marginLeft="@dimen/margin_5dp"
 				android:layout_marginTop="@dimen/margin_5dp"
 				android:orientation="vertical">
 
 				<TextView
-					android:id="@+id/tv_switchName"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:fontFamily="@font/montsemibold"
 					android:text="Lightning"
-					android:textColor="#000" />
+					android:textSize="12sp"
+					/>
+
+
 
 				<TextView
+					android:id="@+id/tv_switchName"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="Two gangs lightning Switch"
@@ -102,7 +106,7 @@
 					/>
 
 				<View
-					android:layout_width="150dp"
+					android:layout_width="200dp"
 					android:layout_height="1dp"
 					android:layout_marginTop="15dp"
 					android:background="#c0c0c0"
@@ -121,26 +125,16 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginLeft="@dimen/margin_8dp"
-					android:orientation="vertical"
+					android:orientation="horizontal"
 
 					>
 
-					<com.livixa.apacam.client.widget.CustomTextView
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:fontFamily="@font/montsemibold"
-						android:hint="@string/Assignedto"
-						android:textColor="#000"
-						android:textSize="12sp" />
 
 					<com.livixa.apacam.client.widget.CustomTextView
 						android:id="@+id/switchAssignedTo"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:text="@string/Assignedto"
-
 						android:textSize="12sp" />
-
 
 				</LinearLayout>
 
@@ -149,13 +143,15 @@
 					android:layout_height="wrap_content"
 					android:layout_marginLeft="@dimen/margin_8dp"
 					android:layout_marginTop="@dimen/margin_5dp"
-					android:orientation="vertical">
+					android:orientation="horizontal"
+					android:layout_marginBottom="@dimen/_5sdp"
+					>
 
 					<com.livixa.apacam.client.widget.CustomTextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:fontFamily="@font/montsemibold"
-						android:text="ID"
+						android:text="ID :"
 						android:textColor="#000"
 						android:textSize="12sp"
 

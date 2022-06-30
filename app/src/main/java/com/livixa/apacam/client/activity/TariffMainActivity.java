@@ -38,6 +38,9 @@ import com.livixa.apacam.dbmodel.Manage_DB_Model;
 import com.livixa.apacam.dbmodel.Tariff_Model;
 import com.livixa.apacam.services.Sync_Service;
 import com.livixa.client.R;
+
+import org.w3c.dom.Text;
+
 import object.p2pipcam.adapter.Tariff_List_Adapter;
 
 public class TariffMainActivity extends Activity {
@@ -459,6 +462,8 @@ private void tariffSettingPopup_1() {
 
 		View popupView = layoutInflater.inflate(R.layout.activity_tariff_option_country_popup, null);
 
+
+		TextView country = (TextView) popupView.findViewById(R.id.country);
 		TextView tv_cancel=(TextView) popupView.findViewById(R.id.cancelButton);
 
 
@@ -475,6 +480,16 @@ private void tariffSettingPopup_1() {
 
 
 		popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+
+		country.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				tariffListView.setVisibility(View.VISIBLE);
+				popupWindow.dismiss();
+			}
+		});
 
 		tv_cancel.setOnClickListener(new OnClickListener() {
 

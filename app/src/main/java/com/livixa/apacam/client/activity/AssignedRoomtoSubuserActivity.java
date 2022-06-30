@@ -54,10 +54,7 @@ public class AssignedRoomtoSubuserActivity extends Activity {
 		roomsGridView=(GridView) findViewById(R.id.roomsGridView);
 		mEmptyView=findViewById(R.id.roomsEmptylayout);
 		
-		
-		
-		
-		
+
 		try
 		{
 		Intent subUserIntent=getIntent();

@@ -80,6 +80,7 @@ public class HomeActivity extends Activity implements OnClickListener {
     private LinearLayout rl_moods;
     private ImageView notigif;
     private TextView activity_home_wattage;
+    private TextView price;
     private TextView activity_home_package_id;
     private TextView activity_home_package_expriy;
     private RelativeLayout rl_energy;
@@ -182,6 +183,7 @@ public class HomeActivity extends Activity implements OnClickListener {
         rl_energy = (RelativeLayout) findViewById(R.id.rl_energy);
         activity_home_package_id = findViewById(R.id.activity_home_package_id);
         activity_home_package_expriy = findViewById(R.id.activity_home_package_expriy);
+        price = findViewById(R.id.price);
         notigif = (ImageView) findViewById(R.id.noti);
 //
 //
@@ -312,7 +314,8 @@ public class HomeActivity extends Activity implements OnClickListener {
                             String watageValue = watageResult.getSh_total_wattage();
                             String watageprice = watageResult.getSh_total_price();
                             if (activity_home_wattage != null)
-                                activity_home_wattage.setText(watageValue + " " + watageUnit + " " + watageprice + " " + watagepUnit);
+                                activity_home_wattage.setText(watageValue + " " + watageUnit );
+                                price.setText(watageprice  +" " + watagepUnit);
 
 
                         } else {

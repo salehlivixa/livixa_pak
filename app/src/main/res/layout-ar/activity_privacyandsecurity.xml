@@ -88,12 +88,12 @@
                         android:text="قفل التطبيق مع Face ID"
                         android:textSize="16sp" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <com.livixa.apacam.client.activity.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/touchid"
+                        android:layout_width="50dip"
+                        android:layout_height="60dip"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginTop="1dp"
-                        android:src="@drawable/ic_toggle" />
+                        shSwitch:shadowSpace="7dip"></com.livixa.apacam.client.activity.ShSwitchView>
                 </RelativeLayout>
 
                 <RelativeLayout
