@@ -1,0 +1,34 @@
+<?php
+
+$_['text_title'] = 'مدفوعات إلكترونية';
+
+ //text
+$_['text_moyasar3']	= '<a href="https://moyasar.com" ><img src="view/image/payment/moyasar3.png" alt="Moyasar" title="Moyasar" style="border: 1px solid #EEEEEE;" /></a>';
+$_['text_enabled'] = 'تمكين';
+$_['text_disabled'] = 'تعطيل';
+$_['text_button_save'] = 'حفظ';
+$_['text_button_cancel'] = 'إلغاء';
+$_['text_extension'] = 'الاضافات';
+$_['text_success'] = 'تم التعديل!';
+$_['text_applepay_options'] = 'خيارات الدفع بـ ApplePay';
+ //entry
+$_['entry_status'] = 'الحالة';
+$_['entry_sort_order']	 = 'ترتيب الفرز';
+$_['entery_api_key'] = 'API Publishable Key';
+$_['entery_api_secret_key'] = 'API Secret Key';
+$_['entry_order_status_id'] = 'حالة الطلب';
+$_['entry_failed_order_status_id'] = 'حالة الطلب الفاشلة';
+$_['entry_payment_type'] = 'تفعيل الدفع بـ :';
+$_['entery_enable_creditcard'] = 'بطاقة ائتمانية';
+$_['entery_enable_stc_pay'] = 'STC Pay';
+$_['entery_enable_apple_pay'] = 'Apple Pay';
+
+
+//help
+$_['help_api_key'] = 'مفتاح publishable_key الخاص بالـ api من موقع مُيسر moyasar.com';
+$_['help_order_status'] = 'حالة الطلب عند التأكيد';
+
+//error
+$_['error_api_key'] = 'API key مطلوب';
+$_['error_permission'] = 'تحذير : أنت لا تمتلك صلاحيات التعديل !';
+$_['error_payment_type'] = 'الرجاء تحديد طريقة/طرق الدفع';

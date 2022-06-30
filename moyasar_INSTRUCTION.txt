@@ -1,0 +1,22 @@
+
+Moyasar - مُيسر
+
+
+Installation
+------------------------------------------------------------------------
+1. Copy the content of each folder, to your opencart installation keeping the folder structure.
+2. Login to the Open Cart admin section and go to Extensions > Payments
+3. Find Moyasar Payment Method in the list of extensions
+4. Click "Install" and then "Edit" the payment module settings
+5. Set Extension Status to Enable and put your publishable_key and Save
+6. Go to Extensions > Modifications
+7. Click the Refresh Button
+
+التثبيت
+------------------------------------------------------------------------
+١‫.‬أنسخ محتويات كل مجلد ولصقه في المسار المماثل لمتجرك.
+٢‫.‬سجل دخولك إلى لوحة التحكم واذهب إلى الإضافات > طرق الدفع.
+٣‫.‬ ستجد مُيسر في القائمة اضغط على تثبيت ثم تعديل ‪.‬   
+٤‫.‬ غيرحالة الحالة  إلى تمكين وضع publishable_key في المكان المخصص واضغط حفظ.
+٥‫.‬ اذهب إلى الإضافات > ادارة التعديلات‪.‬
+٦‫.‬ اضغط على زر ‪‘‬تحديث‪’.‬

@@ -1,0 +1,31 @@
+<legend> {{ text_payment_details }} </legend>
+
+<script type="text/javascript" src="catalog/view/javascript/moyasar/moyasar.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/moyasar.css">
+<form id="payment-form">
+    <div class="mysr-form"></div>
+    <script>
+        Moyasar.init({
+            element: '.mysr-form',
+            language: "{{ language_code }}",
+            amount: "{{ amount_in_halals }}",
+            currency: "{{ currency }}",
+            country: "{{ country }}",
+            description: "{{ description }}",
+            publishable_api_key: "{{ payment_moyasar3_api_key }}",        
+            methods: {{ payment_moyasar3_payment_methods_json }},
+            callback_url: "{{ callback_url }}",
+            apple_pay: {
+                label: "{{ domain_name }}",
+                validate_merchant_url: "{{ validate_merchant_url }}",
+                version: 9,
+                country: "{{ country }}"
+            },
+            translations: {
+                ar: {
+                    "button.pay": "دفع"
+                }
+            },
+        });
+    </script>
+</form>

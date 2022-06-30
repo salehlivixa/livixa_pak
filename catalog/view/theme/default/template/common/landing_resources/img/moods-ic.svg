@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.13" height="85.964" viewBox="0 0 86.13 85.964">
+    <defs>
+        <clipPath id="o72l2p36na">
+            <path data-name="Rectangle 1685" style="fill:#fd6b42" d="M0 0h86.13v85.964H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 1561" style="clip-path:url(#o72l2p36na)">
+        <path data-name="Path 2729" d="M35.451 13a2.1 2.1 0 0 0-1.515 2.568 15.287 15.287 0 0 1 .472 3.721A15.112 15.112 0 1 1 27.746 6.77a2.108 2.108 0 0 0 2.368-3.486 19.279 19.279 0 1 0 7.9 11.165A2.094 2.094 0 0 0 35.451 13z" transform="translate(.036)" style="fill:#fd6b42"/>
+        <path data-name="Path 2730" d="M51.017 38.665a19.355 19.355 0 1 0-13.653-5.673 19.322 19.322 0 0 0 13.653 5.673zm0-34.429a15.124 15.124 0 1 1-10.629 4.45 15.113 15.113 0 0 1 10.629-4.451z" transform="translate(15.77 .002)" style="fill:#fd6b42"/>
+        <path data-name="Path 2731" d="M19.343 31.589A19.355 19.355 0 1 0 33 37.262a19.322 19.322 0 0 0-13.657-5.673zm0 34.429a15.124 15.124 0 1 1 10.67-4.43 15.11 15.11 0 0 1-10.67 4.43" transform="translate(0 15.715)" style="fill:#fd6b42"/>
+        <path data-name="Path 2732" d="M51.021 31.589a19.355 19.355 0 1 0 13.662 5.668 19.328 19.328 0 0 0-13.662-5.668m0 34.429A15.111 15.111 0 1 1 61.7 61.6a15.105 15.105 0 0 1-10.679 4.418z" transform="translate(15.766 15.715)" style="fill:#fd6b42"/>
+        <path data-name="Path 2733" d="m15.136 20.867-5.162-5.174-2.991 2.991 8.152 8.151L38.052 3.918 35.061.941z" transform="translate(3.474 .468)" style="fill:#fd6b42"/>
+    </g>
+</svg>

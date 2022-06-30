@@ -1,0 +1,87 @@
+<form class="form-horizontal" id="package_subscription_form">
+    <div id="package">
+        <label for=""><b>Package</b></label>
+        <select name="package" required id="package_id" class="form-control">
+            <option value="">Select Package</option>
+            <option value="1">Economy Package</option>
+            <option value="2">Mid Package</option>
+            <option value="3">High Package</option>
+        </select>
+    </div>
+
+    <br/>
+    <div id="subscription" style="display: none">
+        <label for=""><b>Subscription</b></label>
+        <select name="subscription_id" id="subscription_id" required class="form-control">
+            <option value="">Select Subscription</option>
+            <option value="1">1 Month</option>
+            <option value="2">3 Months</option>
+            <option value="3">12 Months</option>
+        </select>
+    </div>
+  <div id="total_products_div" style="padding-top: 20px; display: none">
+    <label for=""><b>Total Products: </b> <span id="total_products"></span></label>
+  </div>
+    <div id="order_id" style="padding-top: 20px; display: none">
+        <input type="text" value="" id="order_id">
+    </div>
+  <div id="package_price_div" style="padding-top: 10px; display: none">
+    <label for=""><b>Package Price: </b> <span id="package_price"></span></label>
+  </div>
+    <div id="total_div" style="padding-top: 10px; display: none">
+        <label for=""><b>Total Price: </b> <span id="total"></span></label>
+    </div>
+    <div class="buttons clearfix">
+        <div class="pull-right">
+            <input type="button" value="{{ button_continue }}" id="button-subscription-feature"
+                   data-loading-text="{{ text_loading }}" class="btn btn-primary"/>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+    $('#package_id').on('change', function () {
+        $('#subscription_id').val('');
+        $("#total_products_div").css("display", "none");
+        $("#package_price_div").css("display", "none");
+        $("#total_div").css("display", "none");
+
+        var package_id = (this.value); //or alert($(this).val());
+        if (package_id != '') {
+            $("#subscription").css("display", "block");
+        }
+       else{
+          $('#subscription_id').val('');
+          $("#subscription").css("display", "none");
+        }
+    });
+</script>
+<script type="text/javascript">
+  $('#subscription_id').on('change', function () {
+    var package_id = $("#package_id").val();
+    var subscription_id = $('#subscription_id').val();
+    $.ajax({
+      url: 'index.php?route=checkout/subscription_feature_dropdown',
+      type: 'post',
+      dataType: 'json',
+      data: {
+        package:package_id,
+        subscription:subscription_id
+      },
+      success: function (data) {
+        console.log(data);
+        $("#total_products_div").css("display", "block");
+        $('#total_products').text(data.total_products);
+
+        $("#package_price_div").css("display", "block");
+        $('#package_price').text(data.price);
+
+          $("#total_div").css("display", "block");
+          $('#total').text(data.total);
+          $("#order_id").text(data.order_id);
+
+      }
+    });
+  });
+
+</script>

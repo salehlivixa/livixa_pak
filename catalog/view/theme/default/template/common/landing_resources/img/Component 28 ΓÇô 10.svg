@@ -1,0 +1,11 @@
+<svg id="Component_28_10" data-name="Component 28 – 10" xmlns="http://www.w3.org/2000/svg" width="192" height="48" viewBox="0 0 192 48">
+  <g id="Rectangle_1638" data-name="Rectangle 1638" fill="none" stroke="#8669fc" stroke-width="2">
+    <rect width="192" height="48" rx="7" stroke="none"/>
+    <rect x="1" y="1" width="190" height="46" rx="6" fill="none"/>
+  </g>
+  <text id="Order_Now" data-name="Order Now" transform="translate(96 30.076)" fill="#8669fc" font-size="16" font-family="Helvetica"><tspan x="-50.664" y="0">ORDER NOW</tspan></text>
+  <g id="order-ic" transform="translate(-1163.278 -2089.409)">
+    <path id="Path_2552" data-name="Path 2552" d="M132.494,25.69a2.482,2.482,0,0,0-2.482-2.358H119.588a2.482,2.482,0,0,0-2.482,2.358l-.579,11.5a4.136,4.136,0,0,0,4.136,4.343h8.273a4.136,4.136,0,0,0,4.136-4.343Zm-1.762,13.419a2.482,2.482,0,0,1-1.8.769h-8.273a2.482,2.482,0,0,1-2.482-2.606l.579-11.458a.827.827,0,0,1,.827-.827h10.424a.827.827,0,0,1,.827.827l.579,11.5h0a2.483,2.483,0,0,1-.687,1.8Z" transform="translate(1062.479 2080.976)" fill="#8669fc"/>
+    <path id="Path_2553" data-name="Path 2553" d="M241.051,116.669a.858.858,0,0,0-.858.858,1.716,1.716,0,0,1-1.716,1.716h-1.716a1.716,1.716,0,0,1-1.716-1.716.858.858,0,0,0-1.716,0,3.432,3.432,0,0,0,3.432,3.432h1.716a3.432,3.432,0,0,0,3.432-3.432.858.858,0,0,0-.858-.858Z" transform="translate(949.659 1990.912)" fill="#8669fc"/>
+  </g>
+</svg>

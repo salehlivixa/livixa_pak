@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "BoldText";
+    /*a name to be used later*/
+    src: url(../font/Mont-Bold.otf);
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: "SemiBoldText";
+    /*a name to be used later*/
+    src: url(../font/Mont-SemiBold.otf);
+    /*URL to font*/
+}
+
+.only-arabic {
+    display: none !important;
+}
+
+.only-english-block {
+    display: block !important;
+}
+
+.only-english-flex {
+    display: flex !important;
+}
+
+table tr td:first-child {
+    border-left: unset !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 200px;
+}
+
+table tr td:last-child {
+    border-right: unset !important;
+}
+
+.price-table {
+    border: 3px solid #002b54;
+    border-radius: 20px;
+}
+
+table tr:last-child th:first-child {
+    border-top-left-radius: 15px;
+    padding-left: 30px;
+}
+
+table tr:last-child th:last-child {
+    border-top-right-radius: 15px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}

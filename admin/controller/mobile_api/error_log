@@ -1,0 +1,2 @@
+[12-Jun-2022 12:55:13 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/quailakr/livixa.tracking.me/admin/controller/mobile_api/crontab.php on line 3
+[12-Jun-2022 13:00:28 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/quailakr/livixa.tracking.me/admin/controller/mobile_api/crontab.php on line 3

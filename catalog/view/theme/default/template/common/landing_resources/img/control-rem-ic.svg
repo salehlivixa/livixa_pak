@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73.847" height="67.132" viewBox="0 0 73.847 67.132">
+    <defs>
+        <clipPath id="8gxcmm98za">
+            <path data-name="Rectangle 1686" style="fill:none" d="M0 0h73.847v67.132H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 1566" style="clip-path:url(#8gxcmm98za)">
+        <path data-name="Path 2739" d="M3.357 26.852h3.356v40.28h6.713v-40.28h3.357a3.355 3.355 0 0 0 3.356-3.352V10.07a3.352 3.352 0 0 0-3.357-3.357h-3.356V0H6.713v6.713H3.357A3.355 3.355 0 0 0 0 10.07V23.5a3.358 3.358 0 0 0 3.357 3.357m3.356-13.431h6.713v6.713H6.713z" transform="translate(0 -.001)" style="fill:#8669fc"/>
+        <path data-name="Path 2740" d="M18.7 43.636h3.357v23.5h6.713v-23.5h3.357a3.358 3.358 0 0 0 3.357-3.358V26.852a3.358 3.358 0 0 0-3.356-3.352h-3.357V0h-6.713v23.5H18.7a3.355 3.355 0 0 0-3.357 3.357v13.421a3.355 3.355 0 0 0 3.357 3.358m3.357-13.428h6.713v6.713h-6.712z" transform="translate(11.509 -.001)" style="fill:#8669fc"/>
+        <path data-name="Path 2741" d="M34.046 26.852H37.4v40.28h6.713v-40.28h3.357a3.358 3.358 0 0 0 3.36-3.352V10.07a3.355 3.355 0 0 0-3.358-3.357h-3.357V0H37.4v6.713h-3.354a3.355 3.355 0 0 0-3.357 3.357V23.5a3.358 3.358 0 0 0 3.357 3.357M37.4 13.426h6.713v6.713H37.4z" transform="translate(23.017 -.001)" style="fill:#8669fc"/>
+    </g>
+</svg>
