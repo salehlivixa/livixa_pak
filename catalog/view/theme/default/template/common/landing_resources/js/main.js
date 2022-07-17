@@ -145,29 +145,29 @@
     function calcPrice(lang, month) {
         if (month == "1") {
             if (lang == "en") {
-                $("#price1").text('15.00 SAR');
-                $("#price1m").text('15.00 SAR');
+                $("#price1").text('45.00 SAR');
+                $("#price1m").text('45.00 SAR');
 
             } else if (lang == "arb") {
-                $("#price1").text('15.00 ر.س');
-                $("#price1m").text('15.00 ر.س');
+                $("#price1").text('45.00 ر.س');
+                $("#price1m").text('45.00 ر.س');
             }
 
             if (lang == "en") {
-                $("#price2").text('26.00 SAR');
-                $("#price2m").text('26.00 SAR');
+                $("#price2").text('78.00 SAR');
+                $("#price2m").text('78.00 SAR');
 
             } else if (lang == "arb") {
-                $("#price2").text('26.00 ر.س');
-                $("#price2m").text('26.00 ر.س');
+                $("#price2").text('78.00 ر.س');
+                $("#price2m").text('78.00 ر.س');
             }
 
             if (lang == "en") {
-                $("#price3").text('36.00 SAR');
-                $("#price3m").text('36.00 SAR');
+                $("#price3").text('108.00 SAR');
+                $("#price3m").text('108.00 SAR');
             } else if (lang == "arb") {
-                $("#price3").text('36.00 ر.س');
-                $("#price3m").text('36.00 ر.س');
+                $("#price3").text('108.00 ر.س');
+                $("#price3m").text('108.00 ر.س');
             }
 
         } else if (month == "3") {
