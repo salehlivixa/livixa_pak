@@ -1,7 +1,7 @@
-#Livixa
+# Livixa
 
 Opencart 3.0.3.8
-#Prerequisites:
+# Prerequisites:
 -Apache Version: 2.4.54 <br>
 -PHP Version:    7.3.33 <br>
 -MySQL Version:  10.3.35-MariaDB-cll-lve
