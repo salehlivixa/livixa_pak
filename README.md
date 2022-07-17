@@ -2,8 +2,8 @@
 
 Opencart 3.0.3.8
 # Prerequisites:
--Apache Version: 2.4.54 <br>
--PHP Version:    7.3.33 <br>
+-Apache Version: 2.4.54
+-PHP Version:    7.3.33
 -MySQL Version:  10.3.35-MariaDB-cll-lve
 
 Add following files in crontabs at 5 minutes interval to sync data with mobile apps:
