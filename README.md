@@ -1,3 +1,15 @@
+#Livixa
+
+Opencart 3.0.3.8
+#Prerequisites:
+-Apache Version: 2.4.54 <br>
+-PHP Version:    7.3.33 <br>
+-MySQL Version:  10.3.35-MariaDB-cll-lve
+
+Add following files in crontabs at 5 minutes interval to sync data with mobile apps:
+-cronjobs/crontab.php
+-cronjobs/order_api.php
+
 # Moyasar OpenCart Plugin
 [Moyasar](https://moyasar.com) Payment Gateway plugin for opencart compatible with versions 3.0.x
 
